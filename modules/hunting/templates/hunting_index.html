@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDO Hunting Meta Manager</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('hunting.static', filename='css/style.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='bdo_hub.svg') }}">
+
+    <style>
+        @font-face {
+            font-family: 'Web Pearl';
+            src: url('{{ url_for("static", filename="fonts/web_pearl_original.ttf") }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1, h2, h3, .section-title, .stat-label {
+            font-family: 'Web Pearl', 'Outfit', sans-serif !important;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <div class="background-glow"></div>
+    
+    <div class="app-container">
+        <header class="top-nav">
+            <div class="logo-area">
+                <i data-lucide="target" class="logo-icon"></i>
+                <h1>Hunting Manager</h1>
+                {% if test_mode %}
+                <span class="badge badge-test">Modo Teste</span>
+                {% endif %}
+                <button class="btn-icon-minimal" id="btn-open-settings" title="Configurar Meta" style="margin-left: 0.5rem;">
+                    <i data-lucide="settings"></i>
+                </button>
+            </div>
+            <div class="nav-info" id="nav-stage-info">
+                Carregando...
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Coluna Esquerda: Status -->
+            <div class="side-col">
+                <section class="glass-panel summary-cards">
+                    <h2 class="section-title"><i data-lucide="activity"></i> Status Atual</h2>
+                    <div class="card-grid">
+                        <div class="stat-card">
+                            <span class="stat-label">Progresso da Etapa</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" id="stage-progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="stat-value highlight" id="stage-progress-text">0.00%</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Situação</span>
+                            <span class="stat-value" id="status-verdict">--</span>
+                            <span class="stat-sub" id="status-sub">--</span>
+                        </div>
+                    </div>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">Sua Exp Atual</span>
+                            <span class="info-value" id="current-exp">--</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Meta de Hoje</span>
+                            <div style="text-align: right;">
+                                <span class="info-value" id="target-exp">--</span>
+                                <span id="req-avg" style="display: block; font-size: 0.75rem; color: var(--muted); margin-top: 2px;">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Coluna Central: Calendário + Gráfico -->
+            <div class="main-col">
+                <section class="glass-panel calendar-panel">
+                    <div class="calendar-header">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <h2 class="section-title" style="margin-bottom: 0; border: none; padding: 0;"><i data-lucide="calendar"></i> Histórico</h2>
+                            <a href="calendar" class="btn-icon" title="Ver Calendário Completo da Etapa" style="background: var(--accent-primary); color: #0f172a; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; text-decoration: none;">
+                                Ver Completo
+                            </a>
+                        </div>
+                        <div class="calendar-controls">
+                            <button class="btn-icon" id="btn-prev-month"><i data-lucide="chevron-left"></i></button>
+                            <span id="current-month-display">Mês/Ano</span>
+                            <button class="btn-icon" id="btn-next-month"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="calendar-grid-header">
+                        <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span>
+                    </div>
+                    <div class="calendar-grid" id="calendar-body">
+                        <!-- Gerado por JS -->
+                    </div>
+                </section>
+
+                <section class="glass-panel chart-panel">
+                <div class="panel-header-tabs">
+                    <h2 class="section-title" style="margin-bottom: 0; border: none; padding: 0;">
+                        <i data-lucide="trending-up"></i> Projeções
+                    </h2>
+                    
+                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                        <div class="custom-legend">
+                            <div class="legend-item">
+                                <span class="legend-color meta"></span>
+                                <span class="legend-text">Meta</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color real"></span>
+                                <span class="legend-text">Realizado</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-tabs">
+                            <button class="tab-btn active" data-tab="daily">Diário</button>
+                            <button class="tab-btn" data-tab="monthly">Mensal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="tab-daily" class="tab-content active" style="width: 100%;">
+                    <div class="chart-container">
+                        <canvas id="projectionChart"></canvas>
+                    </div>
+                </div>
+                
+                <div id="tab-monthly" class="tab-content" style="width: 100%;">
+                    <div class="chart-container">
+                        <canvas id="monthlyChart"></canvas>
+                    </div>
+                </div>
+            </section>
+            </div>
+
+            <!-- Coluna Direita: Registro -->
+            <div class="side-col">
+                <section class="glass-panel form-panel">
+                    <h2 class="section-title"><i data-lucide="plus-circle"></i> Registrar Progresso</h2>
+                    <div id="form-hint" style="font-size: 0.85rem; color: var(--accent-primary); margin-bottom: 1rem; text-align: center; font-style: italic;"></div>
+                    <form id="progress-form">
+                        <div class="form-group">
+                            <label for="data_reg">Data</label>
+                            <input type="text" id="data_reg" readonly placeholder="Selecione a data" style="cursor: pointer;" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nivel_reg">Nível (Ex: Guru 12)</label>
+                            <input type="text" id="nivel_reg" placeholder="Guru X" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pct_reg">Porcentagem (%)</label>
+                            <input type="number" step="0.01" id="pct_reg" placeholder="45.22" required>
+                        </div>
+                        <div class="submit-area">
+                            <button type="submit" class="btn-primary" id="btn-submit" title="Salvar Registro">
+                                <i data-lucide="check"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div id="form-feedback" class="feedback-msg"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de Configuração -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 900px;">
+            <div class="modal-header">
+                <h3><i data-lucide="settings"></i> Configurar Etapas</h3>
+                <button class="btn-close" id="btn-close-settings">&times;</button>
+            </div>
+            <form id="settings-form">
+                <div class="stages-grid">
+                    <!-- Etapa 1 -->
+                    <div class="stage-section">
+                        <h4>Etapa 1</h4>
+                        <div class="form-group">
+                            <label>Data de Início</label>
+                            <input type="text" id="stage1_start_date" readonly placeholder="Selecione a data" style="cursor: pointer;" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="stage1_start_level">Nível Inicial</label>
+                            <input type="text" id="stage1_start_level" placeholder="Guru X" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="stage1_end_date">Data de Conclusão</label>
+                            <input type="text" id="stage1_end_date" readonly placeholder="Selecione a data" style="cursor: pointer;" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="stage1_end_level">Nível Final</label>
+                            <input type="text" id="stage1_end_level" placeholder="Guru X" required>
+                        </div>
+                    </div>
+
+                    <!-- Etapa 2 -->
+                    <div class="stage-section">
+                        <h4>Etapa 2</h4>
+                        <div class="form-group">
+                            <label>Data de Início (automático)</label>
+                            <input type="text" id="stage2_start_date" readonly disabled style="background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.3);">
+                            <small class="form-help">Dia seguinte ao fim da Etapa 1</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Nível Inicial (automático)</label>
+                            <input type="text" id="stage2_start_level" readonly disabled style="background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.3);">
+                            <small class="form-help">Mesmo nível final da Etapa 1</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="stage2_end_date">Data de Conclusão</label>
+                            <input type="text" id="stage2_end_date" readonly placeholder="Selecione a data" style="cursor: pointer;" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="stage2_end_level">Nível Final</label>
+                            <input type="text" id="stage2_end_level" placeholder="Guru X" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn-primary" id="btn-save-settings" title="Salvar Configurações">
+                        <i data-lucide="check"></i>
+                    </button>
+                </div>
+            </form>
+            <div id="settings-feedback" class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalhes do Dia -->
+    <div id="day-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 400px;">
+            <div class="modal-header">
+                <h3><i data-lucide="info"></i> Detalhes do Dia</h3>
+                <button class="btn-close" id="btn-close-day">&times;</button>
+            </div>
+            <div id="day-details-content">
+                <div class="detail-header">
+                    <span id="detail-date" class="highlight" style="font-size: 1.2rem; font-weight: 700;">--/--/----</span>
+                    <span id="detail-etapa" class="badge" style="background: rgba(255,255,255,0.1); color: var(--text-sec);">Etapa</span>
+                </div>
+                
+                <div class="detail-grid" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="detail-item glass-card" style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 8px;">
+                        <span style="display: block; color: var(--muted); font-size: 0.8rem; text-transform: uppercase;">Meta Esperada</span>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span id="detail-meta-level" style="font-size: 1.1rem; font-weight: 600;">--</span>
+                            <span id="detail-meta-exp" style="font-family: monospace; font-size: 0.9rem; color: var(--text-sec);">--</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-item glass-card" style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 8px;">
+                        <span style="display: block; color: var(--muted); font-size: 0.8rem; text-transform: uppercase;">Realizado</span>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span id="detail-real-level" style="font-size: 1.1rem; font-weight: 600;">--</span>
+                            <span id="detail-real-exp" style="font-family: monospace; font-size: 0.9rem; color: var(--text-sec);">--</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-result" id="detail-result-box" style="padding: 1rem; border-radius: 8px; text-align: center; font-weight: 700;">
+                        <span id="detail-verdict">--</span>
+                        <div id="detail-diff" style="font-size: 0.9rem; font-weight: 400; margin-top: 0.25rem;">--</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Calendário -->
+    <div id="date-picker-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-box-calendar">
+            <div class="modal-header-calendar">
+                <h3>Selecionar Data</h3>
+                <button class="modal-close-calendar" onclick="closeDatePicker()">&times;</button>
+            </div>
+            <div class="modal-body-calendar">
+                <div class="calendar-header-picker">
+                    <button class="calendar-nav-picker" onclick="prevMonthPicker()">&lsaquo;</button>
+                    <span id="calendar-month-year-picker"></span>
+                    <button class="calendar-nav-picker" onclick="nextMonthPicker()">&rsaquo;</button>
+                </div>
+                <div id="calendar-grid-picker" class="calendar-grid-picker"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('hunting.static', filename='js/main.js') }}"></script>
+    <script>
+        // Variáveis do calendário picker
+        let currentMonthPicker = new Date().getMonth();
+        let currentYearPicker = new Date().getFullYear();
+        let currentTargetInputPicker = null;
+
+        // Abre o modal de calendário
+        function openDatePicker(inputId) {
+            currentTargetInputPicker = document.getElementById(inputId);
+            document.getElementById('date-picker-modal').style.display = 'flex';
+
+            // Se o input já tem valor, posiciona o calendário nessa data
+            if (currentTargetInputPicker.value) {
+                const [d, m, y] = currentTargetInputPicker.value.split('/');
+                if (d && m && y) {
+                    currentMonthPicker = parseInt(m) - 1;
+                    currentYearPicker = parseInt(y);
+                }
+            }
+
+            renderCalendarPicker();
+        }
+
+        // Fecha o modal
+        function closeDatePicker() {
+            document.getElementById('date-picker-modal').style.display = 'none';
+            currentTargetInputPicker = null;
+        }
+
+        // Renderiza o calendário
+        function renderCalendarPicker() {
+            const monthNames = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                                'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
+            document.getElementById('calendar-month-year-picker').textContent =
+                `${monthNames[currentMonthPicker]} ${currentYearPicker}`;
+
+            const firstDay = new Date(currentYearPicker, currentMonthPicker, 1).getDay();
+            const daysInMonth = new Date(currentYearPicker, currentMonthPicker + 1, 0).getDate();
+
+            const calendarGrid = document.getElementById('calendar-grid-picker');
+            calendarGrid.innerHTML = '';
+
+            // Dias da semana
+            const weekdays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+            weekdays.forEach(day => {
+                const dayHeader = document.createElement('div');
+                dayHeader.className = 'calendar-weekday-picker';
+                dayHeader.textContent = day;
+                calendarGrid.appendChild(dayHeader);
+            });
+
+            // Células vazias antes do primeiro dia
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'calendar-day-picker disabled';
+                calendarGrid.appendChild(emptyCell);
+            }
+
+            // Dias do mês
+            const today = new Date();
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.className = 'calendar-day-picker';
+                dayCell.textContent = day;
+
+                const cellDate = new Date(currentYearPicker, currentMonthPicker, day);
+
+                // Marca dia de hoje
+                if (cellDate.toDateString() === today.toDateString()) {
+                    dayCell.classList.add('today');
+                }
+
+                // Marca dia selecionado
+                if (currentTargetInputPicker && currentTargetInputPicker.value) {
+                    const [d, m, y] = currentTargetInputPicker.value.split('/');
+                    if (d && m && y) {
+                        const selectedDate = new Date(y, m - 1, d);
+                        if (cellDate.toDateString() === selectedDate.toDateString()) {
+                            dayCell.classList.add('selected');
+                        }
+                    }
+                }
+
+                dayCell.onclick = () => selectDatePicker(day);
+                calendarGrid.appendChild(dayCell);
+            }
+        }
+
+        // Navega para o mês anterior
+        function prevMonthPicker() {
+            currentMonthPicker--;
+            if (currentMonthPicker < 0) {
+                currentMonthPicker = 11;
+                currentYearPicker--;
+            }
+            renderCalendarPicker();
+        }
+
+        // Navega para o próximo mês
+        function nextMonthPicker() {
+            currentMonthPicker++;
+            if (currentMonthPicker > 11) {
+                currentMonthPicker = 0;
+                currentYearPicker++;
+            }
+            renderCalendarPicker();
+        }
+
+        // Seleciona uma data
+        function selectDatePicker(day) {
+            const formatted = `${String(day).padStart(2, '0')}/${String(currentMonthPicker + 1).padStart(2, '0')}/${currentYearPicker}`;
+            if (currentTargetInputPicker) {
+                currentTargetInputPicker.value = formatted;
+                // Trigger change event para atualizar campos dependentes
+                currentTargetInputPicker.dispatchEvent(new Event('change'));
+            }
+            closeDatePicker();
+        }
+
+        // Inicializa ícones Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>

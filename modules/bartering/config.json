@@ -1,0 +1,21 @@
+{
+    "level": "Guru 6",
+    "vp": true,
+    "cleia": true,
+    "bargain": "1.000.000",
+    "trades": {
+        "Material": 0,
+        "Material (Moedas Corvo)": 0,
+        "Oceano (Moedas Corvo, superior)": 0,
+        "Oceano (Moedas Corvo, inferior)": 0,
+        "Oceano (Itens)": 0,
+        "T4 > Moedas Corvo": 0,
+        "Halmad": 0,
+        "Kashuma": 0,
+        "Derko": 0,
+        "Ninho do Corvo": 0,
+        "T4 > T5": 0,
+        "T5 > T6": 0,
+        "T6 > T7": 0
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "etapas": [
+        {
+            "nome": "Guru 1 a Guru 56",
+            "data_inicio": "2026-05-01",
+            "data_fim": "2026-12-31",
+            "nivel_inicio": "Guru 1",
+            "nivel_fim": "Guru 56"
+        },
+        {
+            "nome": "Guru 56 a Guru 67",
+            "data_inicio": "2027-01-01",
+            "data_fim": "2027-12-31",
+            "nivel_inicio": "Guru 56",
+            "nivel_fim": "Guru 67"
+        }
+    ],
+    "folgas": {
+        "dias_da_semana": [
+            3
+        ],
+        "domingos_alternados": {
+            "ativo": true,
+            "domingo_trabalho_referencia": "2026-05-10"
+        },
+        "datas_especificas": []
+    }
+}

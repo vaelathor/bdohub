@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDO Bartering Tracker</title>
+    <link rel="icon" href="{{ url_for('static', filename='bdo_hub.svg') }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ url_for('bartering.static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @font-face {
+            font-family: 'Web Pearl';
+            src: url('{{ url_for("static", filename="fonts/web_pearl_original.ttf") }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1, h2, h3, .section-title, .stat-label {
+            font-family: 'Web Pearl', 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .app-container {
+            max-width: 1700px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Modal da Tabela de Exp */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-box {
+            background: var(--bg-panel);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            width: 900px;
+            max-width: 95vw;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .exp-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow-y: auto;
+        }
+
+        .exp-table th {
+            color: var(--muted);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0.75rem;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .exp-table th:first-child {
+            text-align: left;
+            min-width: 140px;
+            white-space: nowrap;
+        }
+
+        .exp-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 0.9rem;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .exp-table td:first-child {
+            text-align: left;
+            min-width: 140px;
+            white-space: nowrap;
+        }
+
+        .exp-table tr:hover td {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .exp-table .bonus-input {
+            background: transparent !important;
+            border: none !important;
+            color: var(--accent-primary);
+            font-weight: 700;
+            font-family: inherit;
+            font-size: 0.9rem;
+            width: 60px;
+            text-align: center;
+            outline: none;
+            padding: 0 !important;
+            -moz-appearance: textfield;
+        }
+
+        .exp-table .bonus-input::-webkit-inner-spin-button,
+        .exp-table .bonus-input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .exp-table .bonus-input:focus {
+            color: #fff;
+        }
+
+        button.btn-primary {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-primary);
+            color: #0f172a;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px var(--accent-glow);
+            margin: 0 auto;
+        }
+
+        button.btn-primary:hover {
+            background: var(--accent-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        button.btn-primary:active {
+            transform: scale(0.95);
+        }
+
+        button.btn-primary svg {
+            width: 24px;
+            height: 24px;
+            stroke-width: 3px;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .table-link {
+            font-size: 0.72rem;
+            color: var(--muted);
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 0.25rem;
+            display: inline-block;
+            transition: 0.2s;
+        }
+
+        .table-link:hover {
+            color: var(--accent-primary);
+        }
+
+        .empty-table-msg {
+            text-align: center;
+            color: var(--muted);
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            color: var(--accent-primary);
+            width: 32px;
+            height: 32px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #fff, var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--glass-border);
+            padding: 1.25rem;
+            border-radius: 12px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .stat-card.editable {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.1);
+        }
+
+        .stat-label {
+            color: var(--text-sec);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        select,
+        input {
+            background: #0f172a;
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            padding: 0.6rem 0.8rem;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            width: 100%;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        select:focus,
+        input:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+        }
+
+        .large-input {
+            font-size: 2.8rem !important;
+            font-weight: 700 !important;
+            border: none !important;
+            background: transparent !important;
+            padding: 0 !important;
+            color: var(--accent-primary) !important;
+            outline: none !important;
+        }
+
+        .large-input-sm {
+            font-size: 1.8rem !important;
+            font-weight: 700 !important;
+            border: none !important;
+            background: transparent !important;
+            padding: 0 !important;
+            color: var(--accent-primary) !important;
+            outline: none !important;
+            width: 100%;
+        }
+
+        .large-input-sm::-webkit-inner-spin-button,
+        .large-input-sm::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .badge-test {
+            background: #f59e0b;
+            color: #000;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 0.8rem;
+            vertical-align: middle;
+            display: inline-block;
+            line-height: 1.2;
+        }
+
+        .config-row-mini {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            background: transparent;
+            padding: 0.2rem 0;
+            border-radius: 8px;
+            flex: 1;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 18px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #334155;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 12px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: var(--accent-primary);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(16px);
+        }
+
+        .dashboard-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1.5rem;
+            min-height: 0;
+        }
+
+        .glass-panel {
+            background: var(--bg-panel);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .no-shadow {
+            box-shadow: none !important;
+            background: transparent !important;
+            border: none !important;
+        }
+
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .rem-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.4rem;
+            gap: 1rem;
+            flex: 1;
+        }
+
+        .rem-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .rem-label {
+            font-size: 0.65rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .rem-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .route-item {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid var(--glass-border);
+            padding: 1rem 1.25rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+            transition: 0.2s;
+        }
+
+        .route-item:hover {
+            border-color: var(--accent-primary);
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        .route-name {
+            flex: 1;
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .route-costs {
+            font-family: monospace;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 120px;
+        }
+
+        .route-total {
+            font-weight: 700;
+            color: var(--success);
+            font-family: monospace;
+            font-size: 1rem;
+            min-width: 80px;
+            text-align: right;
+        }
+
+        .input-qty {
+            width: 45px;
+            background: transparent !important;
+            border: none !important;
+            color: var(--accent-primary) !important;
+            font-weight: 700 !important;
+            font-size: 1.2rem !important;
+            text-align: right;
+            outline: none;
+            padding: 0 !important;
+        }
+
+        .input-qty::-webkit-inner-spin-button,
+        .input-qty::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .summary-box {
+            background: var(--bg-panel);
+            padding: 1.25rem;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .rem-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .rem-label {
+            color: var(--text-sec);
+            font-size: 0.8rem;
+        }
+
+        .rem-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .routes-grid::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .routes-grid::-webkit-scrollbar-thumb {
+            background: var(--glass-border);
+            border-radius: 10px;
+        }
+
+        /* Offset for main content */
+        .app-container {
+            max-width: 1700px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Botão de Excluir Registro na Tabela */
+        .btn-delete-record {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 6px;
+            color: var(--danger);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: 0.2s;
+            z-index: 10;
+        }
+
+        .exp-table tr:hover .btn-delete-record {
+            opacity: 1;
+        }
+
+        .btn-delete-record:hover {
+            background: var(--danger);
+            color: #fff;
+        }
+
+        .btn-delete-record svg {
+            width: 14px;
+            height: 14px;
+        }
+    </style>
+</head>
+
+<body class="dark-theme">
+    <div class="app-container">
+        <nav class="top-nav">
+            <div class="logo-area">
+                <i data-lucide="ship" class="logo-icon"></i>
+                <h1>Bartering Tracker</h1>
+                {% if is_test %}
+                <span class="badge badge-test">Modo Teste</span>
+                {% endif %}
+            </div>
+            <div class="auto-save-indicator">
+                <span id="save-text" style="font-size: 0.85rem; color: var(--muted);">Dados sincronizados</span>
+            </div>
+        </nav>
+
+        <div class="stat-grid">
+            <!-- Card 1: Nível e Configuração -->
+            <div class="stat-card">
+                <div class="stat-label">Profissão e Bônus</div>
+                <select id="level-select" class="stat-value" onchange="delayedUpdate()"
+                    style="width: 100%; background: #0f172a; border: 1px solid var(--glass-border); color: #fff; padding: 0.4rem; border-radius: 6px; margin-bottom: 0.5rem; cursor: pointer;">
+                    <!-- Carregado dinamicamente -->
+                </select>
+
+                <div style="display: flex; gap: 0.6rem; margin-bottom: 0.6rem;">
+                    <div class="config-row-mini">
+                        <span style="font-size: 0.85rem;">Pacote Econômico</span>
+                        <label class="switch"><input type="checkbox" id="vp-toggle" onchange="delayedUpdate()"
+                                checked><span class="slider"></span></label>
+                    </div>
+                    <div class="config-row-mini">
+                        <span style="font-size: 0.85rem;">Vice-Capitã Cleia</span>
+                        <label class="switch"><input type="checkbox" id="cleia-toggle" onchange="delayedUpdate()"
+                                checked><span class="slider"></span></label>
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-sec);">
+                    <span>Bônus Nível: <strong id="level-bonus-display"
+                            style="color: var(--accent-primary)">---</strong></span>
+                    <span>Desconto: <strong id="total-discount-display"
+                            style="color: var(--success)">---</strong></span>
+                </div>
+            </div>
+
+            <!-- Card 2: Barganha -->
+            <div class="stat-card editable" onclick="document.getElementById('bargain-input').focus()">
+                <div class="stat-label">Poder de Barganha</div>
+                <input type="text" id="bargain-input" class="large-input" oninput="formatOnly(this); delayedUpdate()"
+                    style="width: 100%;">
+                <div style="font-size: 0.8rem; color: var(--muted); margin-top: 5px;">Pressione para editar</div>
+            </div>
+
+            <!-- Card 3: Permutas Restantes (Subiu) -->
+            <div class="stat-card">
+                <div class="stat-label">Permutas Restantes</div>
+                <div class="rem-row">
+                    <div class="rem-stat">
+                        <span class="rem-label">Permutas Comuns</span>
+                        <span id="rem-itens" class="rem-value">0</span>
+                    </div>
+                    <div class="rem-stat">
+                        <span class="rem-label">Materiais</span>
+                        <span id="rem-mats" class="rem-value">0</span>
+                    </div>
+                    <div class="rem-stat">
+                        <span class="rem-label">Moedas Corvo</span>
+                        <span id="rem-coins" class="rem-value">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Coluna Esquerda: Calculadora de Moedas Corvo -->
+            <div class="glass-panel">
+                <h2 class="section-title" style="font-size: 1.2rem; border: none; margin-bottom: 0.5rem;">Calculadora de
+                    Custos de Moedas Corvo</h2>
+                <div id="routes-container" class="routes-grid">
+                    <!-- Gerado dinamicamente -->
+                </div>
+            </div>
+
+            <!-- Coluna Direita: Calculadora de Exp -->
+            <div class="glass-panel">
+                <h2 class="section-title" style="font-size: 1.2rem; border: none; margin-bottom: 0.2rem;">
+                    Calculadora de Exp</h2>
+                <span class="table-link" onclick="openExpTable()">&#9776; Ver tabela de Exp por Nível</span>
+
+                <form style="margin-top: 1rem;">
+                    <div class="form-group">
+                        <label class="rem-label">Bônus de Exp (%)</label>
+                        <input type="text" id="exp-bonus" class="large-input-sm" value="452" oninput="updateExpCalc()">
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="form-group" style="flex: 1;">
+                            <label class="rem-label">Exp Inicial (%)</label>
+                            <input type="text" id="exp-init" class="large-input-sm" value="0.000"
+                                oninput="updateExpCalc()">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label class="rem-label">Exp Final (%)</label>
+                            <input type="text" id="exp-final" class="large-input-sm" value="1.000"
+                                oninput="updateExpCalc()">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="rem-label">Qtd. de Permutas</label>
+                        <input type="text" id="exp-qty" class="large-input-sm" value="10" oninput="updateExpCalc()">
+                    </div>
+
+                    <div
+                        style="margin-top: 1rem; padding: 1rem; background: rgba(56, 189, 248, 0.1); border-radius: 10px; border: 1px solid rgba(56, 189, 248, 0.2);">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem;">
+                            <span class="rem-label">Ganho Total</span>
+                            <span id="exp-total-res"
+                                style="font-weight: 700; color: var(--accent-primary);">1.000%</span>
+                        </div>
+                        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 0.5rem 0;">
+                        <div style="display: flex; justify-content: space-between; margin-top: 0.5rem;">
+                            <span class="rem-label">Por Permuta</span>
+                            <span id="exp-per-res" style="font-weight: 700; color: var(--success);">0.100%</span>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted);">
+                            <span>Base por Permuta</span>
+                            <span id="exp-per-base-res">0.018%</span>
+                        </div>
+                    </div>
+
+                    <div class="submit-area">
+                        <button type="button" class="btn-primary" onclick="saveExpRecord()" title="Salvar Registro">
+                            <i data-lucide="check"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal: Tabela de Exp por Nível -->
+    <div class="modal-overlay" id="exp-table-modal" onclick="closeExpTableOnBg(event)">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2 style="font-size: 1.1rem; font-weight: 700;">Tabela de Exp por Nível</h2>
+                <button class="modal-close" onclick="closeExpTable()">✕</button>
+            </div>
+            <div style="overflow-y: auto; flex: 1;">
+                <table class="exp-table" id="exp-data-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">Nível</th>
+                            <th>Permutas Registradas</th>
+                            <th>Exp Base / Permuta</th>
+                            <th>Total p/ 100% (Base)</th>
+                            <th>Último Bônus Exp</th>
+                            <th>Total p/ 100% (Com Bônus)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="exp-table-body">
+                        <tr>
+                            <td colspan="6" class="empty-table-msg">Nenhum registro salvo ainda.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateExpCalc() {
+            const bonus = document.getElementById('exp-bonus').value.replace(',', '.');
+            const init = document.getElementById('exp-init').value.replace(',', '.');
+            const final = document.getElementById('exp-final').value.replace(',', '.');
+            const qty = document.getElementById('exp-qty').value;
+
+            // Salva no localStorage
+            localStorage.setItem('exp_calc_data', JSON.stringify({
+                bonus, init, final, qty
+            }));
+
+            const nBonus = parseFloat(bonus) || 0;
+            const nInit = parseFloat(init) || 0;
+            const nFinal = parseFloat(final) || 0;
+            const nQty = parseInt(qty) || 1;
+
+            const totalGain = nFinal - nInit;
+            const bonusFactor = 1 + (nBonus / 100);
+            const baseGain = totalGain / bonusFactor;
+
+            const perTrade = totalGain / nQty;
+            const perTradeBase = baseGain / nQty;
+
+            document.getElementById('exp-total-res').innerText = totalGain.toFixed(3) + '%';
+            document.getElementById('exp-per-res').innerText = perTrade.toFixed(3) + '%';
+            document.getElementById('exp-per-base-res').innerText = perTradeBase.toFixed(3) + '%';
+        }
+        let updateTimeout;
+
+        function formatOnly(input) {
+            let val = input.value.replace(/\D/g, '');
+            if (val) input.value = Number(val).toLocaleString('pt-BR');
+        }
+
+        function delayedUpdate() {
+            document.getElementById('save-text').innerText = 'Salvando...';
+            clearTimeout(updateTimeout);
+            updateTimeout = setTimeout(saveAndRefresh, 400);
+        }
+
+        async function init() {
+            // 1. Carrega a lista completa de níveis do BDO
+            const lvlsResp = await fetch('api/levels');
+            const levels = await lvlsResp.json();
+            const levelSelect = document.getElementById('level-select');
+            levelSelect.innerHTML = levels.map(l => `<option value="${l}" style="background: #0f172a;">${l}</option>`).join('');
+
+            // 2. Carrega o status e a configuração salva do usuário
+            const statusResp = await fetch('api/status');
+            const data = await statusResp.json();
+            const config = data.user_config;
+
+            levelSelect.value = config.level;
+            document.getElementById('vp-toggle').checked = config.vp;
+            document.getElementById('cleia-toggle').checked = config.cleia;
+            document.getElementById('bargain-input').value = config.bargain;
+
+            // 3. Carrega dados da Calculadora de Exp do localStorage
+            const savedExp = localStorage.getItem('exp_calc_data');
+            if (savedExp) {
+                const expData = JSON.parse(savedExp);
+                document.getElementById('exp-bonus').value = expData.bonus || '0';
+                document.getElementById('exp-init').value = expData.init || '0';
+                document.getElementById('exp-final').value = expData.final || '0';
+                document.getElementById('exp-qty').value = expData.qty || '10';
+            }
+
+            updateExpCalc();
+            renderCalculations(data);
+        }
+
+        async function saveAndRefresh() {
+            const trades = {};
+            document.querySelectorAll('.input-qty').forEach(input => {
+                trades[input.dataset.destino] = parseInt(input.value) || 0;
+            });
+
+            const config = {
+                level: document.getElementById('level-select').value,
+                vp: document.getElementById('vp-toggle').checked,
+                cleia: document.getElementById('cleia-toggle').checked,
+                bargain: document.getElementById('bargain-input').value,
+                trades: trades
+            };
+
+            await fetch('api/save_config', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(config)
+            });
+
+            const resp = await fetch('api/status');
+            const data = await resp.json();
+            renderCalculations(data);
+            document.getElementById('save-text').innerText = 'Dados sincronizados';
+        }
+
+        function renderCalculations(data) {
+            document.getElementById('total-discount-display').innerText = data.total_discount_pct;
+            document.getElementById('level-bonus-display').innerText = data.level_bonus_pct;
+            document.getElementById('rem-itens').innerText = data.rem_itens.toLocaleString('pt-BR');
+            document.getElementById('rem-mats').innerText = data.rem_mats.toLocaleString('pt-BR');
+            document.getElementById('rem-coins').innerText = data.rem_coins.toLocaleString('pt-BR');
+
+            const container = document.getElementById('routes-container');
+            let firstPriorityFound = false;
+
+            container.innerHTML = data.costs.map(c => {
+                let extraStyle = "";
+                // Aplica margem e quebra de linha para o grupo de prioridade, mas de forma equilibrada
+                if (c.is_priority) {
+                    if (!firstPriorityFound) {
+                        extraStyle = "grid-column-start: 1;";
+                        firstPriorityFound = true;
+                    }
+                }
+
+                return `
+                <div class="route-item" style="${extraStyle}">
+                    <div class="route-name">${c.destino}</div>
+                    <div class="route-costs">
+                        <span style="color: var(--muted); text-decoration: line-through;">${c.base.toLocaleString('pt-BR')}</span>
+                        <span style="color: #fff;">${c.final.toLocaleString('pt-BR')}</span>
+                    </div>
+                    <div class="route-total">${c.barganha_usada.toLocaleString('pt-BR')}</div>
+                    <input type="number" class="input-qty" 
+                           data-destino="${c.destino}" 
+                           value="${c.num_trocas}" 
+                           oninput="delayedUpdate()">
+                </div>
+            `}).join('');
+        }
+
+        // Funções da Tabela de Exp
+        async function saveExpRecord() {
+            const btn = document.querySelector('.btn-primary');
+            const originalHTML = btn.innerHTML;
+
+            const level = document.getElementById('level-select').value;
+            const bonus = document.getElementById('exp-bonus').value.replace(',', '.');
+            const init = document.getElementById('exp-init').value.replace(',', '.');
+            const final = document.getElementById('exp-final').value.replace(',', '.');
+            const qty = document.getElementById('exp-qty').value;
+
+            const nBonus = parseFloat(bonus) || 0;
+            const nInit = parseFloat(init) || 0;
+            const nFinal = parseFloat(final) || 0;
+            const nQty = parseInt(qty) || 1;
+
+            const totalGain = nFinal - nInit;
+            const bonusFactor = 1 + (nBonus / 100);
+            const baseGain = totalGain / bonusFactor;
+            const perTradeBase = baseGain / nQty;
+
+            btn.innerHTML = '<i data-lucide="loader-2" style="animation: spin 1s linear infinite;"></i>';
+            btn.disabled = true;
+            lucide.createIcons();
+
+            try {
+                await fetch('api/save_exp_record', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        level: level, // Agora envia o nome do nível (ex: "Artesão 5")
+                        trades: nQty,
+                        base_exp_pct: perTradeBase,
+                        bonus_exp: nBonus
+                    })
+                });
+
+                btn.innerHTML = '<i data-lucide="check"></i>';
+                lucide.createIcons();
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                    lucide.createIcons();
+                }, 2000);
+            } catch (err) {
+                console.error(err);
+                btn.innerHTML = '<i data-lucide="x"></i>';
+                lucide.createIcons();
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                    lucide.createIcons();
+                }, 2000);
+            }
+        }
+
+        async function openExpTable() {
+            document.getElementById('exp-table-modal').classList.add('open');
+            const resp = await fetch('api/exp_table');
+            const data = await resp.json();
+            renderExpTable(data);
+        }
+
+        function closeExpTable() {
+            document.getElementById('exp-table-modal').classList.remove('open');
+        }
+
+        function closeExpTableOnBg(e) {
+            if (e.target.id === 'exp-table-modal') closeExpTable();
+        }
+
+        function renderExpTable(data) {
+            const tbody = document.getElementById('exp-table-body');
+            if (!data || data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-table-msg">Nenhum registro salvo ainda.</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = data.map(row => {
+                const bonusFactor = 1 + (row.bonus_exp / 100);
+                // Calcula quantas permutas seriam necessárias para 100% no nível base (sem bônus)
+                const baseTradesTo100 = row.base_exp_pct > 0 ? (100 / row.base_exp_pct) : 0;
+                // Divide esse esforço base pelo multiplicador de bônus atual
+                const tradesWithBonus = baseTradesTo100 > 0 ? Math.ceil(baseTradesTo100 / bonusFactor) : '---';
+
+                return `
+                <tr>
+                    <td style="font-weight: 600; color: #fff; text-align: left; position: relative;">
+                        ${row.level}
+                        <button class="btn-delete-record" onclick="event.stopPropagation(); deleteExpRecord('${row.level}')" title="Remover este registro">
+                            <i data-lucide="trash-2"></i>
+                        </button>
+                    </td>
+                    <td style="color: var(--muted);">${row.trades.toLocaleString('pt-BR')}</td>
+                    <td style="font-family: monospace; color: var(--success); font-weight: 600;">
+                        ${row.base_exp_pct.toFixed(5)}%
+                    </td>
+                    <td style="color: #fff; font-weight: 600;">
+                        ${baseTradesTo100 > 0 ? Math.ceil(baseTradesTo100).toLocaleString('pt-BR') : '---'}
+                    </td>
+                    <td>
+                        <input type="number" class="bonus-input" 
+                               value="${row.bonus_exp}" 
+                               onchange="updateBonusExp('${row.level}', this.value)">
+                        <span style="font-size: 0.7rem; color: var(--muted);">%</span>
+                    </td>
+                    <td style="font-weight: 700; color: var(--accent-primary);">
+                        ${tradesWithBonus.toLocaleString('pt-BR')}
+                    </td>
+                </tr>
+            `}).join('');
+            lucide.createIcons();
+        }
+
+        async function deleteExpRecord(level) {
+            if (!confirm(`Tem certeza que deseja remover o registro de ${level}?`)) {
+                return;
+            }
+
+            try {
+                const res = await fetch('api/delete_exp_record', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ level: level })
+                });
+
+                if (res.ok) {
+                    const resp = await fetch('api/exp_table');
+                    const data = await resp.json();
+                    renderExpTable(data);
+                }
+            } catch (error) {
+                console.error("Erro ao deletar registro:", error);
+            }
+        }
+
+        async function updateBonusExp(level, newValue) {
+            const nBonus = parseFloat(newValue) || 0;
+            await fetch('api/update_exp_bonus', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    level: level,
+                    bonus_exp: nBonus
+                })
+            });
+            // Atualiza a tabela localmente para refletir o novo cálculo de permutas p/ 100%
+            const resp = await fetch('api/exp_table');
+            const data = await resp.json();
+            renderExpTable(data);
+        }
+
+        init();
+        // Inicializa ícones Lucide
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

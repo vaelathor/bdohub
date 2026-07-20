@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDO CP Calculator</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('cp.static', filename='css/style.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='bdo_hub.svg') }}">
+
+    <style>
+        @font-face {
+            font-family: 'Web Pearl';
+            src: url('{{ url_for("static", filename="fonts/web_pearl_original.ttf") }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1, h2, h3, .section-title, .stat-label {
+            font-family: 'Web Pearl', 'Outfit', sans-serif !important;
+        }
+        .btn-ocr:hover { background: rgba(56, 189, 248, 0.25); border-color: #38bdf8; }
+        .btn-ocr:disabled { opacity: 0.5; cursor: not-allowed; }
+        .ocr-status.success { color: #4ade80; }
+        .ocr-status.error { color: #f87171; }
+        .ocr-status.loading { color: #fbbf24; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .spin { animation: spin 1s linear infinite; }
+        .btn-ocr-clean {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            background: none;
+            border: none;
+            flex-shrink: 0;
+            opacity: 0.7;
+            color: inherit;
+            transition: opacity 0.2s;
+        }
+        .btn-ocr-clean:hover {
+            opacity: 1;
+            color: #38bdf8;
+        }
+        .btn-ocr-clean svg {
+            width: 18px;
+            height: 18px;
+        }
+
+    </style>
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <header class="top-nav">
+            <div class="logo-area">
+                <i data-lucide="calculator" class="logo-icon"></i>
+                <h1>Calculadora de CP</h1>
+                <button class="btn-icon-minimal" id="btn-open-settings" title="Configurações de Meta" style="margin-left: 0.5rem;">
+                    <i data-lucide="settings"></i>
+                </button>
+            </div>
+            <div class="nav-info">
+                Simulador de Pontos de Contribuição e Life Skill
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Coluna Esquerda: Inventário de Subprodutos -->
+            <div class="side-col">
+                <section class="glass-panel inventory-panel">
+                    <div style="display:flex;align-items:center;justify-content:space-between;">
+                        <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="package"></i> Subprodutos</h2>
+                        <input type="file" id="ocr-inventory-input" accept="image/*" style="display:none">
+                        <button id="btn-ocr-inventory" class="btn-ocr btn-ocr-clean" title="Importar quantidades de um print do inventário" style="background:none;border:none;cursor:pointer;">
+                            <i data-lucide="scan"></i>
+                        </button>
+                    </div>
+                    <div id="ocr-inventory-status" style="margin-top:0.3rem;font-size:0.75rem;min-height:1.2em;display:none;text-align:center;"></div>
+                    <form id="inventory-form">
+                        {% for item, data in items_data.items() %}
+                        <div class="item-input-group" id="group-{{ loop.index0 }}">
+                            <div class="item-info">
+                                <i data-lucide="{{ data.icon }}" class="item-icon"></i>
+                                <label for="item-{{ loop.index0 }}">{{ item }}</label>
+                            </div>
+                            <input type="number" id="item-{{ loop.index0 }}" data-item="{{ item }}" class="item-qty-input" value="0" min="0">
+                            <button type="button" class="btn-toggle-ignore" data-item="{{ item }}" data-target="group-{{ loop.index0 }}" title="Alternar cálculo deste item">
+                                <i data-lucide="eye"></i>
+                            </button>
+                        </div>
+                        {% endfor %}
+                    </form>
+                </section>
+            </div>
+
+            <!-- Coluna Central: Resultados de CP -->
+            <div class="main-col">
+                <div class="status-row">
+                    <section class="glass-panel current-status-panel">
+                        <h2 class="section-title"><i data-lucide="user"></i> Seu Status Atual</h2>
+                        <div class="status-inputs">
+                            <div class="form-group">
+                                <label>CP Atual</label>
+                                <input type="number" id="current-cp" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label>% Atual</label>
+                                <input type="number" id="current-cp-pct" value="0" step="0.01">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="glass-panel goal-panel">
+                        <h2 class="section-title"><i data-lucide="flag"></i> Meta: <span id="display-goal-cp">---</span> CP</h2>
+                        <div class="goal-content">
+                            <div class="missing-badge" id="missing-goal-text">--</div>
+                            <span class="sub-label">Entregas pendentes</span>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="glass-panel projection-panel">
+                    <h2 class="section-title"><i data-lucide="trending-up"></i> Projeção de Avanço</h2>
+                    <div class="projection-container">
+                        <div class="proj-levels">
+                            <div class="proj-item">
+                                <span class="proj-label">CP Atual</span>
+                                <span class="proj-value" id="disp-current-cp">0</span>
+                            </div>
+                            <div class="proj-arrow">
+                                <i data-lucide="chevrons-right"></i>
+                            </div>
+                            <div class="proj-item highlight">
+                                <span class="proj-label">CP Projetado</span>
+                                <span class="proj-value" id="disp-final-cp">0</span>
+                            </div>
+                        </div>
+                        <div class="progress-section">
+                            <div class="progress-labels">
+                                <span id="disp-final-pct">0.00%</span>
+                                <span>Progresso Final</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" id="cp-progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            <div class="summary-item">
+                                <i data-lucide="check-square"></i>
+                                <span id="total-deliveries">0</span> Entregas Totais
+                            </div>
+                            <div class="summary-item">
+                                <i data-lucide="star"></i>
+                                <span id="total-cp-xp">0</span> CP Exp Total
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Coluna Direita: Simulação de Life Skill -->
+            <div class="side-col">
+                <section class="glass-panel lifeskills-panel">
+                    <div style="display:flex;align-items:center;justify-content:space-between;">
+                        <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="sparkles"></i> Avanço de Profissões</h2>
+                        <input type="file" id="ocr-image-input" accept="image/*" style="display:none">
+                        <button id="btn-ocr-upload" class="btn-ocr btn-ocr-clean" title="Importar níveis de um print da tela de profissões" style="background:none;border:none;cursor:pointer;">
+                            <i data-lucide="scan" style="width:18px;height:18px;"></i>
+                        </button>
+                    </div>
+                        <div id="ocr-status" style="margin-top:0.3rem;font-size:0.75rem;min-height:1.2em;display:none;text-align:center;"></div>
+                    <div id="professions-list" class="professions-container">
+                        <!-- Gerado por JS -->
+                    </div>
+
+                    <div class="help-text">
+                        * Cálculos baseados em 30.000 XP por entrega.
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modais para editar nível de profissão -->
+    <div id="prof-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3 id="modal-prof-title">Editar Nível</h3>
+                <button class="btn-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nível (Ex: Mestre 10)</label>
+                    <input type="text" id="modal-prof-level" placeholder="Mestre 10">
+                </div>
+                <div class="form-group">
+                    <label>% Atual</label>
+                    <input type="number" id="modal-prof-pct" step="0.01" value="0">
+                </div>
+            </div>
+            <div class="modal-footer" style="display: flex; justify-content: center;">
+                <button id="btn-save-prof" class="btn-primary" title="Salvar Alterações">
+                    <i data-lucide="check"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Configurações -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 350px;">
+            <div class="modal-header">
+                <h3><i data-lucide="settings"></i> Configurações</h3>
+                <button class="btn-close" id="btn-close-settings">&times;</button>
+            </div>
+            <form id="settings-form">
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label>Meta de CP Desejada</label>
+                    <input type="number" id="input-goal-cp" class="large-input-sm" value="600" style="text-align: center; width: 100%;">
+                </div>
+                <button type="submit" class="btn-primary" title="Salvar Meta">
+                    <i data-lucide="check"></i>
+                </button>
+                <div id="settings-feedback" class="feedback-msg"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('cp.static', filename='js/main.js') }}"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+[
+    {
+        "level": "Artesão 4",
+        "trades": 201,
+        "base_exp_pct": 0.02414,
+        "bonus_exp": 570.0
+    },
+    {
+        "level": "Artesão 5",
+        "trades": 128,
+        "base_exp_pct": 0.04825,
+        "bonus_exp": 472.0
+    },
+    {
+        "level": "Artesão 6",
+        "trades": 74,
+        "base_exp_pct": 0.04716,
+        "bonus_exp": 402.0
+    },
+    {
+        "level": "Artesão 7",
+        "trades": 113,
+        "base_exp_pct": 0.04524,
+        "bonus_exp": 452.0
+    },
+    {
+        "level": "Artesão 8",
+        "trades": 103,
+        "base_exp_pct": 0.04389,
+        "bonus_exp": 478.0
+    },
+    {
+        "level": "Artesão 9",
+        "trades": 97,
+        "base_exp_pct": 0.04284,
+        "bonus_exp": 380.0
+    },
+    {
+        "level": "Artesão 10",
+        "trades": 134,
+        "base_exp_pct": 0.04252,
+        "bonus_exp": 400.0
+    },
+    {
+        "level": "Mestre 1",
+        "trades": 186,
+        "base_exp_pct": 0.03944,
+        "bonus_exp": 400.0
+    },
+    {
+        "level": "Mestre 2",
+        "trades": 185,
+        "base_exp_pct": 0.03797,
+        "bonus_exp": 454.0
+    },
+    {
+        "level": "Mestre 3",
+        "trades": 110,
+        "base_exp_pct": 0.03594,
+        "bonus_exp": 395.0
+    },
+    {
+        "level": "Mestre 4",
+        "trades": 111,
+        "base_exp_pct": 0.03474,
+        "bonus_exp": 365.0
+    },
+    {
+        "level": "Mestre 5",
+        "trades": 136,
+        "base_exp_pct": 0.03294,
+        "bonus_exp": 435.0
+    },
+    {
+        "level": "Mestre 6",
+        "trades": 147,
+        "base_exp_pct": 0.03125,
+        "bonus_exp": 423.0
+    },
+    {
+        "level": "Mestre 7",
+        "trades": 159,
+        "base_exp_pct": 0.02959,
+        "bonus_exp": 434.0
+    },
+    {
+        "level": "Mestre 8",
+        "trades": 249,
+        "base_exp_pct": 0.02829,
+        "bonus_exp": 437.0
+    },
+    {
+        "level": "Mestre 9",
+        "trades": 203,
+        "base_exp_pct": 0.02707,
+        "bonus_exp": 437.0
+    },
+    {
+        "level": "Mestre 10",
+        "trades": 279,
+        "base_exp_pct": 0.0256,
+        "bonus_exp": 437.0
+    },
+    {
+        "level": "Mestre 11",
+        "trades": 190,
+        "base_exp_pct": 0.02438,
+        "bonus_exp": 539.0
+    },
+    {
+        "level": "Mestre 12",
+        "trades": 268,
+        "base_exp_pct": 0.02335,
+        "bonus_exp": 539.0
+    },
+    {
+        "level": "Mestre 13",
+        "trades": 204,
+        "base_exp_pct": 0.02216,
+        "bonus_exp": 539.0
+    },
+    {
+        "level": "Mestre 14",
+        "trades": 302,
+        "base_exp_pct": 0.02101,
+        "bonus_exp": 550.0
+    },
+    {
+        "level": "Mestre 15",
+        "trades": 257,
+        "base_exp_pct": 0.02,
+        "bonus_exp": 550.0
+    },
+    {
+        "level": "Mestre 16",
+        "trades": 168,
+        "base_exp_pct": 0.01911,
+        "bonus_exp": 550.0
+    },
+    {
+        "level": "Mestre 17",
+        "trades": 222,
+        "base_exp_pct": 0.01818,
+        "bonus_exp": 600.0
+    },
+    {
+        "level": "Mestre 18",
+        "trades": 200,
+        "base_exp_pct": 0.01739,
+        "bonus_exp": 600.0
+    },
+    {
+        "level": "Mestre 19",
+        "trades": 199,
+        "base_exp_pct": 0.01637,
+        "bonus_exp": 600.0
+    },
+    {
+        "level": "Mestre 20",
+        "trades": 252,
+        "base_exp_pct": 0.01585,
+        "bonus_exp": 600.0
+    },
+    {
+        "level": "Mestre 21",
+        "trades": 196,
+        "base_exp_pct": 0.01553,
+        "bonus_exp": 550.0
+    },
+    {
+        "level": "Mestre 22",
+        "trades": 321,
+        "base_exp_pct": 0.01528,
+        "bonus_exp": 470.0
+    },
+    {
+        "level": "Mestre 23",
+        "trades": 329,
+        "base_exp_pct": 0.01499,
+        "bonus_exp": 470.0
+    },
+    {
+        "level": "Mestre 24",
+        "trades": 124,
+        "base_exp_pct": 0.01484,
+        "bonus_exp": 470.0
+    },
+    {
+        "level": "Mestre 25",
+        "trades": 296,
+        "base_exp_pct": 0.01458,
+        "bonus_exp": 470.0
+    },
+    {
+        "level": "Mestre 26",
+        "trades": 187,
+        "base_exp_pct": 0.01432,
+        "bonus_exp": 470.0
+    },
+    {
+        "level": "Mestre 27",
+        "trades": 195,
+        "base_exp_pct": 0.01442,
+        "bonus_exp": 550.0
+    },
+    {
+        "level": "Mestre 28",
+        "trades": 408,
+        "base_exp_pct": 0.014,
+        "bonus_exp": 600.0
+    },
+    {
+        "level": "Mestre 29",
+        "trades": 261,
+        "base_exp_pct": 0.0137,
+        "bonus_exp": 600.0
+    },
+    {
+        "level": "Mestre 30",
+        "trades": 251,
+        "base_exp_pct": 0.01354,
+        "bonus_exp": 600.0
+    },
+    {
+        "level": "Guru 1",
+        "trades": 234,
+        "base_exp_pct": 0.01342,
+        "bonus_exp": 650.0
+    },
+    {
+        "level": "Guru 2",
+        "trades": 274,
+        "base_exp_pct": 0.01333,
+        "bonus_exp": 570.0
+    },
+    {
+        "level": "Guru 3",
+        "trades": 110,
+        "base_exp_pct": 0.01342,
+        "bonus_exp": 590.0
+    },
+    {
+        "level": "Guru 4",
+        "trades": 211,
+        "base_exp_pct": 0.01337,
+        "bonus_exp": 590.0
+    },
+    {
+        "level": "Guru 5",
+        "trades": 182,
+        "base_exp_pct": 0.01334,
+        "bonus_exp": 620.0
+    },
+    {
+        "level": "Guru 6",
+        "trades": 143,
+        "base_exp_pct": 0.01336,
+        "bonus_exp": 670.0
+    }
+]

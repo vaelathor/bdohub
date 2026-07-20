@@ -1,0 +1,638 @@
+[
+    {
+        "data": "2026-05-01",
+        "nivel": "Guru 17",
+        "porcentagem": 6.1846140932013505,
+        "exp_absoluta": 1550843020.0
+    },
+    {
+        "data": "2026-05-02",
+        "nivel": "Guru 26",
+        "porcentagem": 57.40074059433567,
+        "exp_absoluta": 2366132240.0
+    },
+    {
+        "data": "2026-05-03",
+        "nivel": "Guru 31",
+        "porcentagem": 0.9756320729341924,
+        "exp_absoluta": 3181421460.0
+    },
+    {
+        "data": "2026-05-04",
+        "nivel": "Guru 33",
+        "porcentagem": 85.76980941976545,
+        "exp_absoluta": 3996710680.0
+    },
+    {
+        "data": "2026-05-05",
+        "nivel": "Guru 35",
+        "porcentagem": 97.56895084129931,
+        "exp_absoluta": 4811999900.0
+    },
+    {
+        "data": "2026-05-06",
+        "nivel": "Guru 37",
+        "porcentagem": 64.04403279177947,
+        "exp_absoluta": 5627289120.0
+    },
+    {
+        "data": "2026-05-07",
+        "nivel": "Guru 10",
+        "porcentagem": 0.0,
+        "exp_absoluta": 6034933730.0
+    },
+    {
+        "data": "2026-05-08",
+        "nivel": "Guru 39",
+        "porcentagem": 64.77347663200065,
+        "exp_absoluta": 6850222950.0
+    },
+    {
+        "data": "2026-05-09",
+        "nivel": "Guru 40",
+        "porcentagem": 75.86316376534977,
+        "exp_absoluta": 7665512170.0
+    },
+    {
+        "data": "2026-05-11",
+        "nivel": "Guru 41",
+        "porcentagem": 73.36304723982498,
+        "exp_absoluta": 8480801390.0
+    },
+    {
+        "data": "2026-05-12",
+        "nivel": "Guru 42",
+        "porcentagem": 60.25320681612033,
+        "exp_absoluta": 9296090610.0
+    },
+    {
+        "data": "2026-05-13",
+        "nivel": "Guru 43",
+        "porcentagem": 39.0079098251544,
+        "exp_absoluta": 10111379830.0
+    },
+    {
+        "data": "2026-05-15",
+        "nivel": "Guru 44",
+        "porcentagem": 11.672542815391607,
+        "exp_absoluta": 10926669050.0
+    },
+    {
+        "data": "2026-05-16",
+        "nivel": "Guru 44",
+        "porcentagem": 77.3203851927816,
+        "exp_absoluta": 11741958270.0
+    },
+    {
+        "data": "2026-05-17",
+        "nivel": "Guru 45",
+        "porcentagem": 38.02498058412445,
+        "exp_absoluta": 12557247490.0
+    },
+    {
+        "data": "2026-05-18",
+        "nivel": "Guru 45",
+        "porcentagem": 96.12041697868526,
+        "exp_absoluta": 13372536710.0
+    },
+    {
+        "data": "2026-05-19",
+        "nivel": "Guru 46",
+        "porcentagem": 47.97863272575104,
+        "exp_absoluta": 14187825930.0
+    },
+    {
+        "data": "2026-05-20",
+        "nivel": "Guru 46",
+        "porcentagem": 99.39052486415521,
+        "exp_absoluta": 15003115150.0
+    },
+    {
+        "data": "2026-05-22",
+        "nivel": "Guru 47",
+        "porcentagem": 44.95789007389034,
+        "exp_absoluta": 15818404370.0
+    },
+    {
+        "data": "2026-05-23",
+        "nivel": "Guru 47",
+        "porcentagem": 90.4551386621344,
+        "exp_absoluta": 16633693590.0
+    },
+    {
+        "data": "2026-05-25",
+        "nivel": "Guru 48",
+        "porcentagem": 31.816271337341124,
+        "exp_absoluta": 17448982810.0
+    },
+    {
+        "data": "2026-05-26",
+        "nivel": "Guru 48",
+        "porcentagem": 72.07932246952416,
+        "exp_absoluta": 18264272030.0
+    },
+    {
+        "data": "2026-05-27",
+        "nivel": "Guru 49",
+        "porcentagem": 10.922454376353661,
+        "exp_absoluta": 19079561250.0
+    },
+    {
+        "data": "2026-05-29",
+        "nivel": "Guru 49",
+        "porcentagem": 46.5534726258122,
+        "exp_absoluta": 19894850470.0
+    },
+    {
+        "data": "2026-05-30",
+        "nivel": "Guru 49",
+        "porcentagem": 82.18449087527074,
+        "exp_absoluta": 20710139690.0
+    },
+    {
+        "data": "2026-05-31",
+        "nivel": "Guru 50",
+        "porcentagem": 0.0,
+        "exp_absoluta": 21525428910.0
+    },
+    {
+        "data": "2026-06-01",
+        "nivel": "Guru 50",
+        "porcentagem": 58.79476932868002,
+        "exp_absoluta": 22637983854.784508
+    },
+    {
+        "data": "2026-06-02",
+        "nivel": "Guru 50",
+        "porcentagem": 96.6795248670297,
+        "exp_absoluta": 23617533382.065765
+    },
+    {
+        "data": "2026-06-03",
+        "nivel": "Guru 51",
+        "porcentagem": 32.440275920499374,
+        "exp_absoluta": 24651205557.576973
+    },
+    {
+        "data": "2026-06-05",
+        "nivel": "Guru 51",
+        "porcentagem": 67.43509554344261,
+        "exp_absoluta": 25673660330.853146
+    },
+    {
+        "data": "2026-06-06",
+        "nivel": "Guru 52",
+        "porcentagem": 5.5156831875772045,
+        "exp_absoluta": 26807222918.861595
+    },
+    {
+        "data": "2026-06-08",
+        "nivel": "Guru 52",
+        "porcentagem": 39.45795848820221,
+        "exp_absoluta": 27927846451.066376
+    },
+    {
+        "data": "2026-06-09",
+        "nivel": "Guru 52",
+        "porcentagem": 74.81308076294646,
+        "exp_absoluta": 29095115930.03163
+    },
+    {
+        "data": "2026-06-10",
+        "nivel": "Guru 53",
+        "porcentagem": 4.326060598172963,
+        "exp_absoluta": 30088071308.089973
+    },
+    {
+        "data": "2026-06-12",
+        "nivel": "Guru 53",
+        "porcentagem": 32.885143975569655,
+        "exp_absoluta": 31153541967.186954
+    },
+    {
+        "data": "2026-06-13",
+        "nivel": "Guru 53",
+        "porcentagem": 59.16895367673708,
+        "exp_absoluta": 32134127642.00756
+    },
+    {
+        "data": "2026-06-14",
+        "nivel": "Guru 53",
+        "porcentagem": 86.54849774247025,
+        "exp_absoluta": 33155592528.5375
+    },
+    {
+        "data": "2026-06-15",
+        "nivel": "Guru 54",
+        "porcentagem": 13.797962491902574,
+        "exp_absoluta": 34239124407.589382
+    },
+    {
+        "data": "2026-06-16",
+        "nivel": "Guru 54",
+        "porcentagem": 37.04122496921528,
+        "exp_absoluta": 35219004104.93769
+    },
+    {
+        "data": "2026-06-17",
+        "nivel": "Guru 54",
+        "porcentagem": 61.16923755646913,
+        "exp_absoluta": 36236182725.82585
+    },
+    {
+        "data": "2026-06-19",
+        "nivel": "Guru 54",
+        "porcentagem": 87.61332560013433,
+        "exp_absoluta": 37351001483.05371
+    },
+    {
+        "data": "2026-06-20",
+        "nivel": "Guru 55",
+        "porcentagem": 11.963312617568839,
+        "exp_absoluta": 38443102764.091064
+    },
+    {
+        "data": "2026-06-22",
+        "nivel": "Guru 55",
+        "porcentagem": 33.41370347042442,
+        "exp_absoluta": 39464957877.814804
+    },
+    {
+        "data": "2026-06-23",
+        "nivel": "Guru 55",
+        "porcentagem": 56.54009077491512,
+        "exp_absoluta": 40566654219.44131
+    },
+    {
+        "data": "2026-06-24",
+        "nivel": "Guru 55",
+        "porcentagem": 80.66693985972775,
+        "exp_absoluta": 41716010624.3888
+    },
+    {
+        "data": "2026-06-26",
+        "nivel": "Guru 56",
+        "porcentagem": 1.0134042310603357,
+        "exp_absoluta": 42691552776.336464
+    },
+    {
+        "data": "2026-06-27",
+        "nivel": "Guru 56",
+        "porcentagem": 22.35007629248344,
+        "exp_absoluta": 43840127447.45167
+    },
+    {
+        "data": "2026-06-28",
+        "nivel": "Guru 56",
+        "porcentagem": 43.25372761119648,
+        "exp_absoluta": 44965392173.33678
+    },
+    {
+        "data": "2026-06-29",
+        "nivel": "Guru 56",
+        "porcentagem": 62.71817467663388,
+        "exp_absoluta": 46013183076.35415
+    },
+    {
+        "data": "2026-06-30",
+        "nivel": "Guru 56",
+        "porcentagem": 81.43958878094007,
+        "exp_absoluta": 47020975762.38144
+    },
+    {
+        "data": "2026-07-01",
+        "nivel": "Guru 57",
+        "porcentagem": 2.9956386453361503,
+        "exp_absoluta": 48202323337.96089
+    },
+    {
+        "data": "2026-07-03",
+        "nivel": "Guru 57",
+        "porcentagem": 20.207802314278315,
+        "exp_absoluta": 49249322816.32634
+    },
+    {
+        "data": "2026-07-04",
+        "nivel": "Guru 57",
+        "porcentagem": 36.552172802392576,
+        "exp_absoluta": 50243535264.244514
+    },
+    {
+        "data": "2026-07-06",
+        "nivel": "Guru 57",
+        "porcentagem": 52.91067337129284,
+        "exp_absoluta": 51238607231.48267
+    },
+    {
+        "data": "2026-07-07",
+        "nivel": "Guru 57",
+        "porcentagem": 71.9409946839047,
+        "exp_absoluta": 52396203502.972
+    },
+    {
+        "data": "2026-07-08",
+        "nivel": "Guru 57",
+        "porcentagem": 90.10380881975081,
+        "exp_absoluta": 53501030141.36802
+    },
+    {
+        "data": "2026-07-10",
+        "nivel": "Guru 58",
+        "porcentagem": 7.956175079297156,
+        "exp_absoluta": 54649888182.27031
+    },
+    {
+        "data": "2026-07-11",
+        "nivel": "Guru 58",
+        "porcentagem": 24.426294837783587,
+        "exp_absoluta": 55781991855.957954
+    },
+    {
+        "data": "2026-07-12",
+        "nivel": "Guru 58",
+        "porcentagem": 40.28700876738854,
+        "exp_absoluta": 56872206910.26942
+    },
+    {
+        "data": "2026-07-13",
+        "nivel": "Guru 58",
+        "porcentagem": 57.52362352345576,
+        "exp_absoluta": 58056997013.40317
+    },
+    {
+        "data": "2026-07-14",
+        "nivel": "Guru 58",
+        "porcentagem": 72.8877088562738,
+        "exp_absoluta": 59113075396.75381
+    },
+    {
+        "data": "2026-07-15",
+        "nivel": "Guru 58",
+        "porcentagem": 88.7982215968158,
+        "exp_absoluta": 60206713463.01866
+    },
+    {
+        "data": "2026-07-17",
+        "nivel": "Guru 59",
+        "porcentagem": 4.940038513267613,
+        "exp_absoluta": 61360393774.94594
+    },
+    {
+        "data": "2026-07-18",
+        "nivel": "Guru 59",
+        "porcentagem": 19.20541636738858,
+        "exp_absoluta": 62468422876.98096
+    },
+    {
+        "data": "2026-07-22",
+        "nivel": "Guru 59",
+        "porcentagem": 55.05115256819939,
+        "exp_absoluta": 65252654693.377945
+    },
+    {
+        "data": "2026-07-24",
+        "nivel": "Guru 59",
+        "porcentagem": 90.10438854986236,
+        "exp_absoluta": 67975330950.91315
+    },
+    {
+        "data": "2026-07-25",
+        "nivel": "Guru 60",
+        "porcentagem": 4.079287281452825,
+        "exp_absoluta": 69101988136.41962
+    },
+    {
+        "data": "2026-07-26",
+        "nivel": "Guru 60",
+        "porcentagem": 15.29102956851779,
+        "exp_absoluta": 70086043283.9072
+    },
+    {
+        "data": "2026-07-27",
+        "nivel": "Guru 60",
+        "porcentagem": 26.951835739704784,
+        "exp_absoluta": 71109512789.61017
+    },
+    {
+        "data": "2026-07-28",
+        "nivel": "Guru 60",
+        "porcentagem": 38.764299009017236,
+        "exp_absoluta": 72146293245.9435
+    },
+    {
+        "data": "2026-07-29",
+        "nivel": "Guru 60",
+        "porcentagem": 50.059818378012885,
+        "exp_absoluta": 73137701511.84966
+    },
+    {
+        "data": "2026-07-31",
+        "nivel": "Guru 60",
+        "porcentagem": 61.73269159925624,
+        "exp_absoluta": 74162230143.10323
+    },
+    {
+        "data": "2026-08-01",
+        "nivel": "Guru 60",
+        "porcentagem": 73.08052159340033,
+        "exp_absoluta": 75158229715.03726
+    },
+    {
+        "data": "2026-08-03",
+        "nivel": "Guru 60",
+        "porcentagem": 84.86483268229236,
+        "exp_absoluta": 76192539253.17194
+    },
+    {
+        "data": "2026-08-04",
+        "nivel": "Guru 60",
+        "porcentagem": 97.5313955754405,
+        "exp_absoluta": 77304284073.632
+    },
+    {
+        "data": "2026-08-05",
+        "nivel": "Guru 61",
+        "porcentagem": 8.433569165879774,
+        "exp_absoluta": 78357396280.20804
+    },
+    {
+        "data": "2026-08-07",
+        "nivel": "Guru 61",
+        "porcentagem": 19.06341849589658,
+        "exp_absoluta": 79411666363.12605
+    },
+    {
+        "data": "2026-08-08",
+        "nivel": "Guru 61",
+        "porcentagem": 29.342574546516925,
+        "exp_absoluta": 80431154632.93745
+    },
+    {
+        "data": "2026-08-09",
+        "nivel": "Guru 61",
+        "porcentagem": 39.747168616028866,
+        "exp_absoluta": 81463083864.65454
+    },
+    {
+        "data": "2026-08-11",
+        "nivel": "Guru 61",
+        "porcentagem": 67.98322186134855,
+        "exp_absoluta": 84263539945.6415
+    },
+    {
+        "data": "2026-08-12",
+        "nivel": "Guru 61",
+        "porcentagem": 79.21952721842898,
+        "exp_absoluta": 85377958430.11145
+    },
+    {
+        "data": "2026-08-14",
+        "nivel": "Guru 61",
+        "porcentagem": 90.37091834008334,
+        "exp_absoluta": 86483955107.71997
+    },
+    {
+        "data": "2026-08-15",
+        "nivel": "Guru 62",
+        "porcentagem": 0.5011770291656579,
+        "exp_absoluta": 87495137600.36412
+    },
+    {
+        "data": "2026-08-17",
+        "nivel": "Guru 62",
+        "porcentagem": 10.601441335366808,
+        "exp_absoluta": 88627110309.40445
+    },
+    {
+        "data": "2026-08-18",
+        "nivel": "Guru 62",
+        "porcentagem": 19.60898687273169,
+        "exp_absoluta": 89636618121.73714
+    },
+    {
+        "data": "2026-08-19",
+        "nivel": "Guru 62",
+        "porcentagem": 29.033847186197683,
+        "exp_absoluta": 90692895892.09317
+    },
+    {
+        "data": "2026-08-21",
+        "nivel": "Guru 62",
+        "porcentagem": 39.63707768698143,
+        "exp_absoluta": 91881237819.65858
+    },
+    {
+        "data": "2026-08-22",
+        "nivel": "Guru 62",
+        "porcentagem": 49.56518960973796,
+        "exp_absoluta": 92993916795.98581
+    },
+    {
+        "data": "2026-08-23",
+        "nivel": "Guru 62",
+        "porcentagem": 59.33288715635713,
+        "exp_absoluta": 94088617560.01875
+    },
+    {
+        "data": "2026-08-24",
+        "nivel": "Guru 62",
+        "porcentagem": 69.34717372543037,
+        "exp_absoluta": 95210954436.8607
+    },
+    {
+        "data": "2026-08-25",
+        "nivel": "Guru 62",
+        "porcentagem": 79.66710258314399,
+        "exp_absoluta": 96367545737.05048
+    },
+    {
+        "data": "2026-08-26",
+        "nivel": "Guru 62",
+        "porcentagem": 89.85790415387638,
+        "exp_absoluta": 97509665280.81647
+    },
+    {
+        "data": "2026-08-28",
+        "nivel": "Guru 62",
+        "porcentagem": 98.99224671032208,
+        "exp_absoluta": 98533383688.12329
+    },
+    {
+        "data": "2026-08-29",
+        "nivel": "Guru 63",
+        "porcentagem": 6.855023727481646,
+        "exp_absoluta": 99514467909.05771
+    },
+    {
+        "data": "2026-08-31",
+        "nivel": "Guru 63",
+        "porcentagem": 15.086207095571725,
+        "exp_absoluta": 100556890792.01486
+    },
+    {
+        "data": "2026-09-02",
+        "nivel": "Guru 63",
+        "porcentagem": 31.28844440377841,
+        "exp_absoluta": 102608792951.14459
+    },
+    {
+        "data": "2026-09-04",
+        "nivel": "Guru 63",
+        "porcentagem": 40.59215632195579,
+        "exp_absoluta": 103787044214.20686
+    },
+    {
+        "data": "2026-09-05",
+        "nivel": "Guru 63",
+        "porcentagem": 49.78212606023352,
+        "exp_absoluta": 104950890810.79742
+    },
+    {
+        "data": "2026-09-06",
+        "nivel": "Guru 63",
+        "porcentagem": 58.01198441408319,
+        "exp_absoluta": 105993145889.7946
+    },
+    {
+        "data": "2026-09-07",
+        "nivel": "Guru 63",
+        "porcentagem": 66.82431433890473,
+        "exp_absoluta": 107109166995.75298
+    },
+    {
+        "data": "2026-09-08",
+        "nivel": "Guru 63",
+        "porcentagem": 75.19254957619854,
+        "exp_absoluta": 108168946557.3578
+    },
+    {
+        "data": "2026-09-09",
+        "nivel": "Guru 63",
+        "porcentagem": 84.4477813522343,
+        "exp_absoluta": 109341058143.13705
+    },
+    {
+        "data": "2026-09-11",
+        "nivel": "Guru 63",
+        "porcentagem": 92.92408015246708,
+        "exp_absoluta": 110414523213.34787
+    },
+    {
+        "data": "2026-09-12",
+        "nivel": "Guru 64",
+        "porcentagem": 0.9458565778170804,
+        "exp_absoluta": 111445998356.08824
+    },
+    {
+        "data": "2026-09-14",
+        "nivel": "Guru 64",
+        "porcentagem": 8.125978711144704,
+        "exp_absoluta": 112473522263.29121
+    },
+    {
+        "data": "2026-09-15",
+        "nivel": "Guru 64",
+        "porcentagem": 15.78220227326685,
+        "exp_absoluta": 113569179496.25882
+    }
+]

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário Completo - {{ etapa.nome }}</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="{{ url_for('hunting.static', filename='css/style.css') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='bdo_hub.svg') }}">
+    
+    <style>
+        @font-face {
+            font-family: 'Web Pearl';
+            src: url('{{ url_for("static", filename="fonts/web_pearl_original.ttf") }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1, h2, h3, .section-title, .month-title {
+            font-family: 'Web Pearl', 'Outfit', sans-serif !important;
+        }
+        .wall-calendar-container {
+            max-width: 1700px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .btn-back {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: rgba(56, 189, 248, 0.1);
+            transition: background 0.2s;
+        }
+        
+        .btn-back:hover {
+            background: rgba(56, 189, 248, 0.2);
+        }
+        
+        .months-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .month-panel {
+            background: var(--bg-panel);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .month-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    
+    <div class="wall-calendar-container">
+        <div class="header-actions">
+            <div>
+                <h1>Calendário da Etapa: <span style="color: var(--accent-primary)">{{ etapa.nome }}</span></h1>
+                <p style="color: var(--text-sec); margin-top: 0.5rem;">
+                    Período: {{ etapa.data_inicio }} a {{ etapa.data_fim }}
+                </p>
+            </div>
+            <a href="./" class="btn-back">
+                <i data-lucide="arrow-left"></i> Voltar ao Dashboard
+            </a>
+        </div>
+        
+        <div class="calendar-legend" style="margin-bottom: 2rem; justify-content: flex-start;">
+            <div class="legend-item"><span class="dot dot-normal"></span> Caça normal</div>
+            <div class="legend-item"><span class="dot dot-folga"></span> Folga</div>
+            <div class="legend-item"><span class="dot dot-falta"></span> Faltou</div>
+            <div class="legend-item"><span class="dot dot-extra"></span> Caçou na folga</div>
+        </div>
+
+        <div class="months-grid">
+            {% for mes in calendarios %}
+            <div class="month-panel">
+                <h3 class="month-title">{{ mes.nome_mes }} {{ mes.ano }}</h3>
+                
+                <div class="calendar-grid-header">
+                    <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span>
+                </div>
+                <div class="calendar-grid compact-calendar">
+                    {% for semana in mes.dados %}
+                        {% for dia in semana %}
+                            {% if dia == None %}
+                                <div class="cal-day empty"></div>
+                            {% else %}
+                                <div class="cal-day {% if dia.futuro %}future{% endif %}">
+                                    <span class="cal-date">{{ dia.dia }}</span>
+                                    
+                                    <div class="cal-content">
+                                        {% if dia.registro %}
+                                            {% set lvl_short = dia.registro.nivel | replace('Guru ', 'G') | replace('Mestre ', 'M') %}
+                                            <b>{{ lvl_short }}</b> {{ "%.1f"|format(dia.registro.porcentagem) }}%
+                                        {% elif not dia.futuro %}
+                                            {% if dia.eh_util %}
+                                                Falta
+                                            {% else %}
+                                                Folga
+                                            {% endif %}
+                                        {% endif %}
+                                    </div>
+                                    
+                                    {% if dia.registro %}
+                                        {% if dia.eh_util %}
+                                            <div class="cal-badge badge-normal"></div>
+                                        {% else %}
+                                            <div class="cal-badge badge-extra"></div>
+                                        {% endif %}
+                                    {% elif not dia.futuro %}
+                                        {% if dia.eh_util %}
+                                            <div class="cal-badge badge-falta"></div>
+                                        {% else %}
+                                            <div class="cal-badge badge-folga"></div>
+                                        {% endif %}
+                                    {% elif not dia.eh_util %}
+                                        <div class="cal-badge badge-folga"></div>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
