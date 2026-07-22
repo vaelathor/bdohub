@@ -9,6 +9,12 @@ import os
 from io import BytesIO
 
 try:
+    from dotenv import load_dotenv
+    HAS_DOTENV = True
+except ImportError:
+    HAS_DOTENV = False
+
+try:
     import requests
     HAS_REQUESTS = True
 except ImportError:
@@ -24,27 +30,45 @@ except ImportError:
 OCR_SPACE_API_URL = "https://api.ocr.space/parse/image"
 
 OCR_SPACE_API_KEY = None
-env_paths = [
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".env"),
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", ".env"),
-    "/home/ubuntu/projects/bdohub/.env",
-    ".env",
-]
-for env_path in env_paths:
-    try:
-        with open(env_path, "r") as f:
-            for line in f:
-                line = line.strip()
-                if line.startswith("OCR_SPACE_API_KEY="):
-                    OCR_SPACE_API_KEY = line.split("=", 1)[1].strip().strip('"').strip("'")
-                    break
-                if line.startswith("OCRSPACE_API_KEY="):
-                    OCR_SPACE_API_KEY = line.split("=", 1)[1].strip().strip('"').strip("'")
-                    break
-        if OCR_SPACE_API_KEY:
+
+# Try python-dotenv first, fall back to manual .env parsing
+if HAS_DOTENV:
+    # Search for .env in common locations
+    env_candidates = [
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".env"),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", ".env"),
+        os.path.join(os.path.expanduser("~"), "projects", "bdohub", ".env"),
+        ".env",
+    ]
+    for env_path in env_candidates:
+        if os.path.exists(env_path):
+            load_dotenv(env_path)
             break
-    except (IOError, OSError):
-        continue
+    OCR_SPACE_API_KEY = os.getenv("OCR_SPACE_API_KEY") or os.getenv("OCRSPACE_API_KEY")
+
+# Fallback: manual parsing if dotenv didn't find the key
+if not OCR_SPACE_API_KEY:
+    env_paths = [
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".env"),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", ".env"),
+        os.path.join(os.path.expanduser("~"), "projects", "bdohub", ".env"),
+        ".env",
+    ]
+    for env_path in env_paths:
+        try:
+            with open(env_path, "r") as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith("OCR_SPACE_API_KEY="):
+                        OCR_SPACE_API_KEY = line.split("=", 1)[1].strip().strip('"').strip("'")
+                        break
+                    if line.startswith("OCRSPACE_API_KEY="):
+                        OCR_SPACE_API_KEY = line.split("=", 1)[1].strip().strip('"').strip("'")
+                        break
+            if OCR_SPACE_API_KEY:
+                break
+        except (IOError, OSError):
+            continue
 
 
 KNOWN_PROFESSIONS = ["Alquimia", "Caça", "Coleta", "Culinária", "Cultivo", "Pesca"]

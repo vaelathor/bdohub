@@ -3,7 +3,9 @@ import sys
 import json
 import random
 from datetime import date, timedelta, datetime
-sys.path.append(r'c:\Users\Lúcio\Projetos\bdo\hunting')
+
+# Ensure script can find manager.py in the same directory when run standalone
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from manager import HuntingManager
 
 app = HuntingManager(test_mode=True)
