@@ -300,6 +300,92 @@
             box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
         }
 
+        /* Dropdown customizado de nível (mesma fonte no valor e nas opções) */
+        .level-dropdown {
+            position: relative;
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .level-dropdown-trigger {
+            width: 100%;
+            background: #0f172a;
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            padding: 0.6rem 0.8rem;
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .level-dropdown-trigger svg {
+            color: var(--muted);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+
+        .level-dropdown.open .level-dropdown-trigger svg {
+            transform: rotate(180deg);
+        }
+
+        .level-dropdown-trigger:focus-visible,
+        .level-dropdown.open .level-dropdown-trigger {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+        }
+
+        .level-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: #0f172a;
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            max-height: 280px;
+            overflow-y: auto;
+            display: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+        }
+
+        .level-dropdown.open .level-dropdown-menu {
+            display: block;
+        }
+
+        .level-dropdown-option {
+            padding: 0.55rem 0.8rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: background 0.15s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .level-dropdown-option:hover,
+        .level-dropdown-option.active {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-primary);
+        }
+
+        .level-dropdown-menu::-webkit-scrollbar {
+            width: 8px;
+        }
+        .level-dropdown-menu::-webkit-scrollbar-thumb {
+            background: var(--glass-border);
+            border-radius: 4px;
+        }
+
         .large-input {
             font-size: 2.8rem !important;
             font-weight: 700 !important;
@@ -668,10 +754,14 @@
             <!-- Card 1: Nível e Configuração -->
             <div class="stat-card">
                 <div class="stat-label">Profissão e Bônus</div>
-                <select id="level-select" class="stat-value" onchange="delayedUpdate()"
-                    style="width: 100%; background: #0f172a; border: 1px solid var(--glass-border); color: #fff; padding: 0.4rem; border-radius: 6px; margin-bottom: 0.5rem; cursor: pointer;">
-                    <!-- Carregado dinamicamente -->
-                </select>
+                <div class="level-dropdown">
+                    <button type="button" class="level-dropdown-trigger" id="level-dropdown-trigger">
+                        <span id="level-dropdown-value">---</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="level-dropdown-menu" id="level-dropdown-menu"></div>
+                </div>
+                <select id="level-select" class="stat-value" style="display: none;"></select>
 
                 <div style="display: flex; gap: 0.6rem; margin-bottom: 0.6rem;">
                     <div class="config-row-mini">
@@ -890,12 +980,59 @@
             const levelSelect = document.getElementById('level-select');
             levelSelect.innerHTML = levels.map(l => `<option value="${l}" style="background: #0f172a;">${l}</option>`).join('');
 
+            // Dropdown customizado (mesma fonte no valor e nas opções)
+            const ddWrap = document.querySelector('.level-dropdown');
+            const ddTrigger = document.getElementById('level-dropdown-trigger');
+            const ddMenu = document.getElementById('level-dropdown-menu');
+            const ddValue = document.getElementById('level-dropdown-value');
+
+            function closeDropdown() {
+                ddWrap.classList.remove('open');
+                document.removeEventListener('click', outsideClick);
+            }
+
+            function outsideClick(e) {
+                if (!ddWrap.contains(e.target)) closeDropdown();
+            }
+
+            ddTrigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = ddWrap.classList.contains('open');
+                closeDropdown();
+                if (!isOpen) {
+                    ddWrap.classList.add('open');
+                    document.addEventListener('click', outsideClick);
+                    // Rola o menu até a opção atualmente selecionada
+                    const activeOpt = ddMenu.querySelector('.level-dropdown-option.active');
+                    if (activeOpt) {
+                        ddMenu.scrollTop = activeOpt.offsetTop - (ddMenu.clientHeight / 2) + (activeOpt.clientHeight / 2);
+                    }
+                }
+            });
+
+            levels.forEach(l => {
+                const opt = document.createElement('div');
+                opt.className = 'level-dropdown-option';
+                opt.textContent = l;
+                opt.dataset.level = l;
+                opt.addEventListener('click', () => {
+                    levelSelect.value = l;
+                    ddValue.textContent = l;
+                    ddMenu.querySelectorAll('.level-dropdown-option').forEach(o => o.classList.toggle('active', o.dataset.level === l));
+                    closeDropdown();
+                    delayedUpdate();
+                });
+                ddMenu.appendChild(opt);
+            });
+
             // 2. Carrega o status e a configuração salva do usuário
             const statusResp = await fetch('api/status');
             const data = await statusResp.json();
             const config = data.user_config;
 
             levelSelect.value = config.level;
+            ddValue.textContent = levelSelect.value;
+            ddMenu.querySelectorAll('.level-dropdown-option').forEach(o => o.classList.toggle('active', o.dataset.level === levelSelect.value));
             document.getElementById('vp-toggle').checked = config.vp;
             document.getElementById('cleia-toggle').checked = config.cleia;
             document.getElementById('bargain-input').value = config.bargain;
