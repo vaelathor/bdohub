@@ -787,7 +787,7 @@
                     </div>
                     <button class="watch-remove" title="Parar de vigiar">&times;</button>`;
                 card.addEventListener('click', () => {
-                    if (w.id) focusPinned(w.id, w.name);
+                    if (w.id) focusPinned(w.id, w.name, w.sid);
                 });
                 const badge = card.querySelector('.watch-new-badge');
                 if (badge) badge.addEventListener('click', (e) => {
@@ -865,7 +865,7 @@
             await loadPinned();
         }
 
-        async function focusPinned(id, name) {
+        async function focusPinned(id, name, sid) {
             input.value = name;
             const resp = await fetch('api/search?q=' + encodeURIComponent(name));
             const data = await resp.json();
@@ -875,6 +875,14 @@
             if (row) {
                 const item = data.items.find(i => i.id === id);
                 if (item && !row.classList.contains('expanded')) await toggleItem(row, item);
+                // Se veio de um alerta de disponibilidade, abre direto o nível vigiado
+                if (sid != null) {
+                    const levelRow = document.querySelector(`.sub-row[data-sid="${sid}"]`);
+                    if (levelRow) {
+                        if (!levelRow.classList.contains('expanded')) toggleOffers(levelRow, id);
+                        levelRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
             }
         }
 
