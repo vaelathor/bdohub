@@ -353,8 +353,8 @@
         .watch-btn.active { color: var(--accent-gold); }
 
         /* Histórico de preços (90 dias) */
-        .detail-flex { display: flex; align-items: stretch; gap: 1.5rem; }
-        .hist-chart { flex: 1; min-width: 0; padding: 0.4rem 0 0.2rem; }
+        .detail-flex { display: flex; align-items: stretch; gap: 1rem; }
+        .hist-chart { flex-shrink: 0; padding: 0.4rem 0 0.2rem; }
         .hist-chart .chart-title { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.35rem; }
         .chart-flex { display: flex; align-items: stretch; gap: 0.9rem; }
         .chart-vals { flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; gap: 3px; padding-right: 0.9rem; border-right: 1px solid var(--glass-border); font-size: 0.78rem; }
@@ -362,7 +362,7 @@
         .chart-vals .cv-row span { color: var(--muted); }
         .chart-vals .cv-row b { color: var(--accent-gold); font-weight: 600; }
         .chart-vals .cv-pct { margin-top: 5px; font-weight: 700; }
-        .chart-main { flex: 1; min-width: 0; max-width: 320px; }
+        .chart-main { flex-shrink: 0; width: 300px; }
         .chart-box { display: block; width: 100%; height: 76px; }
         .chart-dates { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); margin-top: 3px; }
         .c-up { color: var(--ok); }
