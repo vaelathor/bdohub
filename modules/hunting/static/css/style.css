@@ -853,30 +853,28 @@ button svg { width: 18px; height: 18px; }
     margin-top: 0.25rem;
 }
 
-/* Minimal Button */
+/* Minimal Button (visual igual ao do modulo CP) */
 .btn-icon-minimal {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);
-    color: var(--text-sec);
-    padding: 0.4rem;
-    border-radius: 8px;
+    color: var(--muted);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-icon-minimal:hover {
-    background: var(--bg-panel-hover);
     color: var(--accent-primary);
+    background: rgba(56, 189, 248, 0.1);
     border-color: var(--accent-primary);
+    transform: translateY(-1px);
 }
 
-.btn-icon-minimal svg {
-    width: 18px;
-    height: 18px;
-}
+.btn-icon-minimal svg { width: 18px; height: 18px; }
 
 /* Date Picker Modal */
 .modal-overlay {
