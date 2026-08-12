@@ -1005,7 +1005,7 @@
                 row.dataset.sid = l.sid;
                 row.innerHTML = `
                     <div class="enh">${l.name}${lbl ? `<span> — ${lbl}</span>` : ''}</div>
-                    <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}</div>
+                    <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}${l.currentStock > 0 ? '<span class="from"></span>' : ''}</div>
                     <div class="stock ${l.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${l.currentStock > 0 ? fmt(l.currentStock) : '—'}</div>
                     <button class="watch-btn ${isWatched ? 'active' : ''}" data-key="${wKey}" title="${isWatched ? 'Parar de vigiar' : 'Vigiar disponibilidade (avisa quando entrar no mercado)'}">${bellSvg()}</button>
                     <svg class="caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
@@ -1030,11 +1030,9 @@
                         const asks = (data.orders || []).filter(o => o.sellers > 0).map(o => o.price);
                         if (!asks.length) return;
                         const priceEl = rowEl && rowEl.querySelector('.price');
-                        if (!priceEl || priceEl.querySelector('.from')) return;
-                        const s = document.createElement('span');
-                        s.className = 'from';
+                        const s = priceEl && priceEl.querySelector('.from');
+                        if (!s) return;
                         s.textContent = 'desde ' + fmt(Math.min(...asks));
-                        priceEl.appendChild(s);
                     } catch (e) { /* silencioso */ }
                 })();
             });
