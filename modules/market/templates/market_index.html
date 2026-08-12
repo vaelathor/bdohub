@@ -352,11 +352,20 @@
         .spark svg { display: block; width: 100%; height: 22px; }
 
         .hist-chart { padding: 0.4rem 0 0.2rem; }
-        .hist-chart .chart-title { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem; }
-        .hist-chart .chart-box { display: block; width: 100%; height: auto; }
+        .hist-chart .chart-title { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.35rem; }
+        .chart-flex { display: flex; align-items: stretch; gap: 1rem; }
+        .chart-main { flex: 1; min-width: 0; }
+        .chart-box { display: block; width: 100%; height: 84px; }
+        .chart-dates { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); margin-top: 3px; }
+        .chart-vals { flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; gap: 3px; padding-left: 0.9rem; border-left: 1px solid var(--glass-border); font-size: 0.78rem; }
+        .chart-vals .cv-row { display: flex; justify-content: space-between; gap: 0.8rem; }
+        .chart-vals .cv-row span { color: var(--muted); }
+        .chart-vals .cv-row b { color: var(--accent-gold); font-weight: 600; }
+        .chart-vals .cv-pct { margin-top: 5px; font-weight: 700; }
+        .c-up { color: var(--ok); }
+        .c-down { color: var(--bad); }
         .chart-line { stroke: var(--accent-gold); }
         .chart-fill { fill: var(--accent-gold); opacity: 0.12; }
-        .chart-label { fill: var(--muted); font-size: 9px; }
         .chart-empty { padding: 0.4rem 0; color: var(--muted); font-size: 0.85rem; }
 
         /* Tendência nos cards de alerta */
@@ -612,26 +621,38 @@
                 container.innerHTML = '<div class="chart-empty">Sem histórico disponível.</div>';
                 return;
             }
-            const w = 600, h = 120, padL = 6, padR = 6, padT = 10, padB = 20;
-            const min = Math.min(...prices), max = Math.max(...prices);
-            const span = (max - min) || 1;
-            const iw = w - padL - padR, ih = h - padT - padB;
             const n = prices.length;
+            const min = Math.min(...prices), max = Math.max(...prices);
+            const cur = prices[n - 1];
+            const span = (max - min) || 1;
+            // gráfico à esquerda (estica para preencher) + coluna de valores à direita
+            const w = 600, h = 84, padL = 4, padR = 4, padT = 6, padB = 6;
+            const iw = w - padL - padR, ih = h - padT - padB;
             const pt = (p, i) => [padL + (i / (n - 1)) * iw, padT + ih - ((p - min) / span) * ih];
             const line = prices.map((p, i) => pt(p, i).join(',')).join(' ');
             const area = `${padL},${padT + ih} ${line} ${padL + iw},${padT + ih}`;
             const end = new Date();
             const start = new Date(end.getTime() - (n - 1) * 86400000);
             const dstr = d => d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+            const pct = ((cur - prices[0]) / prices[0]) * 100;
+            const arrow = pct > 0 ? '▲' : (pct < 0 ? '▼' : '＝');
+            const pctCls = pct > 0 ? 'c-up' : (pct < 0 ? 'c-down' : '');
             container.innerHTML = `
-                <svg class="chart-box" viewBox="0 0 ${w} ${h}">
-                    <polygon class="chart-fill" points="${area}"/>
-                    <polyline class="chart-line" points="${line}" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
-                    <text class="chart-label" x="${padL}" y="${padT - 3}">${fmtCompact(max)}</text>
-                    <text class="chart-label" x="${padL}" y="${padT + ih + 12}">${fmtCompact(min)}</text>
-                    <text class="chart-label" x="${padL}" y="${h - 2}">${dstr(start)}</text>
-                    <text class="chart-label" x="${padL + iw}" y="${h - 2}" text-anchor="end">${dstr(end)}</text>
-                </svg>`;
+                <div class="chart-flex">
+                    <div class="chart-main">
+                        <svg class="chart-box" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+                            <polygon class="chart-fill" points="${area}"/>
+                            <polyline class="chart-line" points="${line}" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+                        </svg>
+                        <div class="chart-dates"><span>${dstr(start)}</span><span>${dstr(end)}</span></div>
+                    </div>
+                    <div class="chart-vals">
+                        <div class="cv-row"><span>Máx</span><b>${fmtCompact(max)}</b></div>
+                        <div class="cv-row"><span>Mín</span><b>${fmtCompact(min)}</b></div>
+                        <div class="cv-row"><span>Atual</span><b>${fmtCompact(cur)}</b></div>
+                        <div class="cv-pct ${pctCls}">${arrow} ${Math.abs(pct).toLocaleString('pt-BR', { maximumFractionDigits: 1 })}% (90d)</div>
+                    </div>
+                </div>`;
         }
 
         function iconSvg() {
