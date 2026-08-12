@@ -5,6 +5,7 @@ import time
 import threading
 import unicodedata
 import requests
+import backup_utils
 from flask import Blueprint, render_template, request, jsonify, send_file
 
 market_bp = Blueprint('market', __name__, template_folder='templates', static_folder='static')
@@ -23,6 +24,29 @@ CODE_BASE = 'https://bdocodex.com'
 CODE_UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 with open(os.path.join(_MOD_DIR, 'codex_slots.json'), encoding='utf-8') as _f:
     _SLOTS = json.load(_f)  # "mainCategory-subCategory" -> caminho base do ícone
+
+PINNED_PATH = os.path.join(_MOD_DIR, 'pinned.json')
+
+
+def load_pinned():
+    """Lista de itens favoritados persistida em disco."""
+    if os.path.exists(PINNED_PATH):
+        try:
+            with open(PINNED_PATH, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            items = data.get('items') if isinstance(data, dict) else None
+            if isinstance(items, list):
+                return items
+        except (ValueError, OSError):
+            pass
+    return []
+
+
+def save_pinned(items):
+    """Grava a lista de favoritos (com backup automático, padrão do hub)."""
+    with open(PINNED_PATH, 'w', encoding='utf-8') as f:
+        json.dump({'items': items}, f, indent=4, ensure_ascii=False)
+    backup_utils.backup_single_file('modules/market/pinned.json')
 
 # Caches em memória
 _cache = {'market': None, 'ts': 0.0}
@@ -251,6 +275,57 @@ def icon(item_id):
     if not path:
         return '', 404
     return send_file(path, mimetype='image/webp', max_age=30 * 24 * 3600)
+
+
+@market_bp.route('/api/pinned')
+def pinned_list():
+    """Favoritos com preço/estoque atuais do snapshot (quando disponíveis)."""
+    items = load_pinned()
+    snapshot = None
+    try:
+        snapshot = get_market_snapshot()
+    except Exception:
+        pass
+    by_id = {i['id']: i for i in snapshot} if snapshot else {}
+    out = []
+    for it in items:
+        cur = by_id.get(it['id'], {})
+        out.append({
+            'id': it['id'],
+            'name': it.get('name') or cur.get('name') or '',
+            'mainCategory': it.get('mainCategory', cur.get('mainCategory', 0)),
+            'subCategory': it.get('subCategory', cur.get('subCategory', 0)),
+            'pinnedAt': it.get('pinnedAt'),
+            'price': cur.get('basePrice'),
+            'stock': cur.get('currentStock'),
+            'trades': cur.get('totalTrades'),
+        })
+    return jsonify({'items': out, 'error': None})
+
+
+@market_bp.route('/api/pinned/toggle', methods=['POST'])
+def pinned_toggle():
+    """Favorita/desfavorita um item (recebe id + dados básicos do item)."""
+    data = request.json or {}
+    item_id = data.get('id')
+    if not item_id:
+        return jsonify({'error': 'id é obrigatório.'}), 400
+
+    items = load_pinned()
+    if any(i['id'] == item_id for i in items):
+        items = [i for i in items if i['id'] != item_id]
+        pinned = False
+    else:
+        items.append({
+            'id': item_id,
+            'name': data.get('name'),
+            'mainCategory': data.get('mainCategory', 0),
+            'subCategory': data.get('subCategory', 0),
+            'pinnedAt': time.time(),
+        })
+        pinned = True
+    save_pinned(items)
+    return jsonify({'pinned': pinned, 'ids': [i['id'] for i in items], 'error': None})
 
 
 @market_bp.route('/api/bids')
