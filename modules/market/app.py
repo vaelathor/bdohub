@@ -16,6 +16,8 @@ RETRY_DELAY = 1.0        # segundos entre tentativas
 # Caches em memória
 _cache = {'market': None, 'ts': 0.0}
 _items = {}  # id -> {'data': [...], 'ts': float}
+_bids = {}   # (id, sid) -> {'data': [...], 'ts': float}
+BID_TTL = 3 * 60  # ofertas ativas (cache curto; a própria arsha já cacheia ~30 min)
 _lock = threading.Lock()
 
 
@@ -166,3 +168,47 @@ def item():
         return jsonify({'error': str(exc), 'levels': []}), 502
 
     return jsonify({'levels': levels, 'error': None})
+
+
+def _get_bids_v1(item_id, sid):
+    """Ofertas ativas de um nível: cada ordem é preço-vendedores-compradores."""
+    data = _get(f'{ARSH_API}/v1/{REGION}/GetBiddingInfoList', {'id': item_id, 'sid': sid})
+    raw = data.get('resultMsg', '')
+    orders = []
+    for row in raw.split('|'):
+        parts = row.split('-')
+        if len(parts) < 3:
+            continue
+        try:
+            orders.append({
+                'price': int(parts[0]),
+                'sellers': int(parts[1]),
+                'buyers': int(parts[2]),
+            })
+        except (ValueError, IndexError):
+            continue
+    return orders
+
+
+@market_bp.route('/api/bids')
+def bids():
+    """Livro de ofertas de um nível de aprimoramento (vendedores x compradores)."""
+    item_id = request.args.get('id', type=int)
+    sid = request.args.get('sid', type=int, default=0)
+    if not item_id:
+        return jsonify({'error': 'Parâmetro id é obrigatório.'}), 400
+
+    key = (item_id, sid)
+    with _lock:
+        cached = _bids.get(key)
+        if cached and (time.time() - cached['ts']) < BID_TTL:
+            return jsonify({'orders': cached['data'], 'error': None})
+
+    try:
+        orders = _get_bids_v1(item_id, sid)
+    except Exception as exc:
+        return jsonify({'error': str(exc), 'orders': []}), 502
+
+    with _lock:
+        _bids[key] = {'data': orders, 'ts': time.time()}
+    return jsonify({'orders': orders, 'error': None})

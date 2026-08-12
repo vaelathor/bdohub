@@ -206,13 +206,56 @@
             align-items: center;
             padding: 0.55rem 1.2rem 0.55rem 4.6rem;
             font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.15s;
         }
 
-        .sub-row:nth-child(even) { background: rgba(30, 41, 59, 0.3); }
+        .sub-row.zebra { background: rgba(30, 41, 59, 0.3); }
+        .sub-row:hover { background: rgba(56, 189, 248, 0.07); }
+        .sub-row.expanded { background: rgba(56, 189, 248, 0.1); }
         .sub-row .enh { flex: 1; color: var(--text-main); font-weight: 600; }
         .sub-row .enh span { color: var(--accent-gold); }
         .sub-row .price { width: 130px; text-align: right; color: var(--accent-gold); }
         .sub-row .stock { width: 110px; text-align: right; font-size: 0.8rem; }
+        .sub-row .caret { width: 20px; text-align: right; color: var(--muted); flex-shrink: 0; transition: transform 0.2s; }
+        .sub-row.expanded .caret { transform: rotate(180deg); }
+
+        /* Livro de ofertas de um nível */
+        .offer-block {
+            background: rgba(11, 18, 32, 0.75);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+            padding: 0.4rem 1.2rem 0.6rem 4.6rem;
+            display: none;
+        }
+
+        .sub-row.expanded + .offer-block { display: block; }
+
+        .offer-head {
+            display: flex;
+            gap: 1rem;
+            padding: 0.4rem 0;
+            font-size: 0.72rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+        }
+
+        .offer-head span:nth-child(1) { flex: 1; }
+        .offer-head span:nth-child(2) { width: 110px; text-align: right; }
+        .offer-head span:nth-child(3) { width: 110px; text-align: right; }
+
+        .offer-row {
+            display: flex;
+            gap: 1rem;
+            padding: 0.35rem 0;
+            font-size: 0.88rem;
+        }
+
+        .offer-row .oprice { flex: 1; color: var(--accent-gold); font-weight: 600; }
+        .offer-row .osellers { width: 110px; text-align: right; }
+        .offer-row .obuyers { width: 110px; text-align: right; }
+        .offer-empty { padding: 0.5rem 0; color: var(--muted); font-size: 0.85rem; }
 
         .empty-state {
             display: flex;
@@ -420,7 +463,7 @@
                 const resp = await fetch('api/item?id=' + id);
                 const data = await resp.json();
                 if (data.error) throw new Error(data.error);
-                renderSubList(sub, data.levels || [], item.mainCategory);
+                renderSubList(sub, data.levels || [], item.mainCategory, id);
             } catch (err) {
                 sub.innerHTML = `
                     <div class="sub-header"><span>Aprimoramento</span><span>Preço</span><span>Estoque</span></div>
@@ -430,21 +473,80 @@
             }
         }
 
-        function renderSubList(sub, levels, mainCategory) {
+        function renderSubList(sub, levels, mainCategory, itemId) {
             const sorted = levels.slice().sort((a, b) => (a.minEnhance ?? a.sid) - (b.minEnhance ?? b.sid));
             sub.innerHTML = `
                 <div class="sub-header">
-                    <span>Aprimoramento</span><span>Preço</span><span>Estoque</span>
-                </div>` +
-                sorted.map(l => {
-                    const lbl = enhLabel(l.minEnhance, l.maxEnhance, mainCategory);
-                    return `
-                    <div class="sub-row">
-                        <div class="enh">${l.name}${lbl ? `<span> — ${lbl}</span>` : ''}</div>
-                        <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}</div>
-                        <div class="stock ${l.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${l.currentStock > 0 ? fmt(l.currentStock) : '—'}</div>
-                    </div>`;
-                }).join('');
+                    <span>Aprimoramento</span><span>Preço</span><span>Estoque</span><span></span>
+                </div>`;
+            sorted.forEach((l, i) => {
+                const lbl = enhLabel(l.minEnhance, l.maxEnhance, mainCategory);
+                const row = document.createElement('div');
+                row.className = 'sub-row' + (i % 2 ? ' zebra' : '');
+                row.dataset.sid = l.sid;
+                row.innerHTML = `
+                    <div class="enh">${l.name}${lbl ? `<span> — ${lbl}</span>` : ''}</div>
+                    <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}</div>
+                    <div class="stock ${l.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${l.currentStock > 0 ? fmt(l.currentStock) : '—'}</div>
+                    <svg class="caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+                row.addEventListener('click', () => toggleOffers(row, itemId));
+                sub.appendChild(row);
+            });
+        }
+
+        async function toggleOffers(row, itemId) {
+            const block = row.nextElementSibling;
+
+            if (row.classList.contains('expanded')) {
+                row.classList.remove('expanded');
+                if (block && block.classList.contains('offer-block')) block.remove();
+                return;
+            }
+
+            // Fecha outra oferta aberta
+            document.querySelectorAll('.sub-row.expanded').forEach(r => {
+                r.classList.remove('expanded');
+                const b = r.nextElementSibling;
+                if (b && b.classList.contains('offer-block')) b.remove();
+            });
+
+            row.classList.add('expanded');
+            const off = document.createElement('div');
+            off.className = 'offer-block';
+            off.innerHTML = `
+                <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>
+                <div class="offer-empty">Carregando ofertas...</div>`;
+            row.after(off);
+
+            try {
+                const resp = await fetch('api/bids?id=' + itemId + '&sid=' + row.dataset.sid);
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                renderOffers(off, data.orders || []);
+            } catch (err) {
+                off.innerHTML = `
+                    <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>
+                    <div class="offer-empty">Falha ao carregar: ${err.message}</div>`;
+            }
+        }
+
+        function renderOffers(off, orders) {
+            const active = orders.filter(o => o.sellers > 0 || o.buyers > 0)
+                                 .sort((a, b) => b.price - a.price);
+            if (!active.length) {
+                off.innerHTML = `
+                    <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>
+                    <div class="offer-empty">Sem ofertas ativas neste nível.</div>`;
+                return;
+            }
+            off.innerHTML = `
+                <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>` +
+                active.map(o => `
+                    <div class="offer-row">
+                        <div class="oprice">${fmt(o.price)}</div>
+                        <div class="osellers ${o.sellers > 0 ? 'stock-ok' : ''}">${o.sellers > 0 ? fmt(o.sellers) : '—'}</div>
+                        <div class="obuyers ${o.buyers > 0 ? 'stock-ok' : ''}">${o.buyers > 0 ? fmt(o.buyers) : '—'}</div>
+                    </div>`).join('');
         }
     </script>
 </body>
