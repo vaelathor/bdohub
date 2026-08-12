@@ -250,6 +250,103 @@
 
         .pinned-remove:hover { color: var(--bad); }
 
+        /* Alertas de disponibilidade (níveis vigiados) */
+        .watch-panel { flex-shrink: 0; }
+        .watch-panel.hidden { display: none; }
+
+        .watch-list {
+            display: flex;
+            gap: 0.6rem;
+            overflow-x: auto;
+            padding-bottom: 0.4rem;
+        }
+
+        .watch-card {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--bg-panel);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            padding: 0.5rem 0.7rem;
+            cursor: pointer;
+            flex-shrink: 0;
+            max-width: 360px;
+            min-width: 0;
+            transition: border-color 0.15s, background 0.15s;
+        }
+
+        .watch-card:hover { border-color: var(--accent-primary); background: rgba(56, 189, 248, 0.07); }
+        .watch-card .w-info { min-width: 0; }
+        .watch-card .w-name { font-size: 0.85rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .watch-card .w-name .w-lvl { color: var(--accent-gold); }
+        .watch-card .w-status { font-size: 0.75rem; margin-top: 2px; }
+        .w-status.live { color: var(--ok); }
+        .w-status.alert { color: var(--accent-gold); font-weight: 700; }
+        .w-status.out { color: var(--muted); }
+
+        .dot-live {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--ok);
+            margin-right: 5px;
+            vertical-align: middle;
+            animation: pulse 1.2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.35; }
+        }
+
+        .watch-new-badge {
+            background: var(--accent-gold);
+            color: #0b1220;
+            font-size: 0.62rem;
+            font-weight: 700;
+            padding: 1px 5px;
+            border-radius: 8px;
+            margin-left: 4px;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+
+        .watch-remove {
+            background: none;
+            border: none;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 1.1rem;
+            line-height: 1;
+            padding: 2px 4px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .watch-remove:hover { color: var(--bad); }
+        .watch-check { font-size: 0.7rem; color: var(--muted); }
+
+        /* Sino de vigilância nas linhas de aprimoramento */
+        .watch-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--muted);
+            padding: 3px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: color 0.15s, transform 0.15s;
+        }
+
+        .watch-btn svg { width: 16px; height: 16px; }
+        .watch-btn:hover { color: var(--accent-gold); transform: scale(1.15); }
+        .watch-btn.active { color: var(--accent-gold); }
+
         .item-info { flex: 1; min-width: 0; }
 
         .item-name {
@@ -405,6 +502,11 @@
         <div class="pinned-list" id="pinned-list"></div>
     </div>
 
+    <div class="watch-panel hidden" id="watch-panel">
+        <div class="pinned-head"><span>Alertas de disponibilidade</span><span id="watch-count"></span></div>
+        <div class="watch-list" id="watch-list"></div>
+    </div>
+
     <div class="results" id="results">
         <div class="empty-state" id="empty-state">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg>
@@ -421,6 +523,7 @@
     <script>
         lucide.createIcons();
         loadPinned();
+        loadWatched();
 
         const input = document.getElementById('search-input');
         const resultsEl = document.getElementById('results');
@@ -492,6 +595,8 @@
         let expandedId = null;
         let pinnedIds = new Set();
         let pinnedItems = [];
+        let watchedKeys = new Set();
+        let watchedList = [];
 
         function starSvg(filled) {
             return `<svg viewBox="0 0 24 24" fill="${filled ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
@@ -536,6 +641,96 @@
                 });
                 list.appendChild(card);
             });
+        }
+
+        function bellSvg() {
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>';
+        }
+
+        async function loadWatched() {
+            try {
+                const resp = await fetch('api/watched');
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                watchedList = data.watched || [];
+                watchedKeys = new Set(watchedList.map(w => w.id + ':' + w.sid));
+                renderWatched();
+            } catch (e) { /* silencioso: painel fica oculto */ }
+        }
+
+        function renderWatched() {
+            const panel = document.getElementById('watch-panel');
+            const list = document.getElementById('watch-list');
+            document.getElementById('watch-count').textContent = watchedList.length ? `(${watchedList.length})` : '';
+            if (!watchedList.length) { panel.classList.add('hidden'); return; }
+            panel.classList.remove('hidden');
+            list.innerHTML = '';
+            watchedList.forEach(w => {
+                const st = w.state || {};
+                const stock = st.stock;
+                let statusCls = 'out';
+                let statusHtml = '○ Fora do mercado';
+                if (stock > 0) {
+                    statusCls = 'live';
+                    statusHtml = `<span class="dot-live"></span>NO MERCADO &middot; ${fmt(stock)} oferta${stock === 1 ? '' : 's'}`;
+                    if (st.new) statusHtml += ' <span class="watch-new-badge" title="Marcar como visto">NOVO</span>';
+                } else if (st.new && st.lastEntry) {
+                    statusCls = 'alert';
+                    statusHtml = `▲ Entrou às ${fmtTime(st.lastEntry)} <span class="watch-new-badge" title="Marcar como visto">NOVO</span>`;
+                }
+                const card = document.createElement('div');
+                card.className = 'watch-card';
+                card.innerHTML = `
+                    <div class="w-info">
+                        <div class="w-name">${w.name || ''} <span class="w-lvl">— ${w.label || ''}</span></div>
+                        <div class="w-status ${statusCls}">${statusHtml}</div>
+                    </div>
+                    <button class="watch-remove" title="Parar de vigiar">&times;</button>`;
+                card.addEventListener('click', () => {
+                    if (w.id) focusPinned(w.id, w.name);
+                });
+                const badge = card.querySelector('.watch-new-badge');
+                if (badge) badge.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    ackWatch(w.id, w.sid);
+                });
+                card.querySelector('.watch-remove').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleWatchKey(w.id, w.sid);
+                });
+                list.appendChild(card);
+            });
+        }
+
+        async function toggleWatch(itemId, sid, name, label, mainCategory, subCategory) {
+            const resp = await fetch('api/watched/toggle', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: itemId, sid, name, label, mainCategory, subCategory })
+            });
+            const data = await resp.json();
+            if (data.error) return;
+            if (data.watching) watchedKeys.add(itemId + ':' + sid);
+            else watchedKeys.delete(itemId + ':' + sid);
+            document.querySelectorAll(`.watch-btn[data-key="${itemId}:${sid}"]`).forEach(b => {
+                b.classList.toggle('active', data.watching);
+                b.title = data.watching ? 'Parar de vigiar' : 'Vigiar disponibilidade (avisa quando entrar no mercado)';
+            });
+            await loadWatched();
+        }
+
+        async function toggleWatchKey(itemId, sid) {
+            const w = watchedList.find(x => x.id === itemId && x.sid === sid) || {};
+            await toggleWatch(itemId, sid, w.name, w.label, w.mainCategory, w.subCategory);
+        }
+
+        async function ackWatch(itemId, sid) {
+            await fetch('api/watched/ack', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: itemId, sid })
+            });
+            await loadWatched();
         }
 
         async function togglePin(item) {
@@ -603,7 +798,8 @@
                 if (data.stale) {
                     countEl.textContent += (countEl.textContent ? ' · ' : '') + '⚠ dados de ' + (data.staleTs ? fmtTime(data.staleTs) : 'cache');
                 }
-                loadPinned();  // atualiza preços do painel quando o snapshot chega
+                loadPinned();   // atualiza preços do painel quando o snapshot chega
+                loadWatched();  // atualiza estado dos alertas de disponibilidade
             } catch (err) {
                 emptyState('O mercado está temporariamente indisponível (API instável)', 'Os dados ficam salvos em cache e devem voltar em instantes. Tente novamente.');
             }
@@ -676,7 +872,7 @@
                 const resp = await fetch('api/item?id=' + id);
                 const data = await resp.json();
                 if (data.error) throw new Error(data.error);
-                renderSubList(sub, data.levels || [], item.mainCategory, id);
+                renderSubList(sub, data.levels || [], item.mainCategory, item.subCategory, id, item.name);
             } catch (err) {
                 sub.innerHTML = `
                     <div class="sub-header"><span>Aprimoramento</span><span>Preço</span><span>Estoque</span></div>
@@ -686,7 +882,7 @@
             }
         }
 
-        function renderSubList(sub, levels, mainCategory, itemId) {
+        function renderSubList(sub, levels, mainCategory, subCategory, itemId, itemName) {
             const sorted = levels.slice().sort((a, b) => (a.minEnhance ?? a.sid) - (b.minEnhance ?? b.sid));
             sub.innerHTML = `
                 <div class="sub-header">
@@ -694,6 +890,8 @@
                 </div>`;
             sorted.forEach((l, i) => {
                 const lbl = enhLabel(l.minEnhance, l.maxEnhance, mainCategory);
+                const wKey = `${itemId}:${l.sid}`;
+                const isWatched = watchedKeys.has(wKey);
                 const row = document.createElement('div');
                 row.className = 'sub-row' + (i % 2 ? ' zebra' : '');
                 row.dataset.sid = l.sid;
@@ -701,8 +899,13 @@
                     <div class="enh">${l.name}${lbl ? `<span> — ${lbl}</span>` : ''}</div>
                     <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}</div>
                     <div class="stock ${l.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${l.currentStock > 0 ? fmt(l.currentStock) : '—'}</div>
+                    <button class="watch-btn ${isWatched ? 'active' : ''}" data-key="${wKey}" title="${isWatched ? 'Parar de vigiar' : 'Vigiar disponibilidade (avisa quando entrar no mercado)'}">${bellSvg()}</button>
                     <svg class="caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
                 row.addEventListener('click', () => toggleOffers(row, itemId));
+                row.querySelector('.watch-btn').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleWatch(itemId, l.sid, itemName, lbl || l.name, mainCategory, subCategory);
+                });
                 sub.appendChild(row);
             });
         }

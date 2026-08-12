@@ -26,6 +26,9 @@ with open(os.path.join(_MOD_DIR, 'codex_slots.json'), encoding='utf-8') as _f:
     _SLOTS = json.load(_f)  # "mainCategory-subCategory" -> caminho base do ícone
 
 PINNED_PATH = os.path.join(_MOD_DIR, 'pinned.json')
+WATCHED_PATH = os.path.join(_MOD_DIR, 'watched.json')
+CHECK_INTERVAL = 5 * 60  # checagem de disponibilidade dos níveis vigiados
+_last_check = [0.0]
 
 
 def load_pinned():
@@ -207,6 +210,96 @@ def get_item_levels(item_id):
     return data
 
 
+# ---- Alertas de disponibilidade (níveis vigiados) ----
+#
+# O usuário escolhe níveis de aprimoramento específicos de um item (ex.: Cinto
+# Prione OCT ou ENE) para ser avisado quando eles ENTRAREM no mercado. Uma
+# thread de fundo verifica o estoque desses níveis a cada 5 min e registra o
+# momento da entrada (transição de estoque 0 -> > 0).
+
+
+def load_watched():
+    """Lista de níveis vigiados persistida em disco."""
+    if os.path.exists(WATCHED_PATH):
+        try:
+            with open(WATCHED_PATH, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            watched = data.get('watched') if isinstance(data, dict) else None
+            if isinstance(watched, list):
+                return watched
+        except (ValueError, OSError):
+            pass
+    return []
+
+
+def save_watched(watched):
+    """Grava os níveis vigiados (com backup automático, padrão do hub)."""
+    with open(WATCHED_PATH, 'w', encoding='utf-8') as f:
+        json.dump({'watched': watched}, f, indent=4, ensure_ascii=False)
+    backup_utils.backup_single_file('modules/market/watched.json')
+
+
+def _watch_key(w):
+    return (w.get('id'), w.get('sid'))
+
+
+def _refresh_watch_state(w):
+    """Atualiza o estado de um nível vigiado (estoque/entrada).
+
+    A primeira checagem apenas registra o estado atual sem disparar alerta
+    (senão todo nível recém-vigiado que já está no mercado alertaria na hora).
+    Retorna True se algo mudou.
+    """
+    try:
+        levels = get_item_levels(w['id'])
+    except Exception:
+        return False
+    lvl = next((l for l in levels if l.get('sid') == w.get('sid')), None)
+    if lvl is None:
+        return False
+    cur = lvl.get('currentStock') or 0
+    st = w.setdefault('state', {})
+    if 'stock' not in st:
+        st['stock'] = cur
+        st['lastEntry'] = None
+        st['new'] = False
+    else:
+        prev = st['stock'] or 0
+        if prev == 0 and cur > 0:
+            st['lastEntry'] = time.time()
+            st['new'] = True
+        st['stock'] = cur
+    return True
+
+
+def check_watched():
+    """Checa a disponibilidade de todos os níveis vigiados e salva o estado."""
+    watched = load_watched()
+    _last_check[0] = time.time()
+    if not watched:
+        return
+    changed = False
+    for w in watched:
+        if _refresh_watch_state(w):
+            changed = True
+    if changed:
+        save_watched(watched)
+
+
+def _watched_loop():
+    """Thread de fundo: verifica os níveis vigiados a cada CHECK_INTERVAL."""
+    time.sleep(5)  # espera o servidor subir antes da primeira checagem
+    while True:
+        try:
+            check_watched()
+        except Exception:
+            pass
+        time.sleep(CHECK_INTERVAL)
+
+
+threading.Thread(target=_watched_loop, daemon=True).start()
+
+
 @market_bp.route('/')
 def index():
     return render_template('market_index.html')
@@ -377,6 +470,65 @@ def pinned_toggle():
         pinned = True
     save_pinned(items)
     return jsonify({'pinned': pinned, 'ids': [i['id'] for i in items], 'error': None})
+
+
+@market_bp.route('/api/watched')
+def watched_list():
+    """Níveis vigiados com estado de disponibilidade (atualizado pela thread de fundo)."""
+    if time.time() - _last_check[0] > CHECK_INTERVAL * 2:
+        try:
+            check_watched()  # refresh pontual se a thread estiver atrasada (ex.: pós-restart)
+        except Exception:
+            pass
+    watched = load_watched()
+    return jsonify({'watched': watched, 'checkedAt': int(_last_check[0]), 'error': None})
+
+
+@market_bp.route('/api/watched/toggle', methods=['POST'])
+def watched_toggle():
+    """Vigia/para de vigiar um nível de aprimoramento específico."""
+    data = request.json or {}
+    item_id = data.get('id')
+    sid = data.get('sid')
+    if not item_id or sid is None:
+        return jsonify({'error': 'id e sid são obrigatórios.'}), 400
+
+    watched = load_watched()
+    existing = next((w for w in watched if _watch_key(w) == (item_id, sid)), None)
+    if existing:
+        watched = [w for w in watched if _watch_key(w) != (item_id, sid)]
+        watching = False
+    else:
+        w = {
+            'id': item_id,
+            'sid': sid,
+            'name': data.get('name'),
+            'label': data.get('label'),
+            'mainCategory': data.get('mainCategory', 0),
+            'subCategory': data.get('subCategory', 0),
+            'addedAt': time.time(),
+            'state': {},
+        }
+        _refresh_watch_state(w)  # baseline imediato (best-effort)
+        watched.append(w)
+        watching = True
+    save_watched(watched)
+    return jsonify({'watching': watching, 'count': len(watched), 'error': None})
+
+
+@market_bp.route('/api/watched/ack', methods=['POST'])
+def watched_ack():
+    """Marca um alerta como visto (some o selo 'novo')."""
+    data = request.json or {}
+    item_id = data.get('id')
+    sid = data.get('sid')
+    watched = load_watched()
+    for w in watched:
+        if w.get('id') == item_id and w.get('sid') == sid:
+            w.setdefault('state', {})['new'] = False
+            break
+    save_watched(watched)
+    return jsonify({'error': None})
 
 
 @market_bp.route('/api/bids')
