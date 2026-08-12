@@ -426,7 +426,8 @@
         const resultsEl = document.getElementById('results');
         const countEl = document.getElementById('result-count');
 
-        const ENH_NAMES = ['PRI', 'DUO', 'TRI', 'TET', 'PEN', 'HEX', 'SEP', 'OCT', 'NOV', 'DEC'];
+        // Nomenclatura do servidor SA (PT-BR): VII = HEP e IX = ENE (no EN são SEP e NOV)
+        const ENH_NAMES = ['PRI', 'DUO', 'TRI', 'TET', 'PEN', 'HEX', 'HEP', 'OCT', 'ENE', 'DEC'];
 
         function fmt(n) {
             return Number(n || 0).toLocaleString('pt-BR');
