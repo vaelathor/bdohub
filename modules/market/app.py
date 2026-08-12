@@ -55,6 +55,31 @@ _bids = {}   # (id, sid) -> {'data': [...], 'ts': float}
 BID_TTL = 3 * 60  # ofertas ativas (cache curto; a própria arsha já cacheia ~30 min)
 _lock = threading.Lock()
 
+# Cache em disco: a API do arsha é instável (503/500 com frequência), então
+# guardamos uma cópia local para continuar servindo dados (possivelmente
+# antigos) quando a fonte externa cai.
+_CACHE_DIR = os.path.join(_MOD_DIR, '.cache')
+_SNAP_FILE = os.path.join(_CACHE_DIR, f'market_{REGION}.json')
+_ITEM_DIR = os.path.join(_CACHE_DIR, 'items')
+_BID_DIR = os.path.join(_CACHE_DIR, 'bids')
+
+
+def _write_disk(path, data):
+    try:
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False)
+    except OSError:
+        pass
+
+
+def _read_disk(path):
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return None
+
 
 def _norm(text):
     """Minúsculas e sem acentos, para busca tolerante (ex.: 'kzarka' casa com 'Kzarka')."""
@@ -81,16 +106,30 @@ def _get(url, params, attempts=MAX_ATTEMPTS):
 
 
 def get_market_snapshot(force=False):
-    """Snapshot do mercado SA (nomes em PT-BR), cacheado por 15 minutos."""
+    """Snapshot do mercado SA (nomes em PT-BR), cacheado por 15 minutos.
+
+    Se a API estiver fora do ar, serve a última cópia salva em disco.
+    """
     with _lock:
         if not force and _cache['market'] is not None and (time.time() - _cache['ts']) < CACHE_TTL:
             return _cache['market']
 
-    data = _get(f'{ARSH_API}/v2/{REGION}/market', {'lang': 'pt'})
+    try:
+        data = _get(f'{ARSH_API}/v2/{REGION}/market', {'lang': 'pt'})
+    except Exception:
+        disk = _read_disk(_SNAP_FILE)
+        if disk is not None:
+            # mantém o horário original da coleta para sinalizar dados antigos
+            with _lock:
+                _cache['market'] = disk.get('data', disk)
+                _cache['ts'] = float(disk.get('ts', 0))
+            return _cache['market']
+        raise
 
     with _lock:
         _cache['market'] = data
         _cache['ts'] = time.time()
+    _write_disk(_SNAP_FILE, {'ts': _cache['ts'], 'data': data})
     return data
 
 
@@ -140,7 +179,7 @@ def _get_item_v1(item_id):
 
 
 def get_item_levels(item_id):
-    """Níveis de aprimoramento com cache local de 30 min; v2 com fallback para v1."""
+    """Níveis de aprimoramento com cache local de 30 min; v2 → v1 → disco."""
     with _lock:
         cached = _items.get(item_id)
         if cached and (time.time() - cached['ts']) < ITEM_TTL:
@@ -151,10 +190,20 @@ def get_item_levels(item_id):
         if not isinstance(data, list) or len(data) == 0:
             raise RuntimeError('resposta v2 vazia')
     except Exception:
-        data = _get_item_v1(item_id)
+        try:
+            data = _get_item_v1(item_id)
+        except Exception:
+            disk = _read_disk(os.path.join(_ITEM_DIR, f'{item_id}.json'))
+            if disk is None:
+                raise
+            # marca como antigo para o cliente sinalizar dados em cache
+            with _lock:
+                _items[item_id] = {'data': disk, 'ts': time.time() - ITEM_TTL - 1}
+            return disk
 
     with _lock:
         _items[item_id] = {'data': data, 'ts': time.time()}
+    _write_disk(os.path.join(_ITEM_DIR, f'{item_id}.json'), data)
     return data
 
 
@@ -173,13 +222,11 @@ def search():
     try:
         snapshot = get_market_snapshot()
     except Exception as exc:
-        # Em falha da API, tenta servir o cache antigo
-        with _lock:
-            stale = _cache['market']
-        if stale is not None:
-            snapshot = stale
-        else:
-            return jsonify({'items': [], 'count': 0, 'error': str(exc)}), 502
+        return jsonify({'items': [], 'count': 0, 'error': str(exc)}), 502
+
+    with _lock:
+        stale = (time.time() - _cache['ts']) > CACHE_TTL
+        stale_ts = int(_cache['ts']) if stale else None
 
     items = [i for i in snapshot if nq in _norm(i.get('name', ''))]
     # Relevância: itens que começam com a busca primeiro; depois por volume de negócios
@@ -187,7 +234,8 @@ def search():
         0 if _norm(i['name']).startswith(nq) else 1,
         -i.get('totalTrades', 0)
     ))
-    return jsonify({'items': items[:50], 'count': len(items), 'error': None})
+    return jsonify({'items': items[:50], 'count': len(items), 'error': None,
+                    'stale': stale, 'staleTs': stale_ts})
 
 
 @market_bp.route('/api/item')
@@ -202,7 +250,10 @@ def item():
     except Exception as exc:
         return jsonify({'error': str(exc), 'levels': []}), 502
 
-    return jsonify({'levels': levels, 'error': None})
+    with _lock:
+        entry = _items.get(item_id)
+        item_stale = entry is not None and (time.time() - entry['ts']) > ITEM_TTL
+    return jsonify({'levels': levels, 'error': None, 'stale': bool(item_stale)})
 
 
 def _get_bids_v1(item_id, sid):
@@ -345,8 +396,14 @@ def bids():
     try:
         orders = _get_bids_v1(item_id, sid)
     except Exception as exc:
-        return jsonify({'error': str(exc), 'orders': []}), 502
+        disk = _read_disk(os.path.join(_BID_DIR, f'{item_id}_{sid}.json'))
+        if disk is None:
+            return jsonify({'error': str(exc), 'orders': []}), 502
+        with _lock:
+            _bids[key] = {'data': disk, 'ts': time.time() - BID_TTL - 1}
+        return jsonify({'orders': disk, 'error': None, 'stale': True})
 
     with _lock:
         _bids[key] = {'data': orders, 'ts': time.time()}
-    return jsonify({'orders': orders, 'error': None})
+    _write_disk(os.path.join(_BID_DIR, f'{item_id}_{sid}.json'), orders)
+    return jsonify({'orders': orders, 'error': None, 'stale': False})

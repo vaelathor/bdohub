@@ -599,9 +599,12 @@
                 const data = await resp.json();
                 if (data.error) throw new Error(data.error);
                 renderResults(data.items, data.count);
+                if (data.stale) {
+                    countEl.textContent += (countEl.textContent ? ' · ' : '') + '⚠ dados de ' + (data.staleTs ? fmtTime(data.staleTs) : 'cache');
+                }
                 loadPinned();  // atualiza preços do painel quando o snapshot chega
             } catch (err) {
-                emptyState('Falha ao consultar o mercado', err.message || 'Tente novamente em instantes.');
+                emptyState('O mercado está temporariamente indisponível (API instável)', 'Os dados ficam salvos em cache e devem voltar em instantes. Tente novamente.');
             }
         }
 
