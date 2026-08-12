@@ -269,6 +269,11 @@ def _refresh_watch_state(w):
             st['lastEntry'] = time.time()
             st['new'] = True
         st['stock'] = cur
+    if cur > 0:
+        # menor preço de venda listado (preço real, não o base) — best-effort
+        lowest = _lowest_ask(w['id'], w['sid'])
+        if lowest is not None:
+            st['lowestAsk'] = lowest
     return True
 
 
@@ -367,6 +372,36 @@ def _get_bids_v1(item_id, sid):
         except (ValueError, IndexError):
             continue
     return orders
+
+
+def _lowest_ask(item_id, sid):
+    """Menor preço de venda listado no livro de ofertas (best-effort, 1 tentativa).
+
+    Cada ordem do GetBiddingInfoList é 'preço-vendedores-compradores'; o menor
+    preço com vendedores > 0 é a oferta mais barata disponível agora. Usado nos
+    alertas de disponibilidade para mostrar quanto custa de fato o item.
+    """
+    try:
+        resp = requests.get(
+            f'{ARSH_API}/v1/{REGION}/GetBiddingInfoList',
+            params={'id': item_id, 'sid': sid}, timeout=8)
+        if resp.status_code != 200:
+            return None
+        raw = resp.json().get('resultMsg', '')
+    except (requests.RequestException, ValueError):
+        return None
+    best = None
+    for row in raw.split('|'):
+        parts = row.split('-')
+        if len(parts) < 3:
+            continue
+        try:
+            if int(parts[1]) > 0:
+                p = int(parts[0])
+                best = p if best is None else min(best, p)
+        except (ValueError, IndexError):
+            continue
+    return best
 
 
 def _icon_path(item_id, main_cat, sub_cat):

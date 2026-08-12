@@ -418,6 +418,7 @@
         .sub-row .enh { flex: 1; color: var(--text-main); font-weight: 600; }
         .sub-row .enh span { color: var(--accent-gold); }
         .sub-row .price { width: 130px; text-align: right; color: var(--accent-gold); }
+        .sub-row .price .from { display: block; font-size: 0.72rem; font-weight: 400; color: var(--muted); }
         .sub-row .stock { width: 110px; text-align: right; font-size: 0.8rem; }
         .sub-row .caret { width: 20px; text-align: right; color: var(--muted); flex-shrink: 0; transition: transform 0.2s; }
         .sub-row.expanded .caret { transform: rotate(180deg); }
@@ -673,10 +674,13 @@
                 if (stock > 0) {
                     statusCls = 'live';
                     statusHtml = `<span class="dot-live"></span>NO MERCADO &middot; ${fmt(stock)} oferta${stock === 1 ? '' : 's'}`;
+                    if (st.lowestAsk) statusHtml += ` &middot; desde ${fmt(st.lowestAsk)}`;
                     if (st.new) statusHtml += ' <span class="watch-new-badge" title="Marcar como visto">NOVO</span>';
                 } else if (st.new && st.lastEntry) {
                     statusCls = 'alert';
-                    statusHtml = `▲ Entrou às ${fmtTime(st.lastEntry)} <span class="watch-new-badge" title="Marcar como visto">NOVO</span>`;
+                    statusHtml = `▲ Entrou às ${fmtTime(st.lastEntry)}`;
+                    if (st.lowestAsk) statusHtml += ` &middot; desde ${fmt(st.lowestAsk)}`;
+                    statusHtml += ' <span class="watch-new-badge" title="Marcar como visto">NOVO</span>';
                 }
                 const card = document.createElement('div');
                 card.className = 'watch-card';
@@ -907,6 +911,27 @@
                     toggleWatch(itemId, l.sid, itemName, lbl || l.name, mainCategory, subCategory);
                 });
                 sub.appendChild(row);
+            });
+
+            // Menor preço listado (oferta de venda mais barata) dos níveis com estoque
+            const rows = [...sub.querySelectorAll('.sub-row')];
+            sorted.forEach((l, i) => {
+                if (!(l.currentStock > 0)) return;
+                (async () => {
+                    try {
+                        const resp = await fetch(`api/bids?id=${itemId}&sid=${l.sid}`);
+                        const data = await resp.json();
+                        if (data.error) return;
+                        const asks = (data.orders || []).filter(o => o.sellers > 0).map(o => o.price);
+                        if (!asks.length) return;
+                        const priceEl = rows[i] && rows[i].querySelector('.price');
+                        if (!priceEl || priceEl.querySelector('.from')) return;
+                        const s = document.createElement('span');
+                        s.className = 'from';
+                        s.textContent = 'desde ' + fmt(Math.min(...asks));
+                        priceEl.appendChild(s);
+                    } catch (e) { /* silencioso */ }
+                })();
             });
         }
 
