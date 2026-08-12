@@ -18,7 +18,7 @@
             font-style: normal;
         }
 
-        h1 {
+        h1, h2, .section-title {
             font-family: 'Web Pearl', 'Outfit', sans-serif;
         }
 
@@ -272,16 +272,23 @@
         const resultsEl = document.getElementById('results');
         const countEl = document.getElementById('result-count');
 
-        const ENH = { 8: 'PRI', 9: 'DUO', 10: 'TRI', 11: 'TET', 12: 'PEN' };
+        const ENH_WEAPON = { 8: 'PRI', 9: 'DUO', 10: 'TRI', 11: 'TET', 12: 'PEN', 13: 'HEX', 14: 'SEP', 15: 'OCT', 16: 'NOV', 17: 'DEC' };
+        const ENH_ACC = { 6: 'PRI', 7: 'DUO', 8: 'TRI', 9: 'TET', 10: 'PEN' };
+        const ACC_CATS = new Set([15, 20]);
 
         function fmt(n) {
             return Number(n || 0).toLocaleString('pt-BR');
         }
 
-        function enhLabel(sid) {
+        function enhLabel(sid, mainCategory) {
             if (sid === 0) return '';
-            if (sid <= 7) return '+' + sid;
-            if (ENH[sid]) return ENH[sid];
+            if (ACC_CATS.has(mainCategory)) {
+                if (sid <= 5) return '+' + sid;
+                if (ENH_ACC[sid]) return ENH_ACC[sid];
+            } else {
+                if (sid <= 7) return '+' + sid;
+                if (ENH_WEAPON[sid]) return ENH_WEAPON[sid];
+            }
             return 'Nv ' + sid;
         }
 
@@ -402,7 +409,7 @@
                 const resp = await fetch('api/item?id=' + id);
                 const data = await resp.json();
                 if (data.error) throw new Error(data.error);
-                renderSubList(sub, data.levels || []);
+                renderSubList(sub, data.levels || [], item.mainCategory);
             } catch (err) {
                 sub.innerHTML = `
                     <div class="sub-header"><span>Aprimoramento</span><span>Preço</span><span>Estoque</span></div>
@@ -412,7 +419,7 @@
             }
         }
 
-        function renderSubList(sub, levels) {
+        function renderSubList(sub, levels, mainCategory) {
             const sorted = levels.slice().sort((a, b) => a.sid - b.sid);
             sub.innerHTML = `
                 <div class="sub-header">
@@ -420,7 +427,7 @@
                 </div>` +
                 sorted.map(l => `
                     <div class="sub-row">
-                        <div class="enh">${l.name}<span>${enhLabel(l.sid) ? ' — ' + enhLabel(l.sid) : ''}</span></div>
+                        <div class="enh">${l.name}<span>${enhLabel(l.sid, mainCategory) ? ' — ' + enhLabel(l.sid, mainCategory) : ''}</span></div>
                         <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}</div>
                         <div class="stock ${l.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${l.currentStock > 0 ? fmt(l.currentStock) : '—'}</div>
                     </div>`).join('');
