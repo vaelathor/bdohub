@@ -55,7 +55,9 @@ def save_pinned(items):
 _cache = {'market': None, 'ts': 0.0}
 _items = {}  # id -> {'data': [...], 'ts': float}
 _bids = {}   # (id, sid) -> {'data': [...], 'ts': float}
+_hist = {}   # (id, sid) -> {'data': [...], 'ts': float}  (histórico diário)
 BID_TTL = 3 * 60  # ofertas ativas (cache curto; a própria arsha já cacheia ~30 min)
+HIST_TTL = 6 * 3600  # histórico de preços: dados diários, cache longo
 _lock = threading.Lock()
 
 # Cache em disco: a API do arsha é instável (503/500 com frequência), então
@@ -65,6 +67,7 @@ _CACHE_DIR = os.path.join(_MOD_DIR, '.cache')
 _SNAP_FILE = os.path.join(_CACHE_DIR, f'market_{REGION}.json')
 _ITEM_DIR = os.path.join(_CACHE_DIR, 'items')
 _BID_DIR = os.path.join(_CACHE_DIR, 'bids')
+_HIST_DIR = os.path.join(_CACHE_DIR, 'history')
 
 
 def _write_disk(path, data):
@@ -274,6 +277,12 @@ def _refresh_watch_state(w):
         lowest = _lowest_ask(w['id'], w['sid'])
         if lowest is not None:
             st['lowestAsk'] = lowest
+    # tendência de 7 dias (série diária): último ponto vs o de 7 dias atrás
+    hist = get_history(w['id'], w['sid'])
+    if len(hist) >= 8:
+        base = hist[-8]
+        if base:
+            st['trend7'] = round((hist[-1] - base) / base * 100, 1)
     return True
 
 
@@ -402,6 +411,45 @@ def _lowest_ask(item_id, sid):
         except (ValueError, IndexError):
             continue
     return best
+
+
+def get_history(item_id, sid):
+    """Série de preços diária dos últimos ~90 dias de um nível (gráfico in-game).
+
+    Cacheada 6h em memória + disco; 1 tentativa curta (dados diários não
+    precisam de retry). Retorna lista vazia se a fonte estiver fora do ar e
+    não houver cópia em disco.
+    """
+    key = (item_id, sid)
+    with _lock:
+        cached = _hist.get(key)
+        if cached and (time.time() - cached['ts']) < HIST_TTL:
+            return cached['data']
+    prices = None
+    for _ in range(2):  # retry curto (a arsha falha às vezes)
+        try:
+            resp = requests.get(
+                f'{ARSH_API}/v1/{REGION}/GetMarketPriceInfo',
+                params={'id': item_id, 'sid': sid}, timeout=15)
+            if resp.status_code == 200:
+                raw = resp.json().get('resultMsg', '')
+                prices = [int(x) for x in raw.split('-') if x]
+                if prices:
+                    break
+        except (requests.RequestException, ValueError):
+            pass
+        time.sleep(RETRY_DELAY)
+    if not prices:
+        disk = _read_disk(os.path.join(_HIST_DIR, f'{item_id}_{sid}.json'))
+        if disk is None:
+            return []
+        with _lock:
+            _hist[key] = {'data': disk, 'ts': time.time() - HIST_TTL - 1}
+        return disk
+    with _lock:
+        _hist[key] = {'data': prices, 'ts': time.time()}
+    _write_disk(os.path.join(_HIST_DIR, f'{item_id}_{sid}.json'), prices)
+    return prices
 
 
 def _icon_path(item_id, main_cat, sub_cat):
@@ -564,6 +612,17 @@ def watched_ack():
             break
     save_watched(watched)
     return jsonify({'error': None})
+
+
+@market_bp.route('/api/history')
+def history():
+    """Histórico de preços diário (~90 dias) de um nível de aprimoramento."""
+    item_id = request.args.get('id', type=int)
+    sid = request.args.get('sid', type=int, default=0)
+    if not item_id:
+        return jsonify({'error': 'Parâmetro id é obrigatório.'}), 400
+    prices = get_history(item_id, sid)
+    return jsonify({'history': prices, 'error': None})
 
 
 @market_bp.route('/api/bids')

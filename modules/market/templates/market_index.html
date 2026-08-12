@@ -347,6 +347,23 @@
         .watch-btn:hover { color: var(--accent-gold); transform: scale(1.15); }
         .watch-btn.active { color: var(--accent-gold); }
 
+        /* Histórico de preços (90 dias) */
+        .spark { width: 76px; flex-shrink: 0; color: var(--accent-gold); opacity: 0.85; }
+        .spark svg { display: block; width: 100%; height: 22px; }
+
+        .hist-chart { padding: 0.4rem 0 0.2rem; }
+        .hist-chart .chart-title { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem; }
+        .hist-chart .chart-box { display: block; width: 100%; height: auto; }
+        .chart-line { stroke: var(--accent-gold); }
+        .chart-fill { fill: var(--accent-gold); opacity: 0.12; }
+        .chart-label { fill: var(--muted); font-size: 9px; }
+        .chart-empty { padding: 0.4rem 0; color: var(--muted); font-size: 0.85rem; }
+
+        /* Tendência nos cards de alerta */
+        .w-status .trend { font-size: 0.7rem; font-weight: 700; margin-left: 3px; }
+        .trend-up { color: var(--ok); }
+        .trend-down { color: var(--bad); }
+
         .item-info { flex: 1; min-width: 0; }
 
         .item-name {
@@ -569,6 +586,54 @@
             } catch (e) { return ''; }
         }
 
+        function fmtCompact(n) {
+            if (n == null || !isFinite(n)) return '';
+            if (Math.abs(n) >= 1e9) return (n / 1e9).toFixed(2).replace('.', ',') + ' bi';
+            if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(1).replace('.', ',') + ' mi';
+            if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(0) + ' k';
+            return String(n);
+        }
+
+        function drawSparkline(container, prices) {
+            if (!prices || prices.length < 2) return;
+            const w = 76, h = 22, pad = 1.5;
+            const min = Math.min(...prices), max = Math.max(...prices);
+            const span = (max - min) || 1;
+            const pts = prices.map((p, i) => {
+                const x = pad + (i / (prices.length - 1)) * (w - 2 * pad);
+                const y = h - pad - ((p - min) / span) * (h - 2 * pad);
+                return x.toFixed(1) + ',' + y.toFixed(1);
+            }).join(' ');
+            container.innerHTML = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
+        }
+
+        function drawChart(container, prices) {
+            if (!prices || prices.length < 2) {
+                container.innerHTML = '<div class="chart-empty">Sem histórico disponível.</div>';
+                return;
+            }
+            const w = 600, h = 120, padL = 6, padR = 6, padT = 10, padB = 20;
+            const min = Math.min(...prices), max = Math.max(...prices);
+            const span = (max - min) || 1;
+            const iw = w - padL - padR, ih = h - padT - padB;
+            const n = prices.length;
+            const pt = (p, i) => [padL + (i / (n - 1)) * iw, padT + ih - ((p - min) / span) * ih];
+            const line = prices.map((p, i) => pt(p, i).join(',')).join(' ');
+            const area = `${padL},${padT + ih} ${line} ${padL + iw},${padT + ih}`;
+            const end = new Date();
+            const start = new Date(end.getTime() - (n - 1) * 86400000);
+            const dstr = d => d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+            container.innerHTML = `
+                <svg class="chart-box" viewBox="0 0 ${w} ${h}">
+                    <polygon class="chart-fill" points="${area}"/>
+                    <polyline class="chart-line" points="${line}" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+                    <text class="chart-label" x="${padL}" y="${padT - 3}">${fmtCompact(max)}</text>
+                    <text class="chart-label" x="${padL}" y="${padT + ih + 12}">${fmtCompact(min)}</text>
+                    <text class="chart-label" x="${padL}" y="${h - 2}">${dstr(start)}</text>
+                    <text class="chart-label" x="${padL + iw}" y="${h - 2}" text-anchor="end">${dstr(end)}</text>
+                </svg>`;
+        }
+
         function iconSvg() {
             return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"></path><path d="M11 3 8 9l4 13 4-13-3-6"></path><path d="M2 9h20"></path></svg>';
         }
@@ -681,6 +746,10 @@
                     statusHtml = `▲ Entrou às ${fmtTime(st.lastEntry)}`;
                     if (st.lowestAsk) statusHtml += ` &middot; desde ${fmt(st.lowestAsk)}`;
                     statusHtml += ' <span class="watch-new-badge" title="Marcar como visto">NOVO</span>';
+                }
+                if (st.trend7 != null && st.trend7 !== 0) {
+                    const up = st.trend7 > 0;
+                    statusHtml += ` <span class="trend ${up ? 'trend-up' : 'trend-down'}">${up ? '▲' : '▼'} ${Math.abs(st.trend7).toLocaleString('pt-BR', { maximumFractionDigits: 1 })}% em 7d</span>`;
                 }
                 const card = document.createElement('div');
                 card.className = 'watch-card';
@@ -903,6 +972,7 @@
                     <div class="enh">${l.name}${lbl ? `<span> — ${lbl}</span>` : ''}</div>
                     <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}</div>
                     <div class="stock ${l.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${l.currentStock > 0 ? fmt(l.currentStock) : '—'}</div>
+                    <div class="spark" title="Histórico de preços (90 dias)"></div>
                     <button class="watch-btn ${isWatched ? 'active' : ''}" data-key="${wKey}" title="${isWatched ? 'Parar de vigiar' : 'Vigiar disponibilidade (avisa quando entrar no mercado)'}">${bellSvg()}</button>
                     <svg class="caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
                 row.addEventListener('click', () => toggleOffers(row, itemId));
@@ -913,9 +983,19 @@
                 sub.appendChild(row);
             });
 
-            // Menor preço listado (oferta de venda mais barata) dos níveis com estoque
+            // Sparkline (90 dias) de cada nível + menor preço listado dos com estoque
             const rows = [...sub.querySelectorAll('.sub-row')];
             sorted.forEach((l, i) => {
+                const rowEl = rows[i];
+                (async () => {
+                    try {
+                        const resp = await fetch(`api/history?id=${itemId}&sid=${l.sid}`);
+                        const data = await resp.json();
+                        if (data.error || !rowEl) return;
+                        const spark = rowEl.querySelector('.spark');
+                        if (spark) drawSparkline(spark, data.history || []);
+                    } catch (e) { /* silencioso */ }
+                })();
                 if (!(l.currentStock > 0)) return;
                 (async () => {
                     try {
@@ -924,7 +1004,7 @@
                         if (data.error) return;
                         const asks = (data.orders || []).filter(o => o.sellers > 0).map(o => o.price);
                         if (!asks.length) return;
-                        const priceEl = rows[i] && rows[i].querySelector('.price');
+                        const priceEl = rowEl && rowEl.querySelector('.price');
                         if (!priceEl || priceEl.querySelector('.from')) return;
                         const s = document.createElement('span');
                         s.className = 'from';
@@ -955,32 +1035,49 @@
             const off = document.createElement('div');
             off.className = 'offer-block';
             off.innerHTML = `
-                <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>
-                <div class="offer-empty">Carregando ofertas...</div>`;
+                <div class="hist-chart">
+                    <div class="chart-title">Histórico de preços (90 dias)</div>
+                    <div class="hist-svg"><div class="chart-empty">Carregando histórico...</div></div>
+                </div>
+                <div class="offer-wrap">
+                    <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>
+                    <div class="offer-empty">Carregando ofertas...</div>
+                </div>`;
             row.after(off);
 
+            const sid = row.dataset.sid;
+            (async () => {
+                try {
+                    const resp = await fetch(`api/history?id=${itemId}&sid=${sid}`);
+                    const data = await resp.json();
+                    const box = off.querySelector('.hist-svg');
+                    if (box) drawChart(box, data.history || []);
+                } catch (e) { /* silencioso */ }
+            })();
+
+            const wrap = off.querySelector('.offer-wrap');
             try {
-                const resp = await fetch('api/bids?id=' + itemId + '&sid=' + row.dataset.sid);
+                const resp = await fetch('api/bids?id=' + itemId + '&sid=' + sid);
                 const data = await resp.json();
                 if (data.error) throw new Error(data.error);
-                renderOffers(off, data.orders || []);
+                renderOffers(wrap, data.orders || []);
             } catch (err) {
-                off.innerHTML = `
+                wrap.innerHTML = `
                     <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>
                     <div class="offer-empty">Falha ao carregar: ${err.message}</div>`;
             }
         }
 
-        function renderOffers(off, orders) {
+        function renderOffers(wrap, orders) {
             const active = orders.filter(o => o.sellers > 0 || o.buyers > 0)
                                  .sort((a, b) => b.price - a.price);
             if (!active.length) {
-                off.innerHTML = `
+                wrap.innerHTML = `
                     <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>
                     <div class="offer-empty">Sem ofertas ativas neste nível.</div>`;
                 return;
             }
-            off.innerHTML = `
+            wrap.innerHTML = `
                 <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>` +
                 active.map(o => `
                     <div class="offer-row">
