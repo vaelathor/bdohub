@@ -696,7 +696,7 @@
                 const data = await resp.json();
                 if (data.error) throw new Error(data.error);
                 pinnedItems = data.items || [];
-                pinnedIds = new Set(pinnedItems.map(i => i.id));
+                pinnedIds = new Set(pinnedItems.map(i => String(i.id)));
                 renderPinned();
             } catch (e) { panel.classList.add('hidden'); }
         }
@@ -841,7 +841,7 @@
             });
             const data = await resp.json();
             if (data.error) return;
-            if (data.pinned) pinnedIds.add(item.id); else pinnedIds.delete(item.id);
+            if (data.pinned) pinnedIds.add(String(item.id)); else pinnedIds.delete(String(item.id));
             document.querySelectorAll(`.pin-btn[data-id="${item.id}"]`).forEach(b => {
                 b.classList.toggle('pinned', data.pinned);
                 b.innerHTML = starSvg(data.pinned);
@@ -857,7 +857,7 @@
             });
             const data = await resp.json();
             if (data.error) return;
-            if (data.pinned) pinnedIds.add(itemId); else pinnedIds.delete(itemId);
+            if (data.pinned) pinnedIds.add(String(itemId)); else pinnedIds.delete(String(itemId));
             document.querySelectorAll(`.pin-btn[data-id="${itemId}"]`).forEach(b => {
                 b.classList.toggle('pinned', data.pinned);
                 b.innerHTML = starSvg(data.pinned);
@@ -873,7 +873,7 @@
             renderResults(data.items, data.count);
             const row = document.querySelector(`.result-row[data-id="${id}"]`);
             if (row) {
-                const item = data.items.find(i => i.id === id);
+                const item = data.items.find(i => String(i.id) === String(id));
                 if (item && !row.classList.contains('expanded')) await toggleItem(row, item);
                 // Se veio de um alerta de disponibilidade, abre direto o nível vigiado
                 if (sid != null) {
@@ -934,7 +934,7 @@
                         <div class="item-price">${fmt(item.basePrice)}</div>
                         <div class="item-stock ${item.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${item.currentStock > 0 ? fmt(item.currentStock) + ' ofertas' : 'Sem ofertas'}</div>
                     </div>
-                    <button class="pin-btn ${pinnedIds.has(item.id) ? 'pinned' : ''}" data-id="${item.id}" title="Favoritar item">${starSvg(pinnedIds.has(item.id))}</button>
+                    <button class="pin-btn ${pinnedIds.has(String(item.id)) ? 'pinned' : ''}" data-id="${item.id}" title="Favoritar item">${starSvg(pinnedIds.has(String(item.id)))}</button>
                     <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
                 row.addEventListener('click', () => toggleItem(row, item));
                 row.querySelector('.pin-btn').addEventListener('click', (e) => {
