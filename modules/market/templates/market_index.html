@@ -272,24 +272,35 @@
         const resultsEl = document.getElementById('results');
         const countEl = document.getElementById('result-count');
 
-        const ENH_WEAPON = { 8: 'PRI', 9: 'DUO', 10: 'TRI', 11: 'TET', 12: 'PEN', 13: 'HEX', 14: 'SEP', 15: 'OCT', 16: 'NOV', 17: 'DEC' };
-        const ENH_ACC = { 6: 'PRI', 7: 'DUO', 8: 'TRI', 9: 'TET', 10: 'PEN' };
-        const ACC_CATS = new Set([15, 20]);
+        const ENH_NAMES = ['PRI', 'DUO', 'TRI', 'TET', 'PEN', 'HEX', 'SEP', 'OCT', 'NOV', 'DEC'];
 
         function fmt(n) {
             return Number(n || 0).toLocaleString('pt-BR');
         }
 
-        function enhLabel(sid, mainCategory) {
-            if (sid === 0) return '';
-            if (ACC_CATS.has(mainCategory)) {
-                if (sid <= 5) return '+' + sid;
-                if (ENH_ACC[sid]) return ENH_ACC[sid];
+        // Rótulo de um nível de aprimoramento, conforme a escala do item (verificado
+        // contra a wiki oficial da PA, Garmoth e BDOLytics):
+        //  - acessórios (cat 20): 1-5 = PRI..PEN, 6-10 = HEX..DEC (clássicos e Prione/Preonne)
+        //  - armas/armaduras/ferramentas: 1-15 = +1..+15, 16-20 = PRI..PEN, 21-25 = HEX..DEC
+        function levelLabel(level, isAcc) {
+            if (level === 0) return '0';
+            if (isAcc) {
+                if (level >= 1 && level <= 10) return ENH_NAMES[level - 1];
             } else {
-                if (sid <= 7) return '+' + sid;
-                if (ENH_WEAPON[sid]) return ENH_WEAPON[sid];
+                if (level <= 15) return '+' + level;
+                if (level >= 16 && level <= 25) return ENH_NAMES[level - 16];
             }
-            return 'Nv ' + sid;
+            return 'Nv ' + level;
+        }
+
+        // A sub-lista do mercado agrupa níveis com o mesmo preço (ex.: +0~+7 numa
+        // linha só); usamos minEnhance/maxEnhance para mostrar a faixa correta.
+        function enhLabel(minEnh, maxEnh, mainCategory) {
+            const isAcc = mainCategory === 20;
+            const lo = (minEnh === undefined || minEnh === null) ? 0 : minEnh;
+            const hi = (maxEnh === undefined || maxEnh === null) ? lo : maxEnh;
+            if (hi === lo) return levelLabel(lo, isAcc);
+            return levelLabel(lo, isAcc) + ' ~ ' + levelLabel(hi, isAcc);
         }
 
         function fmtTime(ts) {
@@ -420,17 +431,20 @@
         }
 
         function renderSubList(sub, levels, mainCategory) {
-            const sorted = levels.slice().sort((a, b) => a.sid - b.sid);
+            const sorted = levels.slice().sort((a, b) => (a.minEnhance ?? a.sid) - (b.minEnhance ?? b.sid));
             sub.innerHTML = `
                 <div class="sub-header">
                     <span>Aprimoramento</span><span>Preço</span><span>Estoque</span>
                 </div>` +
-                sorted.map(l => `
+                sorted.map(l => {
+                    const lbl = enhLabel(l.minEnhance, l.maxEnhance, mainCategory);
+                    return `
                     <div class="sub-row">
-                        <div class="enh">${l.name}<span>${enhLabel(l.sid, mainCategory) ? ' — ' + enhLabel(l.sid, mainCategory) : ''}</span></div>
+                        <div class="enh">${l.name}${lbl ? `<span> — ${lbl}</span>` : ''}</div>
                         <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}</div>
                         <div class="stock ${l.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${l.currentStock > 0 ? fmt(l.currentStock) : '—'}</div>
-                    </div>`).join('');
+                    </div>`;
+                }).join('');
         }
     </script>
 </body>

@@ -66,27 +66,37 @@ def _get_item_v2(item_id):
 
 
 def _get_item_v1(item_id):
-    """Fallback via v1 GetWorldMarketSubList (pipe-separated, sem nome)."""
+    """Fallback via v1 GetWorldMarketSubList (pipe-separated, sem nome).
+
+    Formato real de cada linha: mainKey-subKey-maxEnhance-price-stock-
+    totalTrades-priceMin-priceMax-lastSoldPrice-lastSoldTime.
+    O nível inicial (minEnhance) é derivado: começa em 0 e cada linha
+    cobre do nível seguinte até maxEnhance (linhas agrupam níveis com o
+    mesmo preço, ex.: Kzarka +0~+7 numa linha só).
+    """
     data = _get(f'{ARSH_API}/v1/{REGION}/GetWorldMarketSubList', {'id': item_id})
     raw = data.get('resultMsg', '')
     levels = []
+    prev_max = -1
     for row in raw.split('|'):
         parts = row.split('-')
-        if len(parts) < 9:
+        if len(parts) < 10:
             continue
         try:
+            max_enh = int(parts[2])
             levels.append({
                 'sid': int(parts[1]),
-                'minEnhance': int(parts[2]),
-                'maxEnhance': int(parts[3]),
-                'basePrice': int(parts[4]),
-                'currentStock': int(parts[5]),
-                'totalTrades': int(parts[6]),
-                'priceMin': int(parts[7]),
-                'priceMax': int(parts[8]),
-                'lastSoldPrice': int(parts[9]) if len(parts) > 9 else None,
-                'lastSoldTime': int(parts[10]) if len(parts) > 10 else None,
+                'minEnhance': prev_max + 1,
+                'maxEnhance': max_enh,
+                'basePrice': int(parts[3]),
+                'currentStock': int(parts[4]),
+                'totalTrades': int(parts[5]),
+                'priceMin': int(parts[6]),
+                'priceMax': int(parts[7]),
+                'lastSoldPrice': int(parts[8]),
+                'lastSoldTime': int(parts[9]),
             })
+            prev_max = max_enh
         except (ValueError, IndexError):
             continue
     return levels
