@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Central</title>
+    <link rel="icon" href="{{ url_for('static', filename='bdo_hub.svg') }}" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Web Pearl';
+            src: url('{{ url_for("static", filename="fonts/web_pearl_original.ttf") }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1, h2, .section-title {
+            font-family: 'Web Pearl', 'Outfit', sans-serif;
+        }
+
+        :root {
+            --bg-base: #0f172a;
+            --bg-panel: #1e293b;
+            --bg-input: #0b1220;
+            --accent-primary: #38bdf8;
+            --accent-gold: #e0b457;
+            --glass-border: #334155;
+            --muted: #64748b;
+            --text-main: #f8fafc;
+            --ok: #34d399;
+            --bad: #f87171;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem 2rem;
+            gap: 1rem;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .header h1 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .region-badge {
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid var(--accent-primary);
+            color: var(--accent-primary);
+            padding: 0.3rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .search-box {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        #search-input {
+            width: 100%;
+            background: var(--bg-panel);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            padding: 0.9rem 1.2rem 0.9rem 3rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #search-input:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }
+
+        #search-input::placeholder { color: var(--muted); }
+
+        .results {
+            flex: 1;
+            overflow-y: auto;
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            background: rgba(30, 41, 59, 0.35);
+        }
+
+        .results::-webkit-scrollbar { width: 8px; }
+        .results::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 4px; }
+
+        .result-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 1.2rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .result-row:hover { background: rgba(56, 189, 248, 0.07); }
+        .result-row.expanded { background: rgba(56, 189, 248, 0.1); }
+
+        .item-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background: var(--bg-input);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--accent-gold);
+        }
+
+        .item-icon svg { width: 24px; height: 24px; }
+
+        .item-info { flex: 1; min-width: 0; }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 0.98rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .item-meta {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        .item-price-col { text-align: right; flex-shrink: 0; }
+
+        .item-price {
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-size: 0.98rem;
+        }
+
+        .item-stock { font-size: 0.78rem; margin-top: 2px; }
+        .stock-ok { color: var(--ok); }
+        .stock-zero { color: var(--bad); }
+
+        .chevron { color: var(--muted); flex-shrink: 0; transition: transform 0.2s; }
+        .result-row.expanded .chevron { transform: rotate(180deg); }
+
+        /* Sub-lista de aprimoramentos */
+        .sub-list {
+            background: rgba(11, 18, 32, 0.6);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+            display: none;
+        }
+
+        .result-row.expanded + .sub-list { display: block; }
+
+        .sub-header {
+            display: flex;
+            gap: 1rem;
+            padding: 0.5rem 1.2rem 0.5rem 4.6rem;
+            font-size: 0.72rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+        }
+
+        .sub-header span:nth-child(1) { flex: 1; }
+        .sub-header span:nth-child(2) { width: 130px; text-align: right; }
+        .sub-header span:nth-child(3) { width: 110px; text-align: right; }
+
+        .sub-row {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            padding: 0.55rem 1.2rem 0.55rem 4.6rem;
+            font-size: 0.9rem;
+        }
+
+        .sub-row:nth-child(even) { background: rgba(30, 41, 59, 0.3); }
+        .sub-row .enh { flex: 1; color: var(--text-main); font-weight: 600; }
+        .sub-row .enh span { color: var(--accent-gold); }
+        .sub-row .price { width: 130px; text-align: right; color: var(--accent-gold); }
+        .sub-row .stock { width: 110px; text-align: right; font-size: 0.8rem; }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--muted);
+            gap: 0.6rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .empty-state svg { opacity: 0.4; }
+        .empty-state .hint { font-size: 0.85rem; }
+
+        .footer {
+            flex-shrink: 0;
+            font-size: 0.72rem;
+            color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mercado Central</h1>
+        <span class="region-badge">SA</span>
+    </div>
+
+    <div class="search-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f8fafc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+        <input id="search-input" type="text" placeholder="Pesquisar item no mercado..." autocomplete="off" autocapitalize="off" spellcheck="false">
+    </div>
+
+    <div class="results" id="results">
+        <div class="empty-state" id="empty-state">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg>
+            <span>Digite o nome de um item para buscar</span>
+            <span class="hint">Ex.: kzarka, anel, pen, moeda corvo...</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span id="result-count"></span>
+        <span>Dados: api.arsha.io &middot; cache de 15 min</span>
+    </div>
+
+    <script>
+        const input = document.getElementById('search-input');
+        const resultsEl = document.getElementById('results');
+        const countEl = document.getElementById('result-count');
+
+        const ENH = { 8: 'PRI', 9: 'DUO', 10: 'TRI', 11: 'TET', 12: 'PEN' };
+
+        function fmt(n) {
+            return Number(n || 0).toLocaleString('pt-BR');
+        }
+
+        function enhLabel(sid) {
+            if (sid === 0) return '';
+            if (sid <= 7) return '+' + sid;
+            if (ENH[sid]) return ENH[sid];
+            return 'Nv ' + sid;
+        }
+
+        function fmtTime(ts) {
+            if (!ts) return '';
+            try {
+                return new Date(ts * 1000).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+            } catch (e) { return ''; }
+        }
+
+        function iconSvg() {
+            return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"></path><path d="M11 3 8 9l4 13 4-13-3-6"></path><path d="M2 9h20"></path></svg>';
+        }
+
+        function emptyState(primary, hint) {
+            resultsEl.innerHTML = `
+                <div class="empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg>
+                    <span>${primary}</span>
+                    ${hint ? `<span class="hint">${hint}</span>` : ''}
+                </div>`;
+            countEl.textContent = '';
+        }
+
+        function loadingState() {
+            resultsEl.innerHTML = `
+                <div class="empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"></path><path d="m16.2 7.8 2.9-2.9"></path><path d="M18 12h4"></path><path d="m16.2 16.2 2.9 2.9"></path><path d="M12 18v4"></path><path d="m4.9 19.1 2.9-2.9"></path><path d="M2 12h4"></path><path d="m4.9 4.9 2.9 2.9"></path></svg>
+                    <span>Consultando o mercado...</span>
+                </div>`;
+            countEl.textContent = '';
+        }
+
+        let debounceTimer = null;
+        let expandedId = null;
+
+        input.addEventListener('input', function () {
+            clearTimeout(debounceTimer);
+            const q = this.value.trim();
+            if (q.length < 2) {
+                emptyState('Digite o nome de um item para buscar', 'Ex.: kzarka, anel, pen, moeda corvo...');
+                return;
+            }
+            loadingState();
+            debounceTimer = setTimeout(() => search(q), 300);
+        });
+
+        async function search(q) {
+            try {
+                const resp = await fetch('api/search?q=' + encodeURIComponent(q));
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                renderResults(data.items, data.count);
+            } catch (err) {
+                emptyState('Falha ao consultar o mercado', err.message || 'Tente novamente em instantes.');
+            }
+        }
+
+        function renderResults(items, count) {
+            countEl.textContent = count > 50 ? `Exibindo 50 de ${fmt(count)} resultados` : (count ? `${fmt(count)} resultado${count === 1 ? '' : 's'}` : '');
+            if (!items.length) {
+                emptyState('Nenhum item encontrado', 'Tente outro nome ou termo.');
+                return;
+            }
+            resultsEl.innerHTML = '';
+            items.forEach(item => {
+                const row = document.createElement('div');
+                row.className = 'result-row';
+                row.dataset.id = item.id;
+                row.innerHTML = `
+                    <div class="item-icon">${iconSvg()}</div>
+                    <div class="item-info">
+                        <div class="item-name">${item.name}</div>
+                        <div class="item-meta">Vendidos: ${fmt(item.totalTrades)}</div>
+                    </div>
+                    <div class="item-price-col">
+                        <div class="item-price">${fmt(item.basePrice)}</div>
+                        <div class="item-stock ${item.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${item.currentStock > 0 ? fmt(item.currentStock) + ' ofertas' : 'Sem ofertas'}</div>
+                    </div>
+                    <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+                row.addEventListener('click', () => toggleItem(row, item));
+                resultsEl.appendChild(row);
+            });
+        }
+
+        async function toggleItem(row, item) {
+            const id = row.dataset.id;
+            const existingSub = row.nextElementSibling;
+
+            if (row.classList.contains('expanded')) {
+                row.classList.remove('expanded');
+                if (existingSub && existingSub.classList.contains('sub-list')) existingSub.remove();
+                expandedId = null;
+                return;
+            }
+
+            // Remove expansão anterior
+            document.querySelectorAll('.result-row.expanded').forEach(r => {
+                r.classList.remove('expanded');
+                const s = r.nextElementSibling;
+                if (s && s.classList.contains('sub-list')) s.remove();
+            });
+            expandedId = id;
+
+            row.classList.add('expanded');
+            const sub = document.createElement('div');
+            sub.className = 'sub-list';
+            sub.innerHTML = `
+                <div class="sub-header">
+                    <span>Aprimoramento</span><span>Preço</span><span>Estoque</span>
+                </div>
+                <div class="empty-state" style="padding:1.2rem;height:auto">
+                    <span>Carregando níveis...</span>
+                </div>`;
+            row.after(sub);
+
+            try {
+                const resp = await fetch('api/item?id=' + id);
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                renderSubList(sub, data.levels || []);
+            } catch (err) {
+                sub.innerHTML = `
+                    <div class="sub-header"><span>Aprimoramento</span><span>Preço</span><span>Estoque</span></div>
+                    <div class="empty-state" style="padding:1.2rem;height:auto">
+                        <span>Falha ao carregar: ${err.message}</span>
+                    </div>`;
+            }
+        }
+
+        function renderSubList(sub, levels) {
+            const sorted = levels.slice().sort((a, b) => a.sid - b.sid);
+            sub.innerHTML = `
+                <div class="sub-header">
+                    <span>Aprimoramento</span><span>Preço</span><span>Estoque</span>
+                </div>` +
+                sorted.map(l => `
+                    <div class="sub-row">
+                        <div class="enh">${l.name}<span>${enhLabel(l.sid) ? ' — ' + enhLabel(l.sid) : ''}</span></div>
+                        <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}</div>
+                        <div class="stock ${l.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${l.currentStock > 0 ? fmt(l.currentStock) : '—'}</div>
+                    </div>`).join('');
+        }
+    </script>
+</body>
+</html>
