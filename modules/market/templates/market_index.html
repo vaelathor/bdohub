@@ -173,6 +173,11 @@
         .pin-btn:hover { color: var(--accent-gold); transform: scale(1.15); }
         .pin-btn.pinned { color: var(--accent-gold); }
 
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .spin { animation: spin 1s linear infinite; }
+        .panel-loading { display: flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.8rem; padding: 0.2rem 0; }
+        .panel-loading svg { color: var(--accent-primary); flex-shrink: 0; }
+
         /* Painel de favoritos */
         .pinned-panel { flex-shrink: 0; }
         .pinned-panel.hidden { display: none; }
@@ -348,20 +353,18 @@
         .watch-btn.active { color: var(--accent-gold); }
 
         /* Histórico de preços (90 dias) */
-        .spark { width: 76px; flex-shrink: 0; color: var(--accent-gold); opacity: 0.85; }
-        .spark svg { display: block; width: 100%; height: 22px; }
-
-        .hist-chart { padding: 0.4rem 0 0.2rem; }
+        .detail-flex { display: flex; align-items: stretch; gap: 1.5rem; }
+        .hist-chart { flex: 1; min-width: 0; padding: 0.4rem 0 0.2rem; }
         .hist-chart .chart-title { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.35rem; }
-        .chart-flex { display: flex; align-items: stretch; gap: 1rem; }
-        .chart-main { flex: 1; min-width: 0; }
-        .chart-box { display: block; width: 100%; height: 84px; }
-        .chart-dates { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); margin-top: 3px; }
-        .chart-vals { flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; gap: 3px; padding-left: 0.9rem; border-left: 1px solid var(--glass-border); font-size: 0.78rem; }
+        .chart-flex { display: flex; align-items: stretch; gap: 0.9rem; }
+        .chart-vals { flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; gap: 3px; padding-right: 0.9rem; border-right: 1px solid var(--glass-border); font-size: 0.78rem; }
         .chart-vals .cv-row { display: flex; justify-content: space-between; gap: 0.8rem; }
         .chart-vals .cv-row span { color: var(--muted); }
         .chart-vals .cv-row b { color: var(--accent-gold); font-weight: 600; }
         .chart-vals .cv-pct { margin-top: 5px; font-weight: 700; }
+        .chart-main { flex: 1; min-width: 0; max-width: 320px; }
+        .chart-box { display: block; width: 100%; height: 76px; }
+        .chart-dates { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); margin-top: 3px; }
         .c-up { color: var(--ok); }
         .c-down { color: var(--bad); }
         .chart-line { stroke: var(--accent-gold); }
@@ -459,9 +462,11 @@
 
         .sub-row.expanded + .offer-block { display: block; }
 
+        .offer-wrap { flex-shrink: 0; width: 340px; }
+
         .offer-head {
             display: flex;
-            gap: 1rem;
+            gap: 0.5rem;
             padding: 0.4rem 0;
             font-size: 0.72rem;
             color: var(--muted);
@@ -471,19 +476,19 @@
         }
 
         .offer-head span:nth-child(1) { flex: 1; }
-        .offer-head span:nth-child(2) { width: 110px; text-align: right; }
-        .offer-head span:nth-child(3) { width: 110px; text-align: right; }
+        .offer-head span:nth-child(2) { width: 70px; text-align: right; }
+        .offer-head span:nth-child(3) { width: 70px; text-align: right; }
 
         .offer-row {
             display: flex;
-            gap: 1rem;
-            padding: 0.35rem 0;
-            font-size: 0.88rem;
+            gap: 0.5rem;
+            padding: 0.3rem 0;
+            font-size: 0.85rem;
         }
 
-        .offer-row .oprice { flex: 1; color: var(--accent-gold); font-weight: 600; }
-        .offer-row .osellers { width: 110px; text-align: right; }
-        .offer-row .obuyers { width: 110px; text-align: right; }
+        .offer-row .oprice { flex: 1; color: var(--accent-gold); font-weight: 600; font-size: 0.82rem; }
+        .offer-row .osellers { width: 70px; text-align: right; }
+        .offer-row .obuyers { width: 70px; text-align: right; }
         .offer-empty { padding: 0.5rem 0; color: var(--muted); font-size: 0.85rem; }
 
         .empty-state {
@@ -603,19 +608,6 @@
             return String(n);
         }
 
-        function drawSparkline(container, prices) {
-            if (!prices || prices.length < 2) return;
-            const w = 76, h = 22, pad = 1.5;
-            const min = Math.min(...prices), max = Math.max(...prices);
-            const span = (max - min) || 1;
-            const pts = prices.map((p, i) => {
-                const x = pad + (i / (prices.length - 1)) * (w - 2 * pad);
-                const y = h - pad - ((p - min) / span) * (h - 2 * pad);
-                return x.toFixed(1) + ',' + y.toFixed(1);
-            }).join(' ');
-            container.innerHTML = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
-        }
-
         function drawChart(container, prices) {
             if (!prices || prices.length < 2) {
                 container.innerHTML = '<div class="chart-empty">Sem histórico disponível.</div>';
@@ -639,18 +631,18 @@
             const pctCls = pct > 0 ? 'c-up' : (pct < 0 ? 'c-down' : '');
             container.innerHTML = `
                 <div class="chart-flex">
+                    <div class="chart-vals">
+                        <div class="cv-row"><span>Máx</span><b>${fmtCompact(max)}</b></div>
+                        <div class="cv-row"><span>Mín</span><b>${fmtCompact(min)}</b></div>
+                        <div class="cv-row"><span>Atual</span><b>${fmtCompact(cur)}</b></div>
+                        <div class="cv-pct ${pctCls}">${arrow} ${Math.abs(pct).toLocaleString('pt-BR', { maximumFractionDigits: 1 })}% (90d)</div>
+                    </div>
                     <div class="chart-main">
                         <svg class="chart-box" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
                             <polygon class="chart-fill" points="${area}"/>
                             <polyline class="chart-line" points="${line}" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
                         </svg>
                         <div class="chart-dates"><span>${dstr(start)}</span><span>${dstr(end)}</span></div>
-                    </div>
-                    <div class="chart-vals">
-                        <div class="cv-row"><span>Máx</span><b>${fmtCompact(max)}</b></div>
-                        <div class="cv-row"><span>Mín</span><b>${fmtCompact(min)}</b></div>
-                        <div class="cv-row"><span>Atual</span><b>${fmtCompact(cur)}</b></div>
-                        <div class="cv-pct ${pctCls}">${arrow} ${Math.abs(pct).toLocaleString('pt-BR', { maximumFractionDigits: 1 })}% (90d)</div>
                     </div>
                 </div>`;
         }
@@ -689,7 +681,16 @@
             return `<svg viewBox="0 0 24 24" fill="${filled ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
         }
 
+        function panelSpinner() {
+            return '<div class="panel-loading"><svg class="spin" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg><span>Carregando...</span></div>';
+        }
+
         async function loadPinned() {
+            const panel = document.getElementById('pinned-panel');
+            const list = document.getElementById('pinned-list');
+            document.getElementById('pinned-count').textContent = '';
+            panel.classList.remove('hidden');
+            list.innerHTML = panelSpinner();
             try {
                 const resp = await fetch('api/pinned');
                 const data = await resp.json();
@@ -697,7 +698,7 @@
                 pinnedItems = data.items || [];
                 pinnedIds = new Set(pinnedItems.map(i => i.id));
                 renderPinned();
-            } catch (e) { /* silencioso: painel fica oculto */ }
+            } catch (e) { panel.classList.add('hidden'); }
         }
 
         function renderPinned() {
@@ -735,6 +736,11 @@
         }
 
         async function loadWatched() {
+            const panel = document.getElementById('watch-panel');
+            const list = document.getElementById('watch-list');
+            document.getElementById('watch-count').textContent = '';
+            panel.classList.remove('hidden');
+            list.innerHTML = panelSpinner();
             try {
                 const resp = await fetch('api/watched');
                 const data = await resp.json();
@@ -742,7 +748,7 @@
                 watchedList = data.watched || [];
                 watchedKeys = new Set(watchedList.map(w => w.id + ':' + w.sid));
                 renderWatched();
-            } catch (e) { /* silencioso: painel fica oculto */ }
+            } catch (e) { panel.classList.add('hidden'); }
         }
 
         function renderWatched() {
@@ -993,7 +999,6 @@
                     <div class="enh">${l.name}${lbl ? `<span> — ${lbl}</span>` : ''}</div>
                     <div class="price">${fmt(l.lastSoldPrice || l.basePrice)}</div>
                     <div class="stock ${l.currentStock > 0 ? 'stock-ok' : 'stock-zero'}">${l.currentStock > 0 ? fmt(l.currentStock) : '—'}</div>
-                    <div class="spark" title="Histórico de preços (90 dias)"></div>
                     <button class="watch-btn ${isWatched ? 'active' : ''}" data-key="${wKey}" title="${isWatched ? 'Parar de vigiar' : 'Vigiar disponibilidade (avisa quando entrar no mercado)'}">${bellSvg()}</button>
                     <svg class="caret" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
                 row.addEventListener('click', () => toggleOffers(row, itemId));
@@ -1004,19 +1009,10 @@
                 sub.appendChild(row);
             });
 
-            // Sparkline (90 dias) de cada nível + menor preço listado dos com estoque
+            // Menor preço listado ("desde X") dos níveis com oferta ativa
             const rows = [...sub.querySelectorAll('.sub-row')];
             sorted.forEach((l, i) => {
                 const rowEl = rows[i];
-                (async () => {
-                    try {
-                        const resp = await fetch(`api/history?id=${itemId}&sid=${l.sid}`);
-                        const data = await resp.json();
-                        if (data.error || !rowEl) return;
-                        const spark = rowEl.querySelector('.spark');
-                        if (spark) drawSparkline(spark, data.history || []);
-                    } catch (e) { /* silencioso */ }
-                })();
                 if (!(l.currentStock > 0)) return;
                 (async () => {
                     try {
@@ -1056,13 +1052,15 @@
             const off = document.createElement('div');
             off.className = 'offer-block';
             off.innerHTML = `
-                <div class="hist-chart">
-                    <div class="chart-title">Histórico de preços (90 dias)</div>
-                    <div class="hist-svg"><div class="chart-empty">Carregando histórico...</div></div>
-                </div>
-                <div class="offer-wrap">
-                    <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>
-                    <div class="offer-empty">Carregando ofertas...</div>
+                <div class="detail-flex">
+                    <div class="hist-chart">
+                        <div class="chart-title">Histórico de preços (90 dias)</div>
+                        <div class="hist-svg"><div class="chart-empty">Carregando histórico...</div></div>
+                    </div>
+                    <div class="offer-wrap">
+                        <div class="offer-head"><span>Preço</span><span>Ofertas</span><span>Compradores</span></div>
+                        <div class="offer-empty">Carregando ofertas...</div>
+                    </div>
                 </div>`;
             row.after(off);
 
