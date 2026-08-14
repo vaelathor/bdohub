@@ -91,6 +91,12 @@
             color: #38bdf8;
             background: rgba(56, 189, 248, 0.08);
         }
+        .panel-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.6rem;
+        }
         .paste-zone.drag-over {
             border-color: #4ade80;
             color: #4ade80;
@@ -126,7 +132,7 @@
             <!-- Coluna Esquerda: Inventário de Subprodutos -->
             <div class="side-col">
                 <section class="glass-panel inventory-panel">
-                    <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div class="panel-header-row">
                         <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="package"></i> Subprodutos</h2>
                         <div style="display:flex;align-items:center;gap:0.35rem;">
                             <div class="paste-zone" id="paste-zone-inventory" title="Cole o print aqui (Ctrl+V) ou arraste a imagem">
@@ -225,7 +231,7 @@
             <!-- Coluna Direita: Simulação de Life Skill -->
             <div class="side-col">
                 <section class="glass-panel lifeskills-panel">
-                    <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div class="panel-header-row">
                         <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="sparkles"></i> Avanço de Profissões</h2>
                         <div style="display:flex;align-items:center;gap:0.35rem;">
                             <div class="paste-zone" id="paste-zone-prof" title="Cole o print aqui (Ctrl+V) ou arraste a imagem">
