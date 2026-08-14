@@ -478,38 +478,228 @@ def ocr_from_image(image_bytes):
 
 
 
-def ocr_inventory_from_image(image_bytes):
-    """Extract raw text from an inventory screenshot via OCR providers.
-    Returns raw text for analysis (no professions parsing)."""
-    text, warnings = extract_text_from_image(image_bytes)
-    # Log raw text for debugging
-    import sys
-    print(f"[OCR-INVENTORY] raw_text: {repr(text)}", flush=True)
+# Posição (linha, coluna — índices 0-based) de cada subproduto na grade do
+# inventário do jogo, conforme o print de referência do usuário
+# (subprodutos.png). Ajuste aqui se os itens forem reorganizados no inventário.
+INVENTORY_SLOT_MAP = {
+    "Suspiro de Fada": (0, 6),
+    "Estrela Silvestre": (2, 5),
+    "Garrafa de Vidro Descartada": (2, 6),
+    "Folha Rosa": (2, 7),
+    "Catalisador Desconhecido": (2, 8),
+    "Iguarias de Bruxa": (3, 0),
+}
 
-    if text.startswith("[Error") or text.startswith("[OCR"):
+
+def _detect_slot_grid(gray_img):
+    """Detecta a grade de slots do inventário a partir de perfis de brilho.
+
+    Slots são mais claros que o painel; as bordas escuras entre eles formam
+    vales no perfil médio por coluna/linha. Retorna (col_ranges, row_ranges)
+    com as células reais (excluindo sobras de borda/scrollbar), ou None.
+    """
+    w, h = gray_img.size
+    px = gray_img.load()
+
+    col_prof = [sum(px[x, y] for y in range(h)) / h for x in range(w)]
+    row_prof = [sum(px[x, y] for x in range(w)) / w for y in range(h)]
+
+    def separators(profile, n, min_gap_px=12):
+        vals = sorted(profile)
+        p25 = vals[int(n * 0.25)]
+        p75 = vals[int(n * 0.75)]
+        thresh = p25 + 0.15 * (p75 - p25)
+        bands = []
+        i = 0
+        while i < n:
+            if profile[i] < thresh:
+                j = i
+                while j < n and profile[j] < thresh:
+                    j += 1
+                bands.append((i + j - 1) // 2)
+                i = j
+            else:
+                i += 1
+        clusters = []
+        for b in bands:
+            if clusters and b - clusters[-1][-1] <= min_gap_px:
+                clusters[-1].append(b)
+            else:
+                clusters.append([b])
+        return [int(sum(c) / len(c)) for c in clusters]
+
+    col_seps = [c for c in separators(col_prof, w) if 15 < c < w - 15]
+    row_seps = [r for r in separators(row_prof, h) if 15 < r < h - 15]
+
+    if len(col_seps) < 3 or len(row_seps) < 2:
+        return None
+
+    col_b = [0] + col_seps + [w]
+    row_b = [0] + row_seps + [h]
+    col_ranges = [(col_b[i], col_b[i + 1]) for i in range(len(col_b) - 1)]
+    row_ranges = [(row_b[i], row_b[i + 1]) for i in range(len(row_b) - 1)]
+
+    med_col = sorted(c[1] - c[0] for c in col_ranges)[len(col_ranges) // 2]
+    med_row = sorted(r[1] - r[0] for r in row_ranges)[len(row_ranges) // 2]
+    col_ranges = [c for c in col_ranges if (c[1] - c[0]) >= 0.45 * med_col]
+    row_ranges = [r for r in row_ranges if (r[1] - r[0]) >= 0.45 * med_row]
+
+    if len(col_ranges) < 3 or len(row_ranges) < 2:
+        return None
+    return col_ranges, row_ranges
+
+
+def _parse_quantity(text):
+    """Converte o texto OCR da quantidade em inteiro.
+
+    Suporta os formatos do jogo: '122.3k' -> 122300, '1.2m' -> 1200000,
+    '7282' -> 7282, '10.747' -> 10747 (ponto como separador de milhar),
+    e vírgula/dois-pontos como separador decimal.
+    """
+    if not text:
+        return None
+    t = text.strip().lower().replace(":", ".").replace(";", ".")
+
+    m = re.match(r"^([\d.,]+)\s*([km])\s*$", t)
+    if m:
+        num, suffix = m.group(1), m.group(2)
+        if "," in num and "." in num:
+            if num.rfind(".") > num.rfind(","):
+                num = num.replace(",", "")       # vírgula = milhar
+            else:
+                num = num.replace(".", "")       # ponto = milhar
+                num = num.replace(",", ".")      # vírgula = decimal
+        elif "," in num:
+            num = num.replace(",", ".")
+        try:
+            val = float(num)
+        except ValueError:
+            return None
+        mult = 1_000_000 if suffix == "m" else 1_000
+        return int(round(val * mult))
+
+    digits = re.sub(r"[^0-9]", "", t)
+    if not digits:
+        return None
+    return int(digits)
+
+
+def _isolate_digits(slot_img):
+    """Recorta apenas os dígitos brancos da quantidade no rodapé do slot."""
+    g = slot_img.convert("L")
+    w, h = g.size
+    px = g.load()
+    rows = []
+    for y in range(int(h * 0.5), h):
+        cnt = sum(1 for x in range(w) if px[x, y] > 150)
+        rows.append((y, cnt))
+    bright_rows = [y for y, c in rows if c >= 3]
+    if not bright_rows:
+        return None
+    y0, y1 = min(bright_rows), max(bright_rows)
+    cols = []
+    for x in range(w):
+        cnt = sum(1 for y in range(y0, y1 + 1) if px[x, y] > 150)
+        cols.append((x, cnt))
+    bright_cols = [x for x, c in cols if c >= 2]
+    if not bright_cols:
+        return None
+    x0, x1 = min(bright_cols), max(bright_cols)
+    pad = 4
+    return slot_img.crop((max(0, x0 - pad), max(0, y0 - pad), min(w, x1 + pad), min(h, y1 + pad)))
+
+
+def _read_slot_quantity(slot_img):
+    """Lê a quantidade de um slot (recorte) via OCR. Retorna int ou None."""
+    w, h = slot_img.size
+    if w < 20 or h < 20:
+        return None
+    slot = slot_img.resize((w * 6, h * 6), Image.LANCZOS)
+    buf = BytesIO()
+    slot.save(buf, format="PNG")
+
+    candidates = []
+    for _ in range(2):
+        text, _ = extract_text_from_image(buf.getvalue())
+        qty = _parse_quantity(text)
+        if qty is not None:
+            candidates.append(qty)
+        if len(candidates) == 2 and candidates[0] == candidates[1]:
+            return candidates[0]
+    if candidates:
+        return candidates[0]
+
+    # Fallback: isolar só os dígitos (canto inferior do slot)
+    dig = _isolate_digits(slot)
+    if dig is not None:
+        buf2 = BytesIO()
+        dig.save(buf2, format="PNG")
+        text2, _ = extract_text_from_image(buf2.getvalue())
+        qty2 = _parse_quantity(text2)
+        if qty2 is not None:
+            return qty2
+    return None
+
+
+def ocr_inventory_from_image(image_bytes):
+    """Extrai as quantidades dos subprodutos do print do inventário.
+
+    Detecta a grade de slots, lê a quantidade de cada subproduto na posição
+    configurada (INVENTORY_SLOT_MAP) e devolve {item: quantidade}.
+    """
+    if not HAS_PIL:
+        return {"success": False, "error": "PIL não instalado no servidor", "data": None, "count": 0, "warnings": []}
+
+    try:
+        img = Image.open(BytesIO(image_bytes)).convert("RGB")
+    except Exception as e:
+        return {"success": False, "error": f"Imagem inválida: {e}", "data": None, "count": 0, "warnings": []}
+
+    gray = img.convert("L")
+    grid = _detect_slot_grid(gray)
+    if grid is None:
+        text, warnings = extract_text_from_image(image_bytes)
+        print(f"[OCR-INVENTORY] grade não detectada; raw: {repr(text)}", flush=True)
         return {
             "success": False,
-            "error": text.strip("[]"),
-            "raw_text": text,
-            "warnings": warnings,
-        }
-
-    # Return raw text for now - we'll build parsing once we see sample images
-    if text and text != "[OCR.space: No text extracted]":
-        return {
-            "success": True,
+            "error": "Não foi possível identificar a grade de slots do inventário. Tire o print da janela do inventário inteira.",
             "raw_text": text,
             "data": None,
-            "message": "Texto extraído. Aguardando parser de inventário.",
+            "count": 0,
             "warnings": warnings,
         }
-    else:
+
+    col_ranges, row_ranges = grid
+    print(f"[OCR-INVENTORY] grade: {len(col_ranges)} colunas x {len(row_ranges)} linhas", flush=True)
+
+    data = {}
+    warnings = []
+    for item, (ri, ci) in INVENTORY_SLOT_MAP.items():
+        if ri >= len(row_ranges) or ci >= len(col_ranges):
+            continue
+        r0, r1 = row_ranges[ri]
+        c0, c1 = col_ranges[ci]
+        slot = img.crop((c0, r0, c1, r1))
+        qty = _read_slot_quantity(slot)
+        if qty is not None:
+            data[item] = qty
+        print(f"[OCR-INVENTORY] {item} ({ri},{ci}): {qty}", flush=True)
+
+    if data:
         return {
-            "success": False,
-            "error": text.strip("[]"),
-            "raw_text": text,
+            "success": True,
+            "data": data,
+            "message": f"{len(data)} subprodutos lidos do inventário",
+            "count": len(data),
             "warnings": warnings,
         }
+    return {
+        "success": False,
+        "error": "Não foi possível ler as quantidades dos subprodutos.",
+        "data": None,
+        "count": 0,
+        "warnings": warnings,
+    }
 
 
 def ocr_from_base64(b64_string):
