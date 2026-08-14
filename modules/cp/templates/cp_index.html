@@ -68,16 +68,23 @@
             height: 18px;
         }
         .paste-zone {
-            margin-top: 0.5rem;
-            padding: 0.4rem 0.5rem;
+            width: 34px;
+            height: 34px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
             border: 1.5px dashed rgba(148, 163, 184, 0.45);
             border-radius: 8px;
-            text-align: center;
-            font-size: 0.72rem;
             color: #94a3b8;
             cursor: pointer;
-            transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.1s;
+            transition: border-color 0.2s, color 0.2s, background 0.2s;
             user-select: none;
+        }
+        .paste-zone svg {
+            width: 17px;
+            height: 17px;
         }
         .paste-zone:hover {
             border-color: #38bdf8;
@@ -121,14 +128,15 @@
                 <section class="glass-panel inventory-panel">
                     <div style="display:flex;align-items:center;justify-content:space-between;">
                         <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="package"></i> Subprodutos</h2>
-                        <input type="file" id="ocr-inventory-input" accept="image/*" style="display:none">
-                        <button id="btn-ocr-inventory" class="btn-ocr btn-ocr-clean" title="Importar quantidades de um print do inventário — ou cole a imagem (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
-                            <i data-lucide="scan"></i>
-                        </button>
-                    </div>
-                    <div class="paste-zone" id="paste-zone-inventory" title="Clique para escolher um arquivo, ou cole (Ctrl+V) / arraste uma imagem aqui">
-                        <i data-lucide="clipboard-paste" style="width:13px;height:13px;vertical-align:-2px;"></i>
-                        Cole o print aqui (Ctrl+V) ou arraste a imagem
+                        <div style="display:flex;align-items:center;gap:0.35rem;">
+                            <div class="paste-zone" id="paste-zone-inventory" title="Cole o print aqui (Ctrl+V) ou arraste a imagem">
+                                <i data-lucide="clipboard-paste"></i>
+                            </div>
+                            <input type="file" id="ocr-inventory-input" accept="image/*" style="display:none">
+                            <button id="btn-ocr-inventory" class="btn-ocr btn-ocr-clean" title="Importar quantidades de um print do inventário — ou cole a imagem (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
+                                <i data-lucide="scan"></i>
+                            </button>
+                        </div>
                     </div>
                     <div id="ocr-inventory-status" style="margin-top:0.3rem;font-size:0.75rem;min-height:1.2em;display:none;text-align:center;"></div>
                     <div id="ocr-inventory-warning" class="ocr-warning" style="display:none;"></div>
@@ -219,15 +227,16 @@
                 <section class="glass-panel lifeskills-panel">
                     <div style="display:flex;align-items:center;justify-content:space-between;">
                         <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="sparkles"></i> Avanço de Profissões</h2>
-                        <input type="file" id="ocr-image-input" accept="image/*" style="display:none">
-                        <button id="btn-ocr-upload" class="btn-ocr btn-ocr-clean" title="Importar níveis de um print da tela de profissões — ou cole a imagem (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
-                            <i data-lucide="scan" style="width:18px;height:18px;"></i>
-                        </button>
-                    </div>
-                        <div class="paste-zone" id="paste-zone-prof" title="Clique para escolher um arquivo, ou cole (Ctrl+V) / arraste uma imagem aqui">
-                            <i data-lucide="clipboard-paste" style="width:13px;height:13px;vertical-align:-2px;"></i>
-                            Cole o print aqui (Ctrl+V) ou arraste a imagem
+                        <div style="display:flex;align-items:center;gap:0.35rem;">
+                            <div class="paste-zone" id="paste-zone-prof" title="Cole o print aqui (Ctrl+V) ou arraste a imagem">
+                                <i data-lucide="clipboard-paste"></i>
+                            </div>
+                            <input type="file" id="ocr-image-input" accept="image/*" style="display:none">
+                            <button id="btn-ocr-upload" class="btn-ocr btn-ocr-clean" title="Importar níveis de um print da tela de profissões — ou cole a imagem (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
+                                <i data-lucide="scan" style="width:18px;height:18px;"></i>
+                            </button>
                         </div>
+                    </div>
                         <div id="ocr-status" style="margin-top:0.3rem;font-size:0.75rem;min-height:1.2em;display:none;text-align:center;"></div>
                         <div id="ocr-warning" class="ocr-warning" style="display:none;"></div>
                     <div id="professions-list" class="professions-container">
