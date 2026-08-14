@@ -106,6 +106,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnOcr = document.getElementById('btn-ocr-upload');
     const fileInput = document.getElementById('ocr-image-input');
     const statusEl = document.getElementById('ocr-status');
+    const warnEl = document.getElementById('ocr-warning');
+
+    // Aviso discreto: quando uma chave/API de OCR falhou e o resultado veio de outra
+    function setOcrWarnings(el, warnings, failed) {
+        if (!el) return;
+        if (warnings && warnings.length) {
+            el.title = warnings.join('\n');
+            if (failed) {
+                el.textContent = '\u26a0 ' + warnings.join(' \u00b7 ');
+            } else {
+                const n = warnings.length;
+                el.textContent = '\u26a0 ' + (n === 1
+                    ? '1 tentativa falhou; resultado obtido na 2\u00aa'
+                    : n + ' tentativas falharam; resultado obtido na ' + (n + 1) + '\u00aa');
+            }
+            el.style.display = 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    }
 
     if (btnOcr && fileInput) {
         btnOcr.addEventListener('click', () => fileInput.click());
@@ -149,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         statusEl.className = 'ocr-status success';
                         statusEl.textContent = '\u2713 ' + imported + ' profissoes importadas';
                     }
+                    setOcrWarnings(warnEl, result.warnings, false);
                     updateCalculations();
                 } else {
                     if (statusEl) {
@@ -156,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         statusEl.className = 'ocr-status error';
                         statusEl.textContent = '\u2717 Nao foi possivel extrair dados';
                     }
+                    setOcrWarnings(warnEl, result.warnings, true);
                     if (result.raw_text) {
                         console.log('OCR raw text:', result.raw_text);
                     }
@@ -165,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     statusEl.className = 'ocr-status error';
                     statusEl.textContent = '\u2717 Erro ao processar imagem';
                 }
+                setOcrWarnings(warnEl, null, false);
                 console.error('OCR error:', err);
             }
 
@@ -184,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const btnOcrInv = document.getElementById('btn-ocr-inventory');
             const fileInputInv = document.getElementById('ocr-inventory-input');
             const statusElInv = document.getElementById('ocr-inventory-status');
+            const warnElInv = document.getElementById('ocr-inventory-warning');
         
             if (btnOcrInv && fileInputInv) {
                 btnOcrInv.addEventListener('click', () => fileInputInv.click());
@@ -226,11 +250,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                 statusElInv.className = 'ocr-status success';
                                 statusElInv.textContent = '\u2713 ' + imported + ' itens importados';
                             }
+                            setOcrWarnings(warnElInv, result.warnings, false);
                         } else {
                             if (statusElInv) {
                                 statusElInv.className = 'ocr-status error';
                                 statusElInv.textContent = '\u2717 Nao foi possivel extrair dados';
                             }
+                            setOcrWarnings(warnElInv, result.warnings, true);
                             if (result.raw_text) {
                                 console.log('OCR raw text:', result.raw_text);
                             }
@@ -240,6 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             statusElInv.className = 'ocr-status error';
                             statusElInv.textContent = '\u2717 Erro ao processar imagem';
                         }
+                        setOcrWarnings(warnElInv, null, false);
                         console.error('OCR error:', err);
                     }
         

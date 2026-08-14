@@ -1,6 +1,9 @@
 """
-OCR Reader for BDO Life Skills Screenshots - OCR.space Edition
-Uses OCR.space cloud API for far superior accuracy on colored game UI text.
+OCR Reader for BDO Life Skills Screenshots.
+
+Usa provedores de API em cadeia: tenta a chave principal (OCR_SPACE_API_KEY),
+e em caso de falha registra um aviso discreto e tenta as chaves reserva
+(OCR_SPACE_API_KEY_2, _3, ...), na ordem.
 """
 
 import re
@@ -121,18 +124,46 @@ def preprocess_image(image_bytes):
     return buf.getvalue()
 
 
-def extract_text_from_image(image_bytes):
-    """Send image to OCR.space API and return extracted text."""
-    if not HAS_REQUESTS:
-        return "[Error: requests library not installed]"
+def _load_ocr_providers():
+    """Constrói a lista ordenada de provedores de OCR a partir do .env.
 
-    if not OCR_SPACE_API_KEY:
-        return "[Error: OCR_SPACE_API_KEY not found in .env]"
+    Ordem de tentativa:
+      1. OCR_SPACE_API_KEY (ou OCRSPACE_API_KEY)  — chave principal
+      2. OCR_SPACE_API_KEY_2, _3, ...             — chaves reserva
+
+    A estrutura é extensível: para adicionar um serviço de OCR diferente,
+    basta criar um extrator próprio e registrá-lo aqui.
+    """
+    providers = []
+
+    if OCR_SPACE_API_KEY:
+        providers.append({"name": "OCR.space (chave principal)", "key": OCR_SPACE_API_KEY})
+
+    idx = 2
+    while True:
+        key = os.getenv(f"OCR_SPACE_API_KEY_{idx}")
+        if not key:
+            break
+        providers.append({"name": f"OCR.space (chave reserva {idx})", "key": key})
+        idx += 1
+
+    return providers
+
+
+def _extract_ocr_space(image_bytes, api_key):
+    """Tenta extrair texto via OCR.space com uma chave específica.
+
+    Returns:
+        (text, None)      — sucesso
+        (None, err_short) — falha (mensagem curta para o aviso discreto)
+    """
+    if not HAS_REQUESTS:
+        return None, "biblioteca requests não instalada"
 
     processed = preprocess_image(image_bytes)
     b64_data = base64.b64encode(processed).decode("utf-8")
 
-    headers = {"apikey": OCR_SPACE_API_KEY}
+    headers = {"apikey": api_key}
     data = {
         "base64Image": "data:image/png;base64," + b64_data,
         "language": "por",
@@ -146,23 +177,49 @@ def extract_text_from_image(image_bytes):
         resp.raise_for_status()
         result = resp.json()
     except requests.exceptions.RequestException as e:
-        return "[API Error: " + str(e) + "]"
+        return None, str(e).split(" for url:")[0][:100]
     except ValueError as e:
-        return "[JSON Parse Error: " + str(e) + "]"
+        return None, "resposta inválida (" + str(e) + ")"
 
     if result.get("IsErroredOnProcessing"):
-        return "[OCR.space Error: " + result.get("ErrorMessage", "Unknown") + "]"
+        return None, result.get("ErrorMessage", "erro desconhecido")[:100]
 
     ocr_exit = result.get("OCRExitCode", 3)
     if ocr_exit == 3 or ocr_exit == 4:
-        return "[OCR.space Error: " + result.get("ErrorMessage", "Exit code " + str(ocr_exit)) + "]"
+        return None, result.get("ErrorMessage", "exit code " + str(ocr_exit))[:100]
 
     parsed = result.get("ParsedResults", [])
     if not parsed:
-        return "[OCR.space Error: No parsed results]"
+        return None, "sem resultados"
 
     texts = [p.get("ParsedText", "") for p in parsed]
-    return "\n".join(t for t in texts if t) or "[OCR.space: No text extracted]"
+    text = "\n".join(t for t in texts if t)
+    if not text:
+        return None, "nenhum texto extraído"
+    return text, None
+
+
+def extract_text_from_image(image_bytes):
+    """Tenta os provedores de OCR em ordem; em falha, registra aviso e segue.
+
+    Returns:
+        (text, warnings) — text vem do 1º provedor que funcionou;
+                           warnings lista avisos discretos dos que falharam
+                           antes de chegar ao que funcionou (ou de todos,
+                           se nenhum funcionou).
+    """
+    providers = _load_ocr_providers()
+    if not providers:
+        return "[Error: nenhuma chave de API de OCR configurada (OCR_SPACE_API_KEY no .env)]", []
+
+    warnings = []
+    for provider in providers:
+        text, err = _extract_ocr_space(image_bytes, provider["key"])
+        if err is None:
+            return text, warnings
+        warnings.append(f"{provider['name']}: {err}")
+
+    return "[Error: todas as APIs de OCR falharam]", warnings
 
 
 def _find_profession(text):
@@ -385,8 +442,8 @@ def parse_professions_from_text(text):
 
     return results, text
 def ocr_from_image(image_bytes):
-    """Main: send image to OCR.space and return structured profession data."""
-    text = extract_text_from_image(image_bytes)
+    """Main: try OCR providers in order and return structured profession data."""
+    text, warnings = extract_text_from_image(image_bytes)
 
     if text.startswith("[Error") or text.startswith("[OCR"):
         return {
@@ -395,6 +452,7 @@ def ocr_from_image(image_bytes):
             "raw_text": text,
             "data": None,
             "count": 0,
+            "warnings": warnings,
         }
 
     professions, raw_text = parse_professions_from_text(text)
@@ -406,6 +464,7 @@ def ocr_from_image(image_bytes):
             "raw_text": raw_text,
             "error": None,
             "count": len(professions),
+            "warnings": warnings,
         }
     else:
         return {
@@ -414,14 +473,15 @@ def ocr_from_image(image_bytes):
             "raw_text": raw_text,
             "data": None,
             "count": 0,
+            "warnings": warnings,
         }
 
 
 
 def ocr_inventory_from_image(image_bytes):
-    """Extract raw text from an inventory screenshot via OCR.space.
+    """Extract raw text from an inventory screenshot via OCR providers.
     Returns raw text for analysis (no professions parsing)."""
-    text = extract_text_from_image(image_bytes)
+    text, warnings = extract_text_from_image(image_bytes)
     # Log raw text for debugging
     import sys
     print(f"[OCR-INVENTORY] raw_text: {repr(text)}", flush=True)
@@ -431,6 +491,7 @@ def ocr_inventory_from_image(image_bytes):
             "success": False,
             "error": text.strip("[]"),
             "raw_text": text,
+            "warnings": warnings,
         }
 
     # Return raw text for now - we'll build parsing once we see sample images
@@ -440,12 +501,14 @@ def ocr_inventory_from_image(image_bytes):
             "raw_text": text,
             "data": None,
             "message": "Texto extraído. Aguardando parser de inventário.",
+            "warnings": warnings,
         }
     else:
         return {
             "success": False,
             "error": text.strip("[]"),
             "raw_text": text,
+            "warnings": warnings,
         }
 
 
