@@ -81,6 +81,34 @@ async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, 
     }
 }
 
+// Zona de colagem reutilizável: clique abre o seletor, arrastar-e-soltar envia,
+// e o PasteImage (Ctrl+V) dá feedback visual na zona.
+function wirePasteZone(zoneId, { fileInput, upload }) {
+    const zone = document.getElementById(zoneId);
+    if (!zone || !fileInput) return zone;
+    zone.addEventListener('click', () => fileInput.click());
+    zone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        zone.classList.add('drag-over');
+    });
+    zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+    zone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        zone.classList.remove('drag-over');
+        const file = [...(e.dataTransfer.files || [])].find((f) => f.type && f.type.indexOf('image/') === 0);
+        if (file) upload(file);
+    });
+    return zone;
+}
+
+// Destaque visual ao colar com Ctrl+V: pisca a borda da zona ativa
+function flashPasteZone(zone) {
+    if (!zone) return;
+    zone.classList.remove('flash');
+    void zone.offsetWidth; // reinicia a animação
+    zone.classList.add('flash');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initial fetch of user data
     fetchData();
@@ -208,6 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const uploadProf = (file) => uploadOcrImage(file, ocrOpts);
+        const zoneProf = wirePasteZone('paste-zone-prof', { fileInput, upload: uploadProf });
 
         btnOcr.addEventListener('click', () => {
             PasteImage.activate('profissoes');
@@ -223,7 +252,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Colar imagem da área de transferência (Ctrl+V) — mesmo fluxo do arquivo
         if (window.PasteImage) {
-            PasteImage.attach('profissoes', { active: true, onImage: uploadProf });
+            PasteImage.attach('profissoes', {
+                active: true,
+                onImage: uploadProf,
+                onHint: (texto) => {
+                    flashPasteZone(zoneProf);
+                    if (statusEl) {
+                        statusEl.className = 'ocr-status loading';
+                        statusEl.style.display = 'block';
+                        statusEl.textContent = texto;
+                    }
+                },
+                onNoImage: () => {
+                    if (statusEl) {
+                        statusEl.className = 'ocr-status error';
+                        statusEl.style.display = 'block';
+                        statusEl.textContent = '\u26a0 Nenhuma imagem na \u00e1rea de transfer\u00eancia — tire o print (Win+Shift+S) e cole de novo';
+                    }
+                },
+            });
         }
     }
 });
@@ -259,6 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 const uploadInv = (file) => uploadOcrImage(file, ocrInvOpts);
+                const zoneInv = wirePasteZone('paste-zone-inventory', { fileInput: fileInputInv, upload: uploadInv });
 
                 btnOcrInv.addEventListener('click', () => {
                     PasteImage.activate('inventario');
@@ -274,7 +322,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Colar imagem da área de transferência (Ctrl+V) — mesmo fluxo do arquivo
                 if (window.PasteImage) {
-                    PasteImage.attach('inventario', { onImage: uploadInv });
+                    PasteImage.attach('inventario', {
+                        onImage: uploadInv,
+                        onHint: (texto) => {
+                            flashPasteZone(zoneInv);
+                            if (statusElInv) {
+                                statusElInv.className = 'ocr-status loading';
+                                statusElInv.style.display = 'block';
+                                statusElInv.textContent = texto;
+                            }
+                        },
+                        onNoImage: () => {
+                            if (statusElInv) {
+                                statusElInv.className = 'ocr-status error';
+                                statusElInv.style.display = 'block';
+                                statusElInv.textContent = '\u26a0 Nenhuma imagem na \u00e1rea de transfer\u00eancia — tire o print (Win+Shift+S) e cole de novo';
+                            }
+                        },
+                    });
                 }
             }
 
