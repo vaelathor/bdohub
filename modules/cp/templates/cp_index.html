@@ -118,6 +118,36 @@
             min-height: 1.2em;
             text-align: center;
         }
+        .btn-receive-clipboard {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            width: 100%;
+            margin-top: 0.6rem;
+            padding: 0.55rem;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 8px;
+            color: #38bdf8;
+            font-size: 0.8rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+        .btn-receive-clipboard:hover {
+            background: rgba(56, 189, 248, 0.18);
+            border-color: #38bdf8;
+            color: #7dd3fc;
+        }
+        .btn-receive-clipboard:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .btn-receive-clipboard svg {
+            width: 15px;
+            height: 15px;
+        }
 
     </style>
 </head>
@@ -301,6 +331,10 @@
                 <i data-lucide="clipboard-paste"></i>
                 <span>Cole aqui o print (Ctrl+V)<br>ou arraste a imagem</span>
             </div>
+            <button id="btn-receive-prof" class="btn-receive-clipboard" title="Ler a imagem direto da área de transferência, sem precisar apertar Ctrl+V">
+                <i data-lucide="download"></i>
+                Receber imagem do clipboard
+            </button>
             <div id="paste-prof-status" class="ocr-status paste-modal-status" style="display:none;"></div>
             <div id="paste-prof-warning" class="ocr-warning" style="display:none;"></div>
         </div>
@@ -317,6 +351,10 @@
                 <i data-lucide="clipboard-paste"></i>
                 <span>Cole aqui o print (Ctrl+V)<br>ou arraste a imagem</span>
             </div>
+            <button id="btn-receive-inventory" class="btn-receive-clipboard" title="Ler a imagem direto da área de transferência, sem precisar apertar Ctrl+V">
+                <i data-lucide="download"></i>
+                Receber imagem do clipboard
+            </button>
             <div id="paste-inventory-status" class="ocr-status paste-modal-status" style="display:none;"></div>
             <div id="paste-inventory-warning" class="ocr-warning" style="display:none;"></div>
         </div>

@@ -137,5 +137,31 @@
             handlers.delete(id);
             if (armedId === id) armedId = null;
         },
+        /**
+         * Tenta ler uma imagem diretamente da área de transferência, sem o
+         * atalho Ctrl+V, via navigator.clipboard.read() (precisa de permissão
+         * do navegador). Retorna um File com a imagem, ou null se não houver
+         * imagem / não for suportado / permissão negada.
+         */
+        async readClipboard() {
+            if (!global.navigator || !global.navigator.clipboard || !global.navigator.clipboard.read) {
+                return null;
+            }
+            try {
+                const items = await global.navigator.clipboard.read();
+                for (const item of items) {
+                    for (const type of item.types) {
+                        if (type && type.indexOf('image/') === 0) {
+                            const blob = await item.getType(type);
+                            return new File([blob], 'print.png', { type });
+                        }
+                    }
+                }
+            } catch (e) {
+                // permissão negada ou clipboard não suportado — quem chamou decide
+                return null;
+            }
+            return null;
+        },
     };
 })(window);

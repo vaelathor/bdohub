@@ -31,7 +31,8 @@ function setOcrWarnings(el, warnings, failed) {
 
 // Fluxo comum de envio de imagem ao OCR: spinner no botão, status, fetch e avisos.
 // `btn` é opcional — quando ausente (ex.: colagem via modal), não há spinner de botão.
-async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, applyResult }) {
+// `onSettled(success)` é chamado ao final (sucesso ou erro) — útil p/ fechar o modal.
+async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, applyResult, onSettled }) {
     if (btn) {
         btn.disabled = true;
         btn.innerHTML = '<i data-lucide="loader" class="spin"></i>';
@@ -47,6 +48,7 @@ async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, 
             statusEl.textContent = 'Processando' + '.'.repeat(dots);
         }, 400);
     }
+    let succeeded = false;
     try {
         const formData = new FormData();
         formData.append('image', file);
@@ -54,6 +56,7 @@ async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, 
         const result = await res.json();
 
         if (result.success) {
+            succeeded = true;
             applyResult(result);
             setOcrWarnings(warnEl, result.warnings, false);
         } else {
@@ -86,6 +89,7 @@ async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, 
             btn.innerHTML = '<i data-lucide="scan"></i>';
             lucide.createIcons();
         }
+        if (onSettled) onSettled(succeeded);
     }
 }
 
@@ -274,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fluxo do modal: colagem (Ctrl+V/arrastar) — status dentro do modal
         const pasteStatusEl = document.getElementById('paste-prof-status');
         const pasteWarnEl = document.getElementById('paste-prof-warning');
+        let pasteProf = null; // definido abaixo; usado no fechamento automático
         const pasteOpts = {
             endpoint: 'api/ocr',
             btn: null,
@@ -281,6 +286,12 @@ document.addEventListener('DOMContentLoaded', () => {
             warnEl: pasteWarnEl,
             dotsKey: '_ocrDotsInterval',
             applyResult: applyProfResult(pasteStatusEl),
+            // Fecha o modal sozinho quando tudo deu certo
+            onSettled: (success) => {
+                if (success && pasteProf) {
+                    setTimeout(() => pasteProf.close(), 1800);
+                }
+            },
         };
 
         const uploadProf = (file) => uploadOcrImage(file, ocrOpts);
@@ -326,12 +337,35 @@ document.addEventListener('DOMContentLoaded', () => {
         // Botão clipboard: abre o modal de colagem (arma o Ctrl+V para profissões)
         const btnPasteProf = document.getElementById('btn-paste-prof');
         if (btnPasteProf) {
-            const pasteProf = setupPasteModal({
+            pasteProf = setupPasteModal({
                 modalId: 'paste-prof-modal',
                 pasteId: 'profissoes',
                 onOpen: () => flashPasteZone(zoneProf),
             });
             btnPasteProf.addEventListener('click', () => pasteProf && pasteProf.open());
+        }
+
+        // Botão "Receber imagem": lê o clipboard programaticamente (sem Ctrl+V)
+        const btnReceiveProf = document.getElementById('btn-receive-prof');
+        if (btnReceiveProf && window.PasteImage) {
+            btnReceiveProf.addEventListener('click', async () => {
+                if (pasteStatusEl) {
+                    pasteStatusEl.classList.remove('success', 'error');
+                    pasteStatusEl.classList.add('loading');
+                    pasteStatusEl.style.display = 'block';
+                    pasteStatusEl.textContent = 'Lendo a \u00e1rea de transfer\u00eancia...';
+                }
+                btnReceiveProf.disabled = true;
+                const file = await PasteImage.readClipboard();
+                btnReceiveProf.disabled = false;
+                if (file) {
+                    uploadProfModal(file);
+                } else if (pasteStatusEl) {
+                    pasteStatusEl.classList.remove('loading', 'success');
+                    pasteStatusEl.classList.add('error');
+                    pasteStatusEl.textContent = '\u26a0 Nenhuma imagem na \u00e1rea de transfer\u00eancia — tire o print (Win+Shift+S) e tente de novo';
+                }
+            });
         }
     }
 });
@@ -374,6 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Fluxo do modal: colagem (Ctrl+V/arrastar) — status dentro do modal
                 const pasteStatusElInv = document.getElementById('paste-inventory-status');
                 const pasteWarnElInv = document.getElementById('paste-inventory-warning');
+                let pasteInv = null; // definido abaixo; usado no fechamento automático
                 const pasteInvOpts = {
                     endpoint: 'api/ocr-inventory',
                     btn: null,
@@ -381,6 +416,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     warnEl: pasteWarnElInv,
                     dotsKey: '_ocrInvDotsInterval',
                     applyResult: applyInvResult(pasteStatusElInv),
+                    // Fecha o modal sozinho quando tudo deu certo
+                    onSettled: (success) => {
+                        if (success && pasteInv) {
+                            setTimeout(() => pasteInv.close(), 1800);
+                        }
+                    },
                 };
 
                 const uploadInv = (file) => uploadOcrImage(file, ocrInvOpts);
@@ -426,12 +467,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Botão clipboard: abre o modal de colagem (arma o Ctrl+V para o inventário)
                 const btnPasteInv = document.getElementById('btn-paste-inventory');
                 if (btnPasteInv) {
-                    const pasteInv = setupPasteModal({
+                    pasteInv = setupPasteModal({
                         modalId: 'paste-inventory-modal',
                         pasteId: 'inventario',
                         onOpen: () => flashPasteZone(zoneInv),
                     });
                     btnPasteInv.addEventListener('click', () => pasteInv && pasteInv.open());
+                }
+
+                // Botão "Receber imagem": lê o clipboard programaticamente (sem Ctrl+V)
+                const btnReceiveInv = document.getElementById('btn-receive-inventory');
+                if (btnReceiveInv && window.PasteImage) {
+                    btnReceiveInv.addEventListener('click', async () => {
+                        if (pasteStatusElInv) {
+                            pasteStatusElInv.classList.remove('success', 'error');
+                            pasteStatusElInv.classList.add('loading');
+                            pasteStatusElInv.style.display = 'block';
+                            pasteStatusElInv.textContent = 'Lendo a \u00e1rea de transfer\u00eancia...';
+                        }
+                        btnReceiveInv.disabled = true;
+                        const file = await PasteImage.readClipboard();
+                        btnReceiveInv.disabled = false;
+                        if (file) {
+                            uploadInvModal(file);
+                        } else if (pasteStatusElInv) {
+                            pasteStatusElInv.classList.remove('loading', 'success');
+                            pasteStatusElInv.classList.add('error');
+                            pasteStatusElInv.style.display = 'block';
+                            pasteStatusElInv.textContent = '\u26a0 Nenhuma imagem na \u00e1rea de transfer\u00eancia — tire o print (Win+Shift+S) e tente de novo';
+                        }
+                    });
                 }
             }
 
