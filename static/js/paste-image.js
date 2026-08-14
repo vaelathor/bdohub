@@ -8,6 +8,13 @@
  * Chrome/Edge/Firefox (incl. Zen) no Windows 10/11 — sem permissões
  * especiais e sem diálogo de arquivo.
  *
+ * Captura sob demanda (arm/disarm):
+ *   O Ctrl+V SÓ é interceptado enquanto um alvo estiver "armado" — por
+ *   exemplo, enquanto um modal de colagem dedicado está aberto. Com nada
+ *   armado, o listener não interfere no comportamento normal do navegador
+ *   (colar texto em inputs, etc.). Assim, cada área da página decide quando
+ *   quer receber o print, sem conflito entre elas.
+ *
  * Robustez cross-browser:
  *  - O Firefox (e o Zen, que é baseado nele) nem sempre popula
  *    `clipboardData.items` em eventos de paste no Windows 10. Por isso o
@@ -25,22 +32,24 @@
  *       onImage(file),          // obrigatório — recebe a imagem colada
  *       onHint(text),           // opcional — chamado ao detectar a imagem
  *       onNoImage(),            // opcional — havia arquivo, mas não era imagem
- *       active,                 // true = alvo padrão do Ctrl+V
  *   })
- *   PasteImage.activate('id')   // o próximo Ctrl+V vai para este handler
+ *   PasteImage.arm('id')        // passa a interceptar o Ctrl+V para este handler
+ *   PasteImage.disarm()         // para de interceptar
+ *   PasteImage.isArmed('id')
  *   PasteImage.detach('id')
  *
- * Exemplo:
- *   PasteImage.attach('profissoes', {
- *       active: true,
- *       onImage: (file) => uploadOcrImage(file),
- *       onHint:  () => flashPasteZone(zoneEl),
- *   });
+ * Exemplo (modal de colagem):
+ *   PasteImage.attach('profissoes', { onImage: (f) => uploadOcrImage(f) });
+ *   // ao abrir o modal:
+ *   PasteImage.arm('profissoes');
+ *   // ao fechar o modal:
+ *   PasteImage.disarm();
  */
 (function (global) {
     'use strict';
 
-    const handlers = new Map(); // id -> { onImage, onHint, onNoImage, active }
+    const handlers = new Map(); // id -> { onImage, onHint, onNoImage }
+    let armedId = null;         // id do alvo que está interceptando o Ctrl+V
     let listenerAttached = false;
 
     /** Retorna o primeiro arquivo de imagem da área de transferência, ou null. */
@@ -80,12 +89,12 @@
     }
 
     function onPaste(event) {
+        // Sem alvo armado: deixa o navegador tratar o paste normalmente.
+        const target = armedId ? handlers.get(armedId) : null;
+        if (!target) return;
+
         const clipboardData = event.clipboardData;
         const file = firstImageFrom(clipboardData);
-
-        const active = [...handlers.values()].find((h) => h.active);
-        const target = active || [...handlers.values()][handlers.size - 1];
-        if (!target) return;
 
         if (!file) {
             // Só avisa quando havia um arquivo que não era imagem —
@@ -108,7 +117,6 @@
                 onImage: options.onImage,
                 onHint: options.onHint || null,
                 onNoImage: options.onNoImage || null,
-                active: !!options.active,
             });
             if (!listenerAttached) {
                 // captura no window: pega o evento mesmo se algo parar a propagação
@@ -116,13 +124,18 @@
                 listenerAttached = true;
             }
         },
-        activate(id) {
-            for (const [key, handler] of handlers) {
-                handler.active = (key === id);
-            }
+        arm(id) {
+            armedId = handlers.has(id) ? id : null;
+        },
+        disarm() {
+            armedId = null;
+        },
+        isArmed(id) {
+            return armedId === id;
         },
         detach(id) {
             handlers.delete(id);
+            if (armedId === id) armedId = null;
         },
     };
 })(window);

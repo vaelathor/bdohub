@@ -29,13 +29,17 @@ function setOcrWarnings(el, warnings, failed) {
     }
 }
 
-// Fluxo comum de envio de imagem ao OCR: spinner no botão, status, fetch e avisos
+// Fluxo comum de envio de imagem ao OCR: spinner no botão, status, fetch e avisos.
+// `btn` é opcional — quando ausente (ex.: colagem via modal), não há spinner de botão.
 async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, applyResult }) {
-    btn.disabled = true;
-    btn.innerHTML = '<i data-lucide="loader" class="spin"></i>';
-    lucide.createIcons();
+    if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i data-lucide="loader" class="spin"></i>';
+        lucide.createIcons();
+    }
     if (statusEl) {
-        statusEl.className = 'ocr-status loading';
+        statusEl.classList.remove('success', 'error');
+        statusEl.classList.add('loading');
         statusEl.style.display = 'block';
         let dots = 0;
         window[dotsKey] = setInterval(() => {
@@ -55,7 +59,8 @@ async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, 
         } else {
             if (statusEl) {
                 statusEl.style.display = 'block';
-                statusEl.className = 'ocr-status error';
+                statusEl.classList.remove('loading', 'success');
+                statusEl.classList.add('error');
                 statusEl.textContent = '\u2717 Nao foi possivel extrair dados';
             }
             setOcrWarnings(warnEl, result.warnings, true);
@@ -65,7 +70,8 @@ async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, 
         }
     } catch (err) {
         if (statusEl) {
-            statusEl.className = 'ocr-status error';
+            statusEl.classList.remove('loading', 'success');
+            statusEl.classList.add('error');
             statusEl.textContent = '\u2717 Erro ao processar imagem';
         }
         setOcrWarnings(warnEl, null, false);
@@ -75,14 +81,15 @@ async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, 
             clearInterval(window[dotsKey]);
             window[dotsKey] = null;
         }
-        btn.disabled = false;
-        btn.innerHTML = '<i data-lucide="scan"></i>';
-        lucide.createIcons();
+        if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = '<i data-lucide="scan"></i>';
+            lucide.createIcons();
+        }
     }
 }
 
-// Zona de colagem reutilizável: clique abre o seletor, arrastar-e-soltar envia,
-// e o PasteImage (Ctrl+V) dá feedback visual na zona.
+// Zona de colagem reutilizável: clique abre o seletor, arrastar-e-soltar envia.
 function wirePasteZone(zoneId, { fileInput, upload }) {
     const zone = document.getElementById(zoneId);
     if (!zone || !fileInput) return zone;
@@ -107,6 +114,30 @@ function flashPasteZone(zone) {
     zone.classList.remove('flash');
     void zone.offsetWidth; // reinicia a animação
     zone.classList.add('flash');
+}
+
+// Modal de colagem: enquanto aberto, o Ctrl+V (PasteImage) é capturado para
+// aquela área (arm). Ao fechar (X, ESC, clique fora), desarma e volta ao normal.
+function setupPasteModal({ modalId, pasteId, onOpen }) {
+    const modal = document.getElementById(modalId);
+    if (!modal || !window.PasteImage) return null;
+
+    function open() {
+        PasteImage.arm(pasteId);
+        modal.classList.add('active');
+        if (onOpen) onOpen();
+    }
+    function close() {
+        PasteImage.disarm();
+        modal.classList.remove('active');
+    }
+
+    const closeBtn = modal.querySelector('.btn-close');
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+    return { open, close };
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -210,36 +241,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const warnEl = document.getElementById('ocr-warning');
 
     if (btnOcr && fileInput) {
+        // Aplica o resultado do OCR nas profissões e mostra no status indicado
+        const applyProfResult = (statusTarget) => (result) => {
+            let imported = 0;
+            for (const [prof, data] of Object.entries(result.data_dict || {})) {
+                if (!userData.professions[prof]) {
+                    userData.professions[prof] = {};
+                }
+                userData.professions[prof].level = data.level;
+                userData.professions[prof].pct = data.pct;
+                imported++;
+            }
+            if (statusTarget) {
+                statusTarget.style.display = 'block';
+                statusTarget.classList.remove('loading', 'error');
+                statusTarget.classList.add('success');
+                statusTarget.textContent = '\u2713 ' + imported + ' profissoes importadas';
+            }
+            updateCalculations();
+        };
+
+        // Fluxo do painel: upload por arquivo (botão de scan)
         const ocrOpts = {
             endpoint: 'api/ocr',
             btn: btnOcr,
             statusEl,
             warnEl,
             dotsKey: '_ocrDotsInterval',
-            applyResult(result) {
-                let imported = 0;
-                for (const [prof, data] of Object.entries(result.data_dict || {})) {
-                    if (!userData.professions[prof]) {
-                        userData.professions[prof] = {};
-                    }
-                    userData.professions[prof].level = data.level;
-                    userData.professions[prof].pct = data.pct;
-                    imported++;
-                }
-                if (statusEl) {
-                    statusEl.style.display = 'block';
-                    statusEl.className = 'ocr-status success';
-                    statusEl.textContent = '\u2713 ' + imported + ' profissoes importadas';
-                }
-                updateCalculations();
-            },
+            applyResult: applyProfResult(statusEl),
+        };
+
+        // Fluxo do modal: colagem (Ctrl+V/arrastar) — status dentro do modal
+        const pasteStatusEl = document.getElementById('paste-prof-status');
+        const pasteWarnEl = document.getElementById('paste-prof-warning');
+        const pasteOpts = {
+            endpoint: 'api/ocr',
+            btn: null,
+            statusEl: pasteStatusEl,
+            warnEl: pasteWarnEl,
+            dotsKey: '_ocrDotsInterval',
+            applyResult: applyProfResult(pasteStatusEl),
         };
 
         const uploadProf = (file) => uploadOcrImage(file, ocrOpts);
-        const zoneProf = wirePasteZone('paste-zone-prof', { fileInput, upload: uploadProf });
+        const uploadProfModal = (file) => uploadOcrImage(file, pasteOpts);
+        const zoneProf = wirePasteZone('paste-zone-prof', { fileInput, upload: uploadProfModal });
 
         btnOcr.addEventListener('click', () => {
-            PasteImage.activate('profissoes');
             fileInput.click();
         });
 
@@ -250,27 +298,40 @@ document.addEventListener('DOMContentLoaded', () => {
             uploadProf(file);
         });
 
-        // Colar imagem da área de transferência (Ctrl+V) — mesmo fluxo do arquivo
+        // Colar imagem da área de transferência (Ctrl+V) — só enquanto o modal
+        // de colagem de profissões estiver aberto (PasteImage.arm/disarm)
         if (window.PasteImage) {
             PasteImage.attach('profissoes', {
-                active: true,
-                onImage: uploadProf,
+                onImage: uploadProfModal,
                 onHint: (texto) => {
                     flashPasteZone(zoneProf);
-                    if (statusEl) {
-                        statusEl.className = 'ocr-status loading';
-                        statusEl.style.display = 'block';
-                        statusEl.textContent = texto;
+                    if (pasteStatusEl) {
+                        pasteStatusEl.classList.remove('success', 'error');
+                        pasteStatusEl.classList.add('loading');
+                        pasteStatusEl.style.display = 'block';
+                        pasteStatusEl.textContent = texto;
                     }
                 },
                 onNoImage: () => {
-                    if (statusEl) {
-                        statusEl.className = 'ocr-status error';
-                        statusEl.style.display = 'block';
-                        statusEl.textContent = '\u26a0 Nenhuma imagem na \u00e1rea de transfer\u00eancia — tire o print (Win+Shift+S) e cole de novo';
+                    if (pasteStatusEl) {
+                        pasteStatusEl.classList.remove('loading', 'success');
+                        pasteStatusEl.classList.add('error');
+                        pasteStatusEl.style.display = 'block';
+                        pasteStatusEl.textContent = '\u26a0 Nenhuma imagem na \u00e1rea de transfer\u00eancia — tire o print (Win+Shift+S) e cole de novo';
                     }
                 },
             });
+        }
+
+        // Botão clipboard: abre o modal de colagem (arma o Ctrl+V para profissões)
+        const btnPasteProf = document.getElementById('btn-paste-prof');
+        if (btnPasteProf) {
+            const pasteProf = setupPasteModal({
+                modalId: 'paste-prof-modal',
+                pasteId: 'profissoes',
+                onOpen: () => flashPasteZone(zoneProf),
+            });
+            btnPasteProf.addEventListener('click', () => pasteProf && pasteProf.open());
         }
     }
 });
@@ -282,34 +343,51 @@ document.addEventListener('DOMContentLoaded', () => {
             const warnElInv = document.getElementById('ocr-inventory-warning');
         
             if (btnOcrInv && fileInputInv) {
+                // Aplica o resultado do OCR nos campos de subprodutos e mostra no status indicado
+                const applyInvResult = (statusTarget) => (result) => {
+                    let imported = 0;
+                    for (const [itemName, qty] of Object.entries(result.data || {})) {
+                        const input = document.querySelector("input[data-item=\"" + itemName + "\"]");
+                        if (input) {
+                            input.value = qty;
+                            input.dispatchEvent(new Event('input', { bubbles: true }));
+                            imported++;
+                        }
+                    }
+                    if (statusTarget) {
+                        statusTarget.classList.remove('loading', 'error');
+                        statusTarget.classList.add('success');
+                        statusTarget.textContent = '\u2713 ' + imported + ' itens importados';
+                    }
+                };
+
+                // Fluxo do painel: upload por arquivo (botão de scan)
                 const ocrInvOpts = {
                     endpoint: 'api/ocr-inventory',
                     btn: btnOcrInv,
                     statusEl: statusElInv,
                     warnEl: warnElInv,
                     dotsKey: '_ocrInvDotsInterval',
-                    applyResult(result) {
-                        let imported = 0;
-                        for (const [itemName, qty] of Object.entries(result.data || {})) {
-                            const input = document.querySelector("input[data-item=\"" + itemName + "\"]");
-                            if (input) {
-                                input.value = qty;
-                                input.dispatchEvent(new Event('input', { bubbles: true }));
-                                imported++;
-                            }
-                        }
-                        if (statusElInv) {
-                            statusElInv.className = 'ocr-status success';
-                            statusElInv.textContent = '\u2713 ' + imported + ' itens importados';
-                        }
-                    },
+                    applyResult: applyInvResult(statusElInv),
+                };
+
+                // Fluxo do modal: colagem (Ctrl+V/arrastar) — status dentro do modal
+                const pasteStatusElInv = document.getElementById('paste-inventory-status');
+                const pasteWarnElInv = document.getElementById('paste-inventory-warning');
+                const pasteInvOpts = {
+                    endpoint: 'api/ocr-inventory',
+                    btn: null,
+                    statusEl: pasteStatusElInv,
+                    warnEl: pasteWarnElInv,
+                    dotsKey: '_ocrInvDotsInterval',
+                    applyResult: applyInvResult(pasteStatusElInv),
                 };
 
                 const uploadInv = (file) => uploadOcrImage(file, ocrInvOpts);
-                const zoneInv = wirePasteZone('paste-zone-inventory', { fileInput: fileInputInv, upload: uploadInv });
+                const uploadInvModal = (file) => uploadOcrImage(file, pasteInvOpts);
+                const zoneInv = wirePasteZone('paste-zone-inventory', { fileInput: fileInputInv, upload: uploadInvModal });
 
                 btnOcrInv.addEventListener('click', () => {
-                    PasteImage.activate('inventario');
                     fileInputInv.click();
                 });
 
@@ -320,26 +398,40 @@ document.addEventListener('DOMContentLoaded', () => {
                     uploadInv(file);
                 });
 
-                // Colar imagem da área de transferência (Ctrl+V) — mesmo fluxo do arquivo
+                // Colar imagem da área de transferência (Ctrl+V) — só enquanto o modal
+                // de colagem de inventário estiver aberto (PasteImage.arm/disarm)
                 if (window.PasteImage) {
                     PasteImage.attach('inventario', {
-                        onImage: uploadInv,
+                        onImage: uploadInvModal,
                         onHint: (texto) => {
                             flashPasteZone(zoneInv);
-                            if (statusElInv) {
-                                statusElInv.className = 'ocr-status loading';
-                                statusElInv.style.display = 'block';
-                                statusElInv.textContent = texto;
+                            if (pasteStatusElInv) {
+                                pasteStatusElInv.classList.remove('success', 'error');
+                                pasteStatusElInv.classList.add('loading');
+                                pasteStatusElInv.style.display = 'block';
+                                pasteStatusElInv.textContent = texto;
                             }
                         },
                         onNoImage: () => {
-                            if (statusElInv) {
-                                statusElInv.className = 'ocr-status error';
-                                statusElInv.style.display = 'block';
-                                statusElInv.textContent = '\u26a0 Nenhuma imagem na \u00e1rea de transfer\u00eancia — tire o print (Win+Shift+S) e cole de novo';
+                            if (pasteStatusElInv) {
+                                pasteStatusElInv.classList.remove('loading', 'success');
+                                pasteStatusElInv.classList.add('error');
+                                pasteStatusElInv.style.display = 'block';
+                                pasteStatusElInv.textContent = '\u26a0 Nenhuma imagem na \u00e1rea de transfer\u00eancia — tire o print (Win+Shift+S) e cole de novo';
                             }
                         },
                     });
+                }
+
+                // Botão clipboard: abre o modal de colagem (arma o Ctrl+V para o inventário)
+                const btnPasteInv = document.getElementById('btn-paste-inventory');
+                if (btnPasteInv) {
+                    const pasteInv = setupPasteModal({
+                        modalId: 'paste-inventory-modal',
+                        pasteId: 'inventario',
+                        onOpen: () => flashPasteZone(zoneInv),
+                    });
+                    btnPasteInv.addEventListener('click', () => pasteInv && pasteInv.open());
                 }
             }
 

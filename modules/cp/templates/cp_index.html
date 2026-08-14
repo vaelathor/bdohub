@@ -67,35 +67,37 @@
             width: 18px;
             height: 18px;
         }
-        .paste-zone {
-            width: 34px;
-            height: 34px;
-            padding: 0;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            border: 1.5px dashed rgba(148, 163, 184, 0.45);
-            border-radius: 8px;
-            color: #94a3b8;
-            cursor: pointer;
-            transition: border-color 0.2s, color 0.2s, background 0.2s;
-            user-select: none;
-        }
-        .paste-zone svg {
-            width: 17px;
-            height: 17px;
-        }
-        .paste-zone:hover {
-            border-color: #38bdf8;
-            color: #38bdf8;
-            background: rgba(56, 189, 248, 0.08);
-        }
         .panel-header-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 0.6rem;
+        }
+        /* Zona de colagem dentro dos modais de paste */
+        .paste-zone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1.4rem 1rem;
+            border: 1.5px dashed rgba(148, 163, 184, 0.5);
+            border-radius: 10px;
+            color: #94a3b8;
+            font-size: 0.82rem;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s, background 0.2s;
+            user-select: none;
+        }
+        .paste-zone svg {
+            width: 26px;
+            height: 26px;
+        }
+        .paste-zone:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.08);
         }
         .paste-zone.drag-over {
             border-color: #4ade80;
@@ -108,7 +110,13 @@
         @keyframes paste-flash {
             0%   { border-color: #38bdf8; color: #38bdf8; background: rgba(56,189,248,0.25); }
             70%  { border-color: #38bdf8; color: #38bdf8; background: rgba(56,189,248,0.25); }
-            100% { border-color: rgba(148,163,184,0.45); color: #94a3b8; background: transparent; }
+            100% { border-color: rgba(148,163,184,0.5); color: #94a3b8; background: transparent; }
+        }
+        .paste-modal-status {
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            min-height: 1.2em;
+            text-align: center;
         }
 
     </style>
@@ -135,16 +143,16 @@
                     <div class="panel-header-row">
                         <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="package"></i> Subprodutos</h2>
                         <div style="display:flex;align-items:center;gap:0.35rem;">
-                            <div class="paste-zone" id="paste-zone-inventory" title="Cole o print aqui (Ctrl+V) ou arraste a imagem">
-                                <i data-lucide="clipboard-paste"></i>
-                            </div>
                             <input type="file" id="ocr-inventory-input" accept="image/*" style="display:none">
-                            <button id="btn-ocr-inventory" class="btn-ocr btn-ocr-clean" title="Importar quantidades de um print do inventário — ou cole a imagem (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
+                            <button id="btn-paste-inventory" class="btn-ocr btn-ocr-clean" title="Colar um print do inventário (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
+                                <i data-lucide="clipboard-paste"></i>
+                            </button>
+                            <button id="btn-ocr-inventory" class="btn-ocr btn-ocr-clean" title="Escolher um arquivo de imagem do inventário" style="background:none;border:none;cursor:pointer;">
                                 <i data-lucide="scan"></i>
                             </button>
                         </div>
                     </div>
-                    <div id="ocr-inventory-status" style="margin-top:0.3rem;font-size:0.75rem;min-height:1.2em;display:none;text-align:center;"></div>
+                    <div id="ocr-inventory-status" class="ocr-status" style="margin-top:0.3rem;font-size:0.75rem;min-height:1.2em;display:none;text-align:center;"></div>
                     <div id="ocr-inventory-warning" class="ocr-warning" style="display:none;"></div>
                     <form id="inventory-form">
                         {% for item, data in items_data.items() %}
@@ -234,16 +242,16 @@
                     <div class="panel-header-row">
                         <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="sparkles"></i> Avanço de Profissões</h2>
                         <div style="display:flex;align-items:center;gap:0.35rem;">
-                            <div class="paste-zone" id="paste-zone-prof" title="Cole o print aqui (Ctrl+V) ou arraste a imagem">
-                                <i data-lucide="clipboard-paste"></i>
-                            </div>
                             <input type="file" id="ocr-image-input" accept="image/*" style="display:none">
-                            <button id="btn-ocr-upload" class="btn-ocr btn-ocr-clean" title="Importar níveis de um print da tela de profissões — ou cole a imagem (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
+                            <button id="btn-paste-prof" class="btn-ocr btn-ocr-clean" title="Colar um print das profissões (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
+                                <i data-lucide="clipboard-paste"></i>
+                            </button>
+                            <button id="btn-ocr-upload" class="btn-ocr btn-ocr-clean" title="Escolher um arquivo de imagem das profissões" style="background:none;border:none;cursor:pointer;">
                                 <i data-lucide="scan" style="width:18px;height:18px;"></i>
                             </button>
                         </div>
                     </div>
-                        <div id="ocr-status" style="margin-top:0.3rem;font-size:0.75rem;min-height:1.2em;display:none;text-align:center;"></div>
+                        <div id="ocr-status" class="ocr-status" style="margin-top:0.3rem;font-size:0.75rem;min-height:1.2em;display:none;text-align:center;"></div>
                         <div id="ocr-warning" class="ocr-warning" style="display:none;"></div>
                     <div id="professions-list" class="professions-container">
                         <!-- Gerado por JS -->
@@ -279,6 +287,38 @@
                     <i data-lucide="check"></i>
                 </button>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal de colagem: Profissões (libera o Ctrl+V apenas enquanto aberto) -->
+    <div id="paste-prof-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 380px;">
+            <div class="modal-header">
+                <h3><i data-lucide="sparkles"></i> Colar print de Profissões</h3>
+                <button class="btn-close" data-close-paste="profissoes">&times;</button>
+            </div>
+            <div class="paste-zone" id="paste-zone-prof" tabindex="0" title="Clique para escolher arquivo, cole (Ctrl+V) ou arraste a imagem aqui">
+                <i data-lucide="clipboard-paste"></i>
+                <span>Cole aqui o print (Ctrl+V)<br>ou arraste a imagem</span>
+            </div>
+            <div id="paste-prof-status" class="ocr-status paste-modal-status" style="display:none;"></div>
+            <div id="paste-prof-warning" class="ocr-warning" style="display:none;"></div>
+        </div>
+    </div>
+
+    <!-- Modal de colagem: Inventário (libera o Ctrl+V apenas enquanto aberto) -->
+    <div id="paste-inventory-modal" class="modal">
+        <div class="modal-content glass-panel" style="max-width: 380px;">
+            <div class="modal-header">
+                <h3><i data-lucide="package"></i> Colar print de Inventário</h3>
+                <button class="btn-close" data-close-paste="inventario">&times;</button>
+            </div>
+            <div class="paste-zone" id="paste-zone-inventory" tabindex="0" title="Clique para escolher arquivo, cole (Ctrl+V) ou arraste a imagem aqui">
+                <i data-lucide="clipboard-paste"></i>
+                <span>Cole aqui o print (Ctrl+V)<br>ou arraste a imagem</span>
+            </div>
+            <div id="paste-inventory-status" class="ocr-status paste-modal-status" style="display:none;"></div>
+            <div id="paste-inventory-warning" class="ocr-warning" style="display:none;"></div>
         </div>
     </div>
 
