@@ -92,7 +92,7 @@
                     <div style="display:flex;align-items:center;justify-content:space-between;">
                         <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="package"></i> Subprodutos</h2>
                         <input type="file" id="ocr-inventory-input" accept="image/*" style="display:none">
-                        <button id="btn-ocr-inventory" class="btn-ocr btn-ocr-clean" title="Importar quantidades de um print do inventário" style="background:none;border:none;cursor:pointer;">
+                        <button id="btn-ocr-inventory" class="btn-ocr btn-ocr-clean" title="Importar quantidades de um print do inventário — ou cole a imagem (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
                             <i data-lucide="scan"></i>
                         </button>
                     </div>
@@ -186,7 +186,7 @@
                     <div style="display:flex;align-items:center;justify-content:space-between;">
                         <h2 class="section-title" style="margin:0;padding-bottom:0;border-bottom:none;"><i data-lucide="sparkles"></i> Avanço de Profissões</h2>
                         <input type="file" id="ocr-image-input" accept="image/*" style="display:none">
-                        <button id="btn-ocr-upload" class="btn-ocr btn-ocr-clean" title="Importar níveis de um print da tela de profissões" style="background:none;border:none;cursor:pointer;">
+                        <button id="btn-ocr-upload" class="btn-ocr btn-ocr-clean" title="Importar níveis de um print da tela de profissões — ou cole a imagem (Ctrl+V)" style="background:none;border:none;cursor:pointer;">
                             <i data-lucide="scan" style="width:18px;height:18px;"></i>
                         </button>
                     </div>
@@ -249,6 +249,7 @@
         </div>
     </div>
 
+    <script src="{{ url_for('static', filename='js/paste-image.js') }}"></script>
     <script src="{{ url_for('cp.static', filename='js/main.js') }}"></script>
     <script>lucide.createIcons();</script>
 </body>

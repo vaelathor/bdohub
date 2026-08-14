@@ -8,6 +8,79 @@ let userData = {
 
 let saveTimeout = null;
 
+// === OCR: utilitários compartilhados (usados pelos fluxos de upload) ===
+
+// Aviso discreto: quando uma chave/API de OCR falhou e o resultado veio de outra
+function setOcrWarnings(el, warnings, failed) {
+    if (!el) return;
+    if (warnings && warnings.length) {
+        el.title = warnings.join('\n');
+        if (failed) {
+            el.textContent = '\u26a0 ' + warnings.join(' \u00b7 ');
+        } else {
+            const n = warnings.length;
+            el.textContent = '\u26a0 ' + (n === 1
+                ? '1 tentativa falhou; resultado obtido na 2\u00aa'
+                : n + ' tentativas falharam; resultado obtido na ' + (n + 1) + '\u00aa');
+        }
+        el.style.display = 'block';
+    } else {
+        el.style.display = 'none';
+    }
+}
+
+// Fluxo comum de envio de imagem ao OCR: spinner no botão, status, fetch e avisos
+async function uploadOcrImage(file, { btn, statusEl, warnEl, dotsKey, endpoint, applyResult }) {
+    btn.disabled = true;
+    btn.innerHTML = '<i data-lucide="loader" class="spin"></i>';
+    lucide.createIcons();
+    if (statusEl) {
+        statusEl.className = 'ocr-status loading';
+        statusEl.style.display = 'block';
+        let dots = 0;
+        window[dotsKey] = setInterval(() => {
+            dots = (dots + 1) % 4;
+            statusEl.textContent = 'Processando' + '.'.repeat(dots);
+        }, 400);
+    }
+    try {
+        const formData = new FormData();
+        formData.append('image', file);
+        const res = await fetch(endpoint, { method: 'POST', body: formData });
+        const result = await res.json();
+
+        if (result.success) {
+            applyResult(result);
+            setOcrWarnings(warnEl, result.warnings, false);
+        } else {
+            if (statusEl) {
+                statusEl.style.display = 'block';
+                statusEl.className = 'ocr-status error';
+                statusEl.textContent = '\u2717 Nao foi possivel extrair dados';
+            }
+            setOcrWarnings(warnEl, result.warnings, true);
+            if (result.raw_text) {
+                console.log('OCR raw text:', result.raw_text);
+            }
+        }
+    } catch (err) {
+        if (statusEl) {
+            statusEl.className = 'ocr-status error';
+            statusEl.textContent = '\u2717 Erro ao processar imagem';
+        }
+        setOcrWarnings(warnEl, null, false);
+        console.error('OCR error:', err);
+    } finally {
+        if (window[dotsKey]) {
+            clearInterval(window[dotsKey]);
+            window[dotsKey] = null;
+        }
+        btn.disabled = false;
+        btn.innerHTML = '<i data-lucide="scan"></i>';
+        lucide.createIcons();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initial fetch of user data
     fetchData();
@@ -102,104 +175,56 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCalculations();
     });
 
-    // === OCR Image Upload ===
+    // === OCR de profissões (níveis) ===
     const btnOcr = document.getElementById('btn-ocr-upload');
     const fileInput = document.getElementById('ocr-image-input');
     const statusEl = document.getElementById('ocr-status');
     const warnEl = document.getElementById('ocr-warning');
 
-    // Aviso discreto: quando uma chave/API de OCR falhou e o resultado veio de outra
-    function setOcrWarnings(el, warnings, failed) {
-        if (!el) return;
-        if (warnings && warnings.length) {
-            el.title = warnings.join('\n');
-            if (failed) {
-                el.textContent = '\u26a0 ' + warnings.join(' \u00b7 ');
-            } else {
-                const n = warnings.length;
-                el.textContent = '\u26a0 ' + (n === 1
-                    ? '1 tentativa falhou; resultado obtido na 2\u00aa'
-                    : n + ' tentativas falharam; resultado obtido na ' + (n + 1) + '\u00aa');
-            }
-            el.style.display = 'block';
-        } else {
-            el.style.display = 'none';
-        }
-    }
-
     if (btnOcr && fileInput) {
-        btnOcr.addEventListener('click', () => fileInput.click());
+        const ocrOpts = {
+            endpoint: 'api/ocr',
+            btn: btnOcr,
+            statusEl,
+            warnEl,
+            dotsKey: '_ocrDotsInterval',
+            applyResult(result) {
+                let imported = 0;
+                for (const [prof, data] of Object.entries(result.data_dict || {})) {
+                    if (!userData.professions[prof]) {
+                        userData.professions[prof] = {};
+                    }
+                    userData.professions[prof].level = data.level;
+                    userData.professions[prof].pct = data.pct;
+                    imported++;
+                }
+                if (statusEl) {
+                    statusEl.style.display = 'block';
+                    statusEl.className = 'ocr-status success';
+                    statusEl.textContent = '\u2713 ' + imported + ' profissoes importadas';
+                }
+                updateCalculations();
+            },
+        };
 
-        fileInput.addEventListener('change', async (e) => {
+        const uploadProf = (file) => uploadOcrImage(file, ocrOpts);
+
+        btnOcr.addEventListener('click', () => {
+            PasteImage.activate('profissoes');
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', (e) => {
             const file = e.target.files[0];
             if (!file) return;
-
-            btnOcr.disabled = true;
-            btnOcr.innerHTML = '<i data-lucide="loader" class="spin"></i>';
-            lucide.createIcons();
-            if (statusEl) {
-                statusEl.className = 'ocr-status loading';
-                statusEl.style.display = 'block';
-                let dots = 0;
-                window._ocrDotsInterval = setInterval(() => {
-                    dots = (dots + 1) % 4;
-                    statusEl.textContent = 'Processando' + '.'.repeat(dots);
-                }, 400);
-            }
-
-            try {
-                const formData = new FormData();
-                formData.append('image', file);
-
-                const res = await fetch('api/ocr', { method: 'POST', body: formData });
-                const result = await res.json();
-
-                if (result.success && result.data_dict) {
-                    let imported = 0;
-                    for (const [prof, data] of Object.entries(result.data_dict)) {
-                        if (!userData.professions[prof]) {
-                            userData.professions[prof] = {};
-                        }
-                        userData.professions[prof].level = data.level;
-                        userData.professions[prof].pct = data.pct;
-                        imported++;
-                    }
-                    if (statusEl) {
-                        statusEl.style.display = 'block';
-                        statusEl.className = 'ocr-status success';
-                        statusEl.textContent = '\u2713 ' + imported + ' profissoes importadas';
-                    }
-                    setOcrWarnings(warnEl, result.warnings, false);
-                    updateCalculations();
-                } else {
-                    if (statusEl) {
-                        statusEl.style.display = 'block';
-                        statusEl.className = 'ocr-status error';
-                        statusEl.textContent = '\u2717 Nao foi possivel extrair dados';
-                    }
-                    setOcrWarnings(warnEl, result.warnings, true);
-                    if (result.raw_text) {
-                        console.log('OCR raw text:', result.raw_text);
-                    }
-                }
-            } catch (err) {
-                if (statusEl) {
-                    statusEl.className = 'ocr-status error';
-                    statusEl.textContent = '\u2717 Erro ao processar imagem';
-                }
-                setOcrWarnings(warnEl, null, false);
-                console.error('OCR error:', err);
-            }
-
-            if (window._ocrDotsInterval) {
-                clearInterval(window._ocrDotsInterval);
-                window._ocrDotsInterval = null;
-            }
-            btnOcr.disabled = false;
-            btnOcr.innerHTML = '<i data-lucide="scan"></i>';
-            lucide.createIcons();
             fileInput.value = '';
+            uploadProf(file);
         });
+
+        // Colar imagem da área de transferência (Ctrl+V) — mesmo fluxo do arquivo
+        if (window.PasteImage) {
+            PasteImage.attach('profissoes', { active: true, onImage: uploadProf });
+        }
     }
 });
 
@@ -210,76 +235,47 @@ document.addEventListener('DOMContentLoaded', () => {
             const warnElInv = document.getElementById('ocr-inventory-warning');
         
             if (btnOcrInv && fileInputInv) {
-                btnOcrInv.addEventListener('click', () => fileInputInv.click());
-        
-                fileInputInv.addEventListener('change', async (e) => {
+                const ocrInvOpts = {
+                    endpoint: 'api/ocr-inventory',
+                    btn: btnOcrInv,
+                    statusEl: statusElInv,
+                    warnEl: warnElInv,
+                    dotsKey: '_ocrInvDotsInterval',
+                    applyResult(result) {
+                        let imported = 0;
+                        for (const [itemName, qty] of Object.entries(result.data || {})) {
+                            const input = document.querySelector("input[data-item=\"" + itemName + "\"]");
+                            if (input) {
+                                input.value = qty;
+                                input.dispatchEvent(new Event('input', { bubbles: true }));
+                                imported++;
+                            }
+                        }
+                        if (statusElInv) {
+                            statusElInv.className = 'ocr-status success';
+                            statusElInv.textContent = '\u2713 ' + imported + ' itens importados';
+                        }
+                    },
+                };
+
+                const uploadInv = (file) => uploadOcrImage(file, ocrInvOpts);
+
+                btnOcrInv.addEventListener('click', () => {
+                    PasteImage.activate('inventario');
+                    fileInputInv.click();
+                });
+
+                fileInputInv.addEventListener('change', (e) => {
                     const file = e.target.files[0];
                     if (!file) return;
-        
-                    btnOcrInv.disabled = true;
-                    btnOcrInv.innerHTML = '<i data-lucide="loader" class="spin"></i>';
-                    lucide.createIcons();
-                    if (statusElInv) {
-                        statusElInv.className = 'ocr-status loading';
-                        statusElInv.style.display = 'block';
-                        let dots = 0;
-                        window._ocrInvDotsInterval = setInterval(() => {
-                            dots = (dots + 1) % 4;
-                            statusElInv.textContent = 'Processando' + '.'.repeat(dots);
-                        }, 400);
-                    }
-        
-                    try {
-                        const formData = new FormData();
-                        formData.append('image', file);
-        
-                        const res = await fetch('api/ocr-inventory', { method: 'POST', body: formData });
-                        const result = await res.json();
-        
-                        if (result.success && result.data) {
-                            let imported = 0;
-                            for (const [itemName, qty] of Object.entries(result.data)) {
-                                const input = document.querySelector("input[data-item=\"" + itemName + "\"]");
-                                if (input) {
-                                    input.value = qty;
-                                    input.dispatchEvent(new Event('input', { bubbles: true }));
-                                    imported++;
-                                }
-                            }
-                            if (statusElInv) {
-                                statusElInv.className = 'ocr-status success';
-                                statusElInv.textContent = '\u2713 ' + imported + ' itens importados';
-                            }
-                            setOcrWarnings(warnElInv, result.warnings, false);
-                        } else {
-                            if (statusElInv) {
-                                statusElInv.className = 'ocr-status error';
-                                statusElInv.textContent = '\u2717 Nao foi possivel extrair dados';
-                            }
-                            setOcrWarnings(warnElInv, result.warnings, true);
-                            if (result.raw_text) {
-                                console.log('OCR raw text:', result.raw_text);
-                            }
-                        }
-                    } catch (err) {
-                        if (statusElInv) {
-                            statusElInv.className = 'ocr-status error';
-                            statusElInv.textContent = '\u2717 Erro ao processar imagem';
-                        }
-                        setOcrWarnings(warnElInv, null, false);
-                        console.error('OCR error:', err);
-                    }
-        
-                    if (window._ocrInvDotsInterval) {
-                        clearInterval(window._ocrInvDotsInterval);
-                        window._ocrInvDotsInterval = null;
-                    }
-        
-                    btnOcrInv.disabled = false;
-                    btnOcrInv.innerHTML = '<i data-lucide="scan"></i>';
-                    lucide.createIcons();
                     fileInputInv.value = '';
+                    uploadInv(file);
                 });
+
+                // Colar imagem da área de transferência (Ctrl+V) — mesmo fluxo do arquivo
+                if (window.PasteImage) {
+                    PasteImage.attach('inventario', { onImage: uploadInv });
+                }
             }
 
 
