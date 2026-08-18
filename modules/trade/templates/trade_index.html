@@ -341,12 +341,45 @@
 
         .town-card:hover { border-color: rgba(56, 189, 248, 0.5); }
         .town-card.warn { border-color: rgba(248, 113, 113, 0.45); }
+        .town-card.off {
+            opacity: 0.5;
+            filter: grayscale(0.85);
+            border-color: var(--glass-border);
+        }
+        .town-card.off:hover { border-color: var(--glass-border); }
 
         .town-head {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 0.6rem;
+        }
+
+        .town-eye {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: background 0.15s, color 0.15s, border-color 0.15s;
+        }
+        .town-eye:hover { color: var(--text-main); border-color: rgba(56, 189, 248, 0.5); }
+        .town-eye svg { width: 14px; height: 14px; }
+        .town-eye.off {
+            background: rgba(148, 163, 184, 0.1);
+            color: var(--muted);
+            border-color: var(--glass-border);
+        }
+        .town-eye.on {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-primary);
+            border-color: rgba(56, 189, 248, 0.35);
         }
 
         .town-title { display: flex; align-items: center; gap: 0.55rem; min-width: 0; }
@@ -464,12 +497,12 @@
     </header>
 
     <div class="view-toggle" id="view-toggle">
-        <button class="active" data-view="crates"><i data-lucide="package"></i>Caixas</button>
-        <button data-view="towns"><i data-lucide="map"></i>Cidades &amp; Operários</button>
+        <button class="active" data-view="towns"><i data-lucide="map"></i>Cidades &amp; Operários</button>
+        <button data-view="crates"><i data-lucide="package"></i>Caixas</button>
     </div>
 
     <!-- ===== VISÃO CAIXAS ===== -->
-    <div id="view-crates" style="display:flex; flex-direction:column; gap:1rem; flex:1; min-height:0;">
+    <div id="view-crates" style="display:none; flex-direction:column; gap:1rem; flex:1; min-height:0;">
         <div class="stat-cards">
             <div class="stat-card">
                 <div class="sc-icon"><i data-lucide="package"></i></div>
@@ -519,7 +552,7 @@
     </div>
 
     <!-- ===== VISÃO CIDADES ===== -->
-    <div id="view-towns" style="display:none; flex-direction:column; gap:1rem; flex:1; min-height:0;">
+    <div id="view-towns" style="display:flex; flex-direction:column; gap:1rem; flex:1; min-height:0;">
         <div class="stat-cards">
             <div class="stat-card">
                 <div class="sc-icon"><i data-lucide="map"></i></div>
@@ -759,14 +792,20 @@
             const ships = [ship('Valencia', t.transport['Valencia']), ship('Yukjo', t.transport['Yukjo (LoML)'])].join('');
 
             const warn = lod.insufficient ? ' warn' : '';
+            const offCls = t.disabled ? ' off' : '';
             return `
-                <div class="town-card${warn}">
+                <div class="town-card${warn}${offCls}" data-town="${t.name}">
                     <div class="town-head">
                         <div class="town-title">
                             <i data-lucide="map-pin"></i>
                             <span class="name">${t.namePt || t.name}</span>
                         </div>
-                        <span class="town-prod"><i data-lucide="box"></i>${fmt(t.crates_day)}<small>/dia</small></span>
+                        <div style="display:flex; align-items:center; gap:0.5rem;">
+                            <button type="button" class="town-eye ${t.disabled ? 'off' : 'on'}" data-town="${t.name}" title="${t.disabled ? 'Reativar na contagem' : 'Desligar da contagem'}">
+                                <i data-lucide="${t.disabled ? 'eye-off' : 'eye'}"></i>
+                            </button>
+                            <span class="town-prod"><i data-lucide="box"></i>${fmt(t.crates_day)}<small>/dia</small></span>
+                        </div>
                     </div>
                     <div class="town-tags">
                         <span class="t-tag t-harvest"><i data-lucide="wheat"></i>${t.n_colheita} colheita/erva</span>
@@ -790,24 +829,65 @@
         }
 
         function fillTownStats(towns) {
-            const workers = towns.reduce((a, t) => a + (t.workers || 0), 0);
-            const ws = towns.reduce((a, t) => a + (t.n_staffed || 0), 0);
-            const crates = towns.reduce((a, t) => a + (t.crates_day || 0), 0);
-            document.getElementById('tw-cities').textContent = towns.length;
+            // Cidades desligadas não entram na contagem
+            const active = towns.filter(t => !t.disabled);
+            const workers = active.reduce((a, t) => a + (t.workers || 0), 0);
+            const ws = active.reduce((a, t) => a + (t.n_staffed || 0), 0);
+            const crates = active.reduce((a, t) => a + (t.crates_day || 0), 0);
+            document.getElementById('tw-cities').textContent = `${active.length}/${towns.length}`;
             document.getElementById('tw-workers').textContent = workers;
             document.getElementById('tw-workshops').textContent = ws;
             document.getElementById('tw-crates').textContent = fmtCompact(crates);
             document.getElementById('tw-crates-sub').textContent = `${fmt(crates)} caixas/dia (meta 60.000)`;
         }
 
+        async function toggleTown(townBtn) {
+            const card = townBtn.closest('.town-card');
+            const town = townBtn.dataset.town;
+            const willDisable = !card.classList.contains('off');
+            // feedback imediato
+            card.classList.toggle('off', willDisable);
+            townBtn.classList.toggle('off', willDisable);
+            townBtn.classList.toggle('on', !willDisable);
+            townBtn.title = willDisable ? 'Reativar na contagem' : 'Desligar da contagem';
+            townBtn.innerHTML = `<i data-lucide="${willDisable ? 'eye-off' : 'eye'}"></i>`;
+            try {
+                const resp = await fetch('api/towns/toggle', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ town, disabled: willDisable })
+                });
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                townState[town] = data.disabled;
+                fillTownStats(townsData);
+            } catch (e) {
+                // rollback em caso de erro
+                card.classList.toggle('off', !willDisable);
+                townBtn.classList.toggle('off', !willDisable);
+                townBtn.classList.toggle('on', willDisable);
+                townBtn.innerHTML = `<i data-lucide="${willDisable ? 'eye' : 'eye-off'}"></i>`;
+            } finally {
+                lucide.createIcons();
+            }
+        }
+
+        let townsData = [];
+        let townState = {};
+
         async function loadTowns() {
             try {
                 const resp = await fetch('api/towns');
                 const data = await resp.json();
                 if (data.error) throw new Error(data.error);
-                const towns = (data.towns || []).slice().sort((a, b) => b.crates_day - a.crates_day);
-                fillTownStats(towns);
-                townGrid.innerHTML = towns.map(renderTown).join('');
+                townsData = (data.towns || []).slice()
+                    .map(t => { townState[t.name] = !!t.disabled; return t; })
+                    .sort((a, b) => (a.disabled - b.disabled) || (b.crates_day - a.crates_day));
+                fillTownStats(townsData);
+                townGrid.innerHTML = townsData.map(renderTown).join('');
+                townGrid.querySelectorAll('.town-eye').forEach(btn => {
+                    btn.addEventListener('click', () => toggleTown(btn));
+                });
                 lucide.createIcons();
             } catch (e) {
                 townGrid.innerHTML = `
@@ -822,7 +902,7 @@
         const toggleBtn = document.getElementById('view-toggle');
         const viewCrates = document.getElementById('view-crates');
         const viewTowns = document.getElementById('view-towns');
-        let townsLoaded = false;
+        let cratesLoaded = false;
 
         toggleBtn.querySelectorAll('button').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -831,14 +911,14 @@
                 const isTowns = btn.dataset.view === 'towns';
                 viewCrates.style.display = isTowns ? 'none' : 'flex';
                 viewTowns.style.display = isTowns ? 'flex' : 'none';
-                if (isTowns && !townsLoaded) {
-                    townsLoaded = true;
-                    loadTowns();
+                if (!isTowns && !cratesLoaded) {
+                    cratesLoaded = true;
+                    loadCrates();
                 }
             });
         });
 
-        loadCrates();
+        loadTowns();
     </script>
 </body>
 </html>
