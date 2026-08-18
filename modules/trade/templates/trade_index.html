@@ -830,7 +830,7 @@
 
         function fillTownStats(towns) {
             // Cidades desligadas não entram na contagem
-            const active = towns.filter(t => !t.disabled);
+            const active = towns.filter(t => !(t.disabled || townState[t.name]));
             const workers = active.reduce((a, t) => a + (t.workers || 0), 0);
             const ws = active.reduce((a, t) => a + (t.n_staffed || 0), 0);
             const crates = active.reduce((a, t) => a + (t.crates_day || 0), 0);
@@ -860,14 +860,20 @@
                 const data = await resp.json();
                 if (data.error) throw new Error(data.error);
                 townState[town] = data.disabled;
+                // atualiza o objeto em townsData para a contagem em tempo real
+                const tObj = townsData.find(t => t.name === town);
+                if (tObj) tObj.disabled = data.disabled;
+                townsData.sort((a, b) => (a.disabled - b.disabled) || (b.crates_day - a.crates_day));
+                townGrid.innerHTML = townsData.map(renderTown).join('');
+                townGrid.querySelectorAll('.town-eye').forEach(b => b.addEventListener('click', () => toggleTown(b)));
                 fillTownStats(townsData);
+                lucide.createIcons();
             } catch (e) {
                 // rollback em caso de erro
                 card.classList.toggle('off', !willDisable);
                 townBtn.classList.toggle('off', !willDisable);
                 townBtn.classList.toggle('on', willDisable);
                 townBtn.innerHTML = `<i data-lucide="${willDisable ? 'eye' : 'eye-off'}"></i>`;
-            } finally {
                 lucide.createIcons();
             }
         }
