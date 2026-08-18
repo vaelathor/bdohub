@@ -1,46 +1,47 @@
 {
     "items": {
-        "Catalisador Desconhecido": 50609,
-        "Estrela Silvestre": 129400,
-        "Folha Rosa": 560000,
-        "Garrafa de Vidro Descartada": 2721,
-        "Iguarias de Bruxa": 7383,
-        "Suspiro de Fada": 94910
+        "Catalisador Desconhecido": 115800,
+        "Estrela Silvestre": 130900,
+        "Folha Rosa": 80000,
+        "Garrafa de Vidro Descartada": 7282,
+        "Iguarias de Bruxa": 10747,
+        "Suspiro de Fada": 122300
     },
-    "user_cp": 404,
-    "user_cp_pct": 24.09,
+    "user_cp": 509,
+    "user_cp_pct": 57.86,
     "goal_cp": 600,
     "professions": {
         "Alquimia": {
-            "level": "Guru 11",
-            "pct": 75.18
+            "level": "Guru 17",
+            "pct": 28.9
         },
         "Caça": {
             "level": "Guru 41",
-            "pct": 46.79
+            "pct": 53.94
         },
         "Coleta": {
-            "level": "Guru 20",
-            "pct": 8.53
+            "level": "Guru 26",
+            "pct": 28.66
         },
         "Culinária": {
-            "level": "Guru 22",
-            "pct": 72.83
+            "level": "Guru 25",
+            "pct": 32.67
         },
         "Cultivo": {
-            "level": "Mestre 12",
-            "pct": 26.9
+            "level": "Guru 10",
+            "pct": 49.44
         },
         "Pesca": {
-            "level": "Guru 9",
-            "pct": 1.76
+            "level": "Guru 12",
+            "pct": 91.48
         }
     },
     "ignored_items": [
-        "Estrela Silvestre",
-        "Suspiro de Fada",
+        "Folha Rosa",
+        "Catalisador Desconhecido",
         "Iguarias de Bruxa",
+        "Estrela Silvestre",
         "Garrafa de Vidro Descartada",
-        "Catalisador Desconhecido"
+        "Suspiro de Fada"
     ]
 }

@@ -1,7 +1,7 @@
 {
-    "level": "Guru 6",
+    "level": "Guru 19",
     "vp": true,
-    "cleia": true,
+    "cleia": false,
     "bargain": "1.000.000",
     "trades": {
         "Material": 0,

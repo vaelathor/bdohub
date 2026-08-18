@@ -256,5 +256,65 @@
         "trades": 143,
         "base_exp_pct": 0.01336,
         "bonus_exp": 670.0
+    },
+    {
+        "level": "Guru 10",
+        "trades": 76,
+        "base_exp_pct": 0.01337,
+        "bonus_exp": 590.0
+    },
+    {
+        "level": "Guru 11",
+        "trades": 228,
+        "base_exp_pct": 0.01311,
+        "bonus_exp": 590.0
+    },
+    {
+        "level": "Guru 12",
+        "trades": 149,
+        "base_exp_pct": 0.01319,
+        "bonus_exp": 570.0
+    },
+    {
+        "level": "Guru 13",
+        "trades": 224,
+        "base_exp_pct": 0.01318,
+        "bonus_exp": 570.0
+    },
+    {
+        "level": "Guru 14",
+        "trades": 162,
+        "base_exp_pct": 0.01315,
+        "bonus_exp": 570.0
+    },
+    {
+        "level": "Guru 15",
+        "trades": 311,
+        "base_exp_pct": 0.01296,
+        "bonus_exp": 570.0
+    },
+    {
+        "level": "Guru 16",
+        "trades": 321,
+        "base_exp_pct": 0.01301,
+        "bonus_exp": 570.0
+    },
+    {
+        "level": "Guru 17",
+        "trades": 304,
+        "base_exp_pct": 0.01304,
+        "bonus_exp": 670.0
+    },
+    {
+        "level": "Guru 18",
+        "trades": 339,
+        "base_exp_pct": 0.01303,
+        "bonus_exp": 523.0
+    },
+    {
+        "level": "Guru 19",
+        "trades": 328,
+        "base_exp_pct": 0.01299,
+        "bonus_exp": 553.0
     }
 ]

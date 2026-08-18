@@ -2,6 +2,14 @@ from flask import Blueprint, render_template, jsonify, request
 import os
 import json
 import sys
+
+# Adiciona o diretório raiz do projeto ao path para importar backup_utils
+_project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if _project_root not in sys.path:
+    sys.path.insert(0, _project_root)
+
+import backup_utils
+
 from .manager import BarteringManager
 
 bartering_bp = Blueprint('bartering', __name__, 
@@ -60,6 +68,8 @@ def save_exp_table(table):
         return  # Não persiste em modo teste
     with open(EXP_TABLE_PATH, 'w', encoding='utf-8') as f:
         json.dump(table, f, indent=4, ensure_ascii=False)
+    # Backup automático após salvar
+    backup_utils.backup_single_file('modules/bartering/exp_table.json')
 
 def load_local_config():
     default = {
@@ -82,6 +92,8 @@ def load_local_config():
 def save_local_config(config):
     with open(CONFIG_PATH, 'w', encoding='utf-8') as f:
         json.dump(config, f, indent=4)
+    # Backup automático após salvar
+    backup_utils.backup_single_file('modules/bartering/config.json')
 
 @bartering_bp.route('/')
 def index():

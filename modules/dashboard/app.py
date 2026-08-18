@@ -9,6 +9,9 @@ parent_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.
 if parent_dir not in sys.path:
     sys.path.append(parent_dir)
 
+# Importa módulo de backup (está no raiz do projeto)
+import backup_utils
+
 try:
     from prata import jogo_hoje
 except ImportError:
@@ -96,10 +99,13 @@ def load_data():
                 pass
     return data
 
-def save_data(data):
+def save_data(data, do_backup=False):
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
+    # Backup automático após salvar (só quando chamado explicitamente)
+    if do_backup:
+        backup_utils.backup_single_file('data/dashboard.json')
 
 def should_reset_daily(last_reset_date):
     """Verifica se deve resetar tarefas diárias."""
@@ -204,7 +210,7 @@ def index():
 @dashboard_bp.route('/api/save', methods=['POST'])
 def save():
     data = request.json
-    save_data(data)
+    save_data(data, do_backup=True)
     return jsonify({"status": "success"})
 
 @dashboard_bp.route('/api/check_resets', methods=['GET'])

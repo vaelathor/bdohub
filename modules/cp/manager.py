@@ -1,7 +1,15 @@
 import os
 import csv
 import json
+import sys
 from datetime import datetime
+
+# Adiciona o diretório raiz do projeto ao path para importar backup_utils
+_project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if _project_root not in sys.path:
+    sys.path.insert(0, _project_root)
+
+import backup_utils
 
 BASE_DIR = os.path.dirname(__file__)
 CONFIG_FILE = os.path.join(BASE_DIR, "config.json")
@@ -94,6 +102,8 @@ class CPManager:
         self.data = new_data
         with open(CONFIG_FILE, "w", encoding="utf-8") as f:
             json.dump(self.data, f, indent=4, ensure_ascii=False)
+        # Backup automático após salvar
+        backup_utils.backup_single_file('modules/cp/config.json')
 
     def calculate_gains(self, quantities, ignored_items=None):
         if ignored_items is None: ignored_items = []

@@ -31,7 +31,8 @@ WORKER_MSPD = 7.5        # velocidade de movimento (m/s) p/ caminhada
 PACK_SKILL = 3           # skill de embalagem +3 -> x4 caixas por ciclo
 FREE_SLOTS = 1           # 1 operário gratuito por cidade
 CYCLE_BASE = 5.0         # minutos base de trabalho (workload 150 @ 150 vel)
-TRANSPORT_K = 432 / math.hypot(1026110 - (-1472040), 199132 - 1337990)  # min/unit
+# Calibrado com medidas reais (ago/2026):
+TRANSPORT_K = 0.000157  # min por unidade de distancia (cal: Cal->Bukpo 301min/1907393, Val->Yukjo 432min/2745496)
 
 # affTown (Workerman) -> gpw node id (cities.json)
 AFF_TO_GW = {

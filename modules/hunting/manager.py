@@ -5,6 +5,13 @@ import csv
 import argparse
 from datetime import datetime, date, timedelta
 
+# Adiciona o diretório raiz do projeto ao path para importar backup_utils
+_project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if _project_root not in sys.path:
+    sys.path.insert(0, _project_root)
+
+import backup_utils
+
 # Habilita cores ANSI no Windows terminal
 os.system('')
 if sys.stdout.encoding.lower() != 'utf-8':
@@ -83,6 +90,8 @@ class HuntingManager:
             json.dump(self.history, f, indent=4, ensure_ascii=False)
             f.flush()
             os.fsync(f.fileno())
+        # Backup automático após salvar
+        backup_utils.backup_single_file('modules/hunting/historico.json')
 
     def is_working_day(self, check_date):
         # Verifica datas especificas de folga
@@ -992,6 +1001,9 @@ class HuntingManager:
             json.dump(self.config, f, indent=4, ensure_ascii=False)
             f.flush()
             os.fsync(f.fileno())
+
+        # Backup automático após salvar
+        backup_utils.backup_single_file('modules/hunting/config.json')
 
         # Recarrega config
         with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
