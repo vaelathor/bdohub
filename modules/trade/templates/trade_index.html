@@ -726,12 +726,12 @@
             const lodRows = [
                 ...forced.map(x => `
                     <div class="lod-row">
-                        <span class="lod-name">${x.name}</span>
+                        <span class="lod-name">${x.namePt || x.name}</span>
                         <span class="lod-slots"><small>forçado &middot; </small>${x.slots} slot${x.slots > 1 ? 's' : ''}</span>
                     </div>`),
                 ...chosen.map(x => `
                     <div class="lod-row">
-                        <span class="lod-name">${x.name}</span>
+                        <span class="lod-name">${x.namePt || x.name}</span>
                         <span class="lod-slots">${x.slots} slot${x.slots > 1 ? 's' : ''} <small>&middot; ${x.cp} CP</small></span>
                     </div>`),
             ];
@@ -750,7 +750,7 @@
 
             const wsRows = t.workshops.map(w => `
                 <div class="ws-row ${w.inUse ? '' : 'off'}">
-                    <span class="ws-name">${w.name}</span>
+                    <span class="ws-name">${w.namePt || w.name}</span>
                     <span class="ws-packs">${w.packs.map(miniBadge).join('')}</span>
                     <span class="ws-meta">${w.cratesDay}/d</span>
                 </div>`).join('');

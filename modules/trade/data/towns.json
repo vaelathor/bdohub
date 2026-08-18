@@ -27,7 +27,8 @@
      "walkMin": 3.78,
      "cycleMin": 8.78,
      "cratesDay": 656,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Balenos nº. 6-1, Fazenda Toscani"
     },
     {
      "house": "2120",
@@ -40,7 +41,8 @@
      "walkMin": 2.28,
      "cycleMin": 7.28,
      "cratesDay": 791,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Balenos nº. 3-1, Fazenda Loggia"
     },
     {
      "house": "2118",
@@ -53,7 +55,8 @@
      "walkMin": 2.22,
      "cycleMin": 7.22,
      "cratesDay": 798,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Balenos nº. 4-1, Fazenda DelLucci"
     },
     {
      "house": "2116",
@@ -66,7 +69,8 @@
      "walkMin": 1.19,
      "cycleMin": 6.19,
      "cratesDay": 931,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Balenos nº. 1-1, Fazenda Bartali"
     },
     {
      "house": "2114",
@@ -79,7 +83,8 @@
      "walkMin": 1.54,
      "cycleMin": 6.54,
      "cratesDay": 881,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Balenos nº. 2-1, Fazenda Finto"
     },
     {
      "house": "2104",
@@ -91,7 +96,8 @@
      "walkMin": 0.48,
      "cycleMin": 5.48,
      "cratesDay": 1050,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Velia nº. 5-2"
     }
    ],
    "n_workshops": 6,
@@ -104,19 +110,22 @@
       "house": "2111",
       "name": "Velia 1, Rm. 1",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Velia nº. 1 Quarto 1"
      },
      {
       "house": "2112",
       "name": "Velia 1, Rm. 2",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Velia nº. 1 Quarto 2"
      },
      {
       "house": "2113",
       "name": "Velia 1, Rm. 3",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Velia nº. 1 Quarto 3"
      }
     ],
     "cp": 3,
@@ -165,7 +174,8 @@
      "walkMin": 5.93,
      "cycleMin": 10.93,
      "cratesDay": 527,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Serendia nº. 5, Rancho Lynch"
     },
     {
      "house": "2221",
@@ -178,7 +188,8 @@
      "walkMin": 0.24,
      "cycleMin": 5.24,
      "cratesDay": 1098,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Heidel nº. 4-2 Piso 2"
     },
     {
      "house": "2219",
@@ -191,7 +202,8 @@
      "walkMin": 0.53,
      "cycleMin": 5.53,
      "cratesDay": 1042,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Heidel nº. 9-1 Piso 2"
     },
     {
      "house": "2218",
@@ -205,7 +217,8 @@
      "walkMin": 2.61,
      "cycleMin": 7.61,
      "cratesDay": 757,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Serendia nº. 3, Fazenda Elda"
     },
     {
      "house": "2216",
@@ -218,7 +231,8 @@
      "walkMin": 1.94,
      "cycleMin": 6.94,
      "cratesDay": 830,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Serendia nº. 2-1 Piso 2, Fazenda Costa"
     },
     {
      "house": "2215",
@@ -231,7 +245,8 @@
      "walkMin": 1.92,
      "cycleMin": 6.92,
      "cratesDay": 832,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Serendia nº. 2-1 Piso 1, Fazenda Costa"
     },
     {
      "house": "2213",
@@ -244,7 +259,8 @@
      "walkMin": 3.0,
      "cycleMin": 8.0,
      "cratesDay": 720,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Serendia nº. 4, Plantação Moretti"
     },
     {
      "house": "2227",
@@ -256,7 +272,8 @@
      "walkMin": 0.21,
      "cycleMin": 5.21,
      "cratesDay": 1105,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Heidel nº. 4-4"
     },
     {
      "house": "2225",
@@ -270,7 +287,8 @@
      "walkMin": 0.19,
      "cycleMin": 5.19,
      "cratesDay": 1110,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Heidel nº. 3-3"
     },
     {
      "house": "2203",
@@ -282,7 +300,8 @@
      "walkMin": 2.85,
      "cycleMin": 7.85,
      "cratesDay": 734,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Serendia nº. 1-1 Piso 1, Fazenda Alejandro"
     },
     {
      "house": "2162",
@@ -295,7 +314,8 @@
      "walkMin": 0.39,
      "cycleMin": 5.39,
      "cratesDay": 1069,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Heidel nº. 4-1 Piso 2"
     }
    ],
    "n_workshops": 11,
@@ -308,37 +328,43 @@
       "house": "2168",
       "name": "Heidel 9-1, 1F",
       "cp": 1,
-      "slots": 0
+      "slots": 0,
+      "namePt": "Heidel nº. 9-1 Piso 1"
      },
      {
       "house": "2170",
       "name": "Heidel 9-2, 1F",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Heidel nº. 9-2 Piso 1"
      },
      {
       "house": "2171",
       "name": "Heidel 9-2, 2F",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Heidel nº. 9-2 Piso 2"
      },
      {
       "house": "2200",
       "name": "Heidel 8-1, Rm. 3",
       "cp": 2,
-      "slots": 4
+      "slots": 4,
+      "namePt": "Heidel nº. 8-1 Quarto 3"
      },
      {
       "house": "2201",
       "name": "Heidel 8-1, Rm. 2",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Heidel nº. 8-1 Quarto 2"
      },
      {
       "house": "2202",
       "name": "Heidel 8-1, Rm. 1",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Heidel nº. 8-1 Quarto 1"
      }
     ],
     "cp": 6,
@@ -385,7 +411,8 @@
      "walkMin": 3.04,
      "cycleMin": 8.04,
      "cratesDay": 716,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Gabino nº. 2 Piso 2"
     },
     {
      "house": "2805",
@@ -397,7 +424,8 @@
      "walkMin": 1.95,
      "cycleMin": 6.95,
      "cratesDay": 829,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Portão Leste de Calpheon nº. 2"
     },
     {
      "house": "2801",
@@ -410,7 +438,8 @@
      "walkMin": 1.56,
      "cycleMin": 6.56,
      "cratesDay": 879,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Portão Leste de Calpheon nº. 8 1° Piso"
     },
     {
      "house": "2755",
@@ -423,7 +452,8 @@
      "walkMin": 1.62,
      "cycleMin": 6.62,
      "cratesDay": 870,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Portão Norte de Calpheon nº. 4 2° Piso"
     },
     {
      "house": "2754",
@@ -435,7 +465,8 @@
      "walkMin": 1.61,
      "cycleMin": 6.61,
      "cratesDay": 871,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Portão Norte de Calpheon nº. 4 1° Piso"
     },
     {
      "house": "2774",
@@ -448,7 +479,8 @@
      "walkMin": 1.54,
      "cycleMin": 6.54,
      "cratesDay": 880,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Portão Sul de Calpheon nº. 3"
     },
     {
      "house": "2698",
@@ -460,7 +492,8 @@
      "walkMin": 1.4,
      "cycleMin": 6.4,
      "cratesDay": 901,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Capela nº. 1-1 Piso 2"
     },
     {
      "house": "2658",
@@ -473,7 +506,8 @@
      "walkMin": 1.39,
      "cycleMin": 6.39,
      "cratesDay": 902,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Capela nº. 1-1 Piso 1"
     },
     {
      "house": "2682",
@@ -486,7 +520,8 @@
      "walkMin": 1.4,
      "cycleMin": 6.4,
      "cratesDay": 899,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Capela nº. 3-9 Piso 1"
     },
     {
      "house": "2629",
@@ -498,7 +533,8 @@
      "walkMin": 0.59,
      "cycleMin": 5.59,
      "cratesDay": 1030,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Feira nº. 3-5 Piso 2"
     },
     {
      "house": "2628",
@@ -511,7 +547,8 @@
      "walkMin": 0.6,
      "cycleMin": 5.6,
      "cratesDay": 1028,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Feira nº. 3-5 Piso 1"
     },
     {
      "house": "2609",
@@ -523,7 +560,8 @@
      "walkMin": 0.85,
      "cycleMin": 5.85,
      "cratesDay": 984,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Feira nº. 2-3 Piso 2"
     },
     {
      "house": "2565",
@@ -535,7 +573,8 @@
      "walkMin": 1.33,
      "cycleMin": 6.33,
      "cratesDay": 910,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Distrito Nobre nº. 2-3 Piso 1"
     },
     {
      "house": "2818",
@@ -548,7 +587,8 @@
      "walkMin": 2.54,
      "cycleMin": 7.54,
      "cratesDay": 764,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Gabino nº. 5"
     },
     {
      "house": "2816",
@@ -561,7 +601,8 @@
      "walkMin": 2.93,
      "cycleMin": 7.93,
      "cratesDay": 726,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Gabino nº. 4 Piso 1"
     },
     {
      "house": "2505",
@@ -573,7 +614,8 @@
      "walkMin": 1.07,
      "cycleMin": 6.07,
      "cratesDay": 949,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Feira nº. 6-2"
     },
     {
      "house": "2514",
@@ -587,7 +629,8 @@
      "walkMin": 1.28,
      "cycleMin": 6.28,
      "cratesDay": 917,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Feira nº. 7-3 Piso 1"
     },
     {
      "house": "2493",
@@ -599,7 +642,8 @@
      "walkMin": 1.14,
      "cycleMin": 6.14,
      "cratesDay": 938,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Feira nº. 5-2"
     },
     {
      "house": "2488",
@@ -612,7 +656,8 @@
      "walkMin": 0.88,
      "cycleMin": 5.88,
      "cratesDay": 980,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Feira nº. 4-5 Piso 1"
     },
     {
      "house": "2405",
@@ -625,7 +670,8 @@
      "walkMin": 1.66,
      "cycleMin": 6.66,
      "cratesDay": 865,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Favela nº. 1-3 Piso 1"
     },
     {
      "house": "2401",
@@ -637,7 +683,8 @@
      "walkMin": 1.54,
      "cycleMin": 6.54,
      "cratesDay": 880,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Favela nº. 1-1 Piso 1"
     },
     {
      "house": "2424",
@@ -650,7 +697,8 @@
      "walkMin": 1.79,
      "cycleMin": 6.79,
      "cratesDay": 849,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Favela nº. 3-2"
     },
     {
      "house": "2374",
@@ -662,7 +710,8 @@
      "walkMin": 3.97,
      "cycleMin": 8.97,
      "cratesDay": 642,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Plantação de Trigo do Norte nº 2"
     },
     {
      "house": "2373",
@@ -675,7 +724,8 @@
      "walkMin": 3.9,
      "cycleMin": 8.9,
      "cratesDay": 647,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Plantação de Trigo do Norte nº 1"
     },
     {
      "house": "2367",
@@ -687,7 +737,8 @@
      "walkMin": 3.12,
      "cycleMin": 8.12,
      "cratesDay": 709,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Dias nº. 2 Piso 1"
     },
     {
      "house": "2366",
@@ -700,7 +751,8 @@
      "walkMin": 3.08,
      "cycleMin": 8.08,
      "cratesDay": 713,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Dias nº. 1"
     },
     {
      "house": "2363",
@@ -712,7 +764,8 @@
      "walkMin": 7.6,
      "cycleMin": 12.6,
      "cratesDay": 457,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Florin nº. 2-2"
     },
     {
      "house": "2362",
@@ -725,7 +778,8 @@
      "walkMin": 7.54,
      "cycleMin": 12.54,
      "cratesDay": 459,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Florin nº. 2-1"
     },
     {
      "house": "2331",
@@ -738,7 +792,8 @@
      "walkMin": 7.38,
      "cycleMin": 12.38,
      "cratesDay": 465,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Florin nº. 1-1 Quarto 1"
     }
    ],
    "n_workshops": 29,
@@ -751,85 +806,99 @@
       "house": "2372",
       "name": "Falres Dirt Farm 1",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Fazenda de Gado Falres nº. 1"
      },
      {
       "house": "2753",
       "name": "Calpheon North Gate 3",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Portão Norte de Calpheon nº. 3"
      },
      {
       "house": "2754",
       "name": "Calpheon North Gate 4, 1F",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Portão Norte de Calpheon nº. 4 1° Piso"
      },
      {
       "house": "2771",
       "name": "Calpheon South Gate 1",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Portão Sul de Calpheon nº. 1"
      },
      {
       "house": "2772",
       "name": "Calpheon South Gate 2, 1F",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Portão Sul de Calpheon nº. 2 1° Piso"
      },
      {
       "house": "2773",
       "name": "Calpheon South Gate 2, 2F",
       "cp": 2,
-      "slots": 4
+      "slots": 4,
+      "namePt": "Portão Sul de Calpheon nº. 2 2° Piso"
      },
      {
       "house": "2774",
       "name": "Calpheon South Gate 3",
       "cp": 1,
-      "slots": 0
+      "slots": 0,
+      "namePt": "Portão Sul de Calpheon nº. 3"
      },
      {
       "house": "2775",
       "name": "Calpheon South Gate 4, 1F",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Portão Sul de Calpheon nº. 4 1° Piso"
      },
      {
       "house": "2791",
       "name": "Calpheon East Gate 1, 1F",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Portão Leste de Calpheon nº. 1 1° Piso"
      },
      {
       "house": "2804",
       "name": "Calpheon East Gate 1, 2F",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Portão Leste de Calpheon nº. 1 2° Piso"
      },
      {
       "house": "2813",
       "name": "Gabino Farm 2, 2F",
       "cp": 1,
-      "slots": 0
+      "slots": 0,
+      "namePt": "Fazenda Gabino nº. 2 Piso 2"
      },
      {
       "house": "2814",
       "name": "Gabino Farm 3, 1F",
       "cp": 1,
-      "slots": 0
+      "slots": 0,
+      "namePt": "Fazenda Gabino nº. 3 Piso 1"
      },
      {
       "house": "2816",
       "name": "Gabino Farm 4, 1F",
       "cp": 1,
-      "slots": 0
+      "slots": 0,
+      "namePt": "Fazenda Gabino nº. 4 Piso 1"
      },
      {
       "house": "2817",
       "name": "Gabino Farm 4, 2F",
       "cp": 3,
-      "slots": 8
+      "slots": 8,
+      "namePt": "Fazenda Gabino nº. 4 Piso 2"
      }
     ],
     "cp": 11,
@@ -878,7 +947,8 @@
      "walkMin": 1.36,
      "cycleMin": 6.36,
      "cratesDay": 905,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Casta nº. 2"
     },
     {
      "house": "2241",
@@ -891,7 +961,8 @@
      "walkMin": 0.52,
      "cycleMin": 5.52,
      "cratesDay": 1043,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Olvia nº. 7-3"
     },
     {
      "house": "2138",
@@ -905,7 +976,8 @@
      "walkMin": 0.84,
      "cycleMin": 5.84,
      "cratesDay": 987,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Olvia nº. 1-2"
     }
    ],
    "n_workshops": 3,
@@ -918,7 +990,8 @@
       "house": "2245",
       "name": "Wale Farm 1",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Fazenda Wale nº. 1"
      }
     ],
     "cp": 1,
@@ -967,7 +1040,8 @@
      "walkMin": 2.19,
      "cycleMin": 7.19,
      "cratesDay": 801,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Keplan nº. 3-3"
     },
     {
      "house": "2376",
@@ -980,7 +1054,8 @@
      "walkMin": 5.44,
      "cycleMin": 10.44,
      "cratesDay": 552,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Gianin nº. 1"
     }
    ],
    "n_workshops": 2,
@@ -1035,7 +1110,8 @@
      "walkMin": 0.44,
      "cycleMin": 5.44,
      "cratesDay": 1058,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Epheria nº. 2-1 Piso 1"
     },
     {
      "house": "2334",
@@ -1048,7 +1124,8 @@
      "walkMin": 1.02,
      "cycleMin": 6.02,
      "cratesDay": 956,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Epheria nº. 1-1 Piso 1"
     }
    ],
    "n_workshops": 2,
@@ -1101,7 +1178,8 @@
      "walkMin": 0.59,
      "cycleMin": 5.59,
      "cratesDay": 1030,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Trent nº. 1"
     },
     {
      "house": "2307",
@@ -1113,7 +1191,8 @@
      "walkMin": 5.11,
      "cycleMin": 10.11,
      "cratesDay": 570,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Behr nº. 1"
     }
    ],
    "n_workshops": 2,
@@ -1126,13 +1205,15 @@
       "house": "2301",
       "name": "Trent 1",
       "cp": 1,
-      "slots": 0
+      "slots": 0,
+      "namePt": "Trent nº. 1"
      },
      {
       "house": "2303",
       "name": "Trent 3",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Trent nº. 3"
      }
     ],
     "cp": 1,
@@ -1180,7 +1261,8 @@
      "walkMin": 1.15,
      "cycleMin": 6.15,
      "cratesDay": 936,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Altinova nº. 5-4"
     },
     {
      "house": "2870",
@@ -1192,7 +1274,8 @@
      "walkMin": 0.56,
      "cycleMin": 5.56,
      "cratesDay": 1037,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Altinova nº. 2-1 Piso 1"
     },
     {
      "house": "2847",
@@ -1204,7 +1287,8 @@
      "walkMin": 12.9,
      "cycleMin": 17.9,
      "cratesDay": 322,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Kusha nº. 1-2"
     },
     {
      "house": "2845",
@@ -1217,7 +1301,8 @@
      "walkMin": 12.37,
      "cycleMin": 17.37,
      "cratesDay": 332,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Kusha nº. 2"
     },
     {
      "house": "2843",
@@ -1229,7 +1314,8 @@
      "walkMin": 11.93,
      "cycleMin": 16.93,
      "cratesDay": 340,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Rancho Cauda de Pedra n° 2"
     }
    ],
    "n_workshops": 5,
@@ -1242,13 +1328,15 @@
       "house": "2911",
       "name": "Altinova 10-1",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Altinova nº. 10-1"
      },
      {
       "house": "2912",
       "name": "Altinova 10-2",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Altinova nº. 10-2"
      }
     ],
     "cp": 2,
@@ -1295,7 +1383,8 @@
      "walkMin": 0.52,
      "cycleMin": 5.52,
      "cratesDay": 1043,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Tarif nº. 2-1 Quarto 2"
     },
     {
      "house": "2850",
@@ -1308,7 +1397,8 @@
      "walkMin": 0.16,
      "cycleMin": 5.16,
      "cratesDay": 1116,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Tarif nº. 1-1"
     },
     {
      "house": "2864",
@@ -1321,7 +1411,8 @@
      "walkMin": 5.51,
      "cycleMin": 10.51,
      "cratesDay": 548,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Shuri nº. 1"
     },
     {
      "house": "2840",
@@ -1333,7 +1424,8 @@
      "walkMin": 1.36,
      "cycleMin": 6.36,
      "cratesDay": 906,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Kasula nº. 3"
     },
     {
      "house": "2838",
@@ -1345,7 +1437,8 @@
      "walkMin": 1.82,
      "cycleMin": 6.82,
      "cratesDay": 845,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Kasula nº. 1"
     }
    ],
    "n_workshops": 5,
@@ -1358,31 +1451,36 @@
       "house": "2853",
       "name": "Tarif 2-1, Rm. 1",
       "cp": 1,
-      "slots": 0
+      "slots": 0,
+      "namePt": "Tarif nº. 2-1 Quarto 1"
      },
      {
       "house": "2855",
       "name": "Tarif 2-2, 1F",
       "cp": 1,
-      "slots": 0
+      "slots": 0,
+      "namePt": "Tarif nº. 2-2 Piso 1"
      },
      {
       "house": "2856",
       "name": "Tarif 2-2, 2F",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Tarif nº. 2-2 Piso 2"
      },
      {
       "house": "2864",
       "name": "Shuri Farm 1",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Fazenda Shuri nº. 1"
      },
      {
       "house": "2865",
       "name": "Shuri Farm 2",
       "cp": 1,
-      "slots": 2
+      "slots": 2,
+      "namePt": "Fazenda Shuri nº. 2"
      }
     ],
     "cp": 3,
@@ -1431,7 +1529,8 @@
      "walkMin": 2.78,
      "cycleMin": 7.78,
      "cratesDay": 740,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Erdal nº. 1"
     },
     {
      "house": "3144",
@@ -1444,7 +1543,8 @@
      "walkMin": 1.63,
      "cycleMin": 6.63,
      "cratesDay": 869,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 17-3"
     },
     {
      "house": "3166",
@@ -1457,7 +1557,8 @@
      "walkMin": 2.14,
      "cycleMin": 7.14,
      "cratesDay": 807,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Plantação de Valência nº. 1-2"
     },
     {
      "house": "3165",
@@ -1469,7 +1570,8 @@
      "walkMin": 2.31,
      "cycleMin": 7.31,
      "cratesDay": 788,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Plantação de Valência nº. 1-1"
     },
     {
      "house": "3162",
@@ -1482,7 +1584,8 @@
      "walkMin": 1.92,
      "cycleMin": 6.92,
      "cratesDay": 833,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 20-2 Piso 2"
     },
     {
      "house": "3154",
@@ -1494,7 +1597,8 @@
      "walkMin": 1.94,
      "cycleMin": 6.94,
      "cratesDay": 830,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 19-3 Piso 1"
     },
     {
      "house": "3104",
@@ -1507,7 +1611,8 @@
      "walkMin": 1.44,
      "cycleMin": 6.44,
      "cratesDay": 894,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 13-2 Piso 2"
     },
     {
      "house": "3132",
@@ -1520,7 +1625,8 @@
      "walkMin": 1.75,
      "cycleMin": 6.75,
      "cratesDay": 853,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 16-2 Piso 2"
     },
     {
      "house": "3124",
@@ -1532,7 +1638,8 @@
      "walkMin": 1.63,
      "cycleMin": 6.63,
      "cratesDay": 869,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 15-2 Piso 2"
     },
     {
      "house": "3072",
@@ -1545,7 +1652,8 @@
      "walkMin": 0.93,
      "cycleMin": 5.93,
      "cratesDay": 971,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 10-1 Piso 1 Quarto 1"
     },
     {
      "house": "3092",
@@ -1557,7 +1665,8 @@
      "walkMin": 1.05,
      "cycleMin": 6.05,
      "cratesDay": 952,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 12-2 Piso 2"
     },
     {
      "house": "3048",
@@ -1569,7 +1678,8 @@
      "walkMin": 0.94,
      "cycleMin": 5.94,
      "cratesDay": 969,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 6-2  2° Piso Sala 3"
     },
     {
      "house": "3040",
@@ -1582,7 +1692,8 @@
      "walkMin": 1.2,
      "cycleMin": 6.2,
      "cratesDay": 928,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 5-3 Piso 1"
     },
     {
      "house": "3067",
@@ -1594,7 +1705,8 @@
      "walkMin": 1.08,
      "cycleMin": 6.08,
      "cratesDay": 947,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 9-3"
     },
     {
      "house": "3033",
@@ -1607,7 +1719,8 @@
      "walkMin": 0.98,
      "cycleMin": 5.98,
      "cratesDay": 964,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 4-2 1° Piso Sala 1"
     },
     {
      "house": "3024",
@@ -1619,7 +1732,8 @@
      "walkMin": 1.48,
      "cycleMin": 6.48,
      "cratesDay": 888,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Valência nº. 3-3"
     }
    ],
    "n_workshops": 16,
@@ -1632,7 +1746,8 @@
       "house": "3147",
       "name": "Valencia 18-1, 1F",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Valência nº. 18-1 Piso 1"
      }
     ],
     "cp": 1,
@@ -1679,7 +1794,8 @@
      "walkMin": 2.4,
      "cycleMin": 7.4,
      "cratesDay": 778,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda de Shakatu nº. 1-2"
     },
     {
      "house": "3206",
@@ -1692,7 +1808,8 @@
      "walkMin": 2.46,
      "cycleMin": 7.46,
      "cratesDay": 772,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda de Shakatu nº. 1-1"
     },
     {
      "house": "3202",
@@ -1704,7 +1821,8 @@
      "walkMin": 0.36,
      "cycleMin": 5.36,
      "cratesDay": 1075,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Shakatu nº. 1-2"
     }
    ],
    "n_workshops": 3,
@@ -1717,7 +1835,8 @@
       "house": "3204",
       "name": "Shakatu Camp 2-1",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Shakatu nº. 2-1"
      }
     ],
     "cp": 1,
@@ -1765,7 +1884,8 @@
      "walkMin": 2.18,
      "cycleMin": 7.18,
      "cratesDay": 802,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Barhan nº. 1-2"
     },
     {
      "house": "3309",
@@ -1777,7 +1897,8 @@
      "walkMin": 2.4,
      "cycleMin": 7.4,
      "cratesDay": 778,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Barhan nº. 1-1"
     },
     {
      "house": "3305",
@@ -1790,7 +1911,8 @@
      "walkMin": 1.25,
      "cycleMin": 6.25,
      "cratesDay": 921,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Bazar Grão de Areia nº 2-2"
     },
     {
      "house": "3302",
@@ -1802,7 +1924,8 @@
      "walkMin": 1.69,
      "cycleMin": 6.69,
      "cratesDay": 861,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Bazar Grão de Areia nº 1-2"
     }
    ],
    "n_workshops": 4,
@@ -1815,7 +1938,8 @@
       "house": "3307",
       "name": "Sand Grain Bazaar 3-1",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Bazar Grão de Areia nº 3-1"
      }
     ],
     "cp": 1,
@@ -1863,7 +1987,8 @@
      "walkMin": 1.56,
      "cycleMin": 6.56,
      "cratesDay": 877,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Altas nº. 1-2"
     },
     {
      "house": "3174",
@@ -1875,7 +2000,8 @@
      "walkMin": 1.68,
      "cycleMin": 6.68,
      "cratesDay": 862,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Fazenda Altas nº. 1-1"
     }
    ],
    "n_workshops": 2,
@@ -1888,7 +2014,8 @@
       "house": "3171",
       "name": "Ancado Inner Harbor 1-1",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Porto Interior de Ancado nº. 1-1"
      }
     ],
     "cp": 1,
@@ -1936,7 +2063,8 @@
      "walkMin": 8.8,
      "cycleMin": 13.8,
      "cratesDay": 418,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Cabana de Viv Foretta N° 2"
     },
     {
      "house": "3551",
@@ -1948,7 +2076,8 @@
      "walkMin": 8.79,
      "cycleMin": 13.79,
      "cratesDay": 418,
-     "inUse": false
+     "inUse": false,
+     "namePt": "Cabana de Viv Foretta N° 1"
     }
    ],
    "n_workshops": 2,
@@ -2002,7 +2131,8 @@
      "walkMin": 1.64,
      "cycleMin": 6.64,
      "cratesDay": 868,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Graná N° 17"
     },
     {
      "house": "3518",
@@ -2015,7 +2145,8 @@
      "walkMin": 1.56,
      "cycleMin": 6.56,
      "cratesDay": 879,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Graná N° 16"
     },
     {
      "house": "3508",
@@ -2027,7 +2158,8 @@
      "walkMin": 1.32,
      "cycleMin": 6.32,
      "cratesDay": 911,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Graná N° 7"
     }
    ],
    "n_workshops": 3,
@@ -2039,7 +2171,8 @@
       "house": "3511",
       "name": "Grána 10",
       "cp": 2,
-      "slots": 4
+      "slots": 4,
+      "namePt": "Graná N° 10"
      }
     ],
     "chosen": [],
@@ -2088,7 +2221,8 @@
      "walkMin": 17.09,
      "cycleMin": 22.09,
      "cratesDay": 261,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Madeireira de Himut N° 1, 2° Andar"
     },
     {
      "house": "3614",
@@ -2101,7 +2235,8 @@
      "walkMin": 19.49,
      "cycleMin": 24.49,
      "cratesDay": 235,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Madeireira de Dormann N° 1"
     }
    ],
    "n_workshops": 2,
@@ -2114,7 +2249,8 @@
       "house": "3613",
       "name": "Duvencrune 11, 2F",
       "cp": 3,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Duvencrune N° 11 2° Andar"
      }
     ],
     "cp": 3,
@@ -2161,7 +2297,8 @@
      "walkMin": 0.81,
      "cycleMin": 5.81,
      "cratesDay": 992,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Vila Eil Nº3"
     }
    ],
    "n_workshops": 1,
@@ -2215,7 +2352,8 @@
      "walkMin": 0.47,
      "cycleMin": 5.47,
      "cratesDay": 1054,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Terra do Amanhecer Dhal-Bohl N° 3"
     }
    ],
    "n_workshops": 1,
@@ -2269,7 +2407,8 @@
      "walkMin": 1.27,
      "cycleMin": 6.27,
      "cratesDay": 919,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Terra do Amanhecer Nam-Po N°1"
     },
     {
      "house": "3825",
@@ -2281,7 +2420,8 @@
      "walkMin": 0.95,
      "cycleMin": 5.95,
      "cratesDay": 969,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Terra do Amanhecer Dhal-Bohl N° 3"
     }
    ],
    "n_workshops": 2,
@@ -2294,7 +2434,8 @@
       "house": "3826",
       "name": "Morning Light Nampo 4",
       "cp": 1,
-      "slots": 4
+      "slots": 4,
+      "namePt": "Terra do Amanhecer Dhal-Bohl N° 4"
      }
     ],
     "cp": 1,
@@ -2341,7 +2482,8 @@
      "walkMin": 0.75,
      "cycleMin": 5.75,
      "cratesDay": 1002,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Terra do Amanhecer Nop-Se N° 5"
     },
     {
      "house": "3832",
@@ -2354,7 +2496,8 @@
      "walkMin": 0.17,
      "cycleMin": 5.17,
      "cratesDay": 1114,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Terra do Amanhecer Nop-Se N° 1"
     }
    ],
    "n_workshops": 2,
@@ -2367,7 +2510,8 @@
       "house": "3835",
       "name": "Morning Light Nopsae 4",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Terra do Amanhecer Nop-Se N° 4"
      }
     ],
     "cp": 1,
@@ -2414,7 +2558,8 @@
      "walkMin": 0.39,
      "cycleMin": 5.39,
      "cratesDay": 1068,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Terra do Amanhecer Avenida Yukjo N° 4"
     }
    ],
    "n_workshops": 1,
@@ -2468,7 +2613,8 @@
      "walkMin": 0.34,
      "cycleMin": 5.34,
      "cratesDay": 1078,
-     "inUse": false
+     "inUse": false,
+     "namePt": "Terra do Amanhecer Aldeia Godu N° 3"
     },
     {
      "house": "3850",
@@ -2481,7 +2627,8 @@
      "walkMin": 0.63,
      "cycleMin": 5.63,
      "cratesDay": 1023,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Terra do Amanhecer Aldeia Godu N° 2"
     },
     {
      "house": "3849",
@@ -2494,7 +2641,8 @@
      "walkMin": 0.38,
      "cycleMin": 5.38,
      "cratesDay": 1070,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Terra do Amanhecer Aldeia Godu N° 1"
     }
    ],
    "n_workshops": 3,
@@ -2507,7 +2655,8 @@
       "house": "3853",
       "name": "Morning Light Unjongga Street 2",
       "cp": 1,
-      "slots": 1
+      "slots": 1,
+      "namePt": "Terra do Amanhecer Rua Unjong-Ga N° 2"
      }
     ],
     "cp": 1,
@@ -2554,7 +2703,8 @@
      "walkMin": 0.48,
      "cycleMin": 5.48,
      "cratesDay": 1050,
-     "inUse": true
+     "inUse": true,
+     "namePt": "Terra do Amanhecer Porto Norte N° 4"
     }
    ],
    "n_workshops": 1,
