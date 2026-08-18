@@ -507,17 +507,13 @@
             white-space: nowrap;
             flex-shrink: 0;
         }
-        .dest-best {
+        .dest-exp {
             color: var(--accent-primary);
-            font-size: 0.68rem;
-            font-weight: 600;
+            font-size: 0.7rem;
+            font-weight: 700;
             white-space: nowrap;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
             flex-shrink: 0;
         }
-        .dest-best svg { width: 11px; height: 11px; }
 
         /* Dropdown customizado de destino (mesma fonte no trigger e nas opções) */
         .dest-dd {
@@ -584,6 +580,13 @@
             transition: background 0.15s;
         }
         .dest-dd-option > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+        .dest-dd-option .o-exp {
+            color: var(--accent-primary);
+            font-weight: 700;
+            font-size: 0.72rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
         .dest-dd-option .o-time { color: var(--muted); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
         .dest-dd-option:hover,
         .dest-dd-option.active {
@@ -903,6 +906,7 @@
                 const opts = dests.map((d, i) =>
                     `<div class="dest-dd-option ${d.best ? 'active' : ''}" data-i="${i}">
                         <span>${d.namePt}</span>
+                        <span class="o-exp">${d.expPct || 100}%</span>
                         <span class="o-time">${hoursLabel(d.h)}</span>
                     </div>`
                 ).join('');
@@ -917,7 +921,7 @@
                             <div class="dest-dd-menu">${opts}</div>
                         </div>
                         <span class="dest-time">${hoursLabel(dests[0].h)}</span>
-                        <span class="dest-best"><i data-lucide="sparkles"></i>melhor EXP</span>
+                        <span class="dest-exp">${dests[0].expPct || 100}% EXP</span>
                     </div>`;
             } else {
                 destBlock = `<span class="ship"><i data-lucide="truck"></i>sem destinos</span>`;
@@ -1025,7 +1029,7 @@
                 const menu = pick.querySelector('.dest-dd-menu');
                 const valueEl = pick.querySelector('.dest-dd-value');
                 const timeEl = pick.querySelector('.dest-time');
-                const bestEl = pick.querySelector('.dest-best');
+                const expEl = pick.querySelector('.dest-exp');
                 const town = pick.dataset.town;
 
                 function close() {
@@ -1053,9 +1057,9 @@
                         if (!dst) return;
                         valueEl.textContent = dst.namePt;
                         timeEl.textContent = hoursLabel(dst.h);
+                        if (expEl) expEl.textContent = `${dst.expPct || 100}% EXP`;
                         menu.querySelectorAll('.dest-dd-option').forEach(o =>
                             o.classList.toggle('active', o.dataset.i === opt.dataset.i));
-                        bestEl.style.display = dst.best ? '' : 'none';
                         close();
                     });
                 });
