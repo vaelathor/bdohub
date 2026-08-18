@@ -15,11 +15,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Mythril Ingot",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Barra de Mithril"
     }
    ]
   },
@@ -37,19 +39,23 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Gold Ingot",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Barra de Ouro"
     },
     {
      "name": "Platinum Ingot",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Barra de Platina"
     },
     {
      "name": "Silver Ingot",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Barra de Prata"
     }
    ]
   },
@@ -67,11 +73,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Opah",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Opah Desidratado"
     }
    ]
   },
@@ -89,11 +97,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Giant Talking Catfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Bagre Falante Gigante Desidratado"
     }
    ]
   },
@@ -111,11 +121,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Goliath Tigerfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Tigre Desidratado"
     }
    ]
   },
@@ -133,11 +145,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Goldenstriped Soapfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Garoupa Listrada Dourada Desidratada"
     }
    ]
   },
@@ -155,11 +169,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Redfin Anthias",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Anthias Flamejante Desidratado"
     }
    ]
   },
@@ -177,11 +193,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Swiri",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Swiri Desidratado"
     }
    ]
   },
@@ -199,11 +217,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Lungfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Pulmão Desidratado"
     }
    ]
   },
@@ -221,11 +241,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Wrought Iron Butterflyfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Borboleta de Ferro Negro Desidratado"
     }
    ]
   },
@@ -243,15 +265,18 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Obsidian Ore",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Obsidiana"
     },
     {
      "name": "Nickel Ingot",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Barra de Níquel"
     }
    ]
   },
@@ -269,15 +294,18 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Snowfield Cedar Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Cedro Nevado"
     },
     {
      "name": "Thuja Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Tuia"
     }
    ]
   },
@@ -295,15 +323,18 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Snowfield Cedar Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Cedro Nevado"
     },
     {
      "name": "Thornwood Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Espinheiro"
     }
    ]
   },
@@ -321,15 +352,18 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Jade",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Jade"
     },
     {
      "name": "Noc Ingot",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Barra de Ferrugem"
     }
    ]
   },
@@ -347,19 +381,23 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Cedar Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Cedro"
     },
     {
      "name": "Fir Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Abeto"
     },
     {
      "name": "Birch Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Bétula"
     }
    ]
   },
@@ -377,11 +415,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Titanium Ingot",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Barra de Titânio"
     }
    ]
   },
@@ -399,11 +439,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Vanadium Ingot",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Barra de Vanádio"
     }
    ]
   },
@@ -421,15 +463,18 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Caphras Tree Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Árvore de Caphras"
     },
     {
      "name": "Elder Tree Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Sabugueiro"
     }
    ]
   },
@@ -447,11 +492,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Nibbler",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Roedora Desidratada"
     }
    ]
   },
@@ -469,11 +516,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Smokey Chromis",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Donzela Amarelo Defumado Desidratado"
     }
    ]
   },
@@ -491,11 +540,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Tuna",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Atum Desidratado"
     }
    ]
   },
@@ -513,11 +564,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Rapid Goby",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Góbio Rápido Desidratado"
     }
    ]
   },
@@ -535,11 +588,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Bowfin",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Amia Seco"
     }
    ]
   },
@@ -557,11 +612,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Porgy",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Esparideo Desidratado"
     }
    ]
   },
@@ -579,11 +636,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Sea Bass",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Robalo do Mar Desidratado"
     }
    ]
   },
@@ -601,15 +660,18 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Acacia Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Acácia"
     },
     {
      "name": "White Cedar Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Cedro Branco"
     }
    ]
   },
@@ -627,11 +689,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Grunt",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe Branco Desidratado"
     }
    ]
   },
@@ -649,11 +713,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Snakehead",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cabeça-de-Cobra Desidratado"
     }
    ]
   },
@@ -671,11 +737,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Lamprey",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Lampreia Seca"
     }
    ]
   },
@@ -693,11 +761,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Mandarin Fish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Mandarim Desidratado"
     }
    ]
   },
@@ -715,11 +785,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Piranha",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Piranha Desidratada"
     }
    ]
   },
@@ -737,11 +809,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried King Spine Loach",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Wangjonggae seco"
     }
    ]
   },
@@ -759,11 +833,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Neon Damselfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Donzela Neon Desidratado"
     }
    ]
   },
@@ -781,11 +857,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Ransonnet's Surfperch",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-surfista Desidratado"
     }
    ]
   },
@@ -803,11 +881,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Blacktip Chromis",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Barbatana Preta Gourami Desidratada"
     }
    ]
   },
@@ -825,11 +905,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Large-headed Goby",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Gguguri Desidratado"
     }
    ]
   },
@@ -847,11 +929,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Short Barbel Gudgeon",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Molgae Desidratado"
     }
    ]
   },
@@ -869,11 +953,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Red Seabream",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pargo Vermelho Desidratado"
     }
    ]
   },
@@ -891,15 +977,18 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Pine Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Pinheiro"
     },
     {
      "name": "Maple Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Árvore Bordo"
     }
    ]
   },
@@ -917,11 +1006,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Everlasting Herb",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Erva Eterna"
     }
    ]
   },
@@ -939,11 +1030,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Dwarf Gudgeon",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Waemaechi Desidratado"
     }
    ]
   },
@@ -961,11 +1054,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Brass Ingot",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Barra de Latão"
     }
    ]
   },
@@ -983,15 +1078,18 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Maple Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Árvore Bordo"
     },
     {
      "name": "Ash Plywood",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Madeira Compensada de Freixo"
     }
    ]
   },
@@ -1009,11 +1107,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Bronze Ingot",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Barra de Bronze"
     }
    ]
   },
@@ -1031,11 +1131,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Purple Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Roxo Especial"
     }
    ]
   },
@@ -1053,11 +1155,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Pie Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Torta Especial"
     }
    ]
   },
@@ -1075,11 +1179,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Leccinum",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Leccinum Especial"
     }
    ]
   },
@@ -1097,11 +1203,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Chanterelle",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Oriole Especial"
     }
    ]
   },
@@ -1119,11 +1227,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Red-Spotted Amanita",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Amanita Vinosa Especial"
     }
    ]
   },
@@ -1141,11 +1251,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Mesima",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Sanghwang Especial"
     }
    ]
   },
@@ -1163,11 +1275,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Dictyophora",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Véu-de-noiva Especial"
     }
    ]
   },
@@ -1185,11 +1299,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Silver Carp",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Carpa Prateada Seco"
     }
    ]
   },
@@ -1207,11 +1323,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Napa Cabbage",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Acelga Especial"
     }
    ]
   },
@@ -1229,11 +1347,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Bouquet Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Ramalhete Especial"
     }
    ]
   },
@@ -1251,11 +1371,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Sunflower",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Girassol Especial"
     }
    ]
   },
@@ -1273,11 +1395,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Olive",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Oliva Especial"
     }
    ]
   },
@@ -1295,11 +1419,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Grape",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Uva Especial"
     }
    ]
   },
@@ -1317,11 +1443,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Yalu Grayling",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Timalino Seco"
     }
    ]
   },
@@ -1339,11 +1467,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Radish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Rabanete Especial"
     }
    ]
   },
@@ -1361,11 +1491,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Garlic",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Alho Especial"
     }
    ]
   },
@@ -1383,11 +1515,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Paprika",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pimentão Especial"
     }
    ]
   },
@@ -1405,11 +1539,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Steel",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Aço"
     }
    ]
   },
@@ -1427,11 +1563,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Onion",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cebola Especial"
     }
    ]
   },
@@ -1449,11 +1587,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Tomato",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Tomate Especial"
     }
    ]
   },
@@ -1471,11 +1611,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Perilla",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Perilla Especial"
     }
    ]
   },
@@ -1493,11 +1635,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Pumpkin",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Abóbora Especial"
     }
    ]
   },
@@ -1515,11 +1659,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Dark Sleeper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Odontotobutis Seco"
     }
    ]
   },
@@ -1537,11 +1683,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Carrot",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cenoura Especial"
     }
    ]
   },
@@ -1559,11 +1707,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Hot Pepper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pimenta Especial"
     }
    ]
   },
@@ -1581,11 +1731,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Common Bleak",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Alburno Seco"
     }
    ]
   },
@@ -1603,11 +1755,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Strawberry",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Morango Especial"
     }
    ]
   },
@@ -1625,11 +1779,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Pepper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pimenta-do-Reino Especial"
     }
    ]
   },
@@ -1647,11 +1803,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Arrow Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Flecha Especial"
     }
    ]
   },
@@ -1669,11 +1827,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Cloud Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Nuvem Especial"
     }
    ]
   },
@@ -1691,11 +1851,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Ghost Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Fantasma Especial"
     }
    ]
   },
@@ -1713,11 +1875,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Hump Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Corcunda Especial"
     }
    ]
   },
@@ -1735,11 +1899,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Ancient Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Ancestral Especial"
     }
    ]
   },
@@ -1757,11 +1923,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Rice",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Arroz Especial"
     }
    ]
   },
@@ -1779,11 +1947,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Nolina",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Nolina Especial"
     }
    ]
   },
@@ -1801,11 +1971,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Dwarf Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Anão Especial"
     }
    ]
   },
@@ -1823,11 +1995,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Sky Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Céu Especial"
     }
    ]
   },
@@ -1845,11 +2019,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Tiger Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Tigre Especial"
     }
    ]
   },
@@ -1867,11 +2043,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Fog Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Névoa Especial"
     }
    ]
   },
@@ -1889,11 +2067,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Dalvenia Alrea",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Dalvenia Alrea Especial"
     }
    ]
   },
@@ -1911,11 +2091,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Bluffer Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Blefista Especial"
     }
    ]
   },
@@ -1933,11 +2115,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Fortune Teller Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Vidente Especial"
     }
    ]
   },
@@ -1955,11 +2139,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Emperor Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Imperador Especial"
     }
    ]
   },
@@ -1977,11 +2163,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Amanita Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Amanita Especial"
     }
    ]
   },
@@ -1999,11 +2187,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Golden-thread",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe Dourado Desidratado"
     }
    ]
   },
@@ -2021,11 +2211,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Penestraria",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Penestraria Especial"
     }
    ]
   },
@@ -2043,11 +2235,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Pomfret",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Bramidae Desidratado"
     }
    ]
   },
@@ -2065,11 +2259,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Angler",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Tamboril Desidratado"
     }
    ]
   },
@@ -2087,11 +2283,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Lenok",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Lenok Desidratado"
     }
    ]
   },
@@ -2109,11 +2307,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Checkerboard Wrasse",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Bodião-Xadrez Desidratado"
     }
    ]
   },
@@ -2131,11 +2331,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried John Dory",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Galo Desidratado"
     }
    ]
   },
@@ -2153,11 +2355,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Arowana",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Aruanã Desidratado"
     }
    ]
   },
@@ -2175,11 +2379,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Silver Azalea",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Azaleia Real Prata Especial"
     }
    ]
   },
@@ -2197,11 +2403,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Herring",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Arenque Desidratado"
     }
    ]
   },
@@ -2219,11 +2427,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Striped Shiner",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Brilhante Listrado Desidratado"
     }
    ]
   },
@@ -2241,11 +2451,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Swordfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Espada Desidratado"
     }
    ]
   },
@@ -2263,11 +2475,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Sea Eel",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Enguia do Mar Desidratada"
     }
    ]
   },
@@ -2285,11 +2499,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Yellow-head Catfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Bagre Amarelo Desidratado"
     }
    ]
   },
@@ -2307,11 +2523,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Cero",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cero Desidratado"
     }
    ]
   },
@@ -2329,11 +2547,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Swellfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Baiacu Desidratado"
     }
    ]
   },
@@ -2351,11 +2571,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Maomao",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Maomao Desidratado"
     }
    ]
   },
@@ -2373,11 +2595,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Fire Flake Flower",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Flor Escama de Fogo Especial"
     }
    ]
   },
@@ -2395,11 +2619,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Tapertail Anchovy",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Anchova Desidratada"
     }
    ]
   },
@@ -2417,11 +2643,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Freshwater Eel",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Enguia de Água Doce Desidratada"
     }
    ]
   },
@@ -2439,11 +2667,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Grouper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Garoupa Desidratada"
     }
    ]
   },
@@ -2461,11 +2691,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Octopus",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Polvo Desidratado"
     }
    ]
   },
@@ -2483,11 +2715,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Siganid",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Siganid Desidratado"
     }
    ]
   },
@@ -2505,11 +2739,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Carp",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe Encarnado Desidratado"
     }
    ]
   },
@@ -2527,11 +2763,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Sunrise Herb",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Erva Aurora Especial"
     }
    ]
   },
@@ -2549,11 +2787,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Silk Honey Grass",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Grama Mel de Seda Especial"
     }
    ]
   },
@@ -2571,11 +2811,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Cherry Salmon",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Salmão Cereja Desidratado"
     }
    ]
   },
@@ -2593,11 +2835,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Corn",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Milho Especial"
     }
    ]
   },
@@ -2615,11 +2859,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Dry Mane Grass",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Planta Juba de Leão Especial"
     }
    ]
   },
@@ -2637,11 +2883,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Obtuse Barracuda",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Barracuda-Gande Desidratada"
     }
    ]
   },
@@ -2659,11 +2907,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Barley",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cevada Especial"
     }
    ]
   },
@@ -2681,11 +2931,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Wheat",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Trigo Especial"
     }
    ]
   },
@@ -2703,11 +2955,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Longnose Gar",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Gar Bicudo Desidratado"
     }
    ]
   },
@@ -2725,11 +2979,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Spined Bittering",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Acheilognathus Seco"
     }
    ]
   },
@@ -2747,11 +3003,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Pike Characin",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Lúcio-Africano Desidratado"
     }
    ]
   },
@@ -2769,11 +3027,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Mud Crystal",
-     "qty": 3.0
+     "qty": 3.0,
+     "namePt": "Cristal Lama"
     }
    ]
   },
@@ -2791,11 +3051,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Longsnout Catfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-gato Chinês Seco"
     }
    ]
   },
@@ -2813,11 +3075,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Black Crystal",
-     "qty": 3.0
+     "qty": 3.0,
+     "namePt": "Cristal Negro"
     }
    ]
   },
@@ -2835,11 +3099,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Ribbon Eel",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Enguia-Fita Desidratada"
     }
    ]
   },
@@ -2857,11 +3123,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Green Crystal",
-     "qty": 3.0
+     "qty": 3.0,
+     "namePt": "Cristal Verde"
     }
    ]
   },
@@ -2879,11 +3147,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Red Crystal",
-     "qty": 3.0
+     "qty": 3.0,
+     "namePt": "Cristal Vermelho"
     }
    ]
   },
@@ -2901,11 +3171,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Potato",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Batata Especial"
     }
    ]
   },
@@ -2923,11 +3195,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Special Sweet Potato",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Batata Doce Especial"
     }
    ]
   },
@@ -2945,11 +3219,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Chameleon Goby",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Góbio Shimofuri Seco"
     }
    ]
   },
@@ -2967,11 +3243,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Translucent Crystal",
-     "qty": 3.0
+     "qty": 3.0,
+     "namePt": "Cristal Translúcido"
     }
    ]
   },
@@ -2989,11 +3267,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Sharpbelly",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Carpa Selvagem Seco"
     }
    ]
   },
@@ -3011,11 +3291,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Ussurian Bullhead",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Ussuri Seco"
     }
    ]
   },
@@ -3033,11 +3315,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Polished Opal",
-     "qty": 3.0
+     "qty": 3.0,
+     "namePt": "Opala Polido"
     }
    ]
   },
@@ -3055,11 +3339,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Purple Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Roxo de Qualidade Alta"
     }
    ]
   },
@@ -3077,11 +3363,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Pie Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Torta de Qualidade Alta"
     }
    ]
   },
@@ -3099,11 +3387,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Leccinum",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Leccinum de Qualidade Alta"
     }
    ]
   },
@@ -3121,11 +3411,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-quality Chanterelle",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Oriole de Alto Nível"
     }
    ]
   },
@@ -3143,11 +3435,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-quality Red-Spotted Amanita",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Amanita Vinosa de Alta Qualidade"
     }
    ]
   },
@@ -3165,11 +3459,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-quality Mesima",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Sanghwang de Alta Qualidade"
     }
    ]
   },
@@ -3187,11 +3483,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-quality Dictyophora",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Véu-de-noiva Superior"
     }
    ]
   },
@@ -3209,11 +3507,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-quality Napa Cabbage",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Acelga de Alta Qualidade"
     }
    ]
   },
@@ -3231,11 +3531,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Bouquet Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Ramalhete de Qualidade Alta"
     }
    ]
   },
@@ -3253,11 +3555,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Sunflower",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Girassol de Alta Qualidade"
     }
    ]
   },
@@ -3275,11 +3579,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Olive",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Oliva de Alta Qualidade"
     }
    ]
   },
@@ -3297,11 +3603,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Arrow Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Flecha de Qualidade Alta"
     }
    ]
   },
@@ -3319,11 +3627,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Cloud Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Nuvem de Qualidade Alta"
     }
    ]
   },
@@ -3341,11 +3651,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Ghost Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Fantasma de Qualidade Alta"
     }
    ]
   },
@@ -3363,11 +3675,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Hump Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Corcunda de Qualidade Alta"
     }
    ]
   },
@@ -3385,11 +3699,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Ancient Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Ancestral de Qualidade Alta"
     }
    ]
   },
@@ -3407,11 +3723,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Grape",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Uva de Alta Qualidade"
     }
    ]
   },
@@ -3429,11 +3747,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-quality Radish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Rabanete de Alta Qualidade"
     }
    ]
   },
@@ -3451,11 +3771,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Dwarf Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Anão de Qualidade Alta"
     }
    ]
   },
@@ -3473,11 +3795,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Sky Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Céu de Qualidade Alta"
     }
    ]
   },
@@ -3495,11 +3819,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Tiger Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Tigre de Qualidade Alta"
     }
    ]
   },
@@ -3517,11 +3843,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Fog Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Névoa de Qualidade Alta"
     }
    ]
   },
@@ -3539,11 +3867,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Garlic",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Alho de Alta Qualidade"
     }
    ]
   },
@@ -3561,11 +3891,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Paprika",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pimentão de Alta Qualidade"
     }
    ]
   },
@@ -3583,11 +3915,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Bluffer Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Blefista de Qualidade Alta"
     }
    ]
   },
@@ -3605,11 +3939,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Onion",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cebola de Alta Qualidade"
     }
    ]
   },
@@ -3627,11 +3963,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Tomato",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Tomate de Alta Qualidade"
     }
    ]
   },
@@ -3649,11 +3987,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Fortune Teller Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Vidente de Qualidade Alta"
     }
    ]
   },
@@ -3671,11 +4011,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Emperor Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Imperador de Qualidade Alta"
     }
    ]
   },
@@ -3693,11 +4035,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Pumpkin",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Abóbora de Alta Qualidade"
     }
    ]
   },
@@ -3715,11 +4059,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-quality Perilla",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Perilla de Alta Qualidade"
     }
    ]
   },
@@ -3737,11 +4083,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Hot Pepper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pimenta de Alta Qualidade"
     }
    ]
   },
@@ -3759,11 +4107,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Strawberry",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Morango de Qualidade Alta"
     }
    ]
   },
@@ -3781,11 +4131,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Pepper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pimenta-do-Reino de Alta Qualidade"
     }
    ]
   },
@@ -3803,11 +4155,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Amanita Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Amanita de Qualidade Alta"
     }
    ]
   },
@@ -3825,11 +4179,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Boxfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Caixa Amarelo Desidratado"
     }
    ]
   },
@@ -3847,11 +4203,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Lionfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-leão Desidratado"
     }
    ]
   },
@@ -3869,11 +4227,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Pike",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Barracuda Seca"
     }
    ]
   },
@@ -3891,11 +4251,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Croaker",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Corvina Desidratada"
     }
    ]
   },
@@ -3913,11 +4275,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Nolina",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Nolina de Qualidade Alta"
     }
    ]
   },
@@ -3935,11 +4299,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Bigeye",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Fura-Vasos Desidratado"
     }
    ]
   },
@@ -3957,11 +4323,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Dalvenia Alrea",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Dalvenia Alrea de Qualidade Alta"
     }
    ]
   },
@@ -3979,11 +4347,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Beltfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Guaravira Desidratado"
     }
    ]
   },
@@ -4001,11 +4371,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Ray",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Raia Desidratada"
     }
    ]
   },
@@ -4023,11 +4395,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Sardine",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Sardinha Desidratada"
     }
    ]
   },
@@ -4045,11 +4419,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Penestraria",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Penestraria de Qualidade Alta"
     }
    ]
   },
@@ -4067,11 +4443,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Sweetfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Ayu Desidratado"
     }
    ]
   },
@@ -4089,11 +4467,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Trout",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Truta Desidratada"
     }
    ]
   },
@@ -4111,11 +4491,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Terrapin",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe Tartaruga Desidratado"
     }
    ]
   },
@@ -4133,11 +4515,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-quality Rice",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Arroz de Alta Qualidade"
     }
    ]
   },
@@ -4155,11 +4539,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Processed Coal",
-     "qty": 5.0
+     "qty": 5.0,
+     "namePt": "Carvão Processado"
     }
    ]
   },
@@ -4177,11 +4563,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Silver Azalea",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Azaleia Real Prata de Qualidade Alta"
     }
    ]
   },
@@ -4199,11 +4587,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Flying Fish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe Voador Desidratado"
     }
    ]
   },
@@ -4221,11 +4611,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Flounder",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Linguado Desidratado"
     }
    ]
   },
@@ -4243,11 +4635,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Fire Flake Flower",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Flor Escama de Fogo de Qualidade Alta"
     }
    ]
   },
@@ -4265,11 +4659,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Morning River Goby",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Góbio de Rio Verde Desidratado"
     }
    ]
   },
@@ -4287,11 +4683,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Yellowfin Sculpin",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Polegar-de-Moleiro Desidratado"
     }
    ]
   },
@@ -4309,11 +4707,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Rockfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cantarilho Desidratado"
     }
    ]
   },
@@ -4331,11 +4731,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Squid",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Calamar Desidratado"
     }
    ]
   },
@@ -4353,11 +4755,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Mackerel",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cavalinha Desidratada"
     }
    ]
   },
@@ -4375,11 +4779,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Gunnel",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Gunnel Desidratado"
     }
    ]
   },
@@ -4397,11 +4803,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Dry Mane Grass",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Planta Juba de Leão de Alta Qualidade"
     }
    ]
   },
@@ -4419,11 +4827,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Sunrise Herb",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Erva Aurora de Alta Qualidade"
     }
    ]
   },
@@ -4441,11 +4851,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Silk Honey Grass",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Grama Mel de Seda de Qualidade Alta"
     }
    ]
   },
@@ -4463,11 +4875,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Amberjack",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Charuteiro Desidratado"
     }
    ]
   },
@@ -4485,11 +4899,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Youngji Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Ganoderma"
     }
    ]
   },
@@ -4507,11 +4923,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Corn",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Milho de Alta Qualidade"
     }
    ]
   },
@@ -4529,11 +4947,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Kuhlia Marginata",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Kuhlia Marginata Desidratada"
     }
    ]
   },
@@ -4551,11 +4971,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Barley",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cevada de Alta Qualidade"
     }
    ]
   },
@@ -4573,11 +4995,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Wheat",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Trigo de Alta Qualidade"
     }
    ]
   },
@@ -4595,11 +5019,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Crucian Carp",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Carpa Cruciana"
     }
    ]
   },
@@ -4617,11 +5043,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried South Torrent Catfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Bagre de Riacho Desidratado"
     }
    ]
   },
@@ -4639,11 +5067,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Potato",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Batata de Alta Qualidade"
     }
    ]
   },
@@ -4661,11 +5091,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Sweet Potato",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Batata Doce de Alta Qualidade"
     }
    ]
   },
@@ -4683,11 +5115,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "High-Quality Carrot",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cenoura de Alta Qualidade"
     }
    ]
   },
@@ -4705,11 +5139,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Titanium Ore",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Minério de Titânio"
     }
    ]
   },
@@ -4727,11 +5163,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Greenling",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Lorcha Desidratada"
     }
    ]
   },
@@ -4749,11 +5187,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Dolphinfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Dourado-do-Mar Desidratado"
     }
    ]
   },
@@ -4771,11 +5211,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Vanadium Ore",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Minério de Vanádio"
     }
    ]
   },
@@ -4793,11 +5235,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Roundtail Paradisefish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe de Cauda Redonda Desidratado"
     }
    ]
   },
@@ -4815,11 +5259,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Seahorse",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cavalo Marinho Desidratado"
     }
    ]
   },
@@ -4837,11 +5283,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Flatfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe Chato Desidratado"
     }
    ]
   },
@@ -4859,11 +5307,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Perch",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Poleiro Desidratado"
     }
    ]
   },
@@ -4881,11 +5331,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Filefish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Porco Desidratado"
     }
    ]
   },
@@ -4903,11 +5355,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Mullet",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Tainha Desidratada"
     }
    ]
   },
@@ -4925,11 +5379,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Blackfin Sweeper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Espada Preto Desidratado"
     }
    ]
   },
@@ -4947,11 +5403,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Striped Catfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Bagre Listrado Desidratado"
     }
    ]
   },
@@ -4969,11 +5427,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Butterflyfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Borboleta Desidratado"
     }
    ]
   },
@@ -4991,11 +5451,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Bitterling",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cardume Desidratado"
     }
    ]
   },
@@ -5013,11 +5475,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Jellyfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Água-Viva Desidratada"
     }
    ]
   },
@@ -5035,11 +5499,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Silver Stripe Round Herring",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Arenque Redondo Listrado Desidratado"
     }
    ]
   },
@@ -5057,11 +5523,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Scorpion Fish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Rascasso Desidratado"
     }
    ]
   },
@@ -5079,11 +5547,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Bleeker",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Bleeker Desidratado"
     }
    ]
   },
@@ -5101,11 +5571,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Caphras Tree Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Árvore de Caphras"
     }
    ]
   },
@@ -5123,11 +5595,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Zinc Ore",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Minério de Zinco"
     }
    ]
   },
@@ -5145,11 +5619,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Round Herring",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Arenque Redondo Desidratado"
     }
    ]
   },
@@ -5167,11 +5643,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Truffle Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Trufa"
     }
    ]
   },
@@ -5189,11 +5667,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Rosefish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe Vermelho Desidratado"
     }
    ]
   },
@@ -5211,11 +5691,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Goby Minnow",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Vairão Desidratado"
     }
    ]
   },
@@ -5233,11 +5715,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Rock Hind",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Corça Desidratada"
     }
    ]
   },
@@ -5255,11 +5739,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Saurel",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Saurel Desidratado"
     }
    ]
   },
@@ -5277,11 +5763,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Whiting",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Badejo Desidratado"
     }
    ]
   },
@@ -5299,11 +5787,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Silver Prochilodus",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Jaraqui Desidratado"
     }
    ]
   },
@@ -5321,11 +5811,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Elder Tree Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Sabugueiro"
     }
    ]
   },
@@ -5343,11 +5835,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Brassy Chub",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Preguiçosa Bronzeada Desidratada"
     }
    ]
   },
@@ -5365,11 +5859,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Dace",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe Dace Desidratado"
     }
    ]
   },
@@ -5387,11 +5883,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Purple Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Roxo"
     }
    ]
   },
@@ -5409,11 +5907,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Devil Stinger",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Rocha Desidratado"
     }
    ]
   },
@@ -5431,11 +5931,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Dusky Flathead",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cabeça-Chata-Escuro Desidratado"
     }
    ]
   },
@@ -5453,11 +5955,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Garlic",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Alho"
     }
    ]
   },
@@ -5475,11 +5979,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Onion",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cebola"
     }
    ]
   },
@@ -5497,11 +6003,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Pie Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Torta"
     }
    ]
   },
@@ -5519,11 +6027,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Acacia Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Acácia"
     }
    ]
   },
@@ -5541,11 +6051,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Bubble Eye",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe Olho de Bolha Desidratado"
     }
    ]
   },
@@ -5563,11 +6075,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Surfperch",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Embiotocidae Desidratado"
     }
    ]
   },
@@ -5585,11 +6099,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Common Pleco",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Limpador Desidratado"
     }
    ]
   },
@@ -5607,11 +6123,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Leccinum",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Leccinum"
     }
    ]
   },
@@ -5629,11 +6147,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Chanterelle",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Oriole"
     }
    ]
   },
@@ -5651,11 +6171,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Red-Spotted Amanita",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Amanita Vinosa"
     }
    ]
   },
@@ -5673,11 +6195,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Mesima",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Sanghwang"
     }
    ]
   },
@@ -5695,11 +6219,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dictyophora",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Véu-de-noiva"
     }
    ]
   },
@@ -5717,11 +6243,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Palm Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Palmeira"
     }
    ]
   },
@@ -5739,11 +6267,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "White Cedar Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Cedro Branco"
     }
    ]
   },
@@ -5761,11 +6291,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Bouquet Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Ramalhete"
     }
    ]
   },
@@ -5783,11 +6315,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Arrow Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Flecha"
     }
    ]
   },
@@ -5805,11 +6339,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Cloud Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Nuvem"
     }
    ]
   },
@@ -5827,11 +6363,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Ghost Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Fantasma"
     }
    ]
   },
@@ -5849,11 +6387,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Hump Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Corcunda"
     }
    ]
   },
@@ -5871,11 +6411,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Ancient Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Ancestral"
     }
    ]
   },
@@ -5893,11 +6435,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Crab",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Caranguejo Desidratado"
     }
    ]
   },
@@ -5915,11 +6459,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Cedar Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Cedro"
     }
    ]
   },
@@ -5937,11 +6483,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Lavascale Stargazer",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Papuço Desidratado"
     }
    ]
   },
@@ -5959,11 +6507,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Starfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Estrela do Mar Desidratadas"
     }
    ]
   },
@@ -5981,11 +6531,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Hatchetfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Machado Desidratado"
     }
    ]
   },
@@ -6003,11 +6555,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Napa Cabbage",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Acelga"
     }
    ]
   },
@@ -6025,11 +6579,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Sunflower",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Girassol"
     }
    ]
   },
@@ -6047,11 +6603,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Olive",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Oliva"
     }
    ]
   },
@@ -6069,11 +6627,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dwarf Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Anão"
     }
    ]
   },
@@ -6091,11 +6651,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Sky Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Céu"
     }
    ]
   },
@@ -6113,11 +6675,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Tiger Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Tigre"
     }
    ]
   },
@@ -6135,11 +6699,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Fog Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Nevoeiro"
     }
    ]
   },
@@ -6157,11 +6723,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Fourfinger Threadfin",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Barbudo-Gigante Desidratado"
     }
    ]
   },
@@ -6179,11 +6747,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Pine Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Pinheiro"
     }
    ]
   },
@@ -6201,11 +6771,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Bluffer Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Blefista"
     }
    ]
   },
@@ -6223,11 +6795,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Leaffish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Peixe-Folha Desidratado"
     }
    ]
   },
@@ -6245,11 +6819,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Mudskipper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Gobião Desidratado"
     }
    ]
   },
@@ -6267,11 +6843,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Tigerflower",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Flor-Tigre"
     }
    ]
   },
@@ -6289,11 +6867,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Fir Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Abeto"
     }
    ]
   },
@@ -6311,11 +6891,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Viola",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Flor de Violeta"
     }
    ]
   },
@@ -6333,11 +6915,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Fortune Teller Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Vidente"
     }
    ]
   },
@@ -6355,11 +6939,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Emperor Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Imperador"
     }
    ]
   },
@@ -6377,11 +6963,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Paprika",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pimentão"
     }
    ]
   },
@@ -6399,11 +6987,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Lead Ore",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Minério de Chumbo"
     }
    ]
   },
@@ -6421,11 +7011,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Radish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Rabanete"
     }
    ]
   },
@@ -6443,11 +7035,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Birch Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Bétula"
     }
    ]
   },
@@ -6465,11 +7059,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Grape",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Uva"
     }
    ]
   },
@@ -6487,11 +7083,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Tomato",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Tomate"
     }
    ]
   },
@@ -6509,11 +7107,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Iron Ore",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Minério de Ferro"
     }
    ]
   },
@@ -6531,11 +7131,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Tin Ore",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Minério de Estanho"
     }
    ]
   },
@@ -6553,11 +7155,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Maple Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Bordo"
     }
    ]
   },
@@ -6575,11 +7179,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Pumpkin",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Abóbora"
     }
    ]
   },
@@ -6597,11 +7203,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Amanita Mushroom",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cogumelo Amanita"
     }
    ]
   },
@@ -6619,11 +7227,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Ash Timber",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Madeira de Freixo"
     }
    ]
   },
@@ -6641,11 +7251,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Hot Pepper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pimenta"
     }
    ]
   },
@@ -6663,11 +7275,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Wild Berry",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Framboesa"
     }
    ]
   },
@@ -6685,11 +7299,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Strawberry",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Morango"
     }
    ]
   },
@@ -6707,11 +7323,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Copper Ore",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Minério de Cobre"
     }
    ]
   },
@@ -6729,11 +7347,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Perilla",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Perilla"
     }
    ]
   },
@@ -6751,11 +7371,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Nolina",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Nolina"
     }
    ]
   },
@@ -6773,11 +7395,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dalvenia Alrea",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Dalvenia Alrea"
     }
    ]
   },
@@ -6795,11 +7419,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Penestraria",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Penestraria"
     }
    ]
   },
@@ -6817,11 +7443,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Scarlet Rosebay",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Azaleia Vermelha"
     }
    ]
   },
@@ -6839,11 +7467,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Pink Rosebay",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Azaleia Rosa"
     }
    ]
   },
@@ -6861,11 +7491,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Pepper",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Pimenta-do-Reino"
     }
    ]
   },
@@ -6883,11 +7515,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Silver Azalea",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Azaleia Real Prata"
     }
    ]
   },
@@ -6905,11 +7539,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Short Ninespine Stickleback",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Esgana-Gato Seco"
     }
    ]
   },
@@ -6927,11 +7563,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Fire Flake Flower",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Flor de Escama de Fogo"
     }
    ]
   },
@@ -6949,11 +7587,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Pollack",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Polaca Desidratada"
     }
    ]
   },
@@ -6971,11 +7611,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Rice",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Arroz"
     }
    ]
   },
@@ -6993,11 +7635,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Carrot",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cenoura"
     }
    ]
   },
@@ -7015,11 +7659,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dry Mane Grass",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Planta Juba de Leão"
     }
    ]
   },
@@ -7037,11 +7683,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Mitre Squid",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Lula Desfiada Seca"
     }
    ]
   },
@@ -7059,11 +7707,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Sunrise Herb",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Erva Aurora"
     }
    ]
   },
@@ -7081,11 +7731,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Silk Honey Grass",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Grama Mel de Seda"
     }
    ]
   },
@@ -7103,11 +7755,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Corn",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Milho"
     }
    ]
   },
@@ -7125,11 +7779,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Swamp Eel",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Dojô Desidratado"
     }
    ]
   },
@@ -7147,11 +7803,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Barley",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Cevada"
     }
    ]
   },
@@ -7169,11 +7827,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Wheat",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Trigo"
     }
    ]
   },
@@ -7191,11 +7851,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Dried Dark-banded Rockfish",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Poleiro do Mar Desidratado"
     }
    ]
   },
@@ -7213,11 +7875,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Potato",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Batata"
     }
    ]
   },
@@ -7235,11 +7899,13 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Sweet Potato",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Batata Doce"
     }
    ]
   },
@@ -7257,13 +7923,16 @@
    "materials": [
     {
      "name": "Black Stone Powder",
-     "qty": 1.0
+     "qty": 1.0,
+     "namePt": "Pó de Pedra Negra"
     },
     {
      "name": "Reed",
-     "qty": 10.0
+     "qty": 10.0,
+     "namePt": "Caniço"
     }
    ]
   }
- ]
+ ],
+ "translatedMaterials": true
 }

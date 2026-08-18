@@ -392,7 +392,7 @@
                 <tr>
                     <td>
                         <div class="crate-name">${c.name}</div>
-                        <div class="crate-mats">${c.materials.map(m => `<span class="mat">${m.qty}&times; ${m.name}</span>`).join('')}</div>
+                        <div class="crate-mats">${c.materials.map(m => `<span class="mat">${m.qty}&times; ${m.namePt || m.name}</span>`).join('')}</div>
                     </td>
                     <td>${badgeHtml(c.typePt)}</td>
                     <td>${c.regionPt ? `<span class="region-tag">${c.regionPt}</span>` : '<span class="region-tag" style="opacity:0.45">—</span>'}</td>
