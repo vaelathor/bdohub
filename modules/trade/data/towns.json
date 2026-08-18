@@ -1,5 +1,5 @@
 {
- "generatedFrom": "Workerman game db + gpw v2.15 + bdocodex",
+ "generatedFrom": "Workerman game db + gpw v2.15 + bdocodex + nodes (bdo-noderouter)",
  "params": {
   "workerSpeed": 150,
   "workerMspd": 7.5,
@@ -19,6 +19,7 @@
     {
      "house": "2125",
      "name": "Balenos 6-1, Toscani Farm",
+     "namePt": "Balenos nº. 6-1, Fazenda Toscani",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -28,11 +29,23 @@
      "cycleMin": 8.78,
      "cratesDay": 656,
      "inUse": true,
-     "namePt": "Balenos nº. 6-1, Fazenda Toscani"
+     "node": "45",
+     "connPath": [
+      {
+       "id": "21",
+       "cp": 1
+      },
+      {
+       "id": "45",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 3
     },
     {
      "house": "2120",
      "name": "Balenos 3-1, Loggia Farm",
+     "namePt": "Balenos nº. 3-1, Fazenda Loggia",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -42,11 +55,19 @@
      "cycleMin": 7.28,
      "cratesDay": 791,
      "inUse": true,
-     "namePt": "Balenos nº. 3-1, Fazenda Loggia"
+     "node": "26",
+     "connPath": [
+      {
+       "id": "26",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2118",
      "name": "Balenos 4-1, DelLucci Farm",
+     "namePt": "Balenos nº. 4-1, Fazenda DelLucci",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -56,11 +77,23 @@
      "cycleMin": 7.22,
      "cratesDay": 798,
      "inUse": true,
-     "namePt": "Balenos nº. 4-1, Fazenda DelLucci"
+     "node": "44",
+     "connPath": [
+      {
+       "id": "21",
+       "cp": 1
+      },
+      {
+       "id": "44",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 3
     },
     {
      "house": "2116",
      "name": "Balenos 1-1, Bartali Farm",
+     "namePt": "Balenos nº. 1-1, Fazenda Bartali",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -70,11 +103,19 @@
      "cycleMin": 6.19,
      "cratesDay": 931,
      "inUse": true,
-     "namePt": "Balenos nº. 1-1, Fazenda Bartali"
+     "node": "21",
+     "connPath": [
+      {
+       "id": "21",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 1
     },
     {
      "house": "2114",
      "name": "Balenos 2-1, Finto Farm",
+     "namePt": "Balenos nº. 2-1, Fazenda Finto",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -84,11 +125,19 @@
      "cycleMin": 6.54,
      "cratesDay": 881,
      "inUse": true,
-     "namePt": "Balenos nº. 2-1, Fazenda Finto"
+     "node": "22",
+     "connPath": [
+      {
+       "id": "22",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2104",
      "name": "Velia 5-2",
+     "namePt": "Velia nº. 5-2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -97,7 +146,9 @@
      "cycleMin": 5.48,
      "cratesDay": 1050,
      "inUse": true,
-     "namePt": "Velia nº. 5-2"
+     "node": "1",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 6,
@@ -109,23 +160,23 @@
      {
       "house": "2111",
       "name": "Velia 1, Rm. 1",
+      "namePt": "Velia nº. 1 Quarto 1",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Velia nº. 1 Quarto 1"
+      "slots": 1
      },
      {
       "house": "2112",
       "name": "Velia 1, Rm. 2",
+      "namePt": "Velia nº. 1 Quarto 2",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Velia nº. 1 Quarto 2"
+      "slots": 2
      },
      {
       "house": "2113",
       "name": "Velia 1, Rm. 3",
+      "namePt": "Velia nº. 1 Quarto 3",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Velia nº. 1 Quarto 3"
+      "slots": 2
      }
     ],
     "cp": 3,
@@ -138,6 +189,15 @@
    "workers": 6,
    "n_staffed": 6,
    "cp_total": 10,
+   "conn_cp": 9,
+   "conn_nodes": [
+    "21",
+    "22",
+    "26",
+    "44",
+    "45"
+   ],
+   "base_node": "1",
    "crates_day": 5107,
    "transport": {
     "Valencia": {
@@ -640,6 +700,7 @@
     {
      "house": "2249",
      "name": "Serendia 5, Lynch Ranch",
+     "namePt": "Serendia nº. 5, Rancho Lynch",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -650,11 +711,27 @@
      "cycleMin": 10.93,
      "cratesDay": 527,
      "inUse": true,
-     "namePt": "Serendia nº. 5, Rancho Lynch"
+     "node": "328",
+     "connPath": [
+      {
+       "id": "347",
+       "cp": 1
+      },
+      {
+       "id": "341",
+       "cp": 1
+      },
+      {
+       "id": "328",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 4
     },
     {
      "house": "2221",
      "name": "Heidel 4-2, 2F",
+     "namePt": "Heidel nº. 4-2 Piso 2",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -664,11 +741,14 @@
      "cycleMin": 5.24,
      "cratesDay": 1098,
      "inUse": true,
-     "namePt": "Heidel nº. 4-2 Piso 2"
+     "node": "301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2219",
      "name": "Heidel 9-1, 2F",
+     "namePt": "Heidel nº. 9-1 Piso 2",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -678,11 +758,14 @@
      "cycleMin": 5.53,
      "cratesDay": 1042,
      "inUse": true,
-     "namePt": "Heidel nº. 9-1 Piso 2"
+     "node": "301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2218",
      "name": "Serendia 3, Elda Farm",
+     "namePt": "Serendia nº. 3, Fazenda Elda",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -693,11 +776,23 @@
      "cycleMin": 7.61,
      "cratesDay": 757,
      "inUse": true,
-     "namePt": "Serendia nº. 3, Fazenda Elda"
+     "node": "346",
+     "connPath": [
+      {
+       "id": "323",
+       "cp": 2
+      },
+      {
+       "id": "346",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 4
     },
     {
      "house": "2216",
      "name": "Serendia 2-1, 2F, Costa Farm",
+     "namePt": "Serendia nº. 2-1 Piso 2, Fazenda Costa",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -707,11 +802,19 @@
      "cycleMin": 6.94,
      "cratesDay": 830,
      "inUse": true,
-     "namePt": "Serendia nº. 2-1 Piso 2, Fazenda Costa"
+     "node": "322",
+     "connPath": [
+      {
+       "id": "322",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2215",
      "name": "Serendia 2-1, 1F, Costa Farm",
+     "namePt": "Serendia nº. 2-1 Piso 1, Fazenda Costa",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -721,11 +824,19 @@
      "cycleMin": 6.92,
      "cratesDay": 832,
      "inUse": true,
-     "namePt": "Serendia nº. 2-1 Piso 1, Fazenda Costa"
+     "node": "322",
+     "connPath": [
+      {
+       "id": "322",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2213",
      "name": "Serendia 4, Moretti Plantation",
+     "namePt": "Serendia nº. 4, Plantação Moretti",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -735,11 +846,19 @@
      "cycleMin": 8.0,
      "cratesDay": 720,
      "inUse": true,
-     "namePt": "Serendia nº. 4, Plantação Moretti"
+     "node": "323",
+     "connPath": [
+      {
+       "id": "323",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2227",
      "name": "Heidel 4-4",
+     "namePt": "Heidel nº. 4-4",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -748,11 +867,14 @@
      "cycleMin": 5.21,
      "cratesDay": 1105,
      "inUse": true,
-     "namePt": "Heidel nº. 4-4"
+     "node": "301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2225",
      "name": "Heidel 3-3",
+     "namePt": "Heidel nº. 3-3",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -763,11 +885,14 @@
      "cycleMin": 5.19,
      "cratesDay": 1110,
      "inUse": true,
-     "namePt": "Heidel nº. 3-3"
+     "node": "301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2203",
      "name": "Serendia 1-1, 1F, Alejandro Farm",
+     "namePt": "Serendia nº. 1-1 Piso 1, Fazenda Alejandro",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -776,11 +901,23 @@
      "cycleMin": 7.85,
      "cratesDay": 734,
      "inUse": true,
-     "namePt": "Serendia nº. 1-1 Piso 1, Fazenda Alejandro"
+     "node": "321",
+     "connPath": [
+      {
+       "id": "347",
+       "cp": 1
+      },
+      {
+       "id": "321",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2162",
      "name": "Heidel 4-1, 2F",
+     "namePt": "Heidel nº. 4-1 Piso 2",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -790,7 +927,9 @@
      "cycleMin": 5.39,
      "cratesDay": 1069,
      "inUse": true,
-     "namePt": "Heidel nº. 4-1 Piso 2"
+     "node": "301",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 11,
@@ -802,44 +941,44 @@
      {
       "house": "2168",
       "name": "Heidel 9-1, 1F",
+      "namePt": "Heidel nº. 9-1 Piso 1",
       "cp": 1,
-      "slots": 0,
-      "namePt": "Heidel nº. 9-1 Piso 1"
+      "slots": 0
      },
      {
       "house": "2170",
       "name": "Heidel 9-2, 1F",
+      "namePt": "Heidel nº. 9-2 Piso 1",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Heidel nº. 9-2 Piso 1"
+      "slots": 1
      },
      {
       "house": "2171",
       "name": "Heidel 9-2, 2F",
+      "namePt": "Heidel nº. 9-2 Piso 2",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Heidel nº. 9-2 Piso 2"
+      "slots": 1
      },
      {
       "house": "2200",
       "name": "Heidel 8-1, Rm. 3",
+      "namePt": "Heidel nº. 8-1 Quarto 3",
       "cp": 2,
-      "slots": 4,
-      "namePt": "Heidel nº. 8-1 Quarto 3"
+      "slots": 4
      },
      {
       "house": "2201",
       "name": "Heidel 8-1, Rm. 2",
+      "namePt": "Heidel nº. 8-1 Quarto 2",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Heidel nº. 8-1 Quarto 2"
+      "slots": 2
      },
      {
       "house": "2202",
       "name": "Heidel 8-1, Rm. 1",
+      "namePt": "Heidel nº. 8-1 Quarto 1",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Heidel nº. 8-1 Quarto 1"
+      "slots": 1
      }
     ],
     "cp": 6,
@@ -852,6 +991,17 @@
    "workers": 11,
    "n_staffed": 11,
    "cp_total": 17,
+   "conn_cp": 11,
+   "conn_nodes": [
+    "321",
+    "322",
+    "323",
+    "328",
+    "341",
+    "346",
+    "347"
+   ],
+   "base_node": "301",
    "crates_day": 9823,
    "transport": {
     "Valencia": {
@@ -1354,6 +1504,7 @@
     {
      "house": "2813",
      "name": "Gabino Farm 2, 2F",
+     "namePt": "Fazenda Gabino nº. 2 Piso 2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1362,11 +1513,19 @@
      "cycleMin": 8.04,
      "cratesDay": 716,
      "inUse": true,
-     "namePt": "Fazenda Gabino nº. 2 Piso 2"
+     "node": "712",
+     "connPath": [
+      {
+       "id": "712",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2805",
      "name": "Calpheon East Gate 2",
+     "namePt": "Portão Leste de Calpheon nº. 2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1375,11 +1534,14 @@
      "cycleMin": 6.95,
      "cratesDay": 829,
      "inUse": true,
-     "namePt": "Portão Leste de Calpheon nº. 2"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2801",
      "name": "Calpheon East Gate 8, 1F",
+     "namePt": "Portão Leste de Calpheon nº. 8 1° Piso",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1389,11 +1551,14 @@
      "cycleMin": 6.56,
      "cratesDay": 879,
      "inUse": true,
-     "namePt": "Portão Leste de Calpheon nº. 8 1° Piso"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2755",
      "name": "Calpheon North Gate 4, 2F",
+     "namePt": "Portão Norte de Calpheon nº. 4 2° Piso",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1403,11 +1568,14 @@
      "cycleMin": 6.62,
      "cratesDay": 870,
      "inUse": true,
-     "namePt": "Portão Norte de Calpheon nº. 4 2° Piso"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2754",
      "name": "Calpheon North Gate 4, 1F",
+     "namePt": "Portão Norte de Calpheon nº. 4 1° Piso",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1416,11 +1584,14 @@
      "cycleMin": 6.61,
      "cratesDay": 871,
      "inUse": true,
-     "namePt": "Portão Norte de Calpheon nº. 4 1° Piso"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2774",
      "name": "Calpheon South Gate 3",
+     "namePt": "Portão Sul de Calpheon nº. 3",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1430,11 +1601,14 @@
      "cycleMin": 6.54,
      "cratesDay": 880,
      "inUse": true,
-     "namePt": "Portão Sul de Calpheon nº. 3"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2698",
      "name": "Chapel 1-1, 2F",
+     "namePt": "Capela nº. 1-1 Piso 2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1443,11 +1617,14 @@
      "cycleMin": 6.4,
      "cratesDay": 901,
      "inUse": true,
-     "namePt": "Capela nº. 1-1 Piso 2"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2658",
      "name": "Chapel 1-1, 1F",
+     "namePt": "Capela nº. 1-1 Piso 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1457,11 +1634,14 @@
      "cycleMin": 6.39,
      "cratesDay": 902,
      "inUse": true,
-     "namePt": "Capela nº. 1-1 Piso 1"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2682",
      "name": "Chapel 3-9, 1F",
+     "namePt": "Capela nº. 3-9 Piso 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1471,11 +1651,14 @@
      "cycleMin": 6.4,
      "cratesDay": 899,
      "inUse": true,
-     "namePt": "Capela nº. 3-9 Piso 1"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2629",
      "name": "Merchant Lane 3-5, 2F",
+     "namePt": "Feira nº. 3-5 Piso 2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1484,11 +1667,14 @@
      "cycleMin": 5.59,
      "cratesDay": 1030,
      "inUse": true,
-     "namePt": "Feira nº. 3-5 Piso 2"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2628",
      "name": "Merchant Lane 3-5, 1F",
+     "namePt": "Feira nº. 3-5 Piso 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1498,11 +1684,14 @@
      "cycleMin": 5.6,
      "cratesDay": 1028,
      "inUse": true,
-     "namePt": "Feira nº. 3-5 Piso 1"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2609",
      "name": "Merchant Lane 2-3, 2F",
+     "namePt": "Feira nº. 2-3 Piso 2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1511,11 +1700,14 @@
      "cycleMin": 5.85,
      "cratesDay": 984,
      "inUse": true,
-     "namePt": "Feira nº. 2-3 Piso 2"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2565",
      "name": "Noble Quarter 2-3, 1F",
+     "namePt": "Distrito Nobre nº. 2-3 Piso 1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1524,11 +1716,14 @@
      "cycleMin": 6.33,
      "cratesDay": 910,
      "inUse": true,
-     "namePt": "Distrito Nobre nº. 2-3 Piso 1"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2818",
      "name": "Gabino Farm 5",
+     "namePt": "Fazenda Gabino nº. 5",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1538,11 +1733,19 @@
      "cycleMin": 7.54,
      "cratesDay": 764,
      "inUse": true,
-     "namePt": "Fazenda Gabino nº. 5"
+     "node": "712",
+     "connPath": [
+      {
+       "id": "712",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2816",
      "name": "Gabino Farm 4, 1F",
+     "namePt": "Fazenda Gabino nº. 4 Piso 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1552,11 +1755,19 @@
      "cycleMin": 7.93,
      "cratesDay": 726,
      "inUse": true,
-     "namePt": "Fazenda Gabino nº. 4 Piso 1"
+     "node": "712",
+     "connPath": [
+      {
+       "id": "712",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2505",
      "name": "Market Street 6-2",
+     "namePt": "Feira nº. 6-2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1565,11 +1776,14 @@
      "cycleMin": 6.07,
      "cratesDay": 949,
      "inUse": true,
-     "namePt": "Feira nº. 6-2"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2514",
      "name": "Market Street 7-3, 1F",
+     "namePt": "Feira nº. 7-3 Piso 1",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -1580,11 +1794,14 @@
      "cycleMin": 6.28,
      "cratesDay": 917,
      "inUse": true,
-     "namePt": "Feira nº. 7-3 Piso 1"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2493",
      "name": "Market Street 5-2",
+     "namePt": "Feira nº. 5-2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1593,11 +1810,14 @@
      "cycleMin": 6.14,
      "cratesDay": 938,
      "inUse": true,
-     "namePt": "Feira nº. 5-2"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2488",
      "name": "Market Street 4-5, 1F",
+     "namePt": "Feira nº. 4-5 Piso 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1607,11 +1827,14 @@
      "cycleMin": 5.88,
      "cratesDay": 980,
      "inUse": true,
-     "namePt": "Feira nº. 4-5 Piso 1"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2405",
      "name": "Slum 1-3, 1F",
+     "namePt": "Favela nº. 1-3 Piso 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1621,11 +1844,14 @@
      "cycleMin": 6.66,
      "cratesDay": 865,
      "inUse": true,
-     "namePt": "Favela nº. 1-3 Piso 1"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2401",
      "name": "Slum 1-1, 1F",
+     "namePt": "Favela nº. 1-1 Piso 1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1634,11 +1860,14 @@
      "cycleMin": 6.54,
      "cratesDay": 880,
      "inUse": true,
-     "namePt": "Favela nº. 1-1 Piso 1"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2424",
      "name": "Slum 3-2",
+     "namePt": "Favela nº. 3-2",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1648,11 +1877,14 @@
      "cycleMin": 6.79,
      "cratesDay": 849,
      "inUse": true,
-     "namePt": "Favela nº. 3-2"
+     "node": "601",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2374",
      "name": "Northern Wheat Plantation 2",
+     "namePt": "Plantação de Trigo do Norte nº 2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1661,11 +1893,23 @@
      "cycleMin": 8.97,
      "cratesDay": 642,
      "inUse": true,
-     "namePt": "Plantação de Trigo do Norte nº 2"
+     "node": "628",
+     "connPath": [
+      {
+       "id": "633",
+       "cp": 2
+      },
+      {
+       "id": "628",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 3
     },
     {
      "house": "2373",
      "name": "Northern Wheat Plantation 1",
+     "namePt": "Plantação de Trigo do Norte nº 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1675,11 +1919,23 @@
      "cycleMin": 8.9,
      "cratesDay": 647,
      "inUse": true,
-     "namePt": "Plantação de Trigo do Norte nº 1"
+     "node": "628",
+     "connPath": [
+      {
+       "id": "633",
+       "cp": 2
+      },
+      {
+       "id": "628",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 3
     },
     {
      "house": "2367",
      "name": "Dias Farm 2, 1F",
+     "namePt": "Fazenda Dias nº. 2 Piso 1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1688,11 +1944,19 @@
      "cycleMin": 8.12,
      "cratesDay": 709,
      "inUse": true,
-     "namePt": "Fazenda Dias nº. 2 Piso 1"
+     "node": "633",
+     "connPath": [
+      {
+       "id": "633",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2366",
      "name": "Dias Farm 1",
+     "namePt": "Fazenda Dias nº. 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1702,11 +1966,19 @@
      "cycleMin": 8.08,
      "cratesDay": 713,
      "inUse": true,
-     "namePt": "Fazenda Dias nº. 1"
+     "node": "633",
+     "connPath": [
+      {
+       "id": "633",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2363",
      "name": "Florin 2-2",
+     "namePt": "Florin nº. 2-2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -1715,11 +1987,35 @@
      "cycleMin": 12.6,
      "cratesDay": 457,
      "inUse": true,
-     "namePt": "Florin nº. 2-2"
+     "node": "603",
+     "connPath": [
+      {
+       "id": "633",
+       "cp": 2
+      },
+      {
+       "id": "628",
+       "cp": 1
+      },
+      {
+       "id": "629",
+       "cp": 1
+      },
+      {
+       "id": "625",
+       "cp": 1
+      },
+      {
+       "id": "603",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 6
     },
     {
      "house": "2362",
      "name": "Florin 2-1",
+     "namePt": "Florin nº. 2-1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1729,11 +2025,35 @@
      "cycleMin": 12.54,
      "cratesDay": 459,
      "inUse": true,
-     "namePt": "Florin nº. 2-1"
+     "node": "603",
+     "connPath": [
+      {
+       "id": "633",
+       "cp": 2
+      },
+      {
+       "id": "628",
+       "cp": 1
+      },
+      {
+       "id": "629",
+       "cp": 1
+      },
+      {
+       "id": "625",
+       "cp": 1
+      },
+      {
+       "id": "603",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 6
     },
     {
      "house": "2331",
      "name": "Florin 1-1, Rm. 1",
+     "namePt": "Florin nº. 1-1 Quarto 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -1743,7 +2063,30 @@
      "cycleMin": 12.38,
      "cratesDay": 465,
      "inUse": true,
-     "namePt": "Florin nº. 1-1 Quarto 1"
+     "node": "603",
+     "connPath": [
+      {
+       "id": "633",
+       "cp": 2
+      },
+      {
+       "id": "628",
+       "cp": 1
+      },
+      {
+       "id": "629",
+       "cp": 1
+      },
+      {
+       "id": "625",
+       "cp": 1
+      },
+      {
+       "id": "603",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 6
     }
    ],
    "n_workshops": 29,
@@ -1755,100 +2098,100 @@
      {
       "house": "2372",
       "name": "Falres Dirt Farm 1",
+      "namePt": "Fazenda de Gado Falres nº. 1",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Fazenda de Gado Falres nº. 1"
+      "slots": 2
      },
      {
       "house": "2753",
       "name": "Calpheon North Gate 3",
+      "namePt": "Portão Norte de Calpheon nº. 3",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Portão Norte de Calpheon nº. 3"
+      "slots": 2
      },
      {
       "house": "2754",
       "name": "Calpheon North Gate 4, 1F",
+      "namePt": "Portão Norte de Calpheon nº. 4 1° Piso",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Portão Norte de Calpheon nº. 4 1° Piso"
+      "slots": 1
      },
      {
       "house": "2771",
       "name": "Calpheon South Gate 1",
+      "namePt": "Portão Sul de Calpheon nº. 1",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Portão Sul de Calpheon nº. 1"
+      "slots": 2
      },
      {
       "house": "2772",
       "name": "Calpheon South Gate 2, 1F",
+      "namePt": "Portão Sul de Calpheon nº. 2 1° Piso",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Portão Sul de Calpheon nº. 2 1° Piso"
+      "slots": 2
      },
      {
       "house": "2773",
       "name": "Calpheon South Gate 2, 2F",
+      "namePt": "Portão Sul de Calpheon nº. 2 2° Piso",
       "cp": 2,
-      "slots": 4,
-      "namePt": "Portão Sul de Calpheon nº. 2 2° Piso"
+      "slots": 4
      },
      {
       "house": "2774",
       "name": "Calpheon South Gate 3",
+      "namePt": "Portão Sul de Calpheon nº. 3",
       "cp": 1,
-      "slots": 0,
-      "namePt": "Portão Sul de Calpheon nº. 3"
+      "slots": 0
      },
      {
       "house": "2775",
       "name": "Calpheon South Gate 4, 1F",
+      "namePt": "Portão Sul de Calpheon nº. 4 1° Piso",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Portão Sul de Calpheon nº. 4 1° Piso"
+      "slots": 2
      },
      {
       "house": "2791",
       "name": "Calpheon East Gate 1, 1F",
+      "namePt": "Portão Leste de Calpheon nº. 1 1° Piso",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Portão Leste de Calpheon nº. 1 1° Piso"
+      "slots": 1
      },
      {
       "house": "2804",
       "name": "Calpheon East Gate 1, 2F",
+      "namePt": "Portão Leste de Calpheon nº. 1 2° Piso",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Portão Leste de Calpheon nº. 1 2° Piso"
+      "slots": 2
      },
      {
       "house": "2813",
       "name": "Gabino Farm 2, 2F",
+      "namePt": "Fazenda Gabino nº. 2 Piso 2",
       "cp": 1,
-      "slots": 0,
-      "namePt": "Fazenda Gabino nº. 2 Piso 2"
+      "slots": 0
      },
      {
       "house": "2814",
       "name": "Gabino Farm 3, 1F",
+      "namePt": "Fazenda Gabino nº. 3 Piso 1",
       "cp": 1,
-      "slots": 0,
-      "namePt": "Fazenda Gabino nº. 3 Piso 1"
+      "slots": 0
      },
      {
       "house": "2816",
       "name": "Gabino Farm 4, 1F",
+      "namePt": "Fazenda Gabino nº. 4 Piso 1",
       "cp": 1,
-      "slots": 0,
-      "namePt": "Fazenda Gabino nº. 4 Piso 1"
+      "slots": 0
      },
      {
       "house": "2817",
       "name": "Gabino Farm 4, 2F",
+      "namePt": "Fazenda Gabino nº. 4 Piso 2",
       "cp": 3,
-      "slots": 8,
-      "namePt": "Fazenda Gabino nº. 4 Piso 2"
+      "slots": 8
      }
     ],
     "cp": 11,
@@ -1861,6 +2204,16 @@
    "workers": 29,
    "n_staffed": 29,
    "cp_total": 40,
+   "conn_cp": 8,
+   "conn_nodes": [
+    "603",
+    "625",
+    "628",
+    "629",
+    "633",
+    "712"
+   ],
+   "base_node": "601",
    "crates_day": 23659,
    "transport": {
     "Valencia": {
@@ -2363,6 +2716,7 @@
     {
      "house": "2244",
      "name": "Casta Farm 2",
+     "namePt": "Fazenda Casta nº. 2",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -2373,11 +2727,19 @@
      "cycleMin": 6.36,
      "cratesDay": 905,
      "inUse": true,
-     "namePt": "Fazenda Casta nº. 2"
+     "node": "64",
+     "connPath": [
+      {
+       "id": "64",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 1
     },
     {
      "house": "2241",
      "name": "Olvia 7-3",
+     "namePt": "Olvia nº. 7-3",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -2387,11 +2749,14 @@
      "cycleMin": 5.52,
      "cratesDay": 1043,
      "inUse": true,
-     "namePt": "Olvia nº. 7-3"
+     "node": "61",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2138",
      "name": "Olvia 1-2",
+     "namePt": "Olvia nº. 1-2",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -2402,7 +2767,9 @@
      "cycleMin": 5.84,
      "cratesDay": 987,
      "inUse": true,
-     "namePt": "Olvia nº. 1-2"
+     "node": "61",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 3,
@@ -2414,9 +2781,9 @@
      {
       "house": "2245",
       "name": "Wale Farm 1",
+      "namePt": "Fazenda Wale nº. 1",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Fazenda Wale nº. 1"
+      "slots": 2
      }
     ],
     "cp": 1,
@@ -2429,6 +2796,11 @@
    "workers": 4,
    "n_staffed": 3,
    "cp_total": 4,
+   "conn_cp": 1,
+   "conn_nodes": [
+    "64"
+   ],
+   "base_node": "61",
    "crates_day": 2936,
    "transport": {
     "Valencia": {
@@ -2931,6 +3303,7 @@
     {
      "house": "2271",
      "name": "Keplan 3-3",
+     "namePt": "Keplan nº. 3-3",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -2941,11 +3314,14 @@
      "cycleMin": 7.19,
      "cratesDay": 801,
      "inUse": true,
-     "namePt": "Keplan nº. 3-3"
+     "node": "602",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2376",
      "name": "Gianin Farm 1",
+     "namePt": "Fazenda Gianin nº. 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -2955,7 +3331,18 @@
      "cycleMin": 10.44,
      "cratesDay": 552,
      "inUse": true,
-     "namePt": "Fazenda Gianin nº. 1"
+     "node": "670",
+     "connPath": [
+      {
+       "id": "654",
+       "cp": 1
+      },
+      {
+       "id": "670",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 3
     }
    ],
    "n_workshops": 2,
@@ -2974,6 +3361,12 @@
    "workers": 2,
    "n_staffed": 2,
    "cp_total": 2,
+   "conn_cp": 3,
+   "conn_nodes": [
+    "654",
+    "670"
+   ],
+   "base_node": "602",
    "crates_day": 1353,
    "transport": {
     "Valencia": {
@@ -3476,6 +3869,7 @@
     {
      "house": "2343",
      "name": "Port Epheria 2-1, 1F",
+     "namePt": "Epheria nº. 2-1 Piso 1",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -3486,11 +3880,14 @@
      "cycleMin": 5.44,
      "cratesDay": 1058,
      "inUse": true,
-     "namePt": "Epheria nº. 2-1 Piso 1"
+     "node": "604",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2334",
      "name": "Port Epheria 1-1, 1F",
+     "namePt": "Epheria nº. 1-1 Piso 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -3500,7 +3897,9 @@
      "cycleMin": 6.02,
      "cratesDay": 956,
      "inUse": true,
-     "namePt": "Epheria nº. 1-1 Piso 1"
+     "node": "604",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 2,
@@ -3519,6 +3918,9 @@
    "workers": 2,
    "n_staffed": 2,
    "cp_total": 2,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "604",
    "crates_day": 2014,
    "transport": {
     "Valencia": {
@@ -4021,6 +4423,7 @@
     {
      "house": "2301",
      "name": "Trent 1",
+     "namePt": "Trent nº. 1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -4029,11 +4432,14 @@
      "cycleMin": 5.59,
      "cratesDay": 1030,
      "inUse": true,
-     "namePt": "Trent nº. 1"
+     "node": "608",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2307",
      "name": "Behr 1",
+     "namePt": "Behr nº. 1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -4042,7 +4448,26 @@
      "cycleMin": 10.11,
      "cratesDay": 570,
      "inUse": true,
-     "namePt": "Behr nº. 1"
+     "node": "609",
+     "connPath": [
+      {
+       "id": "719",
+       "cp": 2
+      },
+      {
+       "id": "709",
+       "cp": 2
+      },
+      {
+       "id": "720",
+       "cp": 1
+      },
+      {
+       "id": "609",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 6
     }
    ],
    "n_workshops": 2,
@@ -4054,16 +4479,16 @@
      {
       "house": "2301",
       "name": "Trent 1",
+      "namePt": "Trent nº. 1",
       "cp": 1,
-      "slots": 0,
-      "namePt": "Trent nº. 1"
+      "slots": 0
      },
      {
       "house": "2303",
       "name": "Trent 3",
+      "namePt": "Trent nº. 3",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Trent nº. 3"
+      "slots": 1
      }
     ],
     "cp": 1,
@@ -4076,6 +4501,14 @@
    "workers": 2,
    "n_staffed": 2,
    "cp_total": 3,
+   "conn_cp": 6,
+   "conn_nodes": [
+    "609",
+    "709",
+    "719",
+    "720"
+   ],
+   "base_node": "608",
    "crates_day": 1600,
    "transport": {
     "Valencia": {
@@ -4578,6 +5011,7 @@
     {
      "house": "2889",
      "name": "Altinova 5-4",
+     "namePt": "Altinova nº. 5-4",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -4587,11 +5021,14 @@
      "cycleMin": 6.15,
      "cratesDay": 936,
      "inUse": true,
-     "namePt": "Altinova nº. 5-4"
+     "node": "1101",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2870",
      "name": "Altinova 2-1, 1F",
+     "namePt": "Altinova nº. 2-1 Piso 1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -4600,11 +5037,14 @@
      "cycleMin": 5.56,
      "cratesDay": 1037,
      "inUse": true,
-     "namePt": "Altinova nº. 2-1 Piso 1"
+     "node": "1101",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2847",
      "name": "Kusha 1-2",
+     "namePt": "Kusha nº. 1-2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -4613,11 +5053,35 @@
      "cycleMin": 17.9,
      "cratesDay": 322,
      "inUse": true,
-     "namePt": "Kusha nº. 1-2"
+     "node": "1153",
+     "connPath": [
+      {
+       "id": "1140",
+       "cp": 1
+      },
+      {
+       "id": "1147",
+       "cp": 1
+      },
+      {
+       "id": "1149",
+       "cp": 2
+      },
+      {
+       "id": "1163",
+       "cp": 1
+      },
+      {
+       "id": "1153",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 6
     },
     {
      "house": "2845",
      "name": "Kusha 2",
+     "namePt": "Kusha nº. 2",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -4627,11 +5091,35 @@
      "cycleMin": 17.37,
      "cratesDay": 332,
      "inUse": true,
-     "namePt": "Kusha nº. 2"
+     "node": "1153",
+     "connPath": [
+      {
+       "id": "1140",
+       "cp": 1
+      },
+      {
+       "id": "1147",
+       "cp": 1
+      },
+      {
+       "id": "1149",
+       "cp": 2
+      },
+      {
+       "id": "1163",
+       "cp": 1
+      },
+      {
+       "id": "1153",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 6
     },
     {
      "house": "2843",
      "name": "Stonetail Horse Ranch 2",
+     "namePt": "Rancho Cauda de Pedra n° 2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -4640,7 +5128,26 @@
      "cycleMin": 16.93,
      "cratesDay": 340,
      "inUse": true,
-     "namePt": "Rancho Cauda de Pedra n° 2"
+     "node": "1158",
+     "connPath": [
+      {
+       "id": "1140",
+       "cp": 1
+      },
+      {
+       "id": "1164",
+       "cp": 1
+      },
+      {
+       "id": "1138",
+       "cp": 1
+      },
+      {
+       "id": "1158",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 4
     }
    ],
    "n_workshops": 5,
@@ -4652,16 +5159,16 @@
      {
       "house": "2911",
       "name": "Altinova 10-1",
+      "namePt": "Altinova nº. 10-1",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Altinova nº. 10-1"
+      "slots": 1
      },
      {
       "house": "2912",
       "name": "Altinova 10-2",
+      "namePt": "Altinova nº. 10-2",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Altinova nº. 10-2"
+      "slots": 2
      }
     ],
     "cp": 2,
@@ -4674,6 +5181,18 @@
    "workers": 5,
    "n_staffed": 5,
    "cp_total": 7,
+   "conn_cp": 9,
+   "conn_nodes": [
+    "1138",
+    "1140",
+    "1147",
+    "1149",
+    "1153",
+    "1158",
+    "1163",
+    "1164"
+   ],
+   "base_node": "1101",
    "crates_day": 2967,
    "transport": {
     "Valencia": {
@@ -5176,6 +5695,7 @@
     {
      "house": "2854",
      "name": "Tarif 2-1, Rm. 2",
+     "namePt": "Tarif nº. 2-1 Quarto 2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -5184,11 +5704,14 @@
      "cycleMin": 5.52,
      "cratesDay": 1043,
      "inUse": true,
-     "namePt": "Tarif nº. 2-1 Quarto 2"
+     "node": "1141",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2850",
      "name": "Tarif 1-1",
+     "namePt": "Tarif nº. 1-1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -5198,11 +5721,14 @@
      "cycleMin": 5.16,
      "cratesDay": 1116,
      "inUse": true,
-     "namePt": "Tarif nº. 1-1"
+     "node": "1141",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "2864",
      "name": "Shuri Farm 1",
+     "namePt": "Fazenda Shuri nº. 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -5212,11 +5738,31 @@
      "cycleMin": 10.51,
      "cratesDay": 548,
      "inUse": true,
-     "namePt": "Fazenda Shuri nº. 1"
+     "node": "1160",
+     "connPath": [
+      {
+       "id": "1161",
+       "cp": 2
+      },
+      {
+       "id": "1138",
+       "cp": 1
+      },
+      {
+       "id": "1158",
+       "cp": 1
+      },
+      {
+       "id": "1160",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 6
     },
     {
      "house": "2840",
      "name": "Kasula Farm 3",
+     "namePt": "Fazenda Kasula nº. 3",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -5225,11 +5771,19 @@
      "cycleMin": 6.36,
      "cratesDay": 906,
      "inUse": true,
-     "namePt": "Fazenda Kasula nº. 3"
+     "node": "1161",
+     "connPath": [
+      {
+       "id": "1161",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "2838",
      "name": "Kasula Farm 1",
+     "namePt": "Fazenda Kasula nº. 1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -5238,7 +5792,14 @@
      "cycleMin": 6.82,
      "cratesDay": 845,
      "inUse": true,
-     "namePt": "Fazenda Kasula nº. 1"
+     "node": "1161",
+     "connPath": [
+      {
+       "id": "1161",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     }
    ],
    "n_workshops": 5,
@@ -5250,37 +5811,37 @@
      {
       "house": "2853",
       "name": "Tarif 2-1, Rm. 1",
+      "namePt": "Tarif nº. 2-1 Quarto 1",
       "cp": 1,
-      "slots": 0,
-      "namePt": "Tarif nº. 2-1 Quarto 1"
+      "slots": 0
      },
      {
       "house": "2855",
       "name": "Tarif 2-2, 1F",
+      "namePt": "Tarif nº. 2-2 Piso 1",
       "cp": 1,
-      "slots": 0,
-      "namePt": "Tarif nº. 2-2 Piso 1"
+      "slots": 0
      },
      {
       "house": "2856",
       "name": "Tarif 2-2, 2F",
+      "namePt": "Tarif nº. 2-2 Piso 2",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Tarif nº. 2-2 Piso 2"
+      "slots": 2
      },
      {
       "house": "2864",
       "name": "Shuri Farm 1",
+      "namePt": "Fazenda Shuri nº. 1",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Fazenda Shuri nº. 1"
+      "slots": 1
      },
      {
       "house": "2865",
       "name": "Shuri Farm 2",
+      "namePt": "Fazenda Shuri nº. 2",
       "cp": 1,
-      "slots": 2,
-      "namePt": "Fazenda Shuri nº. 2"
+      "slots": 2
      }
     ],
     "cp": 3,
@@ -5293,6 +5854,14 @@
    "workers": 5,
    "n_staffed": 5,
    "cp_total": 8,
+   "conn_cp": 6,
+   "conn_nodes": [
+    "1138",
+    "1158",
+    "1160",
+    "1161"
+   ],
+   "base_node": "1141",
    "crates_day": 4457,
    "transport": {
     "Valencia": {
@@ -5795,6 +6364,7 @@
     {
      "house": "3168",
      "name": "Erdal Farm 1",
+     "namePt": "Fazenda Erdal nº. 1",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -5805,11 +6375,23 @@
      "cycleMin": 7.78,
      "cratesDay": 740,
      "inUse": true,
-     "namePt": "Fazenda Erdal nº. 1"
+     "node": "1354",
+     "connPath": [
+      {
+       "id": "1355",
+       "cp": 2
+      },
+      {
+       "id": "1354",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 4
     },
     {
      "house": "3144",
      "name": "Valencia 17-3",
+     "namePt": "Valência nº. 17-3",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -5819,11 +6401,14 @@
      "cycleMin": 6.63,
      "cratesDay": 869,
      "inUse": true,
-     "namePt": "Valência nº. 17-3"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3166",
      "name": "Valencia Plantation 1-2",
+     "namePt": "Plantação de Valência nº. 1-2",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -5833,11 +6418,19 @@
      "cycleMin": 7.14,
      "cratesDay": 807,
      "inUse": true,
-     "namePt": "Plantação de Valência nº. 1-2"
+     "node": "1355",
+     "connPath": [
+      {
+       "id": "1355",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "3165",
      "name": "Valencia Plantation 1-1",
+     "namePt": "Plantação de Valência nº. 1-1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -5846,11 +6439,19 @@
      "cycleMin": 7.31,
      "cratesDay": 788,
      "inUse": true,
-     "namePt": "Plantação de Valência nº. 1-1"
+     "node": "1355",
+     "connPath": [
+      {
+       "id": "1355",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "3162",
      "name": "Valencia 20-2, 2F",
+     "namePt": "Valência nº. 20-2 Piso 2",
      "cp": 3,
      "packs": [
       "Colheita",
@@ -5860,11 +6461,14 @@
      "cycleMin": 6.92,
      "cratesDay": 833,
      "inUse": true,
-     "namePt": "Valência nº. 20-2 Piso 2"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3154",
      "name": "Valencia 19-3, 1F",
+     "namePt": "Valência nº. 19-3 Piso 1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -5873,11 +6477,14 @@
      "cycleMin": 6.94,
      "cratesDay": 830,
      "inUse": true,
-     "namePt": "Valência nº. 19-3 Piso 1"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3104",
      "name": "Valencia 13-2, 2F",
+     "namePt": "Valência nº. 13-2 Piso 2",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -5887,11 +6494,14 @@
      "cycleMin": 6.44,
      "cratesDay": 894,
      "inUse": true,
-     "namePt": "Valência nº. 13-2 Piso 2"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3132",
      "name": "Valencia 16-2, 2F",
+     "namePt": "Valência nº. 16-2 Piso 2",
      "cp": 3,
      "packs": [
       "Colheita",
@@ -5901,11 +6511,14 @@
      "cycleMin": 6.75,
      "cratesDay": 853,
      "inUse": true,
-     "namePt": "Valência nº. 16-2 Piso 2"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3124",
      "name": "Valencia 15-2, 2F",
+     "namePt": "Valência nº. 15-2 Piso 2",
      "cp": 2,
      "packs": [
       "Cogumelo"
@@ -5914,11 +6527,14 @@
      "cycleMin": 6.63,
      "cratesDay": 869,
      "inUse": true,
-     "namePt": "Valência nº. 15-2 Piso 2"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3072",
      "name": "Valencia 10-1, 1F, Rm. 1",
+     "namePt": "Valência nº. 10-1 Piso 1 Quarto 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -5928,11 +6544,14 @@
      "cycleMin": 5.93,
      "cratesDay": 971,
      "inUse": true,
-     "namePt": "Valência nº. 10-1 Piso 1 Quarto 1"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3092",
      "name": "Valencia 12-2, 2F",
+     "namePt": "Valência nº. 12-2 Piso 2",
      "cp": 2,
      "packs": [
       "Cogumelo"
@@ -5941,11 +6560,14 @@
      "cycleMin": 6.05,
      "cratesDay": 952,
      "inUse": true,
-     "namePt": "Valência nº. 12-2 Piso 2"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3048",
      "name": "Valencia 6-2, 2F, Rm. 3",
+     "namePt": "Valência nº. 6-2  2° Piso Sala 3",
      "cp": 3,
      "packs": [
       "Cogumelo"
@@ -5954,11 +6576,14 @@
      "cycleMin": 5.94,
      "cratesDay": 969,
      "inUse": true,
-     "namePt": "Valência nº. 6-2  2° Piso Sala 3"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3040",
      "name": "Valencia 5-3, 1F",
+     "namePt": "Valência nº. 5-3 Piso 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -5968,11 +6593,14 @@
      "cycleMin": 6.2,
      "cratesDay": 928,
      "inUse": true,
-     "namePt": "Valência nº. 5-3 Piso 1"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3067",
      "name": "Valencia 9-3",
+     "namePt": "Valência nº. 9-3",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -5981,11 +6609,14 @@
      "cycleMin": 6.08,
      "cratesDay": 947,
      "inUse": true,
-     "namePt": "Valência nº. 9-3"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3033",
      "name": "Valencia 4-2, 1F, Rm. 1",
+     "namePt": "Valência nº. 4-2 1° Piso Sala 1",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -5995,11 +6626,14 @@
      "cycleMin": 5.98,
      "cratesDay": 964,
      "inUse": true,
-     "namePt": "Valência nº. 4-2 1° Piso Sala 1"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3024",
      "name": "Valencia 3-3",
+     "namePt": "Valência nº. 3-3",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -6008,7 +6642,9 @@
      "cycleMin": 6.48,
      "cratesDay": 888,
      "inUse": true,
-     "namePt": "Valência nº. 3-3"
+     "node": "1301",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 16,
@@ -6020,9 +6656,9 @@
      {
       "house": "3147",
       "name": "Valencia 18-1, 1F",
+      "namePt": "Valência nº. 18-1 Piso 1",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Valência nº. 18-1 Piso 1"
+      "slots": 1
      }
     ],
     "cp": 1,
@@ -6035,6 +6671,12 @@
    "workers": 16,
    "n_staffed": 16,
    "cp_total": 29,
+   "conn_cp": 4,
+   "conn_nodes": [
+    "1354",
+    "1355"
+   ],
+   "base_node": "1301",
    "crates_day": 14102,
    "transport": {
     "Valencia": {
@@ -6537,6 +7179,7 @@
     {
      "house": "3207",
      "name": "Shakatu Farm 1-2",
+     "namePt": "Fazenda de Shakatu nº. 1-2",
      "cp": 2,
      "packs": [
       "Cogumelo"
@@ -6545,11 +7188,19 @@
      "cycleMin": 7.4,
      "cratesDay": 778,
      "inUse": true,
-     "namePt": "Fazenda de Shakatu nº. 1-2"
+     "node": "1352",
+     "connPath": [
+      {
+       "id": "1352",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "3206",
      "name": "Shakatu Farm 1-1",
+     "namePt": "Fazenda de Shakatu nº. 1-1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -6559,11 +7210,19 @@
      "cycleMin": 7.46,
      "cratesDay": 772,
      "inUse": true,
-     "namePt": "Fazenda de Shakatu nº. 1-1"
+     "node": "1352",
+     "connPath": [
+      {
+       "id": "1352",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "3202",
      "name": "Shakatu Camp 1-2",
+     "namePt": "Shakatu nº. 1-2",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -6572,7 +7231,9 @@
      "cycleMin": 5.36,
      "cratesDay": 1075,
      "inUse": true,
-     "namePt": "Shakatu nº. 1-2"
+     "node": "1314",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 3,
@@ -6584,9 +7245,9 @@
      {
       "house": "3204",
       "name": "Shakatu Camp 2-1",
+      "namePt": "Shakatu nº. 2-1",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Shakatu nº. 2-1"
+      "slots": 1
      }
     ],
     "cp": 1,
@@ -6599,6 +7260,11 @@
    "workers": 3,
    "n_staffed": 3,
    "cp_total": 5,
+   "conn_cp": 2,
+   "conn_nodes": [
+    "1352"
+   ],
+   "base_node": "1314",
    "crates_day": 2625,
    "transport": {
     "Valencia": {
@@ -7101,6 +7767,7 @@
     {
      "house": "3310",
      "name": "Barhan Farm 1-2",
+     "namePt": "Fazenda Barhan nº. 1-2",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -7110,11 +7777,19 @@
      "cycleMin": 7.18,
      "cratesDay": 802,
      "inUse": true,
-     "namePt": "Fazenda Barhan nº. 1-2"
+     "node": "1351",
+     "connPath": [
+      {
+       "id": "1351",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "3309",
      "name": "Barhan Farm 1-1",
+     "namePt": "Fazenda Barhan nº. 1-1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -7123,11 +7798,19 @@
      "cycleMin": 7.4,
      "cratesDay": 778,
      "inUse": true,
-     "namePt": "Fazenda Barhan nº. 1-1"
+     "node": "1351",
+     "connPath": [
+      {
+       "id": "1351",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "3305",
      "name": "Sand Grain Bazaar 2-2",
+     "namePt": "Bazar Grão de Areia nº 2-2",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -7137,11 +7820,14 @@
      "cycleMin": 6.25,
      "cratesDay": 921,
      "inUse": true,
-     "namePt": "Bazar Grão de Areia nº 2-2"
+     "node": "1319",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3302",
      "name": "Sand Grain Bazaar 1-2",
+     "namePt": "Bazar Grão de Areia nº 1-2",
      "cp": 2,
      "packs": [
       "Cogumelo"
@@ -7150,7 +7836,9 @@
      "cycleMin": 6.69,
      "cratesDay": 861,
      "inUse": true,
-     "namePt": "Bazar Grão de Areia nº 1-2"
+     "node": "1319",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 4,
@@ -7162,9 +7850,9 @@
      {
       "house": "3307",
       "name": "Sand Grain Bazaar 3-1",
+      "namePt": "Bazar Grão de Areia nº 3-1",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Bazar Grão de Areia nº 3-1"
+      "slots": 1
      }
     ],
     "cp": 1,
@@ -7177,6 +7865,11 @@
    "workers": 4,
    "n_staffed": 4,
    "cp_total": 7,
+   "conn_cp": 2,
+   "conn_nodes": [
+    "1351"
+   ],
+   "base_node": "1319",
    "crates_day": 3363,
    "transport": {
     "Valencia": {
@@ -7679,6 +8372,7 @@
     {
      "house": "3175",
      "name": "Altas Farm 1-2",
+     "namePt": "Fazenda Altas nº. 1-2",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -7688,11 +8382,19 @@
      "cycleMin": 6.56,
      "cratesDay": 877,
      "inUse": true,
-     "namePt": "Fazenda Altas nº. 1-2"
+     "node": "1353",
+     "connPath": [
+      {
+       "id": "1353",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     },
     {
      "house": "3174",
      "name": "Altas Farm 1-1",
+     "namePt": "Fazenda Altas nº. 1-1",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -7701,7 +8403,14 @@
      "cycleMin": 6.68,
      "cratesDay": 862,
      "inUse": true,
-     "namePt": "Fazenda Altas nº. 1-1"
+     "node": "1353",
+     "connPath": [
+      {
+       "id": "1353",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 2
     }
    ],
    "n_workshops": 2,
@@ -7713,9 +8422,9 @@
      {
       "house": "3171",
       "name": "Ancado Inner Harbor 1-1",
+      "namePt": "Porto Interior de Ancado nº. 1-1",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Porto Interior de Ancado nº. 1-1"
+      "slots": 1
      }
     ],
     "cp": 1,
@@ -7728,6 +8437,11 @@
    "workers": 2,
    "n_staffed": 2,
    "cp_total": 4,
+   "conn_cp": 2,
+   "conn_nodes": [
+    "1353"
+   ],
+   "base_node": "1343",
    "crates_day": 1739,
    "transport": {
     "Valencia": {
@@ -8230,6 +8944,7 @@
     {
      "house": "3552",
      "name": "Viv Foretta Hamlet 2",
+     "namePt": "Cabana de Viv Foretta N° 2",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -8239,11 +8954,14 @@
      "cycleMin": 13.8,
      "cratesDay": 418,
      "inUse": true,
-     "namePt": "Cabana de Viv Foretta N° 2"
+     "node": "1610",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3551",
      "name": "Viv Foretta Hamlet 1",
+     "namePt": "Cabana de Viv Foretta N° 1",
      "cp": 2,
      "packs": [
       "Cogumelo"
@@ -8252,7 +8970,9 @@
      "cycleMin": 13.79,
      "cratesDay": 418,
      "inUse": false,
-     "namePt": "Cabana de Viv Foretta N° 1"
+     "node": "1610",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 2,
@@ -8271,6 +8991,9 @@
    "workers": 1,
    "n_staffed": 1,
    "cp_total": 4,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "1610",
    "crates_day": 418,
    "transport": {
     "Valencia": {
@@ -8773,6 +9496,7 @@
     {
      "house": "3519",
      "name": "Grána 17",
+     "namePt": "Graná N° 17",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -8782,11 +9506,14 @@
      "cycleMin": 6.64,
      "cratesDay": 868,
      "inUse": true,
-     "namePt": "Graná N° 17"
+     "node": "1623",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3518",
      "name": "Grána 16",
+     "namePt": "Graná N° 16",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -8796,11 +9523,14 @@
      "cycleMin": 6.56,
      "cratesDay": 879,
      "inUse": true,
-     "namePt": "Graná N° 16"
+     "node": "1623",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3508",
      "name": "Grána 7",
+     "namePt": "Graná N° 7",
      "cp": 2,
      "packs": [
       "Cogumelo"
@@ -8809,7 +9539,9 @@
      "cycleMin": 6.32,
      "cratesDay": 911,
      "inUse": true,
-     "namePt": "Graná N° 7"
+     "node": "1623",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 3,
@@ -8820,9 +9552,9 @@
      {
       "house": "3511",
       "name": "Grána 10",
+      "namePt": "Graná N° 10",
       "cp": 2,
-      "slots": 4,
-      "namePt": "Graná N° 10"
+      "slots": 4
      }
     ],
     "chosen": [],
@@ -8836,6 +9568,9 @@
    "workers": 5,
    "n_staffed": 3,
    "cp_total": 6,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "1623",
    "crates_day": 2658,
    "transport": {
     "Valencia": {
@@ -9338,6 +10073,7 @@
     {
      "house": "3617",
      "name": "Khimut Lumber Camp 1, 2F",
+     "namePt": "Madeireira de Himut N° 1, 2° Andar",
      "cp": 3,
      "packs": [
       "Colheita",
@@ -9347,11 +10083,27 @@
      "cycleMin": 22.09,
      "cratesDay": 261,
      "inUse": true,
-     "namePt": "Madeireira de Himut N° 1, 2° Andar"
+     "node": "1666",
+     "connPath": [
+      {
+       "id": "1659",
+       "cp": 2
+      },
+      {
+       "id": "1668",
+       "cp": 2
+      },
+      {
+       "id": "1666",
+       "cp": 2
+      }
+     ],
+     "nodeCp": 6
     },
     {
      "house": "3614",
      "name": "Dormann Lumber Camp 1",
+     "namePt": "Madeireira de Dormann N° 1",
      "cp": 3,
      "packs": [
       "Colheita",
@@ -9361,7 +10113,26 @@
      "cycleMin": 24.49,
      "cratesDay": 235,
      "inUse": true,
-     "namePt": "Madeireira de Dormann N° 1"
+     "node": "1665",
+     "connPath": [
+      {
+       "id": "1659",
+       "cp": 2
+      },
+      {
+       "id": "1656",
+       "cp": 2
+      },
+      {
+       "id": "1664",
+       "cp": 1
+      },
+      {
+       "id": "1665",
+       "cp": 1
+      }
+     ],
+     "nodeCp": 6
     }
    ],
    "n_workshops": 2,
@@ -9373,9 +10144,9 @@
      {
       "house": "3613",
       "name": "Duvencrune 11, 2F",
+      "namePt": "Duvencrune N° 11 2° Andar",
       "cp": 3,
-      "slots": 1,
-      "namePt": "Duvencrune N° 11 2° Andar"
+      "slots": 1
      }
     ],
     "cp": 3,
@@ -9388,6 +10159,16 @@
    "workers": 2,
    "n_staffed": 2,
    "cp_total": 9,
+   "conn_cp": 10,
+   "conn_nodes": [
+    "1656",
+    "1659",
+    "1664",
+    "1665",
+    "1666",
+    "1668"
+   ],
+   "base_node": "1649",
    "crates_day": 496,
    "transport": {
     "Valencia": {
@@ -9890,6 +10671,7 @@
     {
      "house": "3818",
      "name": "Eilton 3",
+     "namePt": "Vila Eil Nº3",
      "cp": 3,
      "packs": [
       "Cogumelo"
@@ -9898,7 +10680,9 @@
      "cycleMin": 5.81,
      "cratesDay": 992,
      "inUse": true,
-     "namePt": "Vila Eil Nº3"
+     "node": "1750",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 1,
@@ -9917,6 +10701,9 @@
    "workers": 2,
    "n_staffed": 1,
    "cp_total": 3,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "1750",
    "crates_day": 992,
    "transport": {
     "Valencia": {
@@ -10419,6 +11206,7 @@
     {
      "house": "3829",
      "name": "Morning Light Dalbeol 3",
+     "namePt": "Terra do Amanhecer Dhal-Bohl N° 3",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -10428,7 +11216,9 @@
      "cycleMin": 5.47,
      "cratesDay": 1054,
      "inUse": true,
-     "namePt": "Terra do Amanhecer Dhal-Bohl N° 3"
+     "node": "1781",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 1,
@@ -10447,6 +11237,9 @@
    "workers": 1,
    "n_staffed": 1,
    "cp_total": 1,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "1781",
    "crates_day": 1054,
    "transport": {
     "Valencia": {
@@ -10949,6 +11742,7 @@
     {
      "house": "3823",
      "name": "Morning Light Nampo 1",
+     "namePt": "Terra do Amanhecer Nam-Po N°1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -10958,11 +11752,14 @@
      "cycleMin": 6.27,
      "cratesDay": 919,
      "inUse": true,
-     "namePt": "Terra do Amanhecer Nam-Po N°1"
+     "node": "1785",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3825",
      "name": "Morning Light Nampo 3",
+     "namePt": "Terra do Amanhecer Dhal-Bohl N° 3",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -10971,7 +11768,9 @@
      "cycleMin": 5.95,
      "cratesDay": 969,
      "inUse": true,
-     "namePt": "Terra do Amanhecer Dhal-Bohl N° 3"
+     "node": "1785",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 2,
@@ -10983,9 +11782,9 @@
      {
       "house": "3826",
       "name": "Morning Light Nampo 4",
+      "namePt": "Terra do Amanhecer Dhal-Bohl N° 4",
       "cp": 1,
-      "slots": 4,
-      "namePt": "Terra do Amanhecer Dhal-Bohl N° 4"
+      "slots": 4
      }
     ],
     "cp": 1,
@@ -10998,6 +11797,9 @@
    "workers": 5,
    "n_staffed": 2,
    "cp_total": 3,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "1785",
    "crates_day": 1888,
    "transport": {
     "Valencia": {
@@ -11500,6 +12302,7 @@
     {
      "house": "3836",
      "name": "Morning Light Nopsae 5",
+     "namePt": "Terra do Amanhecer Nop-Se N° 5",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -11508,11 +12311,14 @@
      "cycleMin": 5.75,
      "cratesDay": 1002,
      "inUse": true,
-     "namePt": "Terra do Amanhecer Nop-Se N° 5"
+     "node": "1795",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3832",
      "name": "Morning Light Nopsae 1",
+     "namePt": "Terra do Amanhecer Nop-Se N° 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -11522,7 +12328,9 @@
      "cycleMin": 5.17,
      "cratesDay": 1114,
      "inUse": true,
-     "namePt": "Terra do Amanhecer Nop-Se N° 1"
+     "node": "1795",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 2,
@@ -11534,9 +12342,9 @@
      {
       "house": "3835",
       "name": "Morning Light Nopsae 4",
+      "namePt": "Terra do Amanhecer Nop-Se N° 4",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Terra do Amanhecer Nop-Se N° 4"
+      "slots": 1
      }
     ],
     "cp": 1,
@@ -11549,6 +12357,9 @@
    "workers": 2,
    "n_staffed": 2,
    "cp_total": 3,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "1795",
    "crates_day": 2117,
    "transport": {
     "Valencia": {
@@ -12051,6 +12862,7 @@
     {
      "house": "3863",
      "name": "Morning Light Yukjo Street 4",
+     "namePt": "Terra do Amanhecer Avenida Yukjo N° 4",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -12059,7 +12871,9 @@
      "cycleMin": 5.39,
      "cratesDay": 1068,
      "inUse": true,
-     "namePt": "Terra do Amanhecer Avenida Yukjo N° 4"
+     "node": "1853",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 1,
@@ -12078,6 +12892,9 @@
    "workers": 1,
    "n_staffed": 1,
    "cp_total": 1,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "1853",
    "crates_day": 1068,
    "transport": {
     "Valencia": {
@@ -12580,6 +13397,7 @@
     {
      "house": "3851",
      "name": "Morning Light Godu Village 3",
+     "namePt": "Terra do Amanhecer Aldeia Godu N° 3",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -12589,11 +13407,14 @@
      "cycleMin": 5.34,
      "cratesDay": 1078,
      "inUse": false,
-     "namePt": "Terra do Amanhecer Aldeia Godu N° 3"
+     "node": "1857",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3850",
      "name": "Morning Light Godu Village 2",
+     "namePt": "Terra do Amanhecer Aldeia Godu N° 2",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -12603,11 +13424,14 @@
      "cycleMin": 5.63,
      "cratesDay": 1023,
      "inUse": true,
-     "namePt": "Terra do Amanhecer Aldeia Godu N° 2"
+     "node": "1857",
+     "connPath": [],
+     "nodeCp": 0
     },
     {
      "house": "3849",
      "name": "Morning Light Godu Village 1",
+     "namePt": "Terra do Amanhecer Aldeia Godu N° 1",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -12617,7 +13441,9 @@
      "cycleMin": 5.38,
      "cratesDay": 1070,
      "inUse": true,
-     "namePt": "Terra do Amanhecer Aldeia Godu N° 1"
+     "node": "1857",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 3,
@@ -12629,9 +13455,9 @@
      {
       "house": "3853",
       "name": "Morning Light Unjongga Street 2",
+      "namePt": "Terra do Amanhecer Rua Unjong-Ga N° 2",
       "cp": 1,
-      "slots": 1,
-      "namePt": "Terra do Amanhecer Rua Unjong-Ga N° 2"
+      "slots": 1
      }
     ],
     "cp": 1,
@@ -12644,6 +13470,9 @@
    "workers": 2,
    "n_staffed": 2,
    "cp_total": 4,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "1857",
    "crates_day": 2093,
    "transport": {
     "Valencia": {
@@ -13146,6 +13975,7 @@
     {
      "house": "3857",
      "name": "Morning Light Bukpo 4",
+     "namePt": "Terra do Amanhecer Porto Norte N° 4",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -13154,7 +13984,9 @@
      "cycleMin": 5.48,
      "cratesDay": 1050,
      "inUse": true,
-     "namePt": "Terra do Amanhecer Porto Norte N° 4"
+     "node": "1858",
+     "connPath": [],
+     "nodeCp": 0
     }
    ],
    "n_workshops": 1,
@@ -13173,6 +14005,9 @@
    "workers": 1,
    "n_staffed": 1,
    "cp_total": 1,
+   "conn_cp": 0,
+   "conn_nodes": [],
+   "base_node": "1858",
    "crates_day": 1050,
    "transport": {
     "Valencia": {
