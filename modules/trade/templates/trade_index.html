@@ -493,26 +493,7 @@
             min-width: 0;
             flex: 1;
         }
-        .dest-pick select {
-            background: var(--bg-base);
-            border: 1px solid var(--glass-border);
-            border-radius: 8px;
-            color: var(--text-main);
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 500;
-            padding: 4px 8px;
-            max-width: 100%;
-            min-width: 0;
-            cursor: pointer;
-            outline: none;
-        }
-        .dest-pick select option {
-            font-family: inherit;
-            font-size: inherit;
-        }
-        .dest-pick select:hover { border-color: rgba(56, 189, 248, 0.5); }
-        .dest-pick select:focus { border-color: rgba(56, 189, 248, 0.7); }
+        .dest-pick svg.truck-icon { width: 13px; height: 13px; color: var(--muted); flex-shrink: 0; }
         .dest-pick .dest-time {
             color: var(--accent-gold);
             font-weight: 700;
@@ -529,6 +510,80 @@
             gap: 0.25rem;
         }
         .dest-best svg { width: 11px; height: 11px; }
+
+        /* Dropdown customizado de destino (mesma fonte no trigger e nas opções) */
+        .dest-dd {
+            position: relative;
+            min-width: 0;
+            flex: 1;
+        }
+        .dest-dd-trigger {
+            width: 100%;
+            background: var(--bg-base);
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            outline: none;
+            transition: border-color 0.15s;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .dest-dd-trigger span { overflow: hidden; text-overflow: ellipsis; }
+        .dest-dd-trigger svg {
+            color: var(--muted);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+            width: 14px;
+            height: 14px;
+        }
+        .dest-dd.open .dest-dd-trigger { border-color: rgba(56, 189, 248, 0.7); }
+        .dest-dd.open .dest-dd-trigger svg { transform: rotate(180deg); }
+        .dest-dd-menu {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: #0f172a;
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            max-height: 240px;
+            overflow-y: auto;
+            display: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+        }
+        .dest-dd.open .dest-dd-menu { display: block; }
+        .dest-dd-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.6rem;
+            padding: 0.45rem 0.7rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .dest-dd-option .o-time { color: var(--muted); font-weight: 600; white-space: nowrap; }
+        .dest-dd-option:hover,
+        .dest-dd-option.active {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-primary);
+        }
+        .dest-dd-option.active .o-time { color: var(--accent-primary); }
+        .dest-dd-menu::-webkit-scrollbar { width: 8px; }
+        .dest-dd-menu::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -832,17 +887,26 @@
                     <span class="ws-meta">${w.cratesDay}/d</span>
                 </div>`).join('');
 
-            // Destinos de comércio: dropdown com as melhores opções (mais EXP primeiro)
+            // Destinos de comércio: dropdown customizado (mesma fonte no valor e nas opções)
             const dests = (t.destinations || []).slice(0, 6);
             let destBlock;
             if (dests.length) {
                 const opts = dests.map((d, i) =>
-                    `<option value="${i}" ${d.best ? 'selected' : ''}>${d.namePt} &middot; ${hoursLabel(d.h)}</option>`
+                    `<div class="dest-dd-option ${d.best ? 'active' : ''}" data-i="${i}">
+                        <span>${d.namePt}</span>
+                        <span class="o-time">${hoursLabel(d.h)}</span>
+                    </div>`
                 ).join('');
                 destBlock = `
                     <div class="dest-pick" data-town="${t.name}">
-                        <i data-lucide="truck"></i>
-                        <select class="dest-select" title="Destino de entrega (mais EXP primeiro)">${opts}</select>
+                        <i data-lucide="truck" class="truck-icon"></i>
+                        <div class="dest-dd">
+                            <button type="button" class="dest-dd-trigger" title="Destino de entrega (mais EXP primeiro)">
+                                <span class="dest-dd-value">${dests[0].namePt}</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="dest-dd-menu">${opts}</div>
+                        </div>
                         <span class="dest-time">${hoursLabel(dests[0].h)}</span>
                         <span class="dest-best"><i data-lucide="sparkles"></i>melhor EXP</span>
                     </div>`;
@@ -944,14 +1008,45 @@
             townGrid.querySelectorAll('.town-eye').forEach(btn => {
                 btn.addEventListener('click', () => toggleTown(btn));
             });
-            townGrid.querySelectorAll('.dest-select').forEach(sel => {
-                sel.addEventListener('change', () => {
-                    const pick = sel.closest('.dest-pick');
-                    const t = townsData.find(x => x.name === pick.dataset.town);
-                    if (!t) return;
-                    const dst = (t.destinations || [])[Number(sel.value)];
-                    if (!dst) return;
-                    pick.querySelector('.dest-time').textContent = hoursLabel(dst.h);
+            townGrid.querySelectorAll('.dest-pick').forEach(pick => {
+                const dd = pick.querySelector('.dest-dd');
+                const trigger = pick.querySelector('.dest-dd-trigger');
+                const menu = pick.querySelector('.dest-dd-menu');
+                const valueEl = pick.querySelector('.dest-dd-value');
+                const timeEl = pick.querySelector('.dest-time');
+                const bestEl = pick.querySelector('.dest-best');
+                const town = pick.dataset.town;
+
+                function close() {
+                    dd.classList.remove('open');
+                    document.removeEventListener('click', outside);
+                }
+                function outside(e) {
+                    if (!dd.contains(e.target)) close();
+                }
+
+                trigger.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = dd.classList.contains('open');
+                    close();
+                    if (!isOpen) {
+                        dd.classList.add('open');
+                        document.addEventListener('click', outside);
+                    }
+                });
+
+                menu.querySelectorAll('.dest-dd-option').forEach(opt => {
+                    opt.addEventListener('click', () => {
+                        const t = townsData.find(x => x.name === town);
+                        const dst = t && (t.destinations || [])[Number(opt.dataset.i)];
+                        if (!dst) return;
+                        valueEl.textContent = dst.namePt;
+                        timeEl.textContent = hoursLabel(dst.h);
+                        menu.querySelectorAll('.dest-dd-option').forEach(o =>
+                            o.classList.toggle('active', o.dataset.i === opt.dataset.i));
+                        bestEl.style.display = dst.best ? '' : 'none';
+                        close();
+                    });
                 });
             });
         }
