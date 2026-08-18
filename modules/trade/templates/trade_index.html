@@ -391,7 +391,7 @@
             const rows = list.map(c => `
                 <tr>
                     <td>
-                        <div class="crate-name">${c.name}</div>
+                        <div class="crate-name">${c.namePt || c.name}</div>
                         <div class="crate-mats">${c.materials.map(m => `<span class="mat">${m.qty}&times; ${m.namePt || m.name}</span>`).join('')}</div>
                     </td>
                     <td>${badgeHtml(c.typePt)}</td>
@@ -450,7 +450,7 @@
             const top = crates[0];
             if (top) {
                 document.getElementById('sc-top').textContent = fmtCompact(Math.round(top.base * 2.5));
-                document.getElementById('sc-top-name').textContent = top.name;
+                document.getElementById('sc-top-name').textContent = top.namePt || top.name;
             }
         }
 

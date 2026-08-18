@@ -1,0 +1,348 @@
+{
+ "cities": [
+  {
+   "id": 1,
+   "name": "Velia",
+   "namePt": "Velia",
+   "x": 10069.5,
+   "y": 74166.3,
+   "type": "City"
+  },
+  {
+   "id": 2,
+   "name": "Western Guard Camp",
+   "namePt": "Acamp. de Guarda do Oeste",
+   "x": -59267.3,
+   "y": 39882.5,
+   "type": "Town"
+  },
+  {
+   "id": 61,
+   "name": "Olvia",
+   "namePt": "Olvia",
+   "x": -142268.0,
+   "y": 126063.0,
+   "type": "Town"
+  },
+  {
+   "id": 301,
+   "name": "Heidel",
+   "namePt": "Heidel",
+   "x": 35842.0,
+   "y": -35802.3,
+   "type": "City"
+  },
+  {
+   "id": 302,
+   "name": "Glish",
+   "namePt": "Glish",
+   "x": -17080.0,
+   "y": -120955.0,
+   "type": "Town"
+  },
+  {
+   "id": 601,
+   "name": "Calpheon",
+   "namePt": "Calpheon",
+   "x": -249688.0,
+   "y": -53111.5,
+   "type": "City"
+  },
+  {
+   "id": 602,
+   "name": "Keplan",
+   "namePt": "Keplan",
+   "x": -152284.0,
+   "y": -146923.0,
+   "type": "Town"
+  },
+  {
+   "id": 603,
+   "name": "Florin",
+   "namePt": "Florin",
+   "x": -166912.0,
+   "y": 52937.7,
+   "type": "Town"
+  },
+  {
+   "id": 604,
+   "name": "Port Epheria",
+   "namePt": "Porto de Epheria",
+   "x": -351453.0,
+   "y": 41756.0,
+   "type": "Town"
+  },
+  {
+   "id": 608,
+   "name": "Trent",
+   "namePt": "Trent",
+   "x": -378010.0,
+   "y": -229988.0,
+   "type": "Town"
+  },
+  {
+   "id": 609,
+   "name": "Behr",
+   "namePt": "Behr",
+   "x": -286407.0,
+   "y": -239541.0,
+   "type": "Town"
+  },
+  {
+   "id": 628,
+   "name": "Northern Wheat Plantation",
+   "namePt": "Plantação de Trigo do Norte",
+   "x": -214474.0,
+   "y": -5728.0,
+   "type": "Town"
+  },
+  {
+   "id": 1001,
+   "name": "Lema Island",
+   "namePt": "Ilha de Lema",
+   "x": -56616.4,
+   "y": 392036.0,
+   "type": "Town"
+  },
+  {
+   "id": 1002,
+   "name": "Iliya Island",
+   "namePt": "Ilha de Iliya",
+   "x": 152406.0,
+   "y": 297512.0,
+   "type": "Town"
+  },
+  {
+   "id": 1101,
+   "name": "Altinova",
+   "namePt": "Altinova",
+   "x": 367322.0,
+   "y": -69079.4,
+   "type": "City"
+  },
+  {
+   "id": 1141,
+   "name": "Tarif",
+   "namePt": "Tarif",
+   "x": 226814.0,
+   "y": -73831.4,
+   "type": "Town"
+  },
+  {
+   "id": 1145,
+   "name": "Abun",
+   "namePt": "Abun",
+   "x": 384252.0,
+   "y": -141575.0,
+   "type": "Town"
+  },
+  {
+   "id": 1153,
+   "name": "Kusha",
+   "namePt": "Kusha",
+   "x": 229641.0,
+   "y": 68121.2,
+   "type": "Town"
+  },
+  {
+   "id": 1301,
+   "name": "Valencia City",
+   "namePt": "Capital de Valência",
+   "x": 1026110.0,
+   "y": 199132.0,
+   "type": "City"
+  },
+  {
+   "id": 1314,
+   "name": "Shakatu",
+   "namePt": "Shakatu",
+   "x": 579545.0,
+   "y": 274679.0,
+   "type": "Town"
+  },
+  {
+   "id": 1319,
+   "name": "Sand Grain Bazaar",
+   "namePt": "Bazar Grão de Areia",
+   "x": 590881.0,
+   "y": 48856.9,
+   "type": "Town"
+  },
+  {
+   "id": 1343,
+   "name": "Ancado Inner Harbor",
+   "namePt": "Porto Interior de Ancado",
+   "x": 976980.0,
+   "y": 340744.0,
+   "type": "Town"
+  },
+  {
+   "id": 1380,
+   "name": "Arehaza",
+   "namePt": "Arehaza",
+   "x": 1267170.0,
+   "y": 177948.0,
+   "type": "City"
+  },
+  {
+   "id": 1381,
+   "name": "Muiquun",
+   "namePt": "Muiquun",
+   "x": 1092940.0,
+   "y": -135983.0,
+   "type": "Town"
+  },
+  {
+   "id": 1604,
+   "name": "Old Wisdom Tree",
+   "namePt": "Antiga Árvore da Sabedoria",
+   "x": -363066.0,
+   "y": -443196.0,
+   "type": "Town"
+  },
+  {
+   "id": 1620,
+   "name": "Tooth Fairy Cabin",
+   "namePt": "Cabana das Fadas dos Dentes",
+   "x": -540580.0,
+   "y": -336204.0,
+   "type": "Town"
+  },
+  {
+   "id": 1623,
+   "name": "Grána",
+   "namePt": "Graná",
+   "x": -513575.0,
+   "y": -458652.0,
+   "type": "City"
+  },
+  {
+   "id": 1649,
+   "name": "Duvencrune",
+   "namePt": "Duvencrune",
+   "x": -48357.4,
+   "y": -404589.0,
+   "type": "City"
+  },
+  {
+   "id": 1651,
+   "name": "UnKnown",
+   "namePt": "Duvencrune",
+   "x": -16600.6,
+   "y": -427630.0,
+   "type": "City"
+  },
+  {
+   "id": 1691,
+   "name": "O'draxxia",
+   "namePt": "Odraxia",
+   "x": -156718.0,
+   "y": -598990.0,
+   "type": "City"
+  },
+  {
+   "id": 1727,
+   "name": "Oquilla's Eye",
+   "namePt": "Olho da Okilua",
+   "x": -87328.4,
+   "y": 626901.0,
+   "type": "City"
+  },
+  {
+   "id": 1750,
+   "name": "Eilton",
+   "namePt": "Vila Eil",
+   "x": 170079.0,
+   "y": -398472.0,
+   "type": "City"
+  },
+  {
+   "id": 1781,
+   "name": "Dalbeol Village",
+   "namePt": "Vilarejo Dhal-Bohl",
+   "x": -1130090.0,
+   "y": 1271810.0,
+   "type": "City"
+  },
+  {
+   "id": 1785,
+   "name": "Nampo's Moodle Village",
+   "namePt": "Vilarejo Mu-Duh de Nam-Po",
+   "x": -1312270.0,
+   "y": 1136060.0,
+   "type": "City"
+  },
+  {
+   "id": 1795,
+   "name": "Nopsae's Byeot County",
+   "namePt": "Concelho Byot",
+   "x": -1031140.0,
+   "y": 1298580.0,
+   "type": "City"
+  },
+  {
+   "id": 1834,
+   "name": "Asparkan",
+   "namePt": "Asparkan",
+   "x": 278339.0,
+   "y": -196126.0,
+   "type": "City"
+  },
+  {
+   "id": 1843,
+   "name": "Muzgar",
+   "namePt": "Muzgar",
+   "x": 360002.0,
+   "y": -317810.0,
+   "type": "Town"
+  },
+  {
+   "id": 1850,
+   "name": "Velandir",
+   "namePt": "Vila Velandir",
+   "x": 386345.0,
+   "y": -391883.0,
+   "type": "Town"
+  },
+  {
+   "id": 1852,
+   "name": "Seoul",
+   "namePt": "Seul",
+   "x": -1419520.0,
+   "y": 1333790.0,
+   "type": "City"
+  },
+  {
+   "id": 1853,
+   "name": "Yukjo Street",
+   "namePt": "Avenida Yukjo",
+   "x": -1472040.0,
+   "y": 1337990.0,
+   "type": "Town"
+  },
+  {
+   "id": 1857,
+   "name": "Godu Village",
+   "namePt": "Aldeia Godu",
+   "x": -1419150.0,
+   "y": 1239190.0,
+   "type": "Town"
+  },
+  {
+   "id": 1858,
+   "name": "Bukpo",
+   "namePt": "Porto Norte",
+   "x": -1342900.0,
+   "y": 1509910.0,
+   "type": "Town"
+  },
+  {
+   "id": 2001,
+   "name": "Hakinza Sanctuary",
+   "namePt": "Templo Hakinza",
+   "x": 537251.0,
+   "y": 477184.0,
+   "type": "City"
+  }
+ ]
+}
