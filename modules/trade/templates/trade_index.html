@@ -921,7 +921,7 @@
                             <div class="dest-dd-menu">${opts}</div>
                         </div>
                         <span class="dest-time">${hoursLabel(dests[0].h)}</span>
-                        <span class="dest-exp">${dests[0].expPct || 100}% EXP</span>
+                        <span class="dest-exp">${dests[0].expPct || 100}% dist.</span>
                     </div>`;
             } else {
                 destBlock = `<span class="ship"><i data-lucide="truck"></i>sem destinos</span>`;
@@ -1057,7 +1057,7 @@
                         if (!dst) return;
                         valueEl.textContent = dst.namePt;
                         timeEl.textContent = hoursLabel(dst.h);
-                        if (expEl) expEl.textContent = `${dst.expPct || 100}% EXP`;
+                        if (expEl) expEl.textContent = `${dst.expPct || 100}% dist.`;
                         menu.querySelectorAll('.dest-dd-option').forEach(o =>
                             o.classList.toggle('active', o.dataset.i === opt.dataset.i));
                         close();
