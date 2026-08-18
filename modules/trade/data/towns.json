@@ -1,0 +1,2593 @@
+{
+ "generatedFrom": "Workerman game db + gpw v2.15 + bdocodex",
+ "params": {
+  "workerSpeed": 150,
+  "workerMspd": 7.5,
+  "packSkill": 3,
+  "freeSlots": 1,
+  "cycleBaseMin": 5.0
+ },
+ "towns": [
+  {
+   "affTown": 5,
+   "gpwId": 1,
+   "name": "Velia",
+   "namePt": "Velia",
+   "x": 10069.5,
+   "y": 74166.3,
+   "workshops": [
+    {
+     "house": "2125",
+     "name": "Balenos 6-1, Toscani Farm",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 3.78,
+     "cycleMin": 8.78,
+     "cratesDay": 656,
+     "inUse": true
+    },
+    {
+     "house": "2120",
+     "name": "Balenos 3-1, Loggia Farm",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.28,
+     "cycleMin": 7.28,
+     "cratesDay": 791,
+     "inUse": true
+    },
+    {
+     "house": "2118",
+     "name": "Balenos 4-1, DelLucci Farm",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.22,
+     "cycleMin": 7.22,
+     "cratesDay": 798,
+     "inUse": true
+    },
+    {
+     "house": "2116",
+     "name": "Balenos 1-1, Bartali Farm",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.19,
+     "cycleMin": 6.19,
+     "cratesDay": 931,
+     "inUse": true
+    },
+    {
+     "house": "2114",
+     "name": "Balenos 2-1, Finto Farm",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.54,
+     "cycleMin": 6.54,
+     "cratesDay": 881,
+     "inUse": true
+    },
+    {
+     "house": "2104",
+     "name": "Velia 5-2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.48,
+     "cycleMin": 5.48,
+     "cratesDay": 1050,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 6,
+   "n_colheita": 5,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "2111",
+      "name": "Velia 1, Rm. 1",
+      "cp": 1,
+      "slots": 1
+     },
+     {
+      "house": "2112",
+      "name": "Velia 1, Rm. 2",
+      "cp": 1,
+      "slots": 2
+     },
+     {
+      "house": "2113",
+      "name": "Velia 1, Rm. 3",
+      "cp": 1,
+      "slots": 2
+     }
+    ],
+    "cp": 3,
+    "slots": 5,
+    "base_slots": 0,
+    "target": 5,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 6,
+   "n_staffed": 6,
+   "cp_total": 10,
+   "crates_day": 5107,
+   "transport": {
+    "Valencia": {
+     "min": 161,
+     "h": 2.7
+    },
+    "Yukjo (LoML)": {
+     "min": 306,
+     "h": 5.1
+    },
+    "Dalbeol (LoML)": {
+     "min": 260,
+     "h": 4.3
+    }
+   }
+  },
+  {
+   "affTown": 32,
+   "gpwId": 301,
+   "name": "Heidel",
+   "namePt": "Heidel",
+   "x": 35842.0,
+   "y": -35802.3,
+   "workshops": [
+    {
+     "house": "2249",
+     "name": "Serendia 5, Lynch Ranch",
+     "cp": 1,
+     "packs": [
+      "Cogumelo",
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 5.93,
+     "cycleMin": 10.93,
+     "cratesDay": 527,
+     "inUse": true
+    },
+    {
+     "house": "2221",
+     "name": "Heidel 4-2, 2F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.24,
+     "cycleMin": 5.24,
+     "cratesDay": 1098,
+     "inUse": true
+    },
+    {
+     "house": "2219",
+     "name": "Heidel 9-1, 2F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.53,
+     "cycleMin": 5.53,
+     "cratesDay": 1042,
+     "inUse": true
+    },
+    {
+     "house": "2218",
+     "name": "Serendia 3, Elda Farm",
+     "cp": 1,
+     "packs": [
+      "Cogumelo",
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.61,
+     "cycleMin": 7.61,
+     "cratesDay": 757,
+     "inUse": true
+    },
+    {
+     "house": "2216",
+     "name": "Serendia 2-1, 2F, Costa Farm",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.94,
+     "cycleMin": 6.94,
+     "cratesDay": 830,
+     "inUse": true
+    },
+    {
+     "house": "2215",
+     "name": "Serendia 2-1, 1F, Costa Farm",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.92,
+     "cycleMin": 6.92,
+     "cratesDay": 832,
+     "inUse": true
+    },
+    {
+     "house": "2213",
+     "name": "Serendia 4, Moretti Plantation",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 3.0,
+     "cycleMin": 8.0,
+     "cratesDay": 720,
+     "inUse": true
+    },
+    {
+     "house": "2227",
+     "name": "Heidel 4-4",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.21,
+     "cycleMin": 5.21,
+     "cratesDay": 1105,
+     "inUse": true
+    },
+    {
+     "house": "2225",
+     "name": "Heidel 3-3",
+     "cp": 1,
+     "packs": [
+      "Cogumelo",
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.19,
+     "cycleMin": 5.19,
+     "cratesDay": 1110,
+     "inUse": true
+    },
+    {
+     "house": "2203",
+     "name": "Serendia 1-1, 1F, Alejandro Farm",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 2.85,
+     "cycleMin": 7.85,
+     "cratesDay": 734,
+     "inUse": true
+    },
+    {
+     "house": "2162",
+     "name": "Heidel 4-1, 2F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.39,
+     "cycleMin": 5.39,
+     "cratesDay": 1069,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 11,
+   "n_colheita": 9,
+   "n_cogumelo": 5,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "2168",
+      "name": "Heidel 9-1, 1F",
+      "cp": 1,
+      "slots": 0
+     },
+     {
+      "house": "2170",
+      "name": "Heidel 9-2, 1F",
+      "cp": 1,
+      "slots": 1
+     },
+     {
+      "house": "2171",
+      "name": "Heidel 9-2, 2F",
+      "cp": 1,
+      "slots": 1
+     },
+     {
+      "house": "2200",
+      "name": "Heidel 8-1, Rm. 3",
+      "cp": 2,
+      "slots": 4
+     },
+     {
+      "house": "2201",
+      "name": "Heidel 8-1, Rm. 2",
+      "cp": 1,
+      "slots": 2
+     },
+     {
+      "house": "2202",
+      "name": "Heidel 8-1, Rm. 1",
+      "cp": 1,
+      "slots": 1
+     }
+    ],
+    "cp": 6,
+    "slots": 9,
+    "base_slots": 1,
+    "target": 9,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 11,
+   "n_staffed": 11,
+   "cp_total": 17,
+   "crates_day": 9823,
+   "transport": {
+    "Valencia": {
+     "min": 160,
+     "h": 2.7
+    },
+    "Yukjo (LoML)": {
+     "min": 321,
+     "h": 5.3
+    },
+    "Dalbeol (LoML)": {
+     "min": 276,
+     "h": 4.6
+    }
+   }
+  },
+  {
+   "affTown": 77,
+   "gpwId": 601,
+   "name": "Calpheon",
+   "namePt": "Calpheon",
+   "x": -249688.0,
+   "y": -53111.5,
+   "workshops": [
+    {
+     "house": "2813",
+     "name": "Gabino Farm 2, 2F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 3.04,
+     "cycleMin": 8.04,
+     "cratesDay": 716,
+     "inUse": true
+    },
+    {
+     "house": "2805",
+     "name": "Calpheon East Gate 2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.95,
+     "cycleMin": 6.95,
+     "cratesDay": 829,
+     "inUse": true
+    },
+    {
+     "house": "2801",
+     "name": "Calpheon East Gate 8, 1F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.56,
+     "cycleMin": 6.56,
+     "cratesDay": 879,
+     "inUse": true
+    },
+    {
+     "house": "2755",
+     "name": "Calpheon North Gate 4, 2F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.62,
+     "cycleMin": 6.62,
+     "cratesDay": 870,
+     "inUse": true
+    },
+    {
+     "house": "2754",
+     "name": "Calpheon North Gate 4, 1F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.61,
+     "cycleMin": 6.61,
+     "cratesDay": 871,
+     "inUse": true
+    },
+    {
+     "house": "2774",
+     "name": "Calpheon South Gate 3",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.54,
+     "cycleMin": 6.54,
+     "cratesDay": 880,
+     "inUse": true
+    },
+    {
+     "house": "2698",
+     "name": "Chapel 1-1, 2F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.4,
+     "cycleMin": 6.4,
+     "cratesDay": 901,
+     "inUse": true
+    },
+    {
+     "house": "2658",
+     "name": "Chapel 1-1, 1F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.39,
+     "cycleMin": 6.39,
+     "cratesDay": 902,
+     "inUse": true
+    },
+    {
+     "house": "2682",
+     "name": "Chapel 3-9, 1F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.4,
+     "cycleMin": 6.4,
+     "cratesDay": 899,
+     "inUse": true
+    },
+    {
+     "house": "2629",
+     "name": "Merchant Lane 3-5, 2F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.59,
+     "cycleMin": 5.59,
+     "cratesDay": 1030,
+     "inUse": true
+    },
+    {
+     "house": "2628",
+     "name": "Merchant Lane 3-5, 1F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.6,
+     "cycleMin": 5.6,
+     "cratesDay": 1028,
+     "inUse": true
+    },
+    {
+     "house": "2609",
+     "name": "Merchant Lane 2-3, 2F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.85,
+     "cycleMin": 5.85,
+     "cratesDay": 984,
+     "inUse": true
+    },
+    {
+     "house": "2565",
+     "name": "Noble Quarter 2-3, 1F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.33,
+     "cycleMin": 6.33,
+     "cratesDay": 910,
+     "inUse": true
+    },
+    {
+     "house": "2818",
+     "name": "Gabino Farm 5",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.54,
+     "cycleMin": 7.54,
+     "cratesDay": 764,
+     "inUse": true
+    },
+    {
+     "house": "2816",
+     "name": "Gabino Farm 4, 1F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.93,
+     "cycleMin": 7.93,
+     "cratesDay": 726,
+     "inUse": true
+    },
+    {
+     "house": "2505",
+     "name": "Market Street 6-2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.07,
+     "cycleMin": 6.07,
+     "cratesDay": 949,
+     "inUse": true
+    },
+    {
+     "house": "2514",
+     "name": "Market Street 7-3, 1F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo",
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.28,
+     "cycleMin": 6.28,
+     "cratesDay": 917,
+     "inUse": true
+    },
+    {
+     "house": "2493",
+     "name": "Market Street 5-2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.14,
+     "cycleMin": 6.14,
+     "cratesDay": 938,
+     "inUse": true
+    },
+    {
+     "house": "2488",
+     "name": "Market Street 4-5, 1F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.88,
+     "cycleMin": 5.88,
+     "cratesDay": 980,
+     "inUse": true
+    },
+    {
+     "house": "2405",
+     "name": "Slum 1-3, 1F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.66,
+     "cycleMin": 6.66,
+     "cratesDay": 865,
+     "inUse": true
+    },
+    {
+     "house": "2401",
+     "name": "Slum 1-1, 1F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.54,
+     "cycleMin": 6.54,
+     "cratesDay": 880,
+     "inUse": true
+    },
+    {
+     "house": "2424",
+     "name": "Slum 3-2",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.79,
+     "cycleMin": 6.79,
+     "cratesDay": 849,
+     "inUse": true
+    },
+    {
+     "house": "2374",
+     "name": "Northern Wheat Plantation 2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 3.97,
+     "cycleMin": 8.97,
+     "cratesDay": 642,
+     "inUse": true
+    },
+    {
+     "house": "2373",
+     "name": "Northern Wheat Plantation 1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 3.9,
+     "cycleMin": 8.9,
+     "cratesDay": 647,
+     "inUse": true
+    },
+    {
+     "house": "2367",
+     "name": "Dias Farm 2, 1F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 3.12,
+     "cycleMin": 8.12,
+     "cratesDay": 709,
+     "inUse": true
+    },
+    {
+     "house": "2366",
+     "name": "Dias Farm 1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 3.08,
+     "cycleMin": 8.08,
+     "cratesDay": 713,
+     "inUse": true
+    },
+    {
+     "house": "2363",
+     "name": "Florin 2-2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 7.6,
+     "cycleMin": 12.6,
+     "cratesDay": 457,
+     "inUse": true
+    },
+    {
+     "house": "2362",
+     "name": "Florin 2-1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 7.54,
+     "cycleMin": 12.54,
+     "cratesDay": 459,
+     "inUse": true
+    },
+    {
+     "house": "2331",
+     "name": "Florin 1-1, Rm. 1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 7.38,
+     "cycleMin": 12.38,
+     "cratesDay": 465,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 29,
+   "n_colheita": 16,
+   "n_cogumelo": 14,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "2372",
+      "name": "Falres Dirt Farm 1",
+      "cp": 1,
+      "slots": 2
+     },
+     {
+      "house": "2753",
+      "name": "Calpheon North Gate 3",
+      "cp": 1,
+      "slots": 2
+     },
+     {
+      "house": "2754",
+      "name": "Calpheon North Gate 4, 1F",
+      "cp": 1,
+      "slots": 1
+     },
+     {
+      "house": "2771",
+      "name": "Calpheon South Gate 1",
+      "cp": 1,
+      "slots": 2
+     },
+     {
+      "house": "2772",
+      "name": "Calpheon South Gate 2, 1F",
+      "cp": 1,
+      "slots": 2
+     },
+     {
+      "house": "2773",
+      "name": "Calpheon South Gate 2, 2F",
+      "cp": 2,
+      "slots": 4
+     },
+     {
+      "house": "2774",
+      "name": "Calpheon South Gate 3",
+      "cp": 1,
+      "slots": 0
+     },
+     {
+      "house": "2775",
+      "name": "Calpheon South Gate 4, 1F",
+      "cp": 1,
+      "slots": 2
+     },
+     {
+      "house": "2791",
+      "name": "Calpheon East Gate 1, 1F",
+      "cp": 1,
+      "slots": 1
+     },
+     {
+      "house": "2804",
+      "name": "Calpheon East Gate 1, 2F",
+      "cp": 1,
+      "slots": 2
+     },
+     {
+      "house": "2813",
+      "name": "Gabino Farm 2, 2F",
+      "cp": 1,
+      "slots": 0
+     },
+     {
+      "house": "2814",
+      "name": "Gabino Farm 3, 1F",
+      "cp": 1,
+      "slots": 0
+     },
+     {
+      "house": "2816",
+      "name": "Gabino Farm 4, 1F",
+      "cp": 1,
+      "slots": 0
+     },
+     {
+      "house": "2817",
+      "name": "Gabino Farm 4, 2F",
+      "cp": 3,
+      "slots": 8
+     }
+    ],
+    "cp": 11,
+    "slots": 24,
+    "base_slots": 4,
+    "target": 24,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 29,
+   "n_staffed": 29,
+   "cp_total": 40,
+   "crates_day": 23659,
+   "transport": {
+    "Valencia": {
+     "min": 205,
+     "h": 3.4
+    },
+    "Yukjo (LoML)": {
+     "min": 291,
+     "h": 4.9
+    },
+    "Dalbeol (LoML)": {
+     "min": 250,
+     "h": 4.2
+    }
+   }
+  },
+  {
+   "affTown": 88,
+   "gpwId": 61,
+   "name": "Olvia",
+   "namePt": "Olvia",
+   "x": -142268.0,
+   "y": 126063.0,
+   "workshops": [
+    {
+     "house": "2244",
+     "name": "Casta Farm 2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo",
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.36,
+     "cycleMin": 6.36,
+     "cratesDay": 905,
+     "inUse": true
+    },
+    {
+     "house": "2241",
+     "name": "Olvia 7-3",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.52,
+     "cycleMin": 5.52,
+     "cratesDay": 1043,
+     "inUse": true
+    },
+    {
+     "house": "2138",
+     "name": "Olvia 1-2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo",
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.84,
+     "cycleMin": 5.84,
+     "cratesDay": 987,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 3,
+   "n_colheita": 3,
+   "n_cogumelo": 2,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "2245",
+      "name": "Wale Farm 1",
+      "cp": 1,
+      "slots": 2
+     }
+    ],
+    "cp": 1,
+    "slots": 2,
+    "base_slots": 1,
+    "target": 1,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 4,
+   "n_staffed": 3,
+   "cp_total": 4,
+   "crates_day": 2936,
+   "transport": {
+    "Valencia": {
+     "min": 184,
+     "h": 3.1
+    },
+    "Yukjo (LoML)": {
+     "min": 283,
+     "h": 4.7
+    },
+    "Dalbeol (LoML)": {
+     "min": 238,
+     "h": 4.0
+    }
+   }
+  },
+  {
+   "affTown": 107,
+   "gpwId": 602,
+   "name": "Keplan",
+   "namePt": "Keplan",
+   "x": -152284.0,
+   "y": -146923.0,
+   "workshops": [
+    {
+     "house": "2271",
+     "name": "Keplan 3-3",
+     "cp": 1,
+     "packs": [
+      "Cogumelo",
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.19,
+     "cycleMin": 7.19,
+     "cratesDay": 801,
+     "inUse": true
+    },
+    {
+     "house": "2376",
+     "name": "Gianin Farm 1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 5.44,
+     "cycleMin": 10.44,
+     "cratesDay": 552,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 2,
+   "n_colheita": 2,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [],
+    "chosen": [],
+    "cp": 0,
+    "slots": 0,
+    "base_slots": 1,
+    "target": 0,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 2,
+   "n_staffed": 2,
+   "cp_total": 2,
+   "crates_day": 1353,
+   "transport": {
+    "Valencia": {
+     "min": 193,
+     "h": 3.2
+    },
+    "Yukjo (LoML)": {
+     "min": 313,
+     "h": 5.2
+    },
+    "Dalbeol (LoML)": {
+     "min": 271,
+     "h": 4.5
+    }
+   }
+  },
+  {
+   "affTown": 120,
+   "gpwId": 604,
+   "name": "Port Epheria",
+   "namePt": "Porto de Epheria",
+   "x": -351453.0,
+   "y": 41756.0,
+   "workshops": [
+    {
+     "house": "2343",
+     "name": "Port Epheria 2-1, 1F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo",
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.44,
+     "cycleMin": 5.44,
+     "cratesDay": 1058,
+     "inUse": true
+    },
+    {
+     "house": "2334",
+     "name": "Port Epheria 1-1, 1F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.02,
+     "cycleMin": 6.02,
+     "cratesDay": 956,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 2,
+   "n_colheita": 2,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [],
+    "chosen": [],
+    "cp": 0,
+    "slots": 0,
+    "base_slots": 1,
+    "target": 0,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 2,
+   "n_staffed": 2,
+   "cp_total": 2,
+   "crates_day": 2014,
+   "transport": {
+    "Valencia": {
+     "min": 218,
+     "h": 3.6
+    },
+    "Yukjo (LoML)": {
+     "min": 270,
+     "h": 4.5
+    },
+    "Dalbeol (LoML)": {
+     "min": 229,
+     "h": 3.8
+    }
+   }
+  },
+  {
+   "affTown": 126,
+   "gpwId": 608,
+   "name": "Trent",
+   "namePt": "Trent",
+   "x": -378010.0,
+   "y": -229988.0,
+   "workshops": [
+    {
+     "house": "2301",
+     "name": "Trent 1",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.59,
+     "cycleMin": 5.59,
+     "cratesDay": 1030,
+     "inUse": true
+    },
+    {
+     "house": "2307",
+     "name": "Behr 1",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 5.11,
+     "cycleMin": 10.11,
+     "cratesDay": 570,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 2,
+   "n_colheita": 0,
+   "n_cogumelo": 2,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "2301",
+      "name": "Trent 1",
+      "cp": 1,
+      "slots": 0
+     },
+     {
+      "house": "2303",
+      "name": "Trent 3",
+      "cp": 1,
+      "slots": 1
+     }
+    ],
+    "cp": 1,
+    "slots": 1,
+    "base_slots": 0,
+    "target": 1,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 2,
+   "n_staffed": 2,
+   "cp_total": 3,
+   "crates_day": 1600,
+   "transport": {
+    "Valencia": {
+     "min": 231,
+     "h": 3.9
+    },
+    "Yukjo (LoML)": {
+     "min": 301,
+     "h": 5.0
+    },
+    "Dalbeol (LoML)": {
+     "min": 264,
+     "h": 4.4
+    }
+   }
+  },
+  {
+   "affTown": 202,
+   "gpwId": 1101,
+   "name": "Altinova",
+   "namePt": "Altinova",
+   "x": 367322.0,
+   "y": -69079.4,
+   "workshops": [
+    {
+     "house": "2889",
+     "name": "Altinova 5-4",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.15,
+     "cycleMin": 6.15,
+     "cratesDay": 936,
+     "inUse": true
+    },
+    {
+     "house": "2870",
+     "name": "Altinova 2-1, 1F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.56,
+     "cycleMin": 5.56,
+     "cratesDay": 1037,
+     "inUse": true
+    },
+    {
+     "house": "2847",
+     "name": "Kusha 1-2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 12.9,
+     "cycleMin": 17.9,
+     "cratesDay": 322,
+     "inUse": true
+    },
+    {
+     "house": "2845",
+     "name": "Kusha 2",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 12.37,
+     "cycleMin": 17.37,
+     "cratesDay": 332,
+     "inUse": true
+    },
+    {
+     "house": "2843",
+     "name": "Stonetail Horse Ranch 2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 11.93,
+     "cycleMin": 16.93,
+     "cratesDay": 340,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 5,
+   "n_colheita": 2,
+   "n_cogumelo": 3,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "2911",
+      "name": "Altinova 10-1",
+      "cp": 1,
+      "slots": 1
+     },
+     {
+      "house": "2912",
+      "name": "Altinova 10-2",
+      "cp": 1,
+      "slots": 2
+     }
+    ],
+    "cp": 2,
+    "slots": 3,
+    "base_slots": 1,
+    "target": 3,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 5,
+   "n_staffed": 5,
+   "cp_total": 7,
+   "crates_day": 2967,
+   "transport": {
+    "Valencia": {
+     "min": 112,
+     "h": 1.9
+    },
+    "Yukjo (LoML)": {
+     "min": 364,
+     "h": 6.1
+    },
+    "Dalbeol (LoML)": {
+     "min": 316,
+     "h": 5.3
+    }
+   }
+  },
+  {
+   "affTown": 221,
+   "gpwId": 1141,
+   "name": "Tarif",
+   "namePt": "Tarif",
+   "x": 226814.0,
+   "y": -73831.4,
+   "workshops": [
+    {
+     "house": "2854",
+     "name": "Tarif 2-1, Rm. 2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.52,
+     "cycleMin": 5.52,
+     "cratesDay": 1043,
+     "inUse": true
+    },
+    {
+     "house": "2850",
+     "name": "Tarif 1-1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.16,
+     "cycleMin": 5.16,
+     "cratesDay": 1116,
+     "inUse": true
+    },
+    {
+     "house": "2864",
+     "name": "Shuri Farm 1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 5.51,
+     "cycleMin": 10.51,
+     "cratesDay": 548,
+     "inUse": true
+    },
+    {
+     "house": "2840",
+     "name": "Kasula Farm 3",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.36,
+     "cycleMin": 6.36,
+     "cratesDay": 906,
+     "inUse": true
+    },
+    {
+     "house": "2838",
+     "name": "Kasula Farm 1",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.82,
+     "cycleMin": 6.82,
+     "cratesDay": 845,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 5,
+   "n_colheita": 2,
+   "n_cogumelo": 3,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "2853",
+      "name": "Tarif 2-1, Rm. 1",
+      "cp": 1,
+      "slots": 0
+     },
+     {
+      "house": "2855",
+      "name": "Tarif 2-2, 1F",
+      "cp": 1,
+      "slots": 0
+     },
+     {
+      "house": "2856",
+      "name": "Tarif 2-2, 2F",
+      "cp": 1,
+      "slots": 2
+     },
+     {
+      "house": "2864",
+      "name": "Shuri Farm 1",
+      "cp": 1,
+      "slots": 1
+     },
+     {
+      "house": "2865",
+      "name": "Shuri Farm 2",
+      "cp": 1,
+      "slots": 2
+     }
+    ],
+    "cp": 3,
+    "slots": 4,
+    "base_slots": 0,
+    "target": 4,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 5,
+   "n_staffed": 5,
+   "cp_total": 8,
+   "crates_day": 4457,
+   "transport": {
+    "Valencia": {
+     "min": 133,
+     "h": 2.2
+    },
+    "Yukjo (LoML)": {
+     "min": 348,
+     "h": 5.8
+    },
+    "Dalbeol (LoML)": {
+     "min": 301,
+     "h": 5.0
+    }
+   }
+  },
+  {
+   "affTown": 229,
+   "gpwId": 1301,
+   "name": "Valencia City",
+   "namePt": "Capital de Valência",
+   "x": 1026110.0,
+   "y": 199132.0,
+   "workshops": [
+    {
+     "house": "3168",
+     "name": "Erdal Farm 1",
+     "cp": 1,
+     "packs": [
+      "Cogumelo",
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.78,
+     "cycleMin": 7.78,
+     "cratesDay": 740,
+     "inUse": true
+    },
+    {
+     "house": "3144",
+     "name": "Valencia 17-3",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.63,
+     "cycleMin": 6.63,
+     "cratesDay": 869,
+     "inUse": true
+    },
+    {
+     "house": "3166",
+     "name": "Valencia Plantation 1-2",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.14,
+     "cycleMin": 7.14,
+     "cratesDay": 807,
+     "inUse": true
+    },
+    {
+     "house": "3165",
+     "name": "Valencia Plantation 1-1",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 2.31,
+     "cycleMin": 7.31,
+     "cratesDay": 788,
+     "inUse": true
+    },
+    {
+     "house": "3162",
+     "name": "Valencia 20-2, 2F",
+     "cp": 3,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.92,
+     "cycleMin": 6.92,
+     "cratesDay": 833,
+     "inUse": true
+    },
+    {
+     "house": "3154",
+     "name": "Valencia 19-3, 1F",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.94,
+     "cycleMin": 6.94,
+     "cratesDay": 830,
+     "inUse": true
+    },
+    {
+     "house": "3104",
+     "name": "Valencia 13-2, 2F",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.44,
+     "cycleMin": 6.44,
+     "cratesDay": 894,
+     "inUse": true
+    },
+    {
+     "house": "3132",
+     "name": "Valencia 16-2, 2F",
+     "cp": 3,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.75,
+     "cycleMin": 6.75,
+     "cratesDay": 853,
+     "inUse": true
+    },
+    {
+     "house": "3124",
+     "name": "Valencia 15-2, 2F",
+     "cp": 2,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.63,
+     "cycleMin": 6.63,
+     "cratesDay": 869,
+     "inUse": true
+    },
+    {
+     "house": "3072",
+     "name": "Valencia 10-1, 1F, Rm. 1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.93,
+     "cycleMin": 5.93,
+     "cratesDay": 971,
+     "inUse": true
+    },
+    {
+     "house": "3092",
+     "name": "Valencia 12-2, 2F",
+     "cp": 2,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.05,
+     "cycleMin": 6.05,
+     "cratesDay": 952,
+     "inUse": true
+    },
+    {
+     "house": "3048",
+     "name": "Valencia 6-2, 2F, Rm. 3",
+     "cp": 3,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.94,
+     "cycleMin": 5.94,
+     "cratesDay": 969,
+     "inUse": true
+    },
+    {
+     "house": "3040",
+     "name": "Valencia 5-3, 1F",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.2,
+     "cycleMin": 6.2,
+     "cratesDay": 928,
+     "inUse": true
+    },
+    {
+     "house": "3067",
+     "name": "Valencia 9-3",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.08,
+     "cycleMin": 6.08,
+     "cratesDay": 947,
+     "inUse": true
+    },
+    {
+     "house": "3033",
+     "name": "Valencia 4-2, 1F, Rm. 1",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.98,
+     "cycleMin": 5.98,
+     "cratesDay": 964,
+     "inUse": true
+    },
+    {
+     "house": "3024",
+     "name": "Valencia 3-3",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.48,
+     "cycleMin": 6.48,
+     "cratesDay": 888,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 16,
+   "n_colheita": 9,
+   "n_cogumelo": 8,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "3147",
+      "name": "Valencia 18-1, 1F",
+      "cp": 1,
+      "slots": 1
+     }
+    ],
+    "cp": 1,
+    "slots": 1,
+    "base_slots": 14,
+    "target": 1,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 16,
+   "n_staffed": 16,
+   "cp_total": 29,
+   "crates_day": 14102,
+   "transport": {
+    "Valencia": {
+     "min": 0,
+     "h": 0.0
+    },
+    "Yukjo (LoML)": {
+     "min": 432,
+     "h": 7.2
+    },
+    "Dalbeol (LoML)": {
+     "min": 379,
+     "h": 6.3
+    }
+   }
+  },
+  {
+   "affTown": 601,
+   "gpwId": 1314,
+   "name": "Shakatu",
+   "namePt": "Shakatu",
+   "x": 579545.0,
+   "y": 274679.0,
+   "workshops": [
+    {
+     "house": "3207",
+     "name": "Shakatu Farm 1-2",
+     "cp": 2,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 2.4,
+     "cycleMin": 7.4,
+     "cratesDay": 778,
+     "inUse": true
+    },
+    {
+     "house": "3206",
+     "name": "Shakatu Farm 1-1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.46,
+     "cycleMin": 7.46,
+     "cratesDay": 772,
+     "inUse": true
+    },
+    {
+     "house": "3202",
+     "name": "Shakatu Camp 1-2",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.36,
+     "cycleMin": 5.36,
+     "cratesDay": 1075,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 3,
+   "n_colheita": 1,
+   "n_cogumelo": 2,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "3204",
+      "name": "Shakatu Camp 2-1",
+      "cp": 1,
+      "slots": 1
+     }
+    ],
+    "cp": 1,
+    "slots": 1,
+    "base_slots": 1,
+    "target": 1,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 3,
+   "n_staffed": 3,
+   "cp_total": 5,
+   "crates_day": 2625,
+   "transport": {
+    "Valencia": {
+     "min": 71,
+     "h": 1.2
+    },
+    "Yukjo (LoML)": {
+     "min": 364,
+     "h": 6.1
+    },
+    "Dalbeol (LoML)": {
+     "min": 311,
+     "h": 5.2
+    }
+   }
+  },
+  {
+   "affTown": 605,
+   "gpwId": 1319,
+   "name": "Sand Grain Bazaar",
+   "namePt": "Bazar Grão de Areia",
+   "x": 590881.0,
+   "y": 48856.9,
+   "workshops": [
+    {
+     "house": "3310",
+     "name": "Barhan Farm 1-2",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 2.18,
+     "cycleMin": 7.18,
+     "cratesDay": 802,
+     "inUse": true
+    },
+    {
+     "house": "3309",
+     "name": "Barhan Farm 1-1",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 2.4,
+     "cycleMin": 7.4,
+     "cratesDay": 778,
+     "inUse": true
+    },
+    {
+     "house": "3305",
+     "name": "Sand Grain Bazaar 2-2",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.25,
+     "cycleMin": 6.25,
+     "cratesDay": 921,
+     "inUse": true
+    },
+    {
+     "house": "3302",
+     "name": "Sand Grain Bazaar 1-2",
+     "cp": 2,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.69,
+     "cycleMin": 6.69,
+     "cratesDay": 861,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 4,
+   "n_colheita": 2,
+   "n_cogumelo": 2,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "3307",
+      "name": "Sand Grain Bazaar 3-1",
+      "cp": 1,
+      "slots": 1
+     }
+    ],
+    "cp": 1,
+    "slots": 1,
+    "base_slots": 2,
+    "target": 1,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 4,
+   "n_staffed": 4,
+   "cp_total": 7,
+   "crates_day": 3363,
+   "transport": {
+    "Valencia": {
+     "min": 72,
+     "h": 1.2
+    },
+    "Yukjo (LoML)": {
+     "min": 383,
+     "h": 6.4
+    },
+    "Dalbeol (LoML)": {
+     "min": 332,
+     "h": 5.5
+    }
+   }
+  },
+  {
+   "affTown": 619,
+   "gpwId": 1343,
+   "name": "Ancado Inner Harbor",
+   "namePt": "Porto Interior de Ancado",
+   "x": 976980.0,
+   "y": 340744.0,
+   "workshops": [
+    {
+     "house": "3175",
+     "name": "Altas Farm 1-2",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.56,
+     "cycleMin": 6.56,
+     "cratesDay": 877,
+     "inUse": true
+    },
+    {
+     "house": "3174",
+     "name": "Altas Farm 1-1",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.68,
+     "cycleMin": 6.68,
+     "cratesDay": 862,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 2,
+   "n_colheita": 1,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "3171",
+      "name": "Ancado Inner Harbor 1-1",
+      "cp": 1,
+      "slots": 1
+     }
+    ],
+    "cp": 1,
+    "slots": 1,
+    "base_slots": 0,
+    "target": 1,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 2,
+   "n_staffed": 2,
+   "cp_total": 4,
+   "crates_day": 1739,
+   "transport": {
+    "Valencia": {
+     "min": 24,
+     "h": 0.4
+    },
+    "Yukjo (LoML)": {
+     "min": 416,
+     "h": 6.9
+    },
+    "Dalbeol (LoML)": {
+     "min": 362,
+     "h": 6.0
+    }
+   }
+  },
+  {
+   "affTown": 706,
+   "gpwId": 1604,
+   "name": "Old Wisdom Tree",
+   "namePt": "Antiga Árvore da Sabedoria",
+   "x": -363066.0,
+   "y": -443196.0,
+   "workshops": [
+    {
+     "house": "3552",
+     "name": "Viv Foretta Hamlet 2",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 8.8,
+     "cycleMin": 13.8,
+     "cratesDay": 418,
+     "inUse": true
+    },
+    {
+     "house": "3551",
+     "name": "Viv Foretta Hamlet 1",
+     "cp": 2,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 8.79,
+     "cycleMin": 13.79,
+     "cratesDay": 418,
+     "inUse": false
+    }
+   ],
+   "n_workshops": 2,
+   "n_colheita": 1,
+   "n_cogumelo": 0,
+   "lodging": {
+    "forced": [],
+    "chosen": [],
+    "cp": 0,
+    "slots": 0,
+    "base_slots": 0,
+    "target": 1,
+    "insufficient": true,
+    "free_slots": 1
+   },
+   "workers": 1,
+   "n_staffed": 1,
+   "cp_total": 4,
+   "crates_day": 418,
+   "transport": {
+    "Valencia": {
+     "min": 241,
+     "h": 4.0
+    },
+    "Yukjo (LoML)": {
+     "min": 330,
+     "h": 5.5
+    },
+    "Dalbeol (LoML)": {
+     "min": 296,
+     "h": 4.9
+    }
+   }
+  },
+  {
+   "affTown": 735,
+   "gpwId": 1623,
+   "name": "Grána",
+   "namePt": "Graná",
+   "x": -513575.0,
+   "y": -458652.0,
+   "workshops": [
+    {
+     "house": "3519",
+     "name": "Grána 17",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.64,
+     "cycleMin": 6.64,
+     "cratesDay": 868,
+     "inUse": true
+    },
+    {
+     "house": "3518",
+     "name": "Grána 16",
+     "cp": 2,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.56,
+     "cycleMin": 6.56,
+     "cratesDay": 879,
+     "inUse": true
+    },
+    {
+     "house": "3508",
+     "name": "Grána 7",
+     "cp": 2,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.32,
+     "cycleMin": 6.32,
+     "cratesDay": 911,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 3,
+   "n_colheita": 2,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [
+     {
+      "house": "3511",
+      "name": "Grána 10",
+      "cp": 2,
+      "slots": 4
+     }
+    ],
+    "chosen": [],
+    "cp": 0,
+    "slots": 0,
+    "base_slots": 4,
+    "target": 0,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 5,
+   "n_staffed": 3,
+   "cp_total": 6,
+   "crates_day": 2658,
+   "transport": {
+    "Valencia": {
+     "min": 263,
+     "h": 4.4
+    },
+    "Yukjo (LoML)": {
+     "min": 320,
+     "h": 5.3
+    },
+    "Dalbeol (LoML)": {
+     "min": 289,
+     "h": 4.8
+    }
+   }
+  },
+  {
+   "affTown": 873,
+   "gpwId": 1649,
+   "name": "Duvencrune",
+   "namePt": "Duvencrune",
+   "x": -48357.4,
+   "y": -404589.0,
+   "workshops": [
+    {
+     "house": "3617",
+     "name": "Khimut Lumber Camp 1, 2F",
+     "cp": 3,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 17.09,
+     "cycleMin": 22.09,
+     "cratesDay": 261,
+     "inUse": true
+    },
+    {
+     "house": "3614",
+     "name": "Dormann Lumber Camp 1",
+     "cp": 3,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 19.49,
+     "cycleMin": 24.49,
+     "cratesDay": 235,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 2,
+   "n_colheita": 2,
+   "n_cogumelo": 0,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "3613",
+      "name": "Duvencrune 11, 2F",
+      "cp": 3,
+      "slots": 1
+     }
+    ],
+    "cp": 3,
+    "slots": 1,
+    "base_slots": 0,
+    "target": 1,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 2,
+   "n_staffed": 2,
+   "cp_total": 9,
+   "crates_day": 496,
+   "transport": {
+    "Valencia": {
+     "min": 194,
+     "h": 3.2
+    },
+    "Yukjo (LoML)": {
+     "min": 354,
+     "h": 5.9
+    },
+    "Dalbeol (LoML)": {
+     "min": 314,
+     "h": 5.2
+    }
+   }
+  },
+  {
+   "affTown": 1124,
+   "gpwId": 1750,
+   "name": "Eilton",
+   "namePt": "Vila Eil",
+   "x": 170079.0,
+   "y": -398472.0,
+   "workshops": [
+    {
+     "house": "3818",
+     "name": "Eilton 3",
+     "cp": 3,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.81,
+     "cycleMin": 5.81,
+     "cratesDay": 992,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 1,
+   "n_colheita": 0,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [],
+    "chosen": [],
+    "cp": 0,
+    "slots": 0,
+    "base_slots": 1,
+    "target": 0,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 2,
+   "n_staffed": 1,
+   "cp_total": 3,
+   "crates_day": 992,
+   "transport": {
+    "Valencia": {
+     "min": 164,
+     "h": 2.7
+    },
+    "Yukjo (LoML)": {
+     "min": 376,
+     "h": 6.3
+    },
+    "Dalbeol (LoML)": {
+     "min": 333,
+     "h": 5.6
+    }
+   }
+  },
+  {
+   "affTown": 1210,
+   "gpwId": 1781,
+   "name": "Dalbeol Village",
+   "namePt": "Vilarejo Dhal-Bohl",
+   "x": -1130090.0,
+   "y": 1271810.0,
+   "workshops": [
+    {
+     "house": "3829",
+     "name": "Morning Light Dalbeol 3",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.47,
+     "cycleMin": 5.47,
+     "cratesDay": 1054,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 1,
+   "n_colheita": 1,
+   "n_cogumelo": 0,
+   "lodging": {
+    "forced": [],
+    "chosen": [],
+    "cp": 0,
+    "slots": 0,
+    "base_slots": 0,
+    "target": 0,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 1,
+   "n_staffed": 1,
+   "cp_total": 1,
+   "crates_day": 1054,
+   "transport": {
+    "Valencia": {
+     "min": 379,
+     "h": 6.3
+    },
+    "Yukjo (LoML)": {
+     "min": 55,
+     "h": 0.9
+    },
+    "Dalbeol (LoML)": {
+     "min": 0,
+     "h": 0.0
+    }
+   }
+  },
+  {
+   "affTown": 1219,
+   "gpwId": 1785,
+   "name": "Nampo's Moodle Village",
+   "namePt": "Vilarejo Mu-Duh de Nam-Po",
+   "x": -1312270.0,
+   "y": 1136060.0,
+   "workshops": [
+    {
+     "house": "3823",
+     "name": "Morning Light Nampo 1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 1.27,
+     "cycleMin": 6.27,
+     "cratesDay": 919,
+     "inUse": true
+    },
+    {
+     "house": "3825",
+     "name": "Morning Light Nampo 3",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.95,
+     "cycleMin": 5.95,
+     "cratesDay": 969,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 2,
+   "n_colheita": 1,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "3826",
+      "name": "Morning Light Nampo 4",
+      "cp": 1,
+      "slots": 4
+     }
+    ],
+    "cp": 1,
+    "slots": 4,
+    "base_slots": 0,
+    "target": 1,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 5,
+   "n_staffed": 2,
+   "cp_total": 3,
+   "crates_day": 1888,
+   "transport": {
+    "Valencia": {
+     "min": 396,
+     "h": 6.6
+    },
+    "Yukjo (LoML)": {
+     "min": 41,
+     "h": 0.7
+    },
+    "Dalbeol (LoML)": {
+     "min": 36,
+     "h": 0.6
+    }
+   }
+  },
+  {
+   "affTown": 1246,
+   "gpwId": 1795,
+   "name": "Nopsae's Byeot County",
+   "namePt": "Concelho Byot",
+   "x": -1031140.0,
+   "y": 1298580.0,
+   "workshops": [
+    {
+     "house": "3836",
+     "name": "Morning Light Nopsae 5",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.75,
+     "cycleMin": 5.75,
+     "cratesDay": 1002,
+     "inUse": true
+    },
+    {
+     "house": "3832",
+     "name": "Morning Light Nopsae 1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.17,
+     "cycleMin": 5.17,
+     "cratesDay": 1114,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 2,
+   "n_colheita": 1,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "3835",
+      "name": "Morning Light Nopsae 4",
+      "cp": 1,
+      "slots": 1
+     }
+    ],
+    "cp": 1,
+    "slots": 1,
+    "base_slots": 0,
+    "target": 1,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 2,
+   "n_staffed": 2,
+   "cp_total": 3,
+   "crates_day": 2117,
+   "transport": {
+    "Valencia": {
+     "min": 367,
+     "h": 6.1
+    },
+    "Yukjo (LoML)": {
+     "min": 70,
+     "h": 1.2
+    },
+    "Dalbeol (LoML)": {
+     "min": 16,
+     "h": 0.3
+    }
+   }
+  },
+  {
+   "affTown": 1420,
+   "gpwId": 1853,
+   "name": "Yukjo Street",
+   "namePt": "Avenida Yukjo",
+   "x": -1472040.0,
+   "y": 1337990.0,
+   "workshops": [
+    {
+     "house": "3863",
+     "name": "Morning Light Yukjo Street 4",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.39,
+     "cycleMin": 5.39,
+     "cratesDay": 1068,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 1,
+   "n_colheita": 0,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [],
+    "chosen": [],
+    "cp": 0,
+    "slots": 0,
+    "base_slots": 0,
+    "target": 0,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 1,
+   "n_staffed": 1,
+   "cp_total": 1,
+   "crates_day": 1068,
+   "transport": {
+    "Valencia": {
+     "min": 432,
+     "h": 7.2
+    },
+    "Yukjo (LoML)": {
+     "min": 0,
+     "h": 0.0
+    },
+    "Dalbeol (LoML)": {
+     "min": 55,
+     "h": 0.9
+    }
+   }
+  },
+  {
+   "affTown": 1424,
+   "gpwId": 1857,
+   "name": "Godu Village",
+   "namePt": "Aldeia Godu",
+   "x": -1419150.0,
+   "y": 1239190.0,
+   "workshops": [
+    {
+     "house": "3851",
+     "name": "Morning Light Godu Village 3",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.34,
+     "cycleMin": 5.34,
+     "cratesDay": 1078,
+     "inUse": false
+    },
+    {
+     "house": "3850",
+     "name": "Morning Light Godu Village 2",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.63,
+     "cycleMin": 5.63,
+     "cratesDay": 1023,
+     "inUse": true
+    },
+    {
+     "house": "3849",
+     "name": "Morning Light Godu Village 1",
+     "cp": 1,
+     "packs": [
+      "Colheita",
+      "Erva"
+     ],
+     "walkMin": 0.38,
+     "cycleMin": 5.38,
+     "cratesDay": 1070,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 3,
+   "n_colheita": 2,
+   "n_cogumelo": 0,
+   "lodging": {
+    "forced": [],
+    "chosen": [
+     {
+      "house": "3853",
+      "name": "Morning Light Unjongga Street 2",
+      "cp": 1,
+      "slots": 1
+     }
+    ],
+    "cp": 1,
+    "slots": 1,
+    "base_slots": 0,
+    "target": 2,
+    "insufficient": true,
+    "free_slots": 1
+   },
+   "workers": 2,
+   "n_staffed": 2,
+   "cp_total": 4,
+   "crates_day": 2093,
+   "transport": {
+    "Valencia": {
+     "min": 418,
+     "h": 7.0
+    },
+    "Yukjo (LoML)": {
+     "min": 18,
+     "h": 0.3
+    },
+    "Dalbeol (LoML)": {
+     "min": 46,
+     "h": 0.8
+    }
+   }
+  },
+  {
+   "affTown": 1444,
+   "gpwId": 1858,
+   "name": "Bukpo",
+   "namePt": "Porto Norte",
+   "x": -1342900.0,
+   "y": 1509910.0,
+   "workshops": [
+    {
+     "house": "3857",
+     "name": "Morning Light Bukpo 4",
+     "cp": 1,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 0.48,
+     "cycleMin": 5.48,
+     "cratesDay": 1050,
+     "inUse": true
+    }
+   ],
+   "n_workshops": 1,
+   "n_colheita": 0,
+   "n_cogumelo": 1,
+   "lodging": {
+    "forced": [],
+    "chosen": [],
+    "cp": 0,
+    "slots": 0,
+    "base_slots": 0,
+    "target": 0,
+    "insufficient": false,
+    "free_slots": 1
+   },
+   "workers": 1,
+   "n_staffed": 1,
+   "cp_total": 1,
+   "crates_day": 1050,
+   "transport": {
+    "Valencia": {
+     "min": 426,
+     "h": 7.1
+    },
+    "Yukjo (LoML)": {
+     "min": 34,
+     "h": 0.6
+    },
+    "Dalbeol (LoML)": {
+     "min": 50,
+     "h": 0.8
+    }
+   }
+  }
+ ]
+}

@@ -7,6 +7,7 @@ trade_bp = Blueprint('trade', __name__, template_folder='templates')
 _MOD_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(_MOD_DIR, 'data', 'crates.json')
 CITIES_PATH = os.path.join(_MOD_DIR, 'data', 'cities.json')
+TOWNS_PATH = os.path.join(_MOD_DIR, 'data', 'towns.json')
 
 
 def load_crates():
@@ -18,6 +19,12 @@ def load_crates():
 def load_cities():
     """Cidades com coordenadas e nomes PT-BR (fonte: bdocodex), para a calculadora de rotas."""
     with open(CITIES_PATH, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def load_towns():
+    """Painel de cidades/oficinas/operários gerado por build_towns.py."""
+    with open(TOWNS_PATH, encoding='utf-8') as f:
         return json.load(f)
 
 
@@ -36,3 +43,9 @@ def crates():
 def cities():
     data = load_cities()
     return jsonify({'cities': data.get('cities', []), 'error': None})
+
+
+@trade_bp.route('/api/towns')
+def towns():
+    data = load_towns()
+    return jsonify({'params': data.get('params', {}), 'towns': data.get('towns', []), 'error': None})
