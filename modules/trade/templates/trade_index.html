@@ -107,27 +107,34 @@
         }
 
         /* Cards de resumo */
-        .stat-cards {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            flex-shrink: 0;
-        }
-
-        .stat-card {
+        .stat-bar {
             display: flex;
             align-items: center;
-            gap: 0.9rem;
             background: var(--bg-panel);
             border: 1px solid var(--glass-border);
             border-radius: 12px;
-            padding: 1rem 1.2rem;
+            padding: 0.6rem 0;
+            flex-shrink: 0;
+            gap: 0;
         }
 
-        .stat-card .sc-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
+        .stat-item {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-width: 0;
+        }
+
+        .stat-item + .stat-item {
+            border-left: 1px solid var(--glass-border);
+        }
+
+        .stat-item .sc-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 7px;
             background: var(--bg-input);
             border: 1px solid var(--glass-border);
             display: flex;
@@ -137,13 +144,13 @@
             flex-shrink: 0;
         }
 
-        .stat-card .sc-icon svg { width: 22px; height: 22px; }
-        .stat-card .sc-icon.gold { color: var(--accent-gold); }
+        .stat-item .sc-icon svg { width: 14px; height: 14px; }
+        .stat-item .sc-icon.gold { color: var(--accent-gold); }
 
-        .stat-card .sc-info { min-width: 0; }
-        .stat-card .sc-value { font-size: 1.35rem; font-weight: 700; line-height: 1.2; }
-        .stat-card .sc-label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
-        .stat-card .sc-sub { font-size: 0.72rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .stat-item .sc-info { min-width: 0; text-align: center; }
+        .stat-item .sc-value { font-size: 1rem; font-weight: 700; line-height: 1.2; }
+        .stat-item .sc-label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+        .stat-item .sc-sub { font-size: 0.6rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         /* Barra de ferramentas: busca + filtros */
         .toolbar {
@@ -733,42 +740,42 @@
 
     <!-- ===== VISÃO CIDADES ===== -->
     <div id="view-towns" style="display:flex; flex-direction:column; gap:1rem; flex:1; min-height:0;">
-        <div class="stat-cards">
-            <div class="stat-card">
+        <div class="stat-bar">
+            <div class="stat-item">
                 <div class="sc-icon"><i data-lucide="map"></i></div>
                 <div class="sc-info">
                     <div class="sc-value" id="tw-cities">—</div>
                     <div class="sc-label">Cidades</div>
                 </div>
             </div>
-            <div class="stat-card">
+            <div class="stat-item">
                 <div class="sc-icon"><i data-lucide="users"></i></div>
                 <div class="sc-info">
                     <div class="sc-value" id="tw-workers">—</div>
                     <div class="sc-label">Operários</div>
                 </div>
             </div>
-            <div class="stat-card">
+            <div class="stat-item">
                 <div class="sc-icon"><i data-lucide="factory"></i></div>
                 <div class="sc-info">
                     <div class="sc-value" id="tw-workshops">—</div>
-                    <div class="sc-label">Oficinas em uso</div>
+                    <div class="sc-label">Oficinas</div>
                 </div>
             </div>
-            <div class="stat-card">
+            <div class="stat-item">
                 <div class="sc-icon gold"><i data-lucide="box"></i></div>
                 <div class="sc-info">
                     <div class="sc-value" id="tw-crates">—</div>
-                    <div class="sc-label">Caixas / dia</div>
-                    <div class="sc-sub" id="tw-crates-sub">—</div>
+                    <div class="sc-label">Caixas/dia</div>
+                    <div class="sc-sub" id="tw-crates-sub"></div>
                 </div>
             </div>
-            <div class="stat-card">
+            <div class="stat-item">
                 <div class="sc-icon"><i data-lucide="layers"></i></div>
                 <div class="sc-info">
                     <div class="sc-value" id="tw-cp">—</div>
                     <div class="sc-label">CP total</div>
-                    <div class="sc-sub" id="tw-cp-sub">—</div>
+                    <div class="sc-sub" id="tw-cp-sub"></div>
                 </div>
             </div>
         </div>
