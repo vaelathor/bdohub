@@ -209,31 +209,36 @@
      "id": "21",
      "name": "Bartali Farm",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "22",
      "name": "Finto Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "26",
      "name": "Loggia Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "44",
      "name": "Balenos Forest",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "45",
      "name": "Toscani Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -1058,43 +1063,50 @@
      "id": "321",
      "name": "Alejandro Farm",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "322",
      "name": "Costa Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "323",
      "name": "Moretti Plantation",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "328",
      "name": "Lynch Ranch",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "341",
      "name": "Northern Plain of Serendia",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "346",
      "name": "Northern Swamp",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "347",
      "name": "Lynch Farm Ruins",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -2331,13 +2343,14 @@
    "workers": 29,
    "n_staffed": 29,
    "cp_total": 40,
-   "conn_cp": 8,
+   "conn_cp": 10,
    "conn_nodes": [
     "603",
     "625",
     "628",
     "629",
     "633",
+    "661",
     "712"
    ],
    "conn_detail": [
@@ -2345,37 +2358,50 @@
      "id": "603",
      "name": "Florin",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "625",
      "name": "Khuruto Cave",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "628",
      "name": "Northern Wheat Plantation",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "629",
      "name": "Old Dandelion",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "633",
      "name": "Dias Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
+    },
+    {
+     "id": "661",
+     "name": "Falres Dirt Farm",
+     "cp": 2,
+     "connected": false,
+     "from": "alojamento"
     },
     {
      "id": "712",
      "name": "Gabino Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -2966,16 +2992,25 @@
    "workers": 4,
    "n_staffed": 3,
    "cp_total": 4,
-   "conn_cp": 1,
+   "conn_cp": 2,
    "conn_nodes": [
-    "64"
+    "64",
+    "65"
    ],
    "conn_detail": [
     {
      "id": "64",
      "name": "Casta Farm",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
+    },
+    {
+     "id": "65",
+     "name": "Wale Farm",
+     "cp": 1,
+     "connected": false,
+     "from": "alojamento"
     }
    ],
    "conn_connected": 0,
@@ -3553,13 +3588,15 @@
      "id": "654",
      "name": "Keplan Hill",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "670",
      "name": "Gianin Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -4718,25 +4755,29 @@
      "id": "609",
      "name": "Behr",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "709",
      "name": "Crioville",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "719",
      "name": "Longleaf Tree Sentry Post",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "720",
      "name": "Longleaf Tree Forest",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -5435,49 +5476,57 @@
      "id": "1138",
      "name": "Asula Highlands",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1140",
      "name": "Altinova Entrance",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1147",
      "name": "Stonebeak Shore",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1149",
      "name": "Omar Lava Cave",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1153",
      "name": "Kusha",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1158",
      "name": "Stonetail Horse Ranch",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1163",
      "name": "Mediah Shore",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1164",
      "name": "Highland Junction",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -6161,25 +6210,29 @@
      "id": "1138",
      "name": "Asula Highlands",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1158",
      "name": "Stonetail Horse Ranch",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1160",
      "name": "Shuri Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1161",
      "name": "Kasula Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -7020,13 +7073,15 @@
      "id": "1354",
      "name": "Erdal Farm",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1355",
      "name": "Valencia Plantation",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -7627,7 +7682,8 @@
      "id": "1352",
      "name": "Shakatu Farmland",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -8246,7 +8302,8 @@
      "id": "1351",
      "name": "Bazaar Farmland",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -8830,7 +8887,8 @@
      "id": "1353",
      "name": "Altas Farmland",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -10597,37 +10655,43 @@
      "id": "1656",
      "name": "Garmoth's Nest",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1659",
      "name": "Night Crow Post",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1664",
      "name": "Gervish Mountains",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1665",
      "name": "Dormann Lumber Camp",
      "cp": 1,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1666",
      "name": "Khimut Lumber Camp",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     },
     {
      "id": "1668",
      "name": "Tshira Ruins",
      "cp": 2,
-     "connected": false
+     "connected": false,
+     "from": "oficina"
     }
    ],
    "conn_connected": 0,
@@ -13959,9 +14023,19 @@
    "workers": 2,
    "n_staffed": 2,
    "cp_total": 4,
-   "conn_cp": 0,
-   "conn_nodes": [],
-   "conn_detail": [],
+   "conn_cp": 1,
+   "conn_nodes": [
+    "1854"
+   ],
+   "conn_detail": [
+    {
+     "id": "1854",
+     "name": "Unjongga Street",
+     "cp": 1,
+     "connected": false,
+     "from": "alojamento"
+    }
+   ],
    "conn_connected": 0,
    "base_node": "1857",
    "crates_day": 2093,

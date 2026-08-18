@@ -445,8 +445,17 @@ def compute_town(aff_tk, disabled_workshops=frozenset(), pt_names=None,
             w['connPath'] = []
             w['nodeCp'] = 0
 
-    # conexão considera só as oficinas realmente em uso (staffed) e não desligadas
+    # conexão considera as oficinas em uso (staffed e não desligadas) E os
+    # alojamentos ativos (escolhidos/forçados) — no jogo, alugar qualquer casa
+    # exige o node conectado, então alojamento em fazenda também paga node.
     targets = {w['node'] for w in per_workshop if w['inUse'] and not w['disabled'] and w.get('node')}
+    active_lodging = opt['chosen'] + opt['forced_lodging']
+    for c in active_lodging:
+        h = houses.get(c)
+        if h and h.get('parentNode') is not None:
+            pn = str(h['parentNode'])
+            if pn != base_node:
+                targets.add(pn)
     conn_cp, conn_nodes = graph.connect_cost(base_node, targets, connected_nodes) if base_node else (0, [])
     # detalhe por node (nome + cp + se já conectado) para exibição no card
     conn_detail = []
@@ -464,6 +473,28 @@ def compute_town(aff_tk, disabled_workshops=frozenset(), pt_names=None,
                 'name': node_names.get(nid, 'Node ' + nid),
                 'cp': step['cp'],
                 'connected': nid in connected_nodes,
+                'from': 'oficina',
+            })
+    # nodes exclusivos dos alojamentos (fora da base) também entram no detalhe
+    for c in active_lodging:
+        h = houses.get(c)
+        if not h:
+            continue
+        pn = str(h.get('parentNode'))
+        if pn == base_node or not pn:
+            continue
+        path = graph.path_to(base_node, pn) if base_node else []
+        for step in path or []:
+            nid = step['id']
+            if nid in seen:
+                continue
+            seen.add(nid)
+            conn_detail.append({
+                'id': nid,
+                'name': node_names.get(nid, 'Node ' + nid),
+                'cp': step['cp'],
+                'connected': nid in connected_nodes,
+                'from': 'alojamento',
             })
     conn_detail.sort(key=lambda d: int(d['id']))
 
