@@ -128,10 +128,17 @@ def closure_of(hk, houses):
 
 
 def optimize_lodging(tk, houses, slots, is_workshop, forced_lodging, free_slots,
-                     workshops=None):
+                     workshops=None, conn_graph=None, conn_base=None,
+                     conn_paid=frozenset(), house_node=None):
     """Escolha ótima de alojamentos (min CP) cobrindo target, com casas forçadas.
 
     `workshops` = lista de oficinas ATIVAS (já sem as desligadas pelo usuário).
+
+    Para a escolha, o custo de cada alojamento inclui o CP de conexão dos
+    nodes que ele exige (no jogo, alugar qualquer casa exige o node
+    conectado), descontando os nodes que as oficinas (`conn_paid`) ou o
+    jogador (`connected_nodes`) já pagam. `opt['cp']` retorna só o CP das
+    casas; a parcela de conexão é apenas critério de escolha.
     """
     def is_wk(hk):
         return is_workshop(hk) and hk not in forced_lodging
@@ -160,6 +167,20 @@ def optimize_lodging(tk, houses, slots, is_workshop, forced_lodging, free_slots,
 
     candidates = [hk for hk in houses
                   if slots.get(hk, 0) > 0 and not is_wk(hk) and hk not in base]
+
+    def conn_cost_of(chosen):
+        """Custo incremental de conexão dos nodes dos alojamentos escolhidos.
+
+        Considera a UNIÃO dos caminhos (nodes compartilhados pagam 1x) e
+        desconta os nodes já pagos pelas oficinas / já conectados no jogo.
+        """
+        if not conn_graph or not conn_base or not house_node:
+            return 0
+        targets = {house_node[h] for h in chosen
+                   if h in house_node and house_node[h] != conn_base}
+        if not targets:
+            return 0
+        return conn_graph.connect_cost(conn_base, targets, conn_paid)[0]
 
     # componentes conexas via dependência
     parent = {}
@@ -194,29 +215,33 @@ def optimize_lodging(tk, houses, slots, is_workshop, forced_lodging, free_slots,
             closed = set()
             for hk in chosen:
                 closed.update(closure_of(hk, houses))
-            cost = sum(houses[x].get('CP', 0) for x in closed if x not in base)
+            house_cp = sum(houses[x].get('CP', 0) for x in closed if x not in base)
+            # custo combinado (casas + conexão) é o critério de escolha;
+            # o CP das casas é o que efetivamente retorna em opt['cp'].
+            total = house_cp + conn_cost_of(chosen)
             sl = sum(slots.get(x, 0) for x in closed if x not in base and not is_wk(x))
-            if cost < opts.get(sl, (10 ** 9, None))[0]:
-                opts[sl] = (cost, closed)
+            if total < opts.get(sl, (10 ** 9, None))[0]:
+                opts[sl] = (total, house_cp, closed)
         return opts
 
-    dp = {0: (0, set())}
+    dp = {0: (0, 0, set())}  # slots -> (total, house_cp, closed)
     for keys in comps.values():
         opts = comp_options(keys)
         ndp = dict(dp)
-        for s1, (c1, ch1) in dp.items():
-            for s2, (c2, ch2) in opts.items():
+        for s1, (t1, c1, ch1) in dp.items():
+            for s2, (t2, c2, ch2) in opts.items():
                 ns = s1 + s2
+                nt = t1 + t2
                 nc = c1 + c2
                 nch = ch1 | ch2
-                if nc < ndp.get(ns, (10 ** 9, None))[0]:
-                    ndp[ns] = (nc, nch)
+                if nt < ndp.get(ns, (10 ** 9, 0, None))[0]:
+                    ndp[ns] = (nt, nc, nch)
         dp = ndp
 
     best = None
-    for s, (c, ch) in dp.items():
-        if s >= target and (best is None or c < best[1]):
-            best = (s, c, ch)
+    for s, (t, c, ch) in dp.items():
+        if s >= target and (best is None or t < best[1]):
+            best = (s, t, c, ch)  # (slots, total, house_cp, closed)
 
     if best is None:
         allc = sum(houses[x].get('CP', 0) for x in candidates)
@@ -224,7 +249,7 @@ def optimize_lodging(tk, houses, slots, is_workshop, forced_lodging, free_slots,
         out.update({'cp': allc, 'chosen': candidates, 'slots': alls, 'insufficient': True})
         return out
 
-    out.update({'cp': best[1], 'chosen': sorted(best[2]), 'slots': best[0], 'insufficient': False})
+    out.update({'cp': best[2], 'chosen': sorted(best[3]), 'slots': best[0], 'insufficient': False})
     return out
 
 
@@ -339,8 +364,36 @@ def compute_town(aff_tk, disabled_workshops=frozenset(), pt_names=None,
     forced = [hk for hk in FORCED_LODGING.get(aff_tk, []) if hk in houses]
     # oficinas ativas = todas menos as desligadas e menos as forçadas como alojamento
     active = [hk for hk in workshops if hk not in forced and hk not in disabled_workshops]
+
+    # grafo de nodes + base town da cidade (para CP de conexão)
+    graph = NodeGraph(nodes)
+    base_node = None
+    pns = Counter(str(h.get('parentNode')) for h in houses.values())
+    for pn, c in pns.most_common():
+        nd = graph.N.get(pn)
+        if nd and nd.get('is_base_town'):
+            base_node = pn
+            break
+    if base_node is None and pns:
+        base_node = pns.most_common(1)[0][0]
+    house_node = {hk: str(h.get('parentNode')) for hk, h in houses.items()}
+
+    # nodes que as oficinas ATIVAS já pagam (união dos caminhos) — o alojamento
+    # em node já pago por oficina não precisa pagar de novo na escolha.
+    conn_paid = set()
+    if base_node:
+        for w in active:
+            pn = str(houses[w].get('parentNode'))
+            if not pn:
+                continue
+            path = graph.path_to(base_node, pn)
+            if path:
+                conn_paid.update(x['id'] for x in path)
+
     opt = optimize_lodging(aff_tk, houses, slots, is_workshop, forced, FREE_SLOTS,
-                           workshops=active)
+                           workshops=active, conn_graph=graph, conn_base=base_node,
+                           conn_paid=conn_paid | set(connected_nodes),
+                           house_node=house_node)
 
     # oficinas em uso: as de colheita/cogumelo, exceto as forçadas como alojamento
     workshops_use = active[:]
@@ -419,18 +472,6 @@ def compute_town(aff_tk, disabled_workshops=frozenset(), pt_names=None,
         # bônus de distância real (gpw v2.15), sem teto — o jogo capa a
         # 150% só no preço; o EXP usa o valor real (186,7% p/ Valência->Yukjo)
         dst['expPct'] = round(dst['dist'] * 68 / 1e6, 1)
-
-    # CP de conexão de nodes das oficinas em uso (staffed)
-    graph = NodeGraph(nodes)
-    base_node = None
-    pns = Counter(str(h.get('parentNode')) for h in houses.values())
-    for pn, c in pns.most_common():
-        nd = graph.N.get(pn)
-        if nd and nd.get('is_base_town'):
-            base_node = pn
-            break
-    if base_node is None and pns:
-        base_node = pns.most_common(1)[0][0]
 
     # node/caminho por oficina
     for w in per_workshop:

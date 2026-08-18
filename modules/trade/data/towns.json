@@ -19,7 +19,7 @@
     {
      "house": "2125",
      "name": "Balenos 6-1, Toscani Farm",
-     "namePt": "Balenos nº. 6-1, Fazenda Toscani",
+     "namePt": "Balenos nº. 6-1, Fazenda Tosca",
      "cp": 2,
      "packs": [
       "Colheita",
@@ -46,7 +46,7 @@
     {
      "house": "2120",
      "name": "Balenos 3-1, Loggia Farm",
-     "namePt": "Balenos nº. 3-1, Fazenda Loggia",
+     "namePt": "Balenos nº. 3-1, Fazenda Loggi",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -69,7 +69,7 @@
     {
      "house": "2118",
      "name": "Balenos 4-1, DelLucci Farm",
-     "namePt": "Balenos nº. 4-1, Fazenda DelLucci",
+     "namePt": "Balenos nº. 4-1, Fazenda DelLu",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -96,7 +96,7 @@
     {
      "house": "2116",
      "name": "Balenos 1-1, Bartali Farm",
-     "namePt": "Balenos nº. 1-1, Fazenda Bartali",
+     "namePt": "Balenos nº. 1-1, Fazenda Barta",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -813,7 +813,7 @@
     {
      "house": "2218",
      "name": "Serendia 3, Elda Farm",
-     "namePt": "Serendia nº. 3, Fazenda Elda",
+     "namePt": "Serendia nº. 4, Fazenda Elda",
      "cp": 1,
      "packs": [
       "Cogumelo",
@@ -841,7 +841,7 @@
     {
      "house": "2216",
      "name": "Serendia 2-1, 2F, Costa Farm",
-     "namePt": "Serendia nº. 2-1 Piso 2, Fazenda Costa",
+     "namePt": "Serendia nº. 2-1 Piso 2, Fazen",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -864,7 +864,7 @@
     {
      "house": "2215",
      "name": "Serendia 2-1, 1F, Costa Farm",
-     "namePt": "Serendia nº. 2-1 Piso 1, Fazenda Costa",
+     "namePt": "Serendia nº. 2-1 Piso 1, Fazen",
      "cp": 1,
      "packs": [
       "Colheita",
@@ -946,7 +946,7 @@
     {
      "house": "2203",
      "name": "Serendia 1-1, 1F, Alejandro Farm",
-     "namePt": "Serendia nº. 1-1 Piso 1, Fazenda Alejandro",
+     "namePt": "Serendia nº. 1-1 Piso 1, Fazen",
      "cp": 1,
      "packs": [
       "Cogumelo"
@@ -2235,13 +2235,6 @@
     "forced": [],
     "chosen": [
      {
-      "house": "2372",
-      "name": "Falres Dirt Farm 1",
-      "namePt": "Fazenda de Gado Falres nº. 1",
-      "cp": 1,
-      "slots": 2
-     },
-     {
       "house": "2753",
       "name": "Calpheon North Gate 3",
       "namePt": "Portão Norte de Calpheon nº. 3",
@@ -2305,6 +2298,20 @@
       "slots": 2
      },
      {
+      "house": "2811",
+      "name": "Gabino Farm 1, 1F",
+      "namePt": "Fazenda Gabino nº. 1 Piso 1",
+      "cp": 1,
+      "slots": 1
+     },
+     {
+      "house": "2812",
+      "name": "Gabino Farm 1, 2F",
+      "namePt": "Fazenda Gabino nº. 1 Piso 2",
+      "cp": 1,
+      "slots": 2
+     },
+     {
       "house": "2813",
       "name": "Gabino Farm 2, 2F",
       "namePt": "Fazenda Gabino nº. 2 Piso 2",
@@ -2333,24 +2340,23 @@
       "slots": 8
      }
     ],
-    "cp": 11,
-    "slots": 24,
+    "cp": 12,
+    "slots": 25,
     "base_slots": 4,
     "target": 24,
     "insufficient": false,
     "free_slots": 1
    },
-   "workers": 29,
+   "workers": 30,
    "n_staffed": 29,
-   "cp_total": 40,
-   "conn_cp": 10,
+   "cp_total": 41,
+   "conn_cp": 8,
    "conn_nodes": [
     "603",
     "625",
     "628",
     "629",
     "633",
-    "661",
     "712"
    ],
    "conn_detail": [
@@ -2388,13 +2394,6 @@
      "cp": 2,
      "connected": false,
      "from": "oficina"
-    },
-    {
-     "id": "661",
-     "name": "Falres Dirt Farm",
-     "cp": 2,
-     "connected": false,
-     "from": "alojamento"
     },
     {
      "id": "712",
@@ -2975,27 +2974,26 @@
     "forced": [],
     "chosen": [
      {
-      "house": "2245",
-      "name": "Wale Farm 1",
-      "namePt": "Fazenda Wale nº. 1",
+      "house": "2235",
+      "name": "Olvia 6-1",
+      "namePt": "Olvia nº. 6-1",
       "cp": 1,
-      "slots": 2
+      "slots": 1
      }
     ],
     "cp": 1,
-    "slots": 2,
+    "slots": 1,
     "base_slots": 1,
     "target": 1,
     "insufficient": false,
     "free_slots": 1
    },
-   "workers": 4,
+   "workers": 3,
    "n_staffed": 3,
    "cp_total": 4,
-   "conn_cp": 2,
+   "conn_cp": 1,
    "conn_nodes": [
-    "64",
-    "65"
+    "64"
    ],
    "conn_detail": [
     {
@@ -3004,13 +3002,6 @@
      "cp": 1,
      "connected": false,
      "from": "oficina"
-    },
-    {
-     "id": "65",
-     "name": "Wale Farm",
-     "cp": 1,
-     "connected": false,
-     "from": "alojamento"
     }
    ],
    "conn_connected": 0,
