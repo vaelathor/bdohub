@@ -161,6 +161,7 @@
      "min": 310,
      "h": 5.2,
      "dist": 1972786,
+     "distXP": 3409124,
      "best": true,
      "expPct": 100
     },
@@ -171,6 +172,7 @@
      "min": 306,
      "h": 5.1,
      "dist": 1947793,
+     "distXP": 3389366,
      "best": false,
      "expPct": 99
     },
@@ -181,8 +183,9 @@
      "min": 300,
      "h": 5.0,
      "dist": 1905355,
+     "distXP": 3355526,
      "best": false,
-     "expPct": 97
+     "expPct": 98
     },
     {
      "id": "1857",
@@ -191,8 +194,9 @@
      "min": 290,
      "h": 4.8,
      "dist": 1843895,
+     "distXP": 3305841,
      "best": false,
-     "expPct": 93
+     "expPct": 97
     },
     {
      "id": "1785",
@@ -201,8 +205,9 @@
      "min": 267,
      "h": 4.4,
      "dist": 1695936,
+     "distXP": 3182722,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1781",
@@ -211,8 +216,9 @@
      "min": 260,
      "h": 4.3,
      "dist": 1653576,
+     "distXP": 3146493,
      "best": false,
-     "expPct": 84
+     "expPct": 92
     },
     {
      "id": "1795",
@@ -221,8 +227,9 @@
      "min": 253,
      "h": 4.2,
      "dist": 1607267,
+     "distXP": 3106351,
      "best": false,
-     "expPct": 81
+     "expPct": 91
     },
     {
      "id": "1380",
@@ -231,8 +238,9 @@
      "min": 198,
      "h": 3.3,
      "dist": 1261377,
+     "distXP": 2786111,
      "best": false,
-     "expPct": 64
+     "expPct": 82
     },
     {
      "id": "1381",
@@ -241,8 +249,9 @@
      "min": 174,
      "h": 2.9,
      "dist": 1103074,
+     "distXP": 2624878,
      "best": false,
-     "expPct": 56
+     "expPct": 77
     },
     {
      "id": "1301",
@@ -251,8 +260,9 @@
      "min": 161,
      "h": 2.7,
      "dist": 1023697,
+     "distXP": 2539668,
      "best": false,
-     "expPct": 52
+     "expPct": 74
     },
     {
      "id": "1343",
@@ -261,8 +271,9 @@
      "min": 158,
      "h": 2.6,
      "dist": 1002985,
+     "distXP": 2516896,
      "best": false,
-     "expPct": 51
+     "expPct": 74
     },
     {
      "id": "1623",
@@ -271,8 +282,9 @@
      "min": 118,
      "h": 2.0,
      "dist": 747060,
+     "distXP": 2213268,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1691",
@@ -281,8 +293,9 @@
      "min": 109,
      "h": 1.8,
      "dist": 693511,
+     "distXP": 2143421,
      "best": false,
-     "expPct": 35
+     "expPct": 63
     },
     {
      "id": "1620",
@@ -291,8 +304,9 @@
      "min": 108,
      "h": 1.8,
      "dist": 686745,
+     "distXP": 2134407,
      "best": false,
-     "expPct": 35
+     "expPct": 63
     },
     {
      "id": "2001",
@@ -301,8 +315,9 @@
      "min": 104,
      "h": 1.7,
      "dist": 663584,
+     "distXP": 2103208,
      "best": false,
-     "expPct": 34
+     "expPct": 62
     },
     {
      "id": "1604",
@@ -311,8 +326,9 @@
      "min": 100,
      "h": 1.7,
      "dist": 637882,
+     "distXP": 2067943,
      "best": false,
-     "expPct": 32
+     "expPct": 61
     },
     {
      "id": "1314",
@@ -321,8 +337,9 @@
      "min": 95,
      "h": 1.6,
      "dist": 603745,
+     "distXP": 2019985,
      "best": false,
-     "expPct": 31
+     "expPct": 59
     },
     {
      "id": "1850",
@@ -331,8 +348,9 @@
      "min": 94,
      "h": 1.6,
      "dist": 598987,
+     "distXP": 2013194,
      "best": false,
-     "expPct": 30
+     "expPct": 59
     },
     {
      "id": "1319",
@@ -341,8 +359,9 @@
      "min": 91,
      "h": 1.5,
      "dist": 581363,
+     "distXP": 1987802,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1727",
@@ -351,8 +370,9 @@
      "min": 88,
      "h": 1.5,
      "dist": 561250,
+     "distXP": 1958350,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "1843",
@@ -361,8 +381,9 @@
      "min": 83,
      "h": 1.4,
      "dist": 525450,
+     "distXP": 1904589,
      "best": false,
-     "expPct": 27
+     "expPct": 56
     },
     {
      "id": "1750",
@@ -371,8 +392,9 @@
      "min": 79,
      "h": 1.3,
      "dist": 498989,
+     "distXP": 1863664,
      "best": false,
-     "expPct": 25
+     "expPct": 55
     },
     {
      "id": "608",
@@ -381,8 +403,9 @@
      "min": 78,
      "h": 1.3,
      "dist": 493067,
+     "distXP": 1854358,
      "best": false,
-     "expPct": 25
+     "expPct": 54
     },
     {
      "id": "1649",
@@ -391,8 +414,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 482307,
+     "distXP": 1837304,
      "best": false,
-     "expPct": 24
+     "expPct": 54
     },
     {
      "id": "1145",
@@ -401,8 +425,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 431922,
+     "distXP": 1754791,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "609",
@@ -411,8 +436,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 431637,
+     "distXP": 1754311,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "1101",
@@ -421,8 +447,9 @@
      "min": 61,
      "h": 1.0,
      "dist": 384901,
+     "distXP": 1673322,
      "best": false,
-     "expPct": 20
+     "expPct": 49
     },
     {
      "id": "1834",
@@ -431,8 +458,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 380823,
+     "distXP": 1666028,
      "best": false,
-     "expPct": 19
+     "expPct": 49
     },
     {
      "id": "604",
@@ -441,8 +469,9 @@
      "min": 57,
      "h": 1.0,
      "dist": 362972,
+     "distXP": 1633628,
      "best": false,
-     "expPct": 18
+     "expPct": 48
     },
     {
      "id": "1001",
@@ -451,8 +480,9 @@
      "min": 51,
      "h": 0.9,
      "dist": 324789,
+     "distXP": 1561533,
      "best": false,
-     "expPct": 16
+     "expPct": 46
     },
     {
      "id": "601",
@@ -461,8 +491,9 @@
      "min": 46,
      "h": 0.8,
      "dist": 289264,
+     "distXP": 1490543,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "602",
@@ -471,8 +502,9 @@
      "min": 43,
      "h": 0.7,
      "dist": 274298,
+     "distXP": 1459335,
      "best": false,
-     "expPct": 14
+     "expPct": 43
     },
     {
      "id": "1002",
@@ -481,8 +513,9 @@
      "min": 42,
      "h": 0.7,
      "dist": 264845,
+     "distXP": 1439184,
      "best": false,
-     "expPct": 13
+     "expPct": 42
     },
     {
      "id": "1141",
@@ -491,8 +524,9 @@
      "min": 41,
      "h": 0.7,
      "dist": 262453,
+     "distXP": 1434027,
      "best": false,
-     "expPct": 13
+     "expPct": 42
     },
     {
      "id": "628",
@@ -501,8 +535,9 @@
      "min": 38,
      "h": 0.6,
      "dist": 238334,
+     "distXP": 1380663,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "1153",
@@ -511,8 +546,9 @@
      "min": 35,
      "h": 0.6,
      "dist": 219655,
+     "distXP": 1337452,
      "best": false,
-     "expPct": 11
+     "expPct": 39
     },
     {
      "id": "302",
@@ -521,8 +557,9 @@
      "min": 31,
      "h": 0.5,
      "dist": 197001,
+     "distXP": 1282499,
      "best": false,
-     "expPct": 10
+     "expPct": 38
     },
     {
      "id": "603",
@@ -531,8 +568,9 @@
      "min": 28,
      "h": 0.5,
      "dist": 178250,
+     "distXP": 1234572,
      "best": false,
-     "expPct": 9
+     "expPct": 36
     },
     {
      "id": "61",
@@ -541,8 +579,9 @@
      "min": 25,
      "h": 0.4,
      "dist": 160935,
+     "distXP": 1188020,
      "best": false,
-     "expPct": 8
+     "expPct": 35
     },
     {
      "id": "301",
@@ -551,8 +590,9 @@
      "min": 18,
      "h": 0.3,
      "dist": 112948,
+     "distXP": 1043938,
      "best": false,
-     "expPct": 6
+     "expPct": 31
     },
     {
      "id": "2",
@@ -561,8 +601,9 @@
      "min": 12,
      "h": 0.2,
      "dist": 77349,
+     "distXP": 915638,
      "best": false,
-     "expPct": 4
+     "expPct": 27
     },
     {
      "id": "1",
@@ -571,6 +612,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 1,
+     "distXP": 2293,
      "best": false,
      "expPct": 0
     }
@@ -582,6 +624,7 @@
     "min": 310,
     "h": 5.2,
     "dist": 1972786,
+    "distXP": 3409124,
     "best": true,
     "expPct": 100
    }
@@ -832,6 +875,7 @@
      "min": 326,
      "h": 5.4,
      "dist": 2071269,
+     "distXP": 3485783,
      "best": true,
      "expPct": 100
     },
@@ -842,8 +886,9 @@
      "min": 321,
      "h": 5.3,
      "dist": 2039856,
+     "distXP": 3461533,
      "best": false,
-     "expPct": 98
+     "expPct": 99
     },
     {
      "id": "1852",
@@ -852,8 +897,9 @@
      "min": 314,
      "h": 5.2,
      "dist": 1998465,
+     "distXP": 3429293,
      "best": false,
-     "expPct": 96
+     "expPct": 98
     },
     {
      "id": "1857",
@@ -862,8 +908,9 @@
      "min": 304,
      "h": 5.1,
      "dist": 1934582,
+     "distXP": 3378871,
      "best": false,
-     "expPct": 93
+     "expPct": 97
     },
     {
      "id": "1785",
@@ -872,8 +919,9 @@
      "min": 281,
      "h": 4.7,
      "dist": 1786244,
+     "distXP": 3258478,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1781",
@@ -882,8 +930,9 @@
      "min": 276,
      "h": 4.6,
      "dist": 1751927,
+     "distXP": 3229921,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1795",
@@ -892,8 +941,9 @@
      "min": 269,
      "h": 4.5,
      "dist": 1708516,
+     "distXP": 3193393,
      "best": false,
-     "expPct": 82
+     "expPct": 92
     },
     {
      "id": "1380",
@@ -902,8 +952,9 @@
      "min": 197,
      "h": 3.3,
      "dist": 1249743,
+     "distXP": 2774619,
      "best": false,
-     "expPct": 60
+     "expPct": 80
     },
     {
      "id": "1381",
@@ -912,8 +963,9 @@
      "min": 167,
      "h": 2.8,
      "dist": 1061834,
+     "distXP": 2581006,
      "best": false,
-     "expPct": 51
+     "expPct": 74
     },
     {
      "id": "1301",
@@ -922,8 +974,9 @@
      "min": 160,
      "h": 2.7,
      "dist": 1017755,
+     "distXP": 2533158,
      "best": false,
-     "expPct": 49
+     "expPct": 73
     },
     {
      "id": "1343",
@@ -932,8 +985,9 @@
      "min": 159,
      "h": 2.7,
      "dist": 1013670,
+     "distXP": 2528673,
      "best": false,
-     "expPct": 49
+     "expPct": 73
     },
     {
      "id": "2001",
@@ -942,8 +996,9 @@
      "min": 113,
      "h": 1.9,
      "dist": 717333,
+     "distXP": 2174814,
      "best": false,
-     "expPct": 35
+     "expPct": 62
     },
     {
      "id": "1623",
@@ -952,8 +1007,9 @@
      "min": 109,
      "h": 1.8,
      "dist": 693297,
+     "distXP": 2143137,
      "best": false,
-     "expPct": 33
+     "expPct": 61
     },
     {
      "id": "1727",
@@ -962,8 +1018,9 @@
      "min": 106,
      "h": 1.8,
      "dist": 674052,
+     "distXP": 2117376,
      "best": false,
-     "expPct": 33
+     "expPct": 61
     },
     {
      "id": "1620",
@@ -972,8 +1029,9 @@
      "min": 102,
      "h": 1.7,
      "dist": 650003,
+     "distXP": 2084660,
      "best": false,
-     "expPct": 31
+     "expPct": 60
     },
     {
      "id": "1314",
@@ -982,8 +1040,9 @@
      "min": 99,
      "h": 1.6,
      "dist": 626108,
+     "distXP": 2051550,
      "best": false,
-     "expPct": 30
+     "expPct": 59
     },
     {
      "id": "1691",
@@ -992,8 +1051,9 @@
      "min": 94,
      "h": 1.6,
      "dist": 595197,
+     "distXP": 2007766,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1604",
@@ -1002,8 +1062,9 @@
      "min": 90,
      "h": 1.5,
      "dist": 570173,
+     "distXP": 1971480,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "1319",
@@ -1012,8 +1073,9 @@
      "min": 88,
      "h": 1.5,
      "dist": 561458,
+     "distXP": 1958657,
      "best": false,
-     "expPct": 27
+     "expPct": 56
     },
     {
      "id": "1850",
@@ -1022,8 +1084,9 @@
      "min": 79,
      "h": 1.3,
      "dist": 499646,
+     "distXP": 1864692,
      "best": false,
-     "expPct": 24
+     "expPct": 53
     },
     {
      "id": "608",
@@ -1032,8 +1095,9 @@
      "min": 72,
      "h": 1.2,
      "dist": 457145,
+     "distXP": 1796666,
      "best": false,
-     "expPct": 22
+     "expPct": 52
     },
     {
      "id": "1001",
@@ -1042,8 +1106,9 @@
      "min": 69,
      "h": 1.1,
      "dist": 437715,
+     "distXP": 1764514,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1843",
@@ -1052,8 +1117,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 429660,
+     "distXP": 1750977,
      "best": false,
-     "expPct": 21
+     "expPct": 50
     },
     {
      "id": "604",
@@ -1062,8 +1128,9 @@
      "min": 62,
      "h": 1.0,
      "dist": 394984,
+     "distXP": 1691195,
      "best": false,
-     "expPct": 19
+     "expPct": 49
     },
     {
      "id": "1750",
@@ -1072,8 +1139,9 @@
      "min": 61,
      "h": 1.0,
      "dist": 386716,
+     "distXP": 1676555,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "609",
@@ -1082,8 +1150,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 381253,
+     "distXP": 1666799,
      "best": false,
-     "expPct": 18
+     "expPct": 48
     },
     {
      "id": "1649",
@@ -1092,8 +1161,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 378276,
+     "distXP": 1661453,
      "best": false,
-     "expPct": 18
+     "expPct": 48
     },
     {
      "id": "1145",
@@ -1102,8 +1172,9 @@
      "min": 57,
      "h": 1.0,
      "dist": 364112,
+     "distXP": 1635719,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "1002",
@@ -1112,8 +1183,9 @@
      "min": 56,
      "h": 0.9,
      "dist": 353108,
+     "distXP": 1615382,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "1101",
@@ -1122,8 +1194,9 @@
      "min": 52,
      "h": 0.9,
      "dist": 333146,
+     "distXP": 1577660,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "1834",
@@ -1132,8 +1205,9 @@
      "min": 46,
      "h": 0.8,
      "dist": 290703,
+     "distXP": 1493501,
      "best": false,
-     "expPct": 14
+     "expPct": 43
     },
     {
      "id": "601",
@@ -1142,8 +1216,9 @@
      "min": 45,
      "h": 0.8,
      "dist": 286054,
+     "distXP": 1483919,
      "best": false,
-     "expPct": 14
+     "expPct": 43
     },
     {
      "id": "628",
@@ -1152,8 +1227,9 @@
      "min": 40,
      "h": 0.7,
      "dist": 252116,
+     "distXP": 1411471,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "61",
@@ -1162,8 +1238,9 @@
      "min": 38,
      "h": 0.6,
      "dist": 240673,
+     "distXP": 1385954,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "603",
@@ -1172,8 +1249,9 @@
      "min": 35,
      "h": 0.6,
      "dist": 221323,
+     "distXP": 1341385,
      "best": false,
-     "expPct": 11
+     "expPct": 38
     },
     {
      "id": "1153",
@@ -1182,8 +1260,9 @@
      "min": 35,
      "h": 0.6,
      "dist": 219905,
+     "distXP": 1338043,
      "best": false,
-     "expPct": 11
+     "expPct": 38
     },
     {
      "id": "602",
@@ -1192,8 +1271,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 218493,
+     "distXP": 1334705,
      "best": false,
-     "expPct": 11
+     "expPct": 38
     },
     {
      "id": "1141",
@@ -1202,8 +1282,9 @@
      "min": 31,
      "h": 0.5,
      "dist": 194722,
+     "distXP": 1276798,
      "best": false,
-     "expPct": 9
+     "expPct": 37
     },
     {
      "id": "2",
@@ -1212,8 +1293,9 @@
      "min": 19,
      "h": 0.3,
      "dist": 121548,
+     "distXP": 1071742,
      "best": false,
-     "expPct": 6
+     "expPct": 31
     },
     {
      "id": "1",
@@ -1222,8 +1304,9 @@
      "min": 18,
      "h": 0.3,
      "dist": 112948,
+     "distXP": 1043938,
      "best": false,
-     "expPct": 5
+     "expPct": 30
     },
     {
      "id": "302",
@@ -1232,8 +1315,9 @@
      "min": 16,
      "h": 0.3,
      "dist": 100258,
+     "distXP": 1000903,
      "best": false,
-     "expPct": 5
+     "expPct": 29
     },
     {
      "id": "301",
@@ -1242,6 +1326,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 1645,
      "best": false,
      "expPct": 0
     }
@@ -1253,6 +1338,7 @@
     "min": 326,
     "h": 5.4,
     "dist": 2071269,
+    "distXP": 3485783,
     "best": true,
     "expPct": 100
    }
@@ -1798,6 +1884,7 @@
      "min": 300,
      "h": 5.0,
      "dist": 1907393,
+     "distXP": 3357159,
      "best": true,
      "expPct": 100
     },
@@ -1808,8 +1895,9 @@
      "min": 291,
      "h": 4.9,
      "dist": 1851839,
+     "distXP": 3312309,
      "best": false,
-     "expPct": 97
+     "expPct": 99
     },
     {
      "id": "1852",
@@ -1818,8 +1906,9 @@
      "min": 285,
      "h": 4.8,
      "dist": 1814388,
+     "distXP": 3281694,
      "best": false,
-     "expPct": 95
+     "expPct": 98
     },
     {
      "id": "1857",
@@ -1828,8 +1917,9 @@
      "min": 274,
      "h": 4.6,
      "dist": 1742895,
+     "distXP": 3222359,
      "best": false,
-     "expPct": 91
+     "expPct": 96
     },
     {
      "id": "1785",
@@ -1838,8 +1928,9 @@
      "min": 251,
      "h": 4.2,
      "dist": 1594744,
+     "distXP": 3095397,
      "best": false,
-     "expPct": 84
+     "expPct": 92
     },
     {
      "id": "1781",
@@ -1848,8 +1939,9 @@
      "min": 250,
      "h": 4.2,
      "dist": 1590762,
+     "distXP": 3091905,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1795",
@@ -1858,8 +1950,9 @@
      "min": 246,
      "h": 4.1,
      "dist": 1561325,
+     "distXP": 3065952,
      "best": false,
-     "expPct": 82
+     "expPct": 91
     },
     {
      "id": "1380",
@@ -1868,8 +1961,9 @@
      "min": 241,
      "h": 4.0,
      "dist": 1534355,
+     "distXP": 3041959,
      "best": false,
-     "expPct": 80
+     "expPct": 91
     },
     {
      "id": "1381",
@@ -1878,8 +1972,9 @@
      "min": 212,
      "h": 3.5,
      "dist": 1345183,
+     "distXP": 2867371,
      "best": false,
-     "expPct": 71
+     "expPct": 85
     },
     {
      "id": "1301",
@@ -1888,8 +1983,9 @@
      "min": 205,
      "h": 3.4,
      "dist": 1300495,
+     "distXP": 2824366,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "1343",
@@ -1898,8 +1994,9 @@
      "min": 203,
      "h": 3.4,
      "dist": 1288346,
+     "distXP": 2812548,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "2001",
@@ -1908,8 +2005,9 @@
      "min": 149,
      "h": 2.5,
      "dist": 948940,
+     "distXP": 2456340,
      "best": false,
-     "expPct": 50
+     "expPct": 73
     },
     {
      "id": "1314",
@@ -1918,8 +2016,9 @@
      "min": 140,
      "h": 2.3,
      "dist": 891669,
+     "distXP": 2390258,
      "best": false,
-     "expPct": 47
+     "expPct": 71
     },
     {
      "id": "1319",
@@ -1928,8 +2027,9 @@
      "min": 133,
      "h": 2.2,
      "dist": 846731,
+     "distXP": 2336905,
      "best": false,
-     "expPct": 44
+     "expPct": 70
     },
     {
      "id": "1850",
@@ -1938,8 +2038,9 @@
      "min": 113,
      "h": 1.9,
      "dist": 720628,
+     "distXP": 2179115,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1727",
@@ -1948,8 +2049,9 @@
      "min": 110,
      "h": 1.8,
      "dist": 699126,
+     "distXP": 2150869,
      "best": false,
-     "expPct": 37
+     "expPct": 64
     },
     {
      "id": "1843",
@@ -1958,8 +2060,9 @@
      "min": 105,
      "h": 1.7,
      "dist": 664671,
+     "distXP": 2104684,
      "best": false,
-     "expPct": 35
+     "expPct": 63
     },
     {
      "id": "1145",
@@ -1968,8 +2071,9 @@
      "min": 101,
      "h": 1.7,
      "dist": 640083,
+     "distXP": 2070989,
      "best": false,
-     "expPct": 34
+     "expPct": 62
     },
     {
      "id": "1101",
@@ -1978,8 +2082,9 @@
      "min": 97,
      "h": 1.6,
      "dist": 617217,
+     "distXP": 2039069,
      "best": false,
-     "expPct": 32
+     "expPct": 61
     },
     {
      "id": "1691",
@@ -1988,8 +2093,9 @@
      "min": 87,
      "h": 1.5,
      "dist": 553739,
+     "distXP": 1947216,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1834",
@@ -1998,8 +2104,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 547052,
+     "distXP": 1937239,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1750",
@@ -2008,8 +2115,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 543579,
+     "distXP": 1932034,
      "best": false,
-     "expPct": 28
+     "expPct": 58
     },
     {
      "id": "1002",
@@ -2018,8 +2126,9 @@
      "min": 84,
      "h": 1.4,
      "dist": 533495,
+     "distXP": 1916825,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "1153",
@@ -2028,8 +2137,9 @@
      "min": 78,
      "h": 1.3,
      "dist": 494423,
+     "distXP": 1856492,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "1001",
@@ -2038,8 +2148,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 485214,
+     "distXP": 1841930,
      "best": false,
-     "expPct": 25
+     "expPct": 55
     },
     {
      "id": "1623",
@@ -2048,8 +2159,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 483838,
+     "distXP": 1839742,
      "best": false,
-     "expPct": 25
+     "expPct": 55
     },
     {
      "id": "1141",
@@ -2058,8 +2170,9 @@
      "min": 75,
      "h": 1.3,
      "dist": 476952,
+     "distXP": 1828746,
      "best": false,
-     "expPct": 25
+     "expPct": 54
     },
     {
      "id": "1604",
@@ -2068,8 +2181,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 406227,
+     "distXP": 1710855,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1620",
@@ -2078,8 +2192,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 405906,
+     "distXP": 1710297,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1649",
@@ -2088,8 +2203,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 405056,
+     "distXP": 1708820,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1",
@@ -2098,8 +2214,9 @@
      "min": 46,
      "h": 0.8,
      "dist": 289264,
+     "distXP": 1490543,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "301",
@@ -2108,8 +2225,9 @@
      "min": 45,
      "h": 0.8,
      "dist": 286054,
+     "distXP": 1483919,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "302",
@@ -2118,8 +2236,9 @@
      "min": 38,
      "h": 0.6,
      "dist": 242300,
+     "distXP": 1389618,
      "best": false,
-     "expPct": 13
+     "expPct": 41
     },
     {
      "id": "608",
@@ -2128,8 +2247,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 218522,
+     "distXP": 1334774,
      "best": false,
-     "expPct": 11
+     "expPct": 40
     },
     {
      "id": "2",
@@ -2138,8 +2258,9 @@
      "min": 33,
      "h": 0.6,
      "dist": 211915,
+     "distXP": 1319011,
      "best": false,
-     "expPct": 11
+     "expPct": 39
     },
     {
      "id": "61",
@@ -2148,8 +2269,9 @@
      "min": 33,
      "h": 0.5,
      "dist": 208908,
+     "distXP": 1311755,
      "best": false,
-     "expPct": 11
+     "expPct": 39
     },
     {
      "id": "609",
@@ -2158,8 +2280,9 @@
      "min": 30,
      "h": 0.5,
      "dist": 190011,
+     "distXP": 1264911,
      "best": false,
-     "expPct": 10
+     "expPct": 38
     },
     {
      "id": "604",
@@ -2168,8 +2291,9 @@
      "min": 22,
      "h": 0.4,
      "dist": 139126,
+     "distXP": 1125660,
      "best": false,
-     "expPct": 7
+     "expPct": 34
     },
     {
      "id": "602",
@@ -2178,8 +2302,9 @@
      "min": 21,
      "h": 0.4,
      "dist": 135234,
+     "distXP": 1114029,
      "best": false,
-     "expPct": 7
+     "expPct": 33
     },
     {
      "id": "603",
@@ -2188,8 +2313,9 @@
      "min": 21,
      "h": 0.4,
      "dist": 134530,
+     "distXP": 1111909,
      "best": false,
-     "expPct": 7
+     "expPct": 33
     },
     {
      "id": "628",
@@ -2198,8 +2324,9 @@
      "min": 9,
      "h": 0.2,
      "dist": 59036,
+     "distXP": 837843,
      "best": false,
-     "expPct": 3
+     "expPct": 25
     },
     {
      "id": "601",
@@ -2208,6 +2335,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 2124,
      "best": false,
      "expPct": 0
     }
@@ -2219,6 +2347,7 @@
     "min": 300,
     "h": 5.0,
     "dist": 1907393,
+    "distXP": 3357159,
     "best": true,
     "expPct": 100
    }
@@ -2323,6 +2452,7 @@
      "min": 288,
      "h": 4.8,
      "dist": 1832089,
+     "distXP": 3296203,
      "best": true,
      "expPct": 100
     },
@@ -2333,8 +2463,9 @@
      "min": 283,
      "h": 4.7,
      "dist": 1799183,
+     "distXP": 3269174,
      "best": false,
-     "expPct": 98
+     "expPct": 99
     },
     {
      "id": "1852",
@@ -2343,8 +2474,9 @@
      "min": 277,
      "h": 4.6,
      "dist": 1757833,
+     "distXP": 3234856,
      "best": false,
-     "expPct": 96
+     "expPct": 98
     },
     {
      "id": "1857",
@@ -2353,8 +2485,9 @@
      "min": 267,
      "h": 4.4,
      "dist": 1693954,
+     "distXP": 3181036,
      "best": false,
-     "expPct": 92
+     "expPct": 97
     },
     {
      "id": "1785",
@@ -2363,8 +2496,9 @@
      "min": 243,
      "h": 4.1,
      "dist": 1545639,
+     "distXP": 3052022,
      "best": false,
-     "expPct": 84
+     "expPct": 93
     },
     {
      "id": "1781",
@@ -2373,8 +2507,9 @@
      "min": 238,
      "h": 4.0,
      "dist": 1512788,
+     "distXP": 3022620,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1795",
@@ -2383,8 +2518,9 @@
      "min": 232,
      "h": 3.9,
      "dist": 1471356,
+     "distXP": 2985078,
      "best": false,
-     "expPct": 80
+     "expPct": 91
     },
     {
      "id": "1380",
@@ -2393,8 +2529,9 @@
      "min": 222,
      "h": 3.7,
      "dist": 1410393,
+     "distXP": 2928863,
      "best": false,
-     "expPct": 77
+     "expPct": 89
     },
     {
      "id": "1381",
@@ -2403,8 +2540,9 @@
      "min": 199,
      "h": 3.3,
      "dist": 1262698,
+     "distXP": 2787412,
      "best": false,
-     "expPct": 69
+     "expPct": 85
     },
     {
      "id": "1301",
@@ -2413,8 +2551,9 @@
      "min": 184,
      "h": 3.1,
      "dist": 1170661,
+     "distXP": 2695044,
      "best": false,
-     "expPct": 64
+     "expPct": 82
     },
     {
      "id": "1343",
@@ -2423,8 +2562,9 @@
      "min": 179,
      "h": 3.0,
      "dist": 1139651,
+     "distXP": 2663110,
      "best": false,
-     "expPct": 62
+     "expPct": 81
     },
     {
      "id": "2001",
@@ -2433,8 +2573,9 @@
      "min": 120,
      "h": 2.0,
      "dist": 764874,
+     "distXP": 2235944,
      "best": false,
-     "expPct": 42
+     "expPct": 68
     },
     {
      "id": "1850",
@@ -2443,8 +2584,9 @@
      "min": 116,
      "h": 1.9,
      "dist": 740067,
+     "distXP": 2204292,
      "best": false,
-     "expPct": 40
+     "expPct": 67
     },
     {
      "id": "1319",
@@ -2453,8 +2595,9 @@
      "min": 116,
      "h": 1.9,
      "dist": 737203,
+     "distXP": 2200603,
      "best": false,
-     "expPct": 40
+     "expPct": 67
     },
     {
      "id": "1314",
@@ -2463,8 +2606,9 @@
      "min": 116,
      "h": 1.9,
      "dist": 736954,
+     "distXP": 2200282,
      "best": false,
-     "expPct": 40
+     "expPct": 67
     },
     {
      "id": "1691",
@@ -2473,8 +2617,9 @@
      "min": 114,
      "h": 1.9,
      "dist": 725197,
+     "distXP": 2185063,
      "best": false,
-     "expPct": 40
+     "expPct": 66
     },
     {
      "id": "1623",
@@ -2483,8 +2628,9 @@
      "min": 109,
      "h": 1.8,
      "dist": 692647,
+     "distXP": 2142273,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1843",
@@ -2493,8 +2639,9 @@
      "min": 105,
      "h": 1.8,
      "dist": 670297,
+     "distXP": 2112306,
      "best": false,
-     "expPct": 37
+     "expPct": 64
     },
     {
      "id": "1604",
@@ -2503,8 +2650,9 @@
      "min": 96,
      "h": 1.6,
      "dist": 610580,
+     "distXP": 2029693,
      "best": false,
-     "expPct": 33
+     "expPct": 62
     },
     {
      "id": "1750",
@@ -2513,8 +2661,9 @@
      "min": 96,
      "h": 1.6,
      "dist": 610490,
+     "distXP": 2029566,
      "best": false,
-     "expPct": 33
+     "expPct": 62
     },
     {
      "id": "1620",
@@ -2523,8 +2672,9 @@
      "min": 96,
      "h": 1.6,
      "dist": 610199,
+     "distXP": 2029154,
      "best": false,
-     "expPct": 33
+     "expPct": 62
     },
     {
      "id": "1145",
@@ -2533,8 +2683,9 @@
      "min": 93,
      "h": 1.5,
      "dist": 590638,
+     "distXP": 2001213,
      "best": false,
-     "expPct": 32
+     "expPct": 61
     },
     {
      "id": "1101",
@@ -2543,8 +2694,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 545676,
+     "distXP": 1935179,
      "best": false,
-     "expPct": 30
+     "expPct": 59
     },
     {
      "id": "1649",
@@ -2553,8 +2705,9 @@
      "min": 85,
      "h": 1.4,
      "dist": 538898,
+     "distXP": 1924992,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1834",
@@ -2563,8 +2716,9 @@
      "min": 83,
      "h": 1.4,
      "dist": 529826,
+     "distXP": 1911257,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1727",
@@ -2573,8 +2727,9 @@
      "min": 79,
      "h": 1.3,
      "dist": 503842,
+     "distXP": 1871250,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "608",
@@ -2583,8 +2738,9 @@
      "min": 67,
      "h": 1.1,
      "dist": 427021,
+     "distXP": 1746513,
      "best": false,
-     "expPct": 23
+     "expPct": 53
     },
     {
      "id": "1141",
@@ -2593,8 +2749,9 @@
      "min": 66,
      "h": 1.1,
      "dist": 419737,
+     "distXP": 1734123,
      "best": false,
-     "expPct": 23
+     "expPct": 53
     },
     {
      "id": "609",
@@ -2603,8 +2760,9 @@
      "min": 62,
      "h": 1.0,
      "dist": 392992,
+     "distXP": 1687680,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1153",
@@ -2613,8 +2771,9 @@
      "min": 59,
      "h": 1.0,
      "dist": 376396,
+     "distXP": 1658064,
      "best": false,
-     "expPct": 21
+     "expPct": 50
     },
     {
      "id": "1002",
@@ -2623,8 +2782,9 @@
      "min": 54,
      "h": 0.9,
      "dist": 340922,
+     "distXP": 1592484,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "1001",
@@ -2633,8 +2793,9 @@
      "min": 44,
      "h": 0.7,
      "dist": 279424,
+     "distXP": 1470119,
      "best": false,
-     "expPct": 15
+     "expPct": 45
     },
     {
      "id": "302",
@@ -2643,8 +2804,9 @@
      "min": 44,
      "h": 0.7,
      "dist": 276929,
+     "distXP": 1464883,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "602",
@@ -2653,8 +2815,9 @@
      "min": 43,
      "h": 0.7,
      "dist": 273170,
+     "distXP": 1456949,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "301",
@@ -2663,8 +2826,9 @@
      "min": 38,
      "h": 0.6,
      "dist": 240673,
+     "distXP": 1385954,
      "best": false,
-     "expPct": 13
+     "expPct": 42
     },
     {
      "id": "604",
@@ -2673,8 +2837,9 @@
      "min": 35,
      "h": 0.6,
      "dist": 225535,
+     "distXP": 1351247,
      "best": false,
-     "expPct": 12
+     "expPct": 41
     },
     {
      "id": "601",
@@ -2683,8 +2848,9 @@
      "min": 33,
      "h": 0.5,
      "dist": 208908,
+     "distXP": 1311756,
      "best": false,
-     "expPct": 11
+     "expPct": 40
     },
     {
      "id": "1",
@@ -2693,8 +2859,9 @@
      "min": 25,
      "h": 0.4,
      "dist": 160935,
+     "distXP": 1188021,
      "best": false,
-     "expPct": 9
+     "expPct": 36
     },
     {
      "id": "628",
@@ -2703,8 +2870,9 @@
      "min": 24,
      "h": 0.4,
      "dist": 150275,
+     "distXP": 1158106,
      "best": false,
-     "expPct": 8
+     "expPct": 35
     },
     {
      "id": "2",
@@ -2713,8 +2881,9 @@
      "min": 19,
      "h": 0.3,
      "dist": 119650,
+     "distXP": 1065692,
      "best": false,
-     "expPct": 7
+     "expPct": 32
     },
     {
      "id": "603",
@@ -2723,8 +2892,9 @@
      "min": 12,
      "h": 0.2,
      "dist": 77166,
+     "distXP": 914909,
      "best": false,
-     "expPct": 4
+     "expPct": 28
     },
     {
      "id": "61",
@@ -2733,6 +2903,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -2744,6 +2915,7 @@
     "min": 288,
     "h": 4.8,
     "dist": 1832089,
+    "distXP": 3296203,
     "best": true,
     "expPct": 100
    }
@@ -2825,6 +2997,7 @@
      "min": 321,
      "h": 5.4,
      "dist": 2040260,
+     "distXP": 3461846,
      "best": true,
      "expPct": 100
     },
@@ -2835,8 +3008,9 @@
      "min": 313,
      "h": 5.2,
      "dist": 1986636,
+     "distXP": 3420018,
      "best": false,
-     "expPct": 97
+     "expPct": 99
     },
     {
      "id": "1852",
@@ -2845,8 +3019,9 @@
      "min": 307,
      "h": 5.1,
      "dist": 1948948,
+     "distXP": 3390282,
      "best": false,
-     "expPct": 96
+     "expPct": 98
     },
     {
      "id": "1857",
@@ -2855,8 +3030,9 @@
      "min": 295,
      "h": 4.9,
      "dist": 1877834,
+     "distXP": 3333378,
      "best": false,
-     "expPct": 92
+     "expPct": 96
     },
     {
      "id": "1785",
@@ -2865,8 +3041,9 @@
      "min": 272,
      "h": 4.5,
      "dist": 1729628,
+     "distXP": 3211215,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1781",
@@ -2875,8 +3052,9 @@
      "min": 271,
      "h": 4.5,
      "dist": 1723052,
+     "distXP": 3205676,
      "best": false,
-     "expPct": 84
+     "expPct": 93
     },
     {
      "id": "1795",
@@ -2885,8 +3063,9 @@
      "min": 266,
      "h": 4.4,
      "dist": 1691705,
+     "distXP": 3179124,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1380",
@@ -2895,8 +3074,9 @@
      "min": 229,
      "h": 3.8,
      "dist": 1456156,
+     "distXP": 2971173,
      "best": false,
-     "expPct": 71
+     "expPct": 86
     },
     {
      "id": "1381",
@@ -2905,8 +3085,9 @@
      "min": 196,
      "h": 3.3,
      "dist": 1245272,
+     "distXP": 2770188,
      "best": false,
-     "expPct": 61
+     "expPct": 80
     },
     {
      "id": "1343",
@@ -2915,8 +3096,9 @@
      "min": 194,
      "h": 3.2,
      "dist": 1230064,
+     "distXP": 2755058,
      "best": false,
-     "expPct": 60
+     "expPct": 80
     },
     {
      "id": "1301",
@@ -2925,8 +3107,9 @@
      "min": 193,
      "h": 3.2,
      "dist": 1228156,
+     "distXP": 2753153,
      "best": false,
-     "expPct": 60
+     "expPct": 80
     },
     {
      "id": "2001",
@@ -2935,8 +3118,9 @@
      "min": 146,
      "h": 2.4,
      "dist": 930037,
+     "distXP": 2434755,
      "best": false,
-     "expPct": 46
+     "expPct": 70
     },
     {
      "id": "1314",
@@ -2945,8 +3129,9 @@
      "min": 133,
      "h": 2.2,
      "dist": 844584,
+     "distXP": 2334320,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1727",
@@ -2955,8 +3140,9 @@
      "min": 122,
      "h": 2.0,
      "dist": 776545,
+     "distXP": 2250659,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1319",
@@ -2965,8 +3151,9 @@
      "min": 121,
      "h": 2.0,
      "dist": 768521,
+     "distXP": 2240554,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1850",
@@ -2975,8 +3162,9 @@
      "min": 93,
      "h": 1.6,
      "dist": 591715,
+     "distXP": 2002763,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1001",
@@ -2985,8 +3173,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 547384,
+     "distXP": 1937736,
      "best": false,
-     "expPct": 27
+     "expPct": 56
     },
     {
      "id": "1843",
@@ -2995,8 +3184,9 @@
      "min": 85,
      "h": 1.4,
      "dist": 540036,
+     "distXP": 1926707,
      "best": false,
-     "expPct": 26
+     "expPct": 56
     },
     {
      "id": "1002",
@@ -3005,8 +3195,9 @@
      "min": 85,
      "h": 1.4,
      "dist": 538849,
+     "distXP": 1924918,
      "best": false,
-     "expPct": 26
+     "expPct": 56
     },
     {
      "id": "1145",
@@ -3015,8 +3206,9 @@
      "min": 84,
      "h": 1.4,
      "dist": 536563,
+     "distXP": 1921467,
      "best": false,
-     "expPct": 26
+     "expPct": 56
     },
     {
      "id": "1101",
@@ -3025,8 +3217,9 @@
      "min": 83,
      "h": 1.4,
      "dist": 525405,
+     "distXP": 1904519,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "1623",
@@ -3035,8 +3228,9 @@
      "min": 75,
      "h": 1.3,
      "dist": 477186,
+     "distXP": 1829120,
      "best": false,
-     "expPct": 23
+     "expPct": 53
     },
     {
      "id": "1691",
@@ -3045,8 +3239,9 @@
      "min": 71,
      "h": 1.2,
      "dist": 452089,
+     "distXP": 1788366,
      "best": false,
-     "expPct": 22
+     "expPct": 52
     },
     {
      "id": "1153",
@@ -3055,8 +3250,9 @@
      "min": 69,
      "h": 1.1,
      "dist": 438304,
+     "distXP": 1765500,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1834",
@@ -3065,8 +3261,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 433425,
+     "distXP": 1757320,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1620",
@@ -3075,8 +3272,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 431973,
+     "distXP": 1754878,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1750",
@@ -3085,8 +3283,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 408895,
+     "distXP": 1715479,
      "best": false,
-     "expPct": 20
+     "expPct": 50
     },
     {
      "id": "1141",
@@ -3095,8 +3294,9 @@
      "min": 61,
      "h": 1.0,
      "dist": 386080,
+     "distXP": 1675424,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "1604",
@@ -3105,8 +3305,9 @@
      "min": 57,
      "h": 1.0,
      "dist": 363602,
+     "distXP": 1634785,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "1649",
@@ -3115,8 +3316,9 @@
      "min": 44,
      "h": 0.7,
      "dist": 277836,
+     "distXP": 1466787,
      "best": false,
-     "expPct": 14
+     "expPct": 42
     },
     {
      "id": "604",
@@ -3125,8 +3327,9 @@
      "min": 43,
      "h": 0.7,
      "dist": 274350,
+     "distXP": 1459446,
      "best": false,
-     "expPct": 13
+     "expPct": 42
     },
     {
      "id": "1",
@@ -3135,8 +3338,9 @@
      "min": 43,
      "h": 0.7,
      "dist": 274298,
+     "distXP": 1459335,
      "best": false,
-     "expPct": 13
+     "expPct": 42
     },
     {
      "id": "61",
@@ -3145,8 +3349,9 @@
      "min": 43,
      "h": 0.7,
      "dist": 273170,
+     "distXP": 1456949,
      "best": false,
-     "expPct": 13
+     "expPct": 42
     },
     {
      "id": "608",
@@ -3155,8 +3360,9 @@
      "min": 38,
      "h": 0.6,
      "dist": 240524,
+     "distXP": 1385619,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "301",
@@ -3165,8 +3371,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 218493,
+     "distXP": 1334706,
      "best": false,
-     "expPct": 11
+     "expPct": 39
     },
     {
      "id": "2",
@@ -3175,8 +3382,9 @@
      "min": 33,
      "h": 0.5,
      "dist": 208683,
+     "distXP": 1311210,
      "best": false,
-     "expPct": 10
+     "expPct": 38
     },
     {
      "id": "603",
@@ -3185,8 +3393,9 @@
      "min": 32,
      "h": 0.5,
      "dist": 200396,
+     "distXP": 1290928,
      "best": false,
-     "expPct": 10
+     "expPct": 37
     },
     {
      "id": "609",
@@ -3195,8 +3404,9 @@
      "min": 26,
      "h": 0.4,
      "dist": 162994,
+     "distXP": 1193683,
      "best": false,
-     "expPct": 8
+     "expPct": 34
     },
     {
      "id": "628",
@@ -3205,8 +3415,9 @@
      "min": 24,
      "h": 0.4,
      "dist": 154284,
+     "distXP": 1169478,
      "best": false,
-     "expPct": 8
+     "expPct": 34
     },
     {
      "id": "302",
@@ -3215,8 +3426,9 @@
      "min": 22,
      "h": 0.4,
      "dist": 137675,
+     "distXP": 1121345,
      "best": false,
-     "expPct": 7
+     "expPct": 32
     },
     {
      "id": "601",
@@ -3225,8 +3437,9 @@
      "min": 21,
      "h": 0.4,
      "dist": 135233,
+     "distXP": 1114028,
      "best": false,
-     "expPct": 7
+     "expPct": 32
     },
     {
      "id": "602",
@@ -3235,6 +3448,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -3246,6 +3460,7 @@
     "min": 321,
     "h": 5.4,
     "dist": 2040260,
+    "distXP": 3461846,
     "best": true,
     "expPct": 100
    }
@@ -3327,6 +3542,7 @@
      "min": 279,
      "h": 4.6,
      "dist": 1771565,
+     "distXP": 3246297,
      "best": true,
      "expPct": 100
     },
@@ -3337,8 +3553,9 @@
      "min": 270,
      "h": 4.5,
      "dist": 1713458,
+     "distXP": 3197575,
      "best": false,
-     "expPct": 97
+     "expPct": 98
     },
     {
      "id": "1852",
@@ -3347,8 +3564,9 @@
      "min": 264,
      "h": 4.4,
      "dist": 1676341,
+     "distXP": 3166020,
      "best": false,
-     "expPct": 95
+     "expPct": 98
     },
     {
      "id": "1380",
@@ -3357,8 +3575,9 @@
      "min": 256,
      "h": 4.3,
      "dist": 1624343,
+     "distXP": 3121219,
      "best": false,
-     "expPct": 92
+     "expPct": 96
     },
     {
      "id": "1857",
@@ -3367,8 +3586,9 @@
      "min": 252,
      "h": 4.2,
      "dist": 1604315,
+     "distXP": 3103772,
      "best": false,
-     "expPct": 91
+     "expPct": 96
     },
     {
      "id": "1785",
@@ -3377,8 +3597,9 @@
      "min": 229,
      "h": 3.8,
      "dist": 1456252,
+     "distXP": 2971261,
      "best": false,
-     "expPct": 82
+     "expPct": 92
     },
     {
      "id": "1781",
@@ -3387,8 +3608,9 @@
      "min": 229,
      "h": 3.8,
      "dist": 1455784,
+     "distXP": 2970832,
      "best": false,
-     "expPct": 82
+     "expPct": 92
     },
     {
      "id": "1381",
@@ -3397,8 +3619,9 @@
      "min": 229,
      "h": 3.8,
      "dist": 1455288,
+     "distXP": 2970376,
      "best": false,
-     "expPct": 82
+     "expPct": 92
     },
     {
      "id": "1795",
@@ -3407,8 +3630,9 @@
      "min": 225,
      "h": 3.7,
      "dist": 1428839,
+     "distXP": 2945999,
      "best": false,
-     "expPct": 81
+     "expPct": 91
     },
     {
      "id": "1301",
@@ -3417,8 +3641,9 @@
      "min": 218,
      "h": 3.6,
      "dist": 1386523,
+     "distXP": 2906523,
      "best": false,
-     "expPct": 78
+     "expPct": 90
     },
     {
      "id": "1343",
@@ -3427,8 +3652,9 @@
      "min": 214,
      "h": 3.6,
      "dist": 1361664,
+     "distXP": 2883050,
      "best": false,
-     "expPct": 77
+     "expPct": 89
     },
     {
      "id": "2001",
@@ -3437,8 +3663,9 @@
      "min": 156,
      "h": 2.6,
      "dist": 989643,
+     "distXP": 2502100,
      "best": false,
-     "expPct": 56
+     "expPct": 77
     },
     {
      "id": "1314",
@@ -3447,8 +3674,9 @@
      "min": 151,
      "h": 2.5,
      "dist": 959693,
+     "distXP": 2468523,
      "best": false,
-     "expPct": 54
+     "expPct": 76
     },
     {
      "id": "1319",
@@ -3457,8 +3685,9 @@
      "min": 148,
      "h": 2.5,
      "dist": 942361,
+     "distXP": 2448852,
      "best": false,
-     "expPct": 53
+     "expPct": 75
     },
     {
      "id": "1850",
@@ -3467,8 +3696,9 @@
      "min": 135,
      "h": 2.2,
      "dist": 855797,
+     "distXP": 2347780,
      "best": false,
-     "expPct": 48
+     "expPct": 72
     },
     {
      "id": "1843",
@@ -3477,8 +3707,9 @@
      "min": 125,
      "h": 2.1,
      "dist": 797155,
+     "distXP": 2276375,
      "best": false,
-     "expPct": 45
+     "expPct": 70
     },
     {
      "id": "1145",
@@ -3487,8 +3718,9 @@
      "min": 119,
      "h": 2.0,
      "dist": 758203,
+     "distXP": 2227484,
      "best": false,
-     "expPct": 43
+     "expPct": 69
     },
     {
      "id": "1101",
@@ -3497,8 +3729,9 @@
      "min": 114,
      "h": 1.9,
      "dist": 727270,
+     "distXP": 2187756,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1750",
@@ -3507,8 +3740,9 @@
      "min": 107,
      "h": 1.8,
      "dist": 682493,
+     "distXP": 2128719,
      "best": false,
-     "expPct": 39
+     "expPct": 66
     },
     {
      "id": "1834",
@@ -3517,8 +3751,9 @@
      "min": 106,
      "h": 1.8,
      "dist": 673220,
+     "distXP": 2116254,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1691",
@@ -3527,8 +3762,9 @@
      "min": 105,
      "h": 1.8,
      "dist": 669684,
+     "distXP": 2111478,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1727",
@@ -3537,8 +3773,9 @@
      "min": 101,
      "h": 1.7,
      "dist": 641994,
+     "distXP": 2073632,
      "best": false,
-     "expPct": 36
+     "expPct": 64
     },
     {
      "id": "1141",
@@ -3547,8 +3784,9 @@
      "min": 93,
      "h": 1.5,
      "dist": 589706,
+     "distXP": 1999870,
      "best": false,
-     "expPct": 33
+     "expPct": 62
     },
     {
      "id": "1153",
@@ -3557,8 +3795,9 @@
      "min": 92,
      "h": 1.5,
      "dist": 581692,
+     "distXP": 1988280,
      "best": false,
-     "expPct": 33
+     "expPct": 61
     },
     {
      "id": "1002",
@@ -3567,8 +3806,9 @@
      "min": 89,
      "h": 1.5,
      "dist": 565053,
+     "distXP": 1963959,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "1649",
@@ -3577,8 +3817,9 @@
      "min": 85,
      "h": 1.4,
      "dist": 539529,
+     "distXP": 1925942,
      "best": false,
-     "expPct": 30
+     "expPct": 59
     },
     {
      "id": "1623",
@@ -3587,8 +3828,9 @@
      "min": 83,
      "h": 1.4,
      "dist": 526015,
+     "distXP": 1905451,
      "best": false,
-     "expPct": 30
+     "expPct": 59
     },
     {
      "id": "1604",
@@ -3597,8 +3839,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 485091,
+     "distXP": 1841734,
      "best": false,
-     "expPct": 27
+     "expPct": 57
     },
     {
      "id": "1001",
@@ -3607,8 +3850,9 @@
      "min": 72,
      "h": 1.2,
      "dist": 457848,
+     "distXP": 1797817,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "1620",
@@ -3617,8 +3861,9 @@
      "min": 67,
      "h": 1.1,
      "dist": 422638,
+     "distXP": 1739071,
      "best": false,
-     "expPct": 24
+     "expPct": 54
     },
     {
      "id": "301",
@@ -3627,8 +3872,9 @@
      "min": 62,
      "h": 1.0,
      "dist": 394984,
+     "distXP": 1691194,
      "best": false,
-     "expPct": 22
+     "expPct": 52
     },
     {
      "id": "302",
@@ -3637,8 +3883,9 @@
      "min": 59,
      "h": 1.0,
      "dist": 371860,
+     "distXP": 1649857,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1",
@@ -3647,8 +3894,9 @@
      "min": 57,
      "h": 1.0,
      "dist": 362973,
+     "distXP": 1633629,
      "best": false,
-     "expPct": 20
+     "expPct": 50
     },
     {
      "id": "2",
@@ -3657,8 +3905,9 @@
      "min": 46,
      "h": 0.8,
      "dist": 292192,
+     "distXP": 1496553,
      "best": false,
-     "expPct": 16
+     "expPct": 46
     },
     {
      "id": "609",
@@ -3667,8 +3916,9 @@
      "min": 45,
      "h": 0.8,
      "dist": 288720,
+     "distXP": 1489422,
      "best": false,
-     "expPct": 16
+     "expPct": 46
     },
     {
      "id": "602",
@@ -3677,8 +3927,9 @@
      "min": 43,
      "h": 0.7,
      "dist": 274350,
+     "distXP": 1459446,
      "best": false,
-     "expPct": 15
+     "expPct": 45
     },
     {
      "id": "608",
@@ -3687,8 +3938,9 @@
      "min": 43,
      "h": 0.7,
      "dist": 273039,
+     "distXP": 1456671,
      "best": false,
-     "expPct": 15
+     "expPct": 45
     },
     {
      "id": "61",
@@ -3697,8 +3949,9 @@
      "min": 35,
      "h": 0.6,
      "dist": 225535,
+     "distXP": 1351247,
      "best": false,
-     "expPct": 13
+     "expPct": 42
     },
     {
      "id": "603",
@@ -3707,8 +3960,9 @@
      "min": 29,
      "h": 0.5,
      "dist": 184879,
+     "distXP": 1251792,
      "best": false,
-     "expPct": 10
+     "expPct": 39
     },
     {
      "id": "628",
@@ -3717,8 +3971,9 @@
      "min": 23,
      "h": 0.4,
      "dist": 144976,
+     "distXP": 1142841,
      "best": false,
-     "expPct": 8
+     "expPct": 35
     },
     {
      "id": "601",
@@ -3727,8 +3982,9 @@
      "min": 22,
      "h": 0.4,
      "dist": 139126,
+     "distXP": 1125661,
      "best": false,
-     "expPct": 8
+     "expPct": 35
     },
     {
      "id": "604",
@@ -3737,6 +3993,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -3748,6 +4005,7 @@
     "min": 279,
     "h": 4.6,
     "dist": 1771565,
+    "distXP": 3246297,
     "best": true,
     "expPct": 100
    }
@@ -3841,6 +4099,7 @@
      "min": 313,
      "h": 5.2,
      "dist": 1989537,
+     "distXP": 3422295,
      "best": true,
      "expPct": 100
     },
@@ -3851,8 +4110,9 @@
      "min": 301,
      "h": 5.0,
      "dist": 1911925,
+     "distXP": 3360789,
      "best": false,
-     "expPct": 96
+     "expPct": 98
     },
     {
      "id": "1852",
@@ -3861,8 +4121,9 @@
      "min": 296,
      "h": 4.9,
      "dist": 1878868,
+     "distXP": 3334213,
      "best": false,
-     "expPct": 94
+     "expPct": 97
     },
     {
      "id": "1857",
@@ -3871,8 +4132,9 @@
      "min": 283,
      "h": 4.7,
      "dist": 1800682,
+     "distXP": 3270411,
      "best": false,
-     "expPct": 91
+     "expPct": 96
     },
     {
      "id": "1380",
@@ -3881,8 +4143,9 @@
      "min": 267,
      "h": 4.4,
      "dist": 1695001,
+     "distXP": 3181927,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1781",
@@ -3891,8 +4154,9 @@
      "min": 264,
      "h": 4.4,
      "dist": 1679590,
+     "distXP": 3168795,
      "best": false,
-     "expPct": 84
+     "expPct": 93
     },
     {
      "id": "1795",
@@ -3901,8 +4165,9 @@
      "min": 262,
      "h": 4.4,
      "dist": 1662257,
+     "distXP": 3153955,
      "best": false,
-     "expPct": 84
+     "expPct": 92
     },
     {
      "id": "1785",
@@ -3911,8 +4176,9 @@
      "min": 260,
      "h": 4.3,
      "dist": 1654971,
+     "distXP": 3147693,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1381",
@@ -3921,8 +4187,9 @@
      "min": 232,
      "h": 3.9,
      "dist": 1473951,
+     "distXP": 2987444,
      "best": false,
-     "expPct": 74
+     "expPct": 87
     },
     {
      "id": "1343",
@@ -3931,8 +4198,9 @@
      "min": 231,
      "h": 3.9,
      "dist": 1470283,
+     "distXP": 2984099,
      "best": false,
-     "expPct": 74
+     "expPct": 87
     },
     {
      "id": "1301",
@@ -3941,8 +4209,9 @@
      "min": 231,
      "h": 3.9,
      "dist": 1468229,
+     "distXP": 2982223,
      "best": false,
-     "expPct": 74
+     "expPct": 87
     },
     {
      "id": "2001",
@@ -3951,8 +4220,9 @@
      "min": 182,
      "h": 3.0,
      "dist": 1156631,
+     "distXP": 2680649,
      "best": false,
-     "expPct": 58
+     "expPct": 78
     },
     {
      "id": "1314",
@@ -3961,8 +4231,9 @@
      "min": 170,
      "h": 2.8,
      "dist": 1082405,
+     "distXP": 2602994,
      "best": false,
-     "expPct": 54
+     "expPct": 76
     },
     {
      "id": "1319",
@@ -3971,8 +4242,9 @@
      "min": 159,
      "h": 2.6,
      "dist": 1008218,
+     "distXP": 2522671,
      "best": false,
-     "expPct": 51
+     "expPct": 74
     },
     {
      "id": "1727",
@@ -3981,8 +4253,9 @@
      "min": 142,
      "h": 2.4,
      "dist": 904851,
+     "distXP": 2405651,
      "best": false,
-     "expPct": 45
+     "expPct": 70
     },
     {
      "id": "1850",
@@ -3991,8 +4264,9 @@
      "min": 123,
      "h": 2.0,
      "dist": 781312,
+     "distXP": 2256637,
      "best": false,
-     "expPct": 39
+     "expPct": 66
     },
     {
      "id": "1145",
@@ -4001,8 +4275,9 @@
      "min": 121,
      "h": 2.0,
      "dist": 767372,
+     "distXP": 2239103,
      "best": false,
-     "expPct": 39
+     "expPct": 65
     },
     {
      "id": "1101",
@@ -4011,8 +4286,9 @@
      "min": 120,
      "h": 2.0,
      "dist": 762503,
+     "distXP": 2232942,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1002",
@@ -4021,8 +4297,9 @@
      "min": 118,
      "h": 2.0,
      "dist": 748062,
+     "distXP": 2214551,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1843",
@@ -4031,8 +4308,9 @@
      "min": 117,
      "h": 1.9,
      "dist": 743219,
+     "distXP": 2208342,
      "best": false,
-     "expPct": 37
+     "expPct": 65
     },
     {
      "id": "1001",
@@ -4041,8 +4319,9 @@
      "min": 110,
      "h": 1.8,
      "dist": 700149,
+     "distXP": 2152222,
      "best": false,
-     "expPct": 35
+     "expPct": 63
     },
     {
      "id": "1153",
@@ -4051,8 +4330,9 @@
      "min": 106,
      "h": 1.8,
      "dist": 676837,
+     "distXP": 2121126,
      "best": false,
-     "expPct": 34
+     "expPct": 62
     },
     {
      "id": "1834",
@@ -4061,8 +4341,9 @@
      "min": 103,
      "h": 1.7,
      "dist": 657222,
+     "distXP": 2094543,
      "best": false,
-     "expPct": 33
+     "expPct": 61
     },
     {
      "id": "1141",
@@ -4071,8 +4352,9 @@
      "min": 98,
      "h": 1.6,
      "dist": 624658,
+     "distXP": 2049520,
      "best": false,
-     "expPct": 31
+     "expPct": 60
     },
     {
      "id": "1750",
@@ -4081,8 +4363,9 @@
      "min": 90,
      "h": 1.5,
      "dist": 573401,
+     "distXP": 1976205,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1",
@@ -4091,8 +4374,9 @@
      "min": 78,
      "h": 1.3,
      "dist": 493068,
+     "distXP": 1854358,
      "best": false,
-     "expPct": 25
+     "expPct": 54
     },
     {
      "id": "301",
@@ -4101,8 +4385,9 @@
      "min": 72,
      "h": 1.2,
      "dist": 457145,
+     "distXP": 1796666,
      "best": false,
-     "expPct": 23
+     "expPct": 52
     },
     {
      "id": "1691",
@@ -4111,8 +4396,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 430270,
+     "distXP": 1752007,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "61",
@@ -4121,8 +4407,9 @@
      "min": 67,
      "h": 1.1,
      "dist": 427021,
+     "distXP": 1746513,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "2",
@@ -4131,8 +4418,9 @@
      "min": 66,
      "h": 1.1,
      "dist": 417645,
+     "distXP": 1730545,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "302",
@@ -4141,8 +4429,9 @@
      "min": 59,
      "h": 1.0,
      "dist": 377039,
+     "distXP": 1659225,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "1649",
@@ -4151,8 +4440,9 @@
      "min": 59,
      "h": 1.0,
      "dist": 373037,
+     "distXP": 1651991,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "603",
@@ -4161,8 +4451,9 @@
      "min": 56,
      "h": 0.9,
      "dist": 353001,
+     "distXP": 1615181,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "628",
@@ -4171,8 +4462,9 @@
      "min": 44,
      "h": 0.7,
      "dist": 277555,
+     "distXP": 1466197,
      "best": false,
-     "expPct": 14
+     "expPct": 43
     },
     {
      "id": "604",
@@ -4181,8 +4473,9 @@
      "min": 43,
      "h": 0.7,
      "dist": 273039,
+     "distXP": 1456671,
      "best": false,
-     "expPct": 14
+     "expPct": 43
     },
     {
      "id": "1623",
@@ -4191,8 +4484,9 @@
      "min": 42,
      "h": 0.7,
      "dist": 265829,
+     "distXP": 1441298,
      "best": false,
-     "expPct": 13
+     "expPct": 42
     },
     {
      "id": "602",
@@ -4201,8 +4495,9 @@
      "min": 38,
      "h": 0.6,
      "dist": 240524,
+     "distXP": 1385619,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "601",
@@ -4211,8 +4506,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 218522,
+     "distXP": 1334773,
      "best": false,
-     "expPct": 11
+     "expPct": 39
     },
     {
      "id": "1604",
@@ -4221,8 +4517,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 213731,
+     "distXP": 1323368,
      "best": false,
-     "expPct": 11
+     "expPct": 39
     },
     {
      "id": "1620",
@@ -4231,8 +4528,9 @@
      "min": 31,
      "h": 0.5,
      "dist": 194193,
+     "distXP": 1275471,
      "best": false,
-     "expPct": 10
+     "expPct": 37
     },
     {
      "id": "609",
@@ -4241,8 +4539,9 @@
      "min": 14,
      "h": 0.2,
      "dist": 92100,
+     "distXP": 971780,
      "best": false,
-     "expPct": 5
+     "expPct": 28
     },
     {
      "id": "608",
@@ -4251,6 +4550,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -4262,6 +4562,7 @@
     "min": 313,
     "h": 5.2,
     "dist": 1989537,
+    "distXP": 3422295,
     "best": true,
     "expPct": 100
    }
@@ -4396,6 +4697,7 @@
      "min": 366,
      "h": 6.1,
      "dist": 2327674,
+     "distXP": 3677218,
      "best": true,
      "expPct": 100
     },
@@ -4406,8 +4708,9 @@
      "min": 364,
      "h": 6.1,
      "dist": 2315836,
+     "distXP": 3668619,
      "best": false,
-     "expPct": 99
+     "expPct": 100
     },
     {
      "id": "1852",
@@ -4416,8 +4719,9 @@
      "min": 357,
      "h": 6.0,
      "dist": 2271750,
+     "distXP": 3636401,
      "best": false,
-     "expPct": 98
+     "expPct": 99
     },
     {
      "id": "1857",
@@ -4426,8 +4730,9 @@
      "min": 348,
      "h": 5.8,
      "dist": 2214283,
+     "distXP": 3593932,
      "best": false,
-     "expPct": 95
+     "expPct": 98
     },
     {
      "id": "1785",
@@ -4436,8 +4741,9 @@
      "min": 325,
      "h": 5.4,
      "dist": 2067218,
+     "distXP": 3482666,
      "best": false,
-     "expPct": 89
+     "expPct": 95
     },
     {
      "id": "1781",
@@ -4446,8 +4752,9 @@
      "min": 316,
      "h": 5.3,
      "dist": 2010032,
+     "distXP": 3438336,
      "best": false,
-     "expPct": 86
+     "expPct": 94
     },
     {
      "id": "1795",
@@ -4456,8 +4763,9 @@
      "min": 308,
      "h": 5.1,
      "dist": 1956064,
+     "distXP": 3395919,
      "best": false,
-     "expPct": 84
+     "expPct": 92
     },
     {
      "id": "1623",
@@ -4466,8 +4774,9 @@
      "min": 152,
      "h": 2.5,
      "dist": 963196,
+     "distXP": 2472477,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1620",
@@ -4476,8 +4785,9 @@
      "min": 149,
      "h": 2.5,
      "dist": 946383,
+     "distXP": 2453434,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1380",
@@ -4486,8 +4796,9 @@
      "min": 147,
      "h": 2.4,
      "dist": 933139,
+     "distXP": 2438313,
      "best": false,
-     "expPct": 40
+     "expPct": 66
     },
     {
      "id": "1727",
@@ -4496,8 +4807,9 @@
      "min": 131,
      "h": 2.2,
      "dist": 831321,
+     "distXP": 2318285,
      "best": false,
-     "expPct": 36
+     "expPct": 63
     },
     {
      "id": "1604",
@@ -4506,8 +4818,9 @@
      "min": 129,
      "h": 2.2,
      "dist": 820628,
+     "distXP": 2305262,
      "best": false,
-     "expPct": 35
+     "expPct": 63
     },
     {
      "id": "608",
@@ -4516,8 +4829,9 @@
      "min": 120,
      "h": 2.0,
      "dist": 762503,
+     "distXP": 2232942,
      "best": false,
-     "expPct": 33
+     "expPct": 61
     },
     {
      "id": "1691",
@@ -4526,8 +4840,9 @@
      "min": 117,
      "h": 2.0,
      "dist": 745267,
+     "distXP": 2210970,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "1343",
@@ -4536,8 +4851,9 @@
      "min": 116,
      "h": 1.9,
      "dist": 734601,
+     "distXP": 2197246,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "1381",
@@ -4546,8 +4862,9 @@
      "min": 115,
      "h": 1.9,
      "dist": 728696,
+     "distXP": 2189605,
      "best": false,
-     "expPct": 31
+     "expPct": 60
     },
     {
      "id": "604",
@@ -4556,8 +4873,9 @@
      "min": 114,
      "h": 1.9,
      "dist": 727270,
+     "distXP": 2187756,
      "best": false,
-     "expPct": 31
+     "expPct": 59
     },
     {
      "id": "1301",
@@ -4566,8 +4884,9 @@
      "min": 112,
      "h": 1.9,
      "dist": 711294,
+     "distXP": 2166906,
      "best": false,
-     "expPct": 31
+     "expPct": 59
     },
     {
      "id": "609",
@@ -4576,8 +4895,9 @@
      "min": 106,
      "h": 1.8,
      "dist": 675588,
+     "distXP": 2119444,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1001",
@@ -4586,8 +4906,9 @@
      "min": 99,
      "h": 1.6,
      "dist": 626379,
+     "distXP": 2051929,
      "best": false,
-     "expPct": 27
+     "expPct": 56
     },
     {
      "id": "601",
@@ -4596,8 +4917,9 @@
      "min": 97,
      "h": 1.6,
      "dist": 617217,
+     "distXP": 2039069,
      "best": false,
-     "expPct": 27
+     "expPct": 55
     },
     {
      "id": "628",
@@ -4606,8 +4928,9 @@
      "min": 92,
      "h": 1.5,
      "dist": 585235,
+     "distXP": 1993414,
      "best": false,
-     "expPct": 25
+     "expPct": 54
     },
     {
      "id": "2001",
@@ -4616,8 +4939,9 @@
      "min": 90,
      "h": 1.5,
      "dist": 572084,
+     "distXP": 1974278,
      "best": false,
-     "expPct": 25
+     "expPct": 54
     },
     {
      "id": "603",
@@ -4626,8 +4950,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 547991,
+     "distXP": 1938644,
      "best": false,
-     "expPct": 24
+     "expPct": 53
     },
     {
      "id": "61",
@@ -4636,8 +4961,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 545676,
+     "distXP": 1935179,
      "best": false,
-     "expPct": 23
+     "expPct": 53
     },
     {
      "id": "1649",
@@ -4646,8 +4972,9 @@
      "min": 84,
      "h": 1.4,
      "dist": 534187,
+     "distXP": 1917873,
      "best": false,
-     "expPct": 23
+     "expPct": 52
     },
     {
      "id": "602",
@@ -4656,8 +4983,9 @@
      "min": 83,
      "h": 1.4,
      "dist": 525405,
+     "distXP": 1904519,
      "best": false,
-     "expPct": 23
+     "expPct": 52
     },
     {
      "id": "2",
@@ -4666,8 +4994,9 @@
      "min": 69,
      "h": 1.2,
      "dist": 440285,
+     "distXP": 1768808,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "1002",
@@ -4676,8 +5005,9 @@
      "min": 67,
      "h": 1.1,
      "dist": 424945,
+     "distXP": 1742993,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "1314",
@@ -4686,8 +5016,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 403991,
+     "distXP": 1706966,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "302",
@@ -4696,8 +5027,9 @@
      "min": 61,
      "h": 1.0,
      "dist": 387887,
+     "distXP": 1678638,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "1",
@@ -4706,8 +5038,9 @@
      "min": 61,
      "h": 1.0,
      "dist": 384900,
+     "distXP": 1673321,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "1750",
@@ -4716,8 +5049,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 383933,
+     "distXP": 1671593,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "301",
@@ -4726,8 +5060,9 @@
      "min": 52,
      "h": 0.9,
      "dist": 333146,
+     "distXP": 1577660,
      "best": false,
-     "expPct": 14
+     "expPct": 43
     },
     {
      "id": "1850",
@@ -4736,8 +5071,9 @@
      "min": 51,
      "h": 0.8,
      "dist": 323364,
+     "distXP": 1558762,
      "best": false,
-     "expPct": 14
+     "expPct": 42
     },
     {
      "id": "1319",
@@ -4746,8 +5082,9 @@
      "min": 40,
      "h": 0.7,
      "dist": 252760,
+     "distXP": 1412889,
      "best": false,
-     "expPct": 11
+     "expPct": 38
     },
     {
      "id": "1843",
@@ -4756,8 +5093,9 @@
      "min": 39,
      "h": 0.7,
      "dist": 248838,
+     "distXP": 1404222,
      "best": false,
-     "expPct": 11
+     "expPct": 38
     },
     {
      "id": "1153",
@@ -4766,8 +5104,9 @@
      "min": 31,
      "h": 0.5,
      "dist": 194371,
+     "distXP": 1275918,
      "best": false,
-     "expPct": 8
+     "expPct": 35
     },
     {
      "id": "1834",
@@ -4776,8 +5115,9 @@
      "min": 24,
      "h": 0.4,
      "dist": 155109,
+     "distXP": 1171799,
      "best": false,
-     "expPct": 7
+     "expPct": 32
     },
     {
      "id": "1141",
@@ -4786,8 +5126,9 @@
      "min": 22,
      "h": 0.4,
      "dist": 140588,
+     "distXP": 1129989,
      "best": false,
-     "expPct": 6
+     "expPct": 31
     },
     {
      "id": "1145",
@@ -4796,8 +5137,9 @@
      "min": 12,
      "h": 0.2,
      "dist": 74446,
+     "distXP": 903975,
      "best": false,
-     "expPct": 3
+     "expPct": 25
     },
     {
      "id": "1101",
@@ -4806,6 +5148,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 1899,
      "best": false,
      "expPct": 0
     }
@@ -4817,6 +5160,7 @@
     "min": 366,
     "h": 6.1,
     "dist": 2327674,
+    "distXP": 3677218,
     "best": true,
     "expPct": 100
    }
@@ -4972,6 +5316,7 @@
      "min": 351,
      "h": 5.8,
      "dist": 2229852,
+     "distXP": 3605491,
      "best": true,
      "expPct": 100
     },
@@ -4982,8 +5327,9 @@
      "min": 348,
      "h": 5.8,
      "dist": 2208924,
+     "distXP": 3589943,
      "best": false,
-     "expPct": 99
+     "expPct": 100
     },
     {
      "id": "1852",
@@ -4992,8 +5338,9 @@
      "min": 341,
      "h": 5.7,
      "dist": 2166059,
+     "distXP": 3557866,
      "best": false,
-     "expPct": 97
+     "expPct": 99
     },
     {
      "id": "1857",
@@ -5002,8 +5349,9 @@
      "min": 331,
      "h": 5.5,
      "dist": 2105522,
+     "distXP": 3512017,
      "best": false,
-     "expPct": 94
+     "expPct": 97
     },
     {
      "id": "1785",
@@ -5012,8 +5360,9 @@
      "min": 308,
      "h": 5.1,
      "dist": 1957707,
+     "distXP": 3397218,
      "best": false,
-     "expPct": 88
+     "expPct": 94
     },
     {
      "id": "1781",
@@ -5022,8 +5371,9 @@
      "min": 301,
      "h": 5.0,
      "dist": 1911005,
+     "distXP": 3360052,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1795",
@@ -5032,8 +5382,9 @@
      "min": 293,
      "h": 4.9,
      "dist": 1861709,
+     "distXP": 3320327,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1380",
@@ -5042,8 +5393,9 @@
      "min": 168,
      "h": 2.8,
      "dist": 1070389,
+     "distXP": 2590176,
      "best": false,
-     "expPct": 48
+     "expPct": 72
     },
     {
      "id": "1381",
@@ -5052,8 +5404,9 @@
      "min": 137,
      "h": 2.3,
      "dist": 868353,
+     "distXP": 2362748,
      "best": false,
-     "expPct": 39
+     "expPct": 66
     },
     {
      "id": "1343",
@@ -5062,8 +5415,9 @@
      "min": 135,
      "h": 2.2,
      "dist": 857101,
+     "distXP": 2349339,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1301",
@@ -5072,8 +5426,9 @@
      "min": 133,
      "h": 2.2,
      "dist": 844620,
+     "distXP": 2334364,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1623",
@@ -5082,8 +5437,9 @@
      "min": 131,
      "h": 2.2,
      "dist": 834424,
+     "distXP": 2322047,
      "best": false,
-     "expPct": 37
+     "expPct": 64
     },
     {
      "id": "1620",
@@ -5092,8 +5448,9 @@
      "min": 128,
      "h": 2.1,
      "dist": 811007,
+     "distXP": 2293473,
      "best": false,
-     "expPct": 36
+     "expPct": 64
     },
     {
      "id": "1727",
@@ -5102,8 +5459,9 @@
      "min": 121,
      "h": 2.0,
      "dist": 767926,
+     "distXP": 2239804,
      "best": false,
-     "expPct": 34
+     "expPct": 62
     },
     {
      "id": "1604",
@@ -5112,8 +5470,9 @@
      "min": 110,
      "h": 1.8,
      "dist": 695980,
+     "distXP": 2146700,
      "best": false,
-     "expPct": 31
+     "expPct": 60
     },
     {
      "id": "1691",
@@ -5122,8 +5481,9 @@
      "min": 102,
      "h": 1.7,
      "dist": 650299,
+     "distXP": 2085066,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "2001",
@@ -5132,8 +5492,9 @@
      "min": 100,
      "h": 1.7,
      "dist": 632447,
+     "distXP": 2060394,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "608",
@@ -5142,8 +5503,9 @@
      "min": 98,
      "h": 1.6,
      "dist": 624657,
+     "distXP": 2049520,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "604",
@@ -5152,8 +5514,9 @@
      "min": 93,
      "h": 1.5,
      "dist": 589706,
+     "distXP": 1999870,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "1001",
@@ -5162,8 +5525,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 545312,
+     "distXP": 1934633,
      "best": false,
-     "expPct": 24
+     "expPct": 54
     },
     {
      "id": "609",
@@ -5172,8 +5536,9 @@
      "min": 85,
      "h": 1.4,
      "dist": 539310,
+     "distXP": 1925613,
      "best": false,
-     "expPct": 24
+     "expPct": 53
     },
     {
      "id": "1314",
@@ -5182,8 +5547,9 @@
      "min": 78,
      "h": 1.3,
      "dist": 495862,
+     "distXP": 1858756,
      "best": false,
-     "expPct": 22
+     "expPct": 52
     },
     {
      "id": "601",
@@ -5192,8 +5558,9 @@
      "min": 75,
      "h": 1.3,
      "dist": 476952,
+     "distXP": 1828746,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "628",
@@ -5202,8 +5569,9 @@
      "min": 70,
      "h": 1.2,
      "dist": 446512,
+     "distXP": 1779158,
      "best": false,
-     "expPct": 20
+     "expPct": 49
     },
     {
      "id": "1649",
@@ -5212,8 +5580,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 430255,
+     "distXP": 1751981,
      "best": false,
-     "expPct": 19
+     "expPct": 49
     },
     {
      "id": "61",
@@ -5222,8 +5591,9 @@
      "min": 66,
      "h": 1.1,
      "dist": 419737,
+     "distXP": 1734124,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "603",
@@ -5232,8 +5602,9 @@
      "min": 65,
      "h": 1.1,
      "dist": 413631,
+     "distXP": 1723654,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "602",
@@ -5242,8 +5613,9 @@
      "min": 61,
      "h": 1.0,
      "dist": 386080,
+     "distXP": 1675424,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "1319",
@@ -5252,8 +5624,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 384184,
+     "distXP": 1672042,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "1002",
@@ -5262,8 +5635,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 378725,
+     "distXP": 1662259,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "1850",
@@ -5272,8 +5646,9 @@
      "min": 56,
      "h": 0.9,
      "dist": 355819,
+     "distXP": 1620421,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "1750",
@@ -5282,8 +5657,9 @@
      "min": 52,
      "h": 0.9,
      "dist": 329561,
+     "distXP": 1570766,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "2",
@@ -5292,8 +5668,9 @@
      "min": 48,
      "h": 0.8,
      "dist": 307853,
+     "distXP": 1528201,
      "best": false,
-     "expPct": 14
+     "expPct": 42
     },
     {
      "id": "1843",
@@ -5302,8 +5679,9 @@
      "min": 44,
      "h": 0.7,
      "dist": 277965,
+     "distXP": 1467059,
      "best": false,
-     "expPct": 12
+     "expPct": 41
     },
     {
      "id": "1",
@@ -5312,8 +5690,9 @@
      "min": 41,
      "h": 0.7,
      "dist": 262452,
+     "distXP": 1434026,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "302",
@@ -5322,8 +5701,9 @@
      "min": 39,
      "h": 0.7,
      "dist": 248405,
+     "distXP": 1403260,
      "best": false,
-     "expPct": 11
+     "expPct": 39
     },
     {
      "id": "301",
@@ -5332,8 +5712,9 @@
      "min": 31,
      "h": 0.5,
      "dist": 194722,
+     "distXP": 1276799,
      "best": false,
-     "expPct": 9
+     "expPct": 35
     },
     {
      "id": "1145",
@@ -5342,8 +5723,9 @@
      "min": 27,
      "h": 0.4,
      "dist": 171394,
+     "distXP": 1216422,
      "best": false,
-     "expPct": 8
+     "expPct": 34
     },
     {
      "id": "1153",
@@ -5352,8 +5734,9 @@
      "min": 22,
      "h": 0.4,
      "dist": 141981,
+     "distXP": 1134089,
      "best": false,
-     "expPct": 6
+     "expPct": 31
     },
     {
      "id": "1101",
@@ -5362,8 +5745,9 @@
      "min": 22,
      "h": 0.4,
      "dist": 140588,
+     "distXP": 1129989,
      "best": false,
-     "expPct": 6
+     "expPct": 31
     },
     {
      "id": "1834",
@@ -5372,8 +5756,9 @@
      "min": 21,
      "h": 0.3,
      "dist": 132706,
+     "distXP": 1106385,
      "best": false,
-     "expPct": 6
+     "expPct": 31
     },
     {
      "id": "1141",
@@ -5382,6 +5767,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 1899,
      "best": false,
      "expPct": 0
     }
@@ -5393,6 +5779,7 @@
     "min": 351,
     "h": 5.8,
     "dist": 2229852,
+    "distXP": 3605491,
     "best": true,
     "expPct": 100
    }
@@ -5671,6 +6058,7 @@
      "min": 432,
      "h": 7.2,
      "dist": 2745496,
+     "distXP": 3967823,
      "best": true,
      "expPct": 100
     },
@@ -5681,6 +6069,7 @@
      "min": 426,
      "h": 7.1,
      "dist": 2707461,
+     "distXP": 3942329,
      "best": false,
      "expPct": 99
     },
@@ -5691,8 +6080,9 @@
      "min": 424,
      "h": 7.1,
      "dist": 2696026,
+     "distXP": 3934628,
      "best": false,
-     "expPct": 98
+     "expPct": 99
     },
     {
      "id": "1857",
@@ -5701,8 +6091,9 @@
      "min": 418,
      "h": 7.0,
      "dist": 2657257,
+     "distXP": 3908401,
      "best": false,
-     "expPct": 97
+     "expPct": 99
     },
     {
      "id": "1785",
@@ -5711,8 +6102,9 @@
      "min": 396,
      "h": 6.6,
      "dist": 2519098,
+     "distXP": 3813343,
      "best": false,
-     "expPct": 92
+     "expPct": 96
     },
     {
      "id": "1781",
@@ -5721,8 +6113,9 @@
      "min": 379,
      "h": 6.3,
      "dist": 2408285,
+     "distXP": 3735199,
      "best": false,
-     "expPct": 88
+     "expPct": 94
     },
     {
      "id": "1795",
@@ -5731,8 +6124,9 @@
      "min": 367,
      "h": 6.1,
      "dist": 2332609,
+     "distXP": 3680796,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1623",
@@ -5741,8 +6135,9 @@
      "min": 263,
      "h": 4.4,
      "dist": 1674309,
+     "distXP": 3164282,
      "best": false,
-     "expPct": 61
+     "expPct": 80
     },
     {
      "id": "1620",
@@ -5751,8 +6146,9 @@
      "min": 261,
      "h": 4.3,
      "dist": 1655627,
+     "distXP": 3148258,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "1604",
@@ -5761,8 +6157,9 @@
      "min": 241,
      "h": 4.0,
      "dist": 1530489,
+     "distXP": 3038502,
      "best": false,
-     "expPct": 56
+     "expPct": 77
     },
     {
      "id": "608",
@@ -5771,8 +6168,9 @@
      "min": 231,
      "h": 3.9,
      "dist": 1468229,
+     "distXP": 2982223,
      "best": false,
-     "expPct": 53
+     "expPct": 75
     },
     {
      "id": "1691",
@@ -5781,8 +6179,9 @@
      "min": 225,
      "h": 3.7,
      "dist": 1426913,
+     "distXP": 2944215,
      "best": false,
-     "expPct": 52
+     "expPct": 74
     },
     {
      "id": "604",
@@ -5791,8 +6190,9 @@
      "min": 218,
      "h": 3.6,
      "dist": 1386523,
+     "distXP": 2906523,
      "best": false,
-     "expPct": 51
+     "expPct": 73
     },
     {
      "id": "609",
@@ -5801,8 +6201,9 @@
      "min": 218,
      "h": 3.6,
      "dist": 1383884,
+     "distXP": 2904041,
      "best": false,
-     "expPct": 50
+     "expPct": 73
     },
     {
      "id": "601",
@@ -5811,8 +6212,9 @@
      "min": 205,
      "h": 3.4,
      "dist": 1300495,
+     "distXP": 2824366,
      "best": false,
-     "expPct": 47
+     "expPct": 71
     },
     {
      "id": "628",
@@ -5821,8 +6223,9 @@
      "min": 198,
      "h": 3.3,
      "dist": 1257385,
+     "distXP": 2782173,
      "best": false,
-     "expPct": 46
+     "expPct": 70
     },
     {
      "id": "1649",
@@ -5831,8 +6234,9 @@
      "min": 194,
      "h": 3.2,
      "dist": 1232460,
+     "distXP": 2757448,
      "best": false,
-     "expPct": 45
+     "expPct": 69
     },
     {
      "id": "602",
@@ -5841,8 +6245,9 @@
      "min": 193,
      "h": 3.2,
      "dist": 1228156,
+     "distXP": 2753153,
      "best": false,
-     "expPct": 45
+     "expPct": 69
     },
     {
      "id": "603",
@@ -5851,8 +6256,9 @@
      "min": 189,
      "h": 3.2,
      "dist": 1201946,
+     "distXP": 2726836,
      "best": false,
-     "expPct": 44
+     "expPct": 69
     },
     {
      "id": "1727",
@@ -5861,8 +6267,9 @@
      "min": 188,
      "h": 3.1,
      "dist": 1192783,
+     "distXP": 2717568,
      "best": false,
-     "expPct": 43
+     "expPct": 68
     },
     {
      "id": "61",
@@ -5871,8 +6278,9 @@
      "min": 184,
      "h": 3.1,
      "dist": 1170661,
+     "distXP": 2695044,
      "best": false,
-     "expPct": 43
+     "expPct": 68
     },
     {
      "id": "1001",
@@ -5881,8 +6289,9 @@
      "min": 173,
      "h": 2.9,
      "dist": 1099776,
+     "distXP": 2621401,
      "best": false,
-     "expPct": 40
+     "expPct": 66
     },
     {
      "id": "2",
@@ -5891,8 +6300,9 @@
      "min": 173,
      "h": 2.9,
      "dist": 1096997,
+     "distXP": 2618466,
      "best": false,
-     "expPct": 40
+     "expPct": 66
     },
     {
      "id": "302",
@@ -5901,8 +6311,9 @@
      "min": 172,
      "h": 2.9,
      "dist": 1091192,
+     "distXP": 2612324,
      "best": false,
-     "expPct": 40
+     "expPct": 66
     },
     {
      "id": "1750",
@@ -5911,8 +6322,9 @@
      "min": 164,
      "h": 2.7,
      "dist": 1043992,
+     "distXP": 2561760,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1",
@@ -5921,8 +6333,9 @@
      "min": 161,
      "h": 2.7,
      "dist": 1023696,
+     "distXP": 2539667,
      "best": false,
-     "expPct": 37
+     "expPct": 64
     },
     {
      "id": "301",
@@ -5931,8 +6344,9 @@
      "min": 160,
      "h": 2.7,
      "dist": 1017755,
+     "distXP": 2533158,
      "best": false,
-     "expPct": 37
+     "expPct": 64
     },
     {
      "id": "1002",
@@ -5941,8 +6355,9 @@
      "min": 138,
      "h": 2.3,
      "dist": 879225,
+     "distXP": 2375621,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "1850",
@@ -5951,8 +6366,9 @@
      "min": 137,
      "h": 2.3,
      "dist": 870975,
+     "distXP": 2365860,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "1834",
@@ -5961,8 +6377,9 @@
      "min": 133,
      "h": 2.2,
      "dist": 845808,
+     "distXP": 2335793,
      "best": false,
-     "expPct": 31
+     "expPct": 59
     },
     {
      "id": "1141",
@@ -5971,8 +6388,9 @@
      "min": 133,
      "h": 2.2,
      "dist": 844620,
+     "distXP": 2334364,
      "best": false,
-     "expPct": 31
+     "expPct": 59
     },
     {
      "id": "1843",
@@ -5981,8 +6399,9 @@
      "min": 133,
      "h": 2.2,
      "dist": 843166,
+     "distXP": 2332612,
      "best": false,
-     "expPct": 31
+     "expPct": 59
     },
     {
      "id": "1153",
@@ -5991,8 +6410,9 @@
      "min": 127,
      "h": 2.1,
      "dist": 807172,
+     "distXP": 2288754,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1145",
@@ -6001,8 +6421,9 @@
      "min": 114,
      "h": 1.9,
      "dist": 726679,
+     "distXP": 2186989,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "1101",
@@ -6011,8 +6432,9 @@
      "min": 112,
      "h": 1.9,
      "dist": 711294,
+     "distXP": 2166906,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "2001",
@@ -6021,8 +6443,9 @@
      "min": 88,
      "h": 1.5,
      "dist": 562402,
+     "distXP": 1960051,
      "best": false,
-     "expPct": 20
+     "expPct": 49
     },
     {
      "id": "1319",
@@ -6031,8 +6454,9 @@
      "min": 72,
      "h": 1.2,
      "dist": 460442,
+     "distXP": 1802053,
      "best": false,
-     "expPct": 17
+     "expPct": 45
     },
     {
      "id": "1314",
@@ -6041,8 +6465,9 @@
      "min": 71,
      "h": 1.2,
      "dist": 452910,
+     "distXP": 1789718,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "1381",
@@ -6051,8 +6476,9 @@
      "min": 54,
      "h": 0.9,
      "dist": 341714,
+     "distXP": 1593985,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "1380",
@@ -6061,8 +6487,9 @@
      "min": 38,
      "h": 0.6,
      "dist": 241989,
+     "distXP": 1388919,
      "best": false,
-     "expPct": 9
+     "expPct": 35
     },
     {
      "id": "1343",
@@ -6071,8 +6498,9 @@
      "min": 24,
      "h": 0.4,
      "dist": 149892,
+     "distXP": 1157013,
      "best": false,
-     "expPct": 5
+     "expPct": 29
     },
     {
      "id": "1301",
@@ -6081,6 +6509,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -6092,6 +6521,7 @@
     "min": 432,
     "h": 7.2,
     "dist": 2745496,
+    "distXP": 3967823,
     "best": true,
     "expPct": 100
    }
@@ -6192,6 +6622,7 @@
      "min": 364,
      "h": 6.1,
      "dist": 2310764,
+     "distXP": 3664928,
      "best": true,
      "expPct": 100
     },
@@ -6202,6 +6633,7 @@
      "min": 360,
      "h": 6.0,
      "dist": 2285080,
+     "distXP": 3646175,
      "best": false,
      "expPct": 99
     },
@@ -6212,8 +6644,9 @@
      "min": 356,
      "h": 5.9,
      "dist": 2262295,
+     "distXP": 3629450,
      "best": false,
-     "expPct": 98
+     "expPct": 99
     },
     {
      "id": "1857",
@@ -6222,8 +6655,9 @@
      "min": 349,
      "h": 5.8,
      "dist": 2219248,
+     "distXP": 3597622,
      "best": false,
-     "expPct": 96
+     "expPct": 98
     },
     {
      "id": "1785",
@@ -6232,8 +6666,9 @@
      "min": 327,
      "h": 5.5,
      "dist": 2078687,
+     "distXP": 3491483,
      "best": false,
-     "expPct": 90
+     "expPct": 95
     },
     {
      "id": "1781",
@@ -6242,8 +6677,9 @@
      "min": 311,
      "h": 5.2,
      "dist": 1979172,
+     "distXP": 3414152,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1795",
@@ -6252,8 +6688,9 @@
      "min": 300,
      "h": 5.0,
      "dist": 1908580,
+     "distXP": 3358111,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1623",
@@ -6262,8 +6699,9 @@
      "min": 207,
      "h": 3.5,
      "dist": 1316315,
+     "distXP": 2839674,
      "best": false,
-     "expPct": 57
+     "expPct": 77
     },
     {
      "id": "1620",
@@ -6272,8 +6710,9 @@
      "min": 201,
      "h": 3.3,
      "dist": 1275875,
+     "distXP": 2800357,
      "best": false,
-     "expPct": 55
+     "expPct": 76
     },
     {
      "id": "1604",
@@ -6282,8 +6721,9 @@
      "min": 186,
      "h": 3.1,
      "dist": 1184846,
+     "distXP": 2709511,
      "best": false,
-     "expPct": 51
+     "expPct": 74
     },
     {
      "id": "1691",
@@ -6292,8 +6732,9 @@
      "min": 180,
      "h": 3.0,
      "dist": 1142533,
+     "distXP": 2666095,
      "best": false,
-     "expPct": 49
+     "expPct": 73
     },
     {
      "id": "608",
@@ -6302,8 +6743,9 @@
      "min": 170,
      "h": 2.8,
      "dist": 1082405,
+     "distXP": 2602994,
      "best": false,
-     "expPct": 47
+     "expPct": 71
     },
     {
      "id": "609",
@@ -6312,8 +6754,9 @@
      "min": 158,
      "h": 2.6,
      "dist": 1007122,
+     "distXP": 2521463,
      "best": false,
-     "expPct": 44
+     "expPct": 69
     },
     {
      "id": "604",
@@ -6322,8 +6765,9 @@
      "min": 151,
      "h": 2.5,
      "dist": 959693,
+     "distXP": 2468523,
      "best": false,
-     "expPct": 42
+     "expPct": 67
     },
     {
      "id": "1649",
@@ -6332,8 +6776,9 @@
      "min": 146,
      "h": 2.4,
      "dist": 925022,
+     "distXP": 2428992,
      "best": false,
-     "expPct": 40
+     "expPct": 66
     },
     {
      "id": "601",
@@ -6342,8 +6787,9 @@
      "min": 140,
      "h": 2.3,
      "dist": 891669,
+     "distXP": 2390258,
      "best": false,
-     "expPct": 39
+     "expPct": 65
     },
     {
      "id": "602",
@@ -6352,8 +6798,9 @@
      "min": 133,
      "h": 2.2,
      "dist": 844584,
+     "distXP": 2334320,
      "best": false,
-     "expPct": 37
+     "expPct": 64
     },
     {
      "id": "628",
@@ -6362,8 +6809,9 @@
      "min": 132,
      "h": 2.2,
      "dist": 842077,
+     "distXP": 2331299,
      "best": false,
-     "expPct": 36
+     "expPct": 64
     },
     {
      "id": "1750",
@@ -6372,8 +6820,9 @@
      "min": 124,
      "h": 2.1,
      "dist": 787905,
+     "distXP": 2264875,
      "best": false,
-     "expPct": 34
+     "expPct": 62
     },
     {
      "id": "603",
@@ -6382,8 +6831,9 @@
      "min": 123,
      "h": 2.0,
      "dist": 778696,
+     "distXP": 2253358,
      "best": false,
-     "expPct": 34
+     "expPct": 61
     },
     {
      "id": "1727",
@@ -6392,8 +6842,9 @@
      "min": 119,
      "h": 2.0,
      "dist": 754175,
+     "distXP": 2222357,
      "best": false,
-     "expPct": 33
+     "expPct": 61
     },
     {
      "id": "61",
@@ -6402,8 +6853,9 @@
      "min": 116,
      "h": 1.9,
      "dist": 736954,
+     "distXP": 2200282,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "302",
@@ -6412,8 +6864,9 @@
      "min": 113,
      "h": 1.9,
      "dist": 715882,
+     "distXP": 2172918,
      "best": false,
-     "expPct": 31
+     "expPct": 59
     },
     {
      "id": "1380",
@@ -6422,8 +6875,9 @@
      "min": 109,
      "h": 1.8,
      "dist": 694395,
+     "distXP": 2144596,
      "best": false,
-     "expPct": 30
+     "expPct": 59
     },
     {
      "id": "1850",
@@ -6432,8 +6886,9 @@
      "min": 109,
      "h": 1.8,
      "dist": 693996,
+     "distXP": 2144066,
      "best": false,
-     "expPct": 30
+     "expPct": 59
     },
     {
      "id": "2",
@@ -6442,8 +6897,9 @@
      "min": 107,
      "h": 1.8,
      "dist": 680595,
+     "distXP": 2126175,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1381",
@@ -6452,8 +6908,9 @@
      "min": 103,
      "h": 1.7,
      "dist": 657433,
+     "distXP": 2094831,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "1001",
@@ -6462,8 +6919,9 @@
      "min": 102,
      "h": 1.7,
      "dist": 646895,
+     "distXP": 2080389,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "1843",
@@ -6472,8 +6930,9 @@
      "min": 99,
      "h": 1.7,
      "dist": 631856,
+     "distXP": 2059572,
      "best": false,
-     "expPct": 27
+     "expPct": 56
     },
     {
      "id": "301",
@@ -6482,8 +6941,9 @@
      "min": 99,
      "h": 1.6,
      "dist": 626108,
+     "distXP": 2051550,
      "best": false,
-     "expPct": 27
+     "expPct": 56
     },
     {
      "id": "1",
@@ -6492,8 +6952,9 @@
      "min": 95,
      "h": 1.6,
      "dist": 603744,
+     "distXP": 2019984,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "1834",
@@ -6502,8 +6963,9 @@
      "min": 88,
      "h": 1.5,
      "dist": 558912,
+     "distXP": 1954892,
      "best": false,
-     "expPct": 24
+     "expPct": 53
     },
     {
      "id": "1141",
@@ -6512,8 +6974,9 @@
      "min": 78,
      "h": 1.3,
      "dist": 495861,
+     "distXP": 1858755,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "1145",
@@ -6522,8 +6985,9 @@
      "min": 72,
      "h": 1.2,
      "dist": 459790,
+     "distXP": 1800989,
      "best": false,
-     "expPct": 20
+     "expPct": 49
     },
     {
      "id": "1301",
@@ -6532,8 +6996,9 @@
      "min": 71,
      "h": 1.2,
      "dist": 452910,
+     "distXP": 1789718,
      "best": false,
-     "expPct": 20
+     "expPct": 49
     },
     {
      "id": "1002",
@@ -6542,8 +7007,9 @@
      "min": 67,
      "h": 1.1,
      "dist": 427749,
+     "distXP": 1747746,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "1153",
@@ -6552,8 +7018,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 406324,
+     "distXP": 1711023,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "1101",
@@ -6562,8 +7029,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 403990,
+     "distXP": 1706965,
      "best": false,
-     "expPct": 17
+     "expPct": 47
     },
     {
      "id": "1343",
@@ -6572,8 +7040,9 @@
      "min": 63,
      "h": 1.1,
      "dist": 402889,
+     "distXP": 1705045,
      "best": false,
-     "expPct": 17
+     "expPct": 47
     },
     {
      "id": "1319",
@@ -6582,8 +7051,9 @@
      "min": 36,
      "h": 0.6,
      "dist": 226106,
+     "distXP": 1352578,
      "best": false,
-     "expPct": 10
+     "expPct": 37
     },
     {
      "id": "2001",
@@ -6592,8 +7062,9 @@
      "min": 33,
      "h": 0.5,
      "dist": 206874,
+     "distXP": 1306819,
      "best": false,
-     "expPct": 9
+     "expPct": 36
     },
     {
      "id": "1314",
@@ -6602,6 +7073,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -6613,6 +7085,7 @@
     "min": 364,
     "h": 6.1,
     "dist": 2310764,
+    "distXP": 3664928,
     "best": true,
     "expPct": 100
    }
@@ -6727,6 +7200,7 @@
      "min": 383,
      "h": 6.4,
      "dist": 2432593,
+     "distXP": 3752492,
      "best": true,
      "expPct": 100
     },
@@ -6737,6 +7211,7 @@
      "min": 381,
      "h": 6.4,
      "dist": 2423672,
+     "distXP": 3746156,
      "best": false,
      "expPct": 100
     },
@@ -6747,8 +7222,9 @@
      "min": 375,
      "h": 6.3,
      "dist": 2385952,
+     "distXP": 3719234,
      "best": false,
-     "expPct": 98
+     "expPct": 99
     },
     {
      "id": "1857",
@@ -6757,8 +7233,9 @@
      "min": 368,
      "h": 6.1,
      "dist": 2336047,
+     "distXP": 3683287,
      "best": false,
-     "expPct": 96
+     "expPct": 98
     },
     {
      "id": "1785",
@@ -6767,8 +7244,9 @@
      "min": 345,
      "h": 5.7,
      "dist": 2191802,
+     "distXP": 3577167,
      "best": false,
-     "expPct": 90
+     "expPct": 95
     },
     {
      "id": "1781",
@@ -6777,8 +7255,9 @@
      "min": 332,
      "h": 5.5,
      "dist": 2111245,
+     "distXP": 3516380,
      "best": false,
-     "expPct": 87
+     "expPct": 94
     },
     {
      "id": "1795",
@@ -6787,8 +7266,9 @@
      "min": 322,
      "h": 5.4,
      "dist": 2047623,
+     "distXP": 3467546,
      "best": false,
-     "expPct": 84
+     "expPct": 92
     },
     {
      "id": "1623",
@@ -6797,8 +7277,9 @@
      "min": 191,
      "h": 3.2,
      "dist": 1215479,
+     "distXP": 2740460,
      "best": false,
-     "expPct": 50
+     "expPct": 73
     },
     {
      "id": "1620",
@@ -6807,8 +7288,9 @@
      "min": 188,
      "h": 3.1,
      "dist": 1195189,
+     "distXP": 2720005,
      "best": false,
-     "expPct": 49
+     "expPct": 72
     },
     {
      "id": "1604",
@@ -6817,8 +7299,9 @@
      "min": 169,
      "h": 2.8,
      "dist": 1073374,
+     "distXP": 2593366,
      "best": false,
-     "expPct": 44
+     "expPct": 69
     },
     {
      "id": "608",
@@ -6827,8 +7310,9 @@
      "min": 159,
      "h": 2.6,
      "dist": 1008218,
+     "distXP": 2522671,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1691",
@@ -6837,8 +7321,9 @@
      "min": 156,
      "h": 2.6,
      "dist": 989247,
+     "distXP": 2501660,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "604",
@@ -6847,8 +7332,9 @@
      "min": 148,
      "h": 2.5,
      "dist": 942361,
+     "distXP": 2448852,
      "best": false,
-     "expPct": 39
+     "expPct": 65
     },
     {
      "id": "609",
@@ -6857,8 +7343,9 @@
      "min": 145,
      "h": 2.4,
      "dist": 923476,
+     "distXP": 2427212,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1727",
@@ -6867,8 +7354,9 @@
      "min": 140,
      "h": 2.3,
      "dist": 891124,
+     "distXP": 2389619,
      "best": false,
-     "expPct": 37
+     "expPct": 64
     },
     {
      "id": "601",
@@ -6877,8 +7365,9 @@
      "min": 133,
      "h": 2.2,
      "dist": 846731,
+     "distXP": 2336905,
      "best": false,
-     "expPct": 35
+     "expPct": 62
     },
     {
      "id": "628",
@@ -6887,8 +7376,9 @@
      "min": 127,
      "h": 2.1,
      "dist": 807203,
+     "distXP": 2288791,
      "best": false,
-     "expPct": 33
+     "expPct": 61
     },
     {
      "id": "1649",
@@ -6897,8 +7387,9 @@
      "min": 123,
      "h": 2.1,
      "dist": 783734,
+     "distXP": 2259667,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "602",
@@ -6907,8 +7398,9 @@
      "min": 121,
      "h": 2.0,
      "dist": 768521,
+     "distXP": 2240554,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "603",
@@ -6917,8 +7409,9 @@
      "min": 119,
      "h": 2.0,
      "dist": 757804,
+     "distXP": 2226976,
      "best": false,
-     "expPct": 31
+     "expPct": 59
     },
     {
      "id": "61",
@@ -6927,8 +7420,9 @@
      "min": 116,
      "h": 1.9,
      "dist": 737203,
+     "distXP": 2200603,
      "best": false,
-     "expPct": 30
+     "expPct": 59
     },
     {
      "id": "1001",
@@ -6937,8 +7431,9 @@
      "min": 115,
      "h": 1.9,
      "dist": 732819,
+     "distXP": 2194944,
      "best": false,
-     "expPct": 30
+     "expPct": 58
     },
     {
      "id": "1380",
@@ -6947,8 +7442,9 @@
      "min": 108,
      "h": 1.8,
      "dist": 688499,
+     "distXP": 2136748,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "2",
@@ -6957,8 +7453,9 @@
      "min": 102,
      "h": 1.7,
      "dist": 650210,
+     "distXP": 2084945,
      "best": false,
-     "expPct": 27
+     "expPct": 56
     },
     {
      "id": "302",
@@ -6967,8 +7464,9 @@
      "min": 99,
      "h": 1.7,
      "dist": 631231,
+     "distXP": 2058701,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "1750",
@@ -6977,8 +7475,9 @@
      "min": 97,
      "h": 1.6,
      "dist": 614148,
+     "distXP": 2034740,
      "best": false,
-     "expPct": 25
+     "expPct": 54
     },
     {
      "id": "1",
@@ -6987,8 +7486,9 @@
      "min": 91,
      "h": 1.5,
      "dist": 581362,
+     "distXP": 1987801,
      "best": false,
-     "expPct": 24
+     "expPct": 53
     },
     {
      "id": "301",
@@ -6997,8 +7497,9 @@
      "min": 88,
      "h": 1.5,
      "dist": 561458,
+     "distXP": 1958657,
      "best": false,
-     "expPct": 23
+     "expPct": 52
     },
     {
      "id": "1381",
@@ -7007,8 +7508,9 @@
      "min": 84,
      "h": 1.4,
      "dist": 535004,
+     "distXP": 1919110,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "1002",
@@ -7017,8 +7519,9 @@
      "min": 79,
      "h": 1.3,
      "dist": 504073,
+     "distXP": 1871610,
      "best": false,
-     "expPct": 21
+     "expPct": 50
     },
     {
      "id": "1850",
@@ -7027,8 +7530,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 485887,
+     "distXP": 1842999,
      "best": false,
-     "expPct": 20
+     "expPct": 49
     },
     {
      "id": "1343",
@@ -7037,8 +7541,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 484015,
+     "distXP": 1840023,
      "best": false,
-     "expPct": 20
+     "expPct": 49
     },
     {
      "id": "1301",
@@ -7047,8 +7552,9 @@
      "min": 72,
      "h": 1.2,
      "dist": 460442,
+     "distXP": 1802053,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "1843",
@@ -7057,8 +7563,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 433301,
+     "distXP": 1757111,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "2001",
@@ -7067,8 +7574,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 431671,
+     "distXP": 1754369,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "1834",
@@ -7077,8 +7585,9 @@
      "min": 62,
      "h": 1.0,
      "dist": 397113,
+     "distXP": 1694939,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "1141",
@@ -7087,8 +7596,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 384184,
+     "distXP": 1672042,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "1153",
@@ -7097,8 +7607,9 @@
      "min": 57,
      "h": 0.9,
      "dist": 361753,
+     "distXP": 1631386,
      "best": false,
-     "expPct": 15
+     "expPct": 43
     },
     {
      "id": "1145",
@@ -7107,8 +7618,9 @@
      "min": 44,
      "h": 0.7,
      "dist": 280998,
+     "distXP": 1473409,
      "best": false,
-     "expPct": 12
+     "expPct": 39
     },
     {
      "id": "1101",
@@ -7117,8 +7629,9 @@
      "min": 40,
      "h": 0.7,
      "dist": 252760,
+     "distXP": 1412889,
      "best": false,
-     "expPct": 10
+     "expPct": 38
     },
     {
      "id": "1314",
@@ -7127,8 +7640,9 @@
      "min": 36,
      "h": 0.6,
      "dist": 226106,
+     "distXP": 1352578,
      "best": false,
-     "expPct": 9
+     "expPct": 36
     },
     {
      "id": "1319",
@@ -7137,6 +7651,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 949,
      "best": false,
      "expPct": 0
     }
@@ -7148,6 +7663,7 @@
     "min": 383,
     "h": 6.4,
     "dist": 2432593,
+    "distXP": 3752492,
     "best": true,
     "expPct": 100
    }
@@ -7235,6 +7751,7 @@
      "min": 416,
      "h": 6.9,
      "dist": 2644277,
+     "distXP": 3899577,
      "best": true,
      "expPct": 100
     },
@@ -7245,8 +7762,9 @@
      "min": 409,
      "h": 6.8,
      "dist": 2597844,
+     "distXP": 3867833,
      "best": false,
-     "expPct": 98
+     "expPct": 99
     },
     {
      "id": "1852",
@@ -7255,8 +7773,9 @@
      "min": 408,
      "h": 6.8,
      "dist": 2594100,
+     "distXP": 3865261,
      "best": false,
-     "expPct": 98
+     "expPct": 99
     },
     {
      "id": "1857",
@@ -7265,8 +7784,9 @@
      "min": 403,
      "h": 6.7,
      "dist": 2559032,
+     "distXP": 3841081,
      "best": false,
-     "expPct": 97
+     "expPct": 98
     },
     {
      "id": "1785",
@@ -7275,8 +7795,9 @@
      "min": 381,
      "h": 6.4,
      "dist": 2423467,
+     "distXP": 3746010,
      "best": false,
-     "expPct": 92
+     "expPct": 96
     },
     {
      "id": "1781",
@@ -7285,8 +7806,9 @@
      "min": 362,
      "h": 6.0,
      "dist": 2303612,
+     "distXP": 3659717,
      "best": false,
-     "expPct": 87
+     "expPct": 94
     },
     {
      "id": "1795",
@@ -7295,8 +7817,9 @@
      "min": 350,
      "h": 5.8,
      "dist": 2224859,
+     "distXP": 3601788,
      "best": false,
-     "expPct": 84
+     "expPct": 92
     },
     {
      "id": "1623",
@@ -7305,8 +7828,9 @@
      "min": 266,
      "h": 4.4,
      "dist": 1691386,
+     "distXP": 3178852,
      "best": false,
-     "expPct": 64
+     "expPct": 82
     },
     {
      "id": "1620",
@@ -7315,8 +7839,9 @@
      "min": 261,
      "h": 4.4,
      "dist": 1661700,
+     "distXP": 3153476,
      "best": false,
-     "expPct": 63
+     "expPct": 81
     },
     {
      "id": "1604",
@@ -7325,8 +7850,9 @@
      "min": 244,
      "h": 4.1,
      "dist": 1552509,
+     "distXP": 3058132,
      "best": false,
-     "expPct": 59
+     "expPct": 78
     },
     {
      "id": "1691",
@@ -7335,8 +7861,9 @@
      "min": 232,
      "h": 3.9,
      "dist": 1472539,
+     "distXP": 2986157,
      "best": false,
-     "expPct": 56
+     "expPct": 77
     },
     {
      "id": "608",
@@ -7345,8 +7872,9 @@
      "min": 231,
      "h": 3.9,
      "dist": 1470283,
+     "distXP": 2984099,
      "best": false,
-     "expPct": 56
+     "expPct": 77
     },
     {
      "id": "609",
@@ -7355,8 +7883,9 @@
      "min": 219,
      "h": 3.6,
      "dist": 1390280,
+     "distXP": 2910051,
      "best": false,
-     "expPct": 53
+     "expPct": 75
     },
     {
      "id": "604",
@@ -7365,8 +7894,9 @@
      "min": 214,
      "h": 3.6,
      "dist": 1361664,
+     "distXP": 2883050,
      "best": false,
-     "expPct": 51
+     "expPct": 74
     },
     {
      "id": "601",
@@ -7375,8 +7905,9 @@
      "min": 203,
      "h": 3.4,
      "dist": 1288347,
+     "distXP": 2812548,
      "best": false,
-     "expPct": 49
+     "expPct": 72
     },
     {
      "id": "1649",
@@ -7385,8 +7916,9 @@
      "min": 199,
      "h": 3.3,
      "dist": 1267611,
+     "distXP": 2792246,
      "best": false,
-     "expPct": 48
+     "expPct": 72
     },
     {
      "id": "628",
@@ -7395,8 +7927,9 @@
      "min": 195,
      "h": 3.3,
      "dist": 1240808,
+     "distXP": 2765757,
      "best": false,
-     "expPct": 47
+     "expPct": 71
     },
     {
      "id": "602",
@@ -7405,8 +7938,9 @@
      "min": 194,
      "h": 3.2,
      "dist": 1230064,
+     "distXP": 2755058,
      "best": false,
-     "expPct": 47
+     "expPct": 71
     },
     {
      "id": "603",
@@ -7415,8 +7949,9 @@
      "min": 186,
      "h": 3.1,
      "dist": 1179543,
+     "distXP": 2704113,
      "best": false,
-     "expPct": 45
+     "expPct": 69
     },
     {
      "id": "61",
@@ -7425,8 +7960,9 @@
      "min": 179,
      "h": 3.0,
      "dist": 1139651,
+     "distXP": 2663110,
      "best": false,
-     "expPct": 43
+     "expPct": 68
     },
     {
      "id": "1727",
@@ -7435,8 +7971,9 @@
      "min": 173,
      "h": 2.9,
      "dist": 1102106,
+     "distXP": 2623858,
      "best": false,
-     "expPct": 42
+     "expPct": 67
     },
     {
      "id": "302",
@@ -7445,8 +7982,9 @@
      "min": 172,
      "h": 2.9,
      "dist": 1096048,
+     "distXP": 2617463,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1750",
@@ -7455,8 +7993,9 @@
      "min": 172,
      "h": 2.9,
      "dist": 1094317,
+     "distXP": 2615632,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "2",
@@ -7465,8 +8004,9 @@
      "min": 170,
      "h": 2.8,
      "dist": 1079039,
+     "distXP": 2599411,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1001",
@@ -7475,8 +8015,9 @@
      "min": 163,
      "h": 2.7,
      "dist": 1034868,
+     "distXP": 2551855,
      "best": false,
-     "expPct": 39
+     "expPct": 65
     },
     {
      "id": "301",
@@ -7485,8 +8026,9 @@
      "min": 159,
      "h": 2.7,
      "dist": 1013670,
+     "distXP": 2528673,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1",
@@ -7495,8 +8037,9 @@
      "min": 158,
      "h": 2.6,
      "dist": 1002985,
+     "distXP": 2516895,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1850",
@@ -7505,8 +8048,9 @@
      "min": 148,
      "h": 2.5,
      "dist": 941059,
+     "distXP": 2447367,
      "best": false,
-     "expPct": 36
+     "expPct": 63
     },
     {
      "id": "1843",
@@ -7515,8 +8059,9 @@
      "min": 142,
      "h": 2.4,
      "dist": 902416,
+     "distXP": 2402817,
      "best": false,
-     "expPct": 34
+     "expPct": 62
     },
     {
      "id": "1834",
@@ -7525,8 +8070,9 @@
      "min": 139,
      "h": 2.3,
      "dist": 881095,
+     "distXP": 2377827,
      "best": false,
-     "expPct": 33
+     "expPct": 61
     },
     {
      "id": "1141",
@@ -7535,8 +8081,9 @@
      "min": 135,
      "h": 2.2,
      "dist": 857101,
+     "distXP": 2349339,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "1002",
@@ -7545,8 +8092,9 @@
      "min": 130,
      "h": 2.2,
      "dist": 825707,
+     "distXP": 2311457,
      "best": false,
-     "expPct": 31
+     "expPct": 59
     },
     {
      "id": "1153",
@@ -7555,8 +8103,9 @@
      "min": 125,
      "h": 2.1,
      "dist": 795512,
+     "distXP": 2274337,
      "best": false,
-     "expPct": 30
+     "expPct": 58
     },
     {
      "id": "1145",
@@ -7565,8 +8114,9 @@
      "min": 120,
      "h": 2.0,
      "dist": 764172,
+     "distXP": 2235055,
      "best": false,
-     "expPct": 29
+     "expPct": 57
     },
     {
      "id": "1101",
@@ -7575,8 +8125,9 @@
      "min": 116,
      "h": 1.9,
      "dist": 734600,
+     "distXP": 2197245,
      "best": false,
-     "expPct": 28
+     "expPct": 56
     },
     {
      "id": "1381",
@@ -7585,8 +8136,9 @@
      "min": 77,
      "h": 1.3,
      "dist": 490628,
+     "distXP": 1850507,
      "best": false,
-     "expPct": 19
+     "expPct": 47
     },
     {
      "id": "1319",
@@ -7595,8 +8147,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 484015,
+     "distXP": 1840023,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "2001",
@@ -7605,8 +8158,9 @@
      "min": 72,
      "h": 1.2,
      "dist": 460410,
+     "distXP": 1802001,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "1314",
@@ -7615,8 +8169,9 @@
      "min": 63,
      "h": 1.1,
      "dist": 402889,
+     "distXP": 1705045,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "1380",
@@ -7625,8 +8180,9 @@
      "min": 52,
      "h": 0.9,
      "dist": 332735,
+     "distXP": 1576872,
      "best": false,
-     "expPct": 13
+     "expPct": 40
     },
     {
      "id": "1301",
@@ -7635,8 +8191,9 @@
      "min": 24,
      "h": 0.4,
      "dist": 149892,
+     "distXP": 1157013,
      "best": false,
-     "expPct": 6
+     "expPct": 30
     },
     {
      "id": "1343",
@@ -7645,6 +8202,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -7656,6 +8214,7 @@
     "min": 416,
     "h": 6.9,
     "dist": 2644277,
+    "distXP": 3899577,
     "best": true,
     "expPct": 100
    }
@@ -7735,6 +8294,7 @@
      "min": 344,
      "h": 5.7,
      "dist": 2185108,
+     "distXP": 3572159,
      "best": true,
      "expPct": 100
     },
@@ -7745,8 +8305,9 @@
      "min": 330,
      "h": 5.5,
      "dist": 2098201,
+     "distXP": 3506428,
      "best": false,
-     "expPct": 96
+     "expPct": 98
     },
     {
      "id": "1852",
@@ -7755,8 +8316,9 @@
      "min": 325,
      "h": 5.4,
      "dist": 2067311,
+     "distXP": 3482738,
      "best": false,
-     "expPct": 95
+     "expPct": 97
     },
     {
      "id": "1857",
@@ -7765,8 +8327,9 @@
      "min": 313,
      "h": 5.2,
      "dist": 1986388,
+     "distXP": 3419823,
      "best": false,
-     "expPct": 91
+     "expPct": 96
     },
     {
      "id": "1781",
@@ -7775,8 +8338,9 @@
      "min": 296,
      "h": 4.9,
      "dist": 1878715,
+     "distXP": 3334090,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1795",
@@ -7785,8 +8349,9 @@
      "min": 294,
      "h": 4.9,
      "dist": 1865504,
+     "distXP": 3323403,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1785",
@@ -7795,8 +8360,9 @@
      "min": 290,
      "h": 4.8,
      "dist": 1842563,
+     "distXP": 3304755,
      "best": false,
-     "expPct": 84
+     "expPct": 93
     },
     {
      "id": "1380",
@@ -7805,8 +8371,9 @@
      "min": 275,
      "h": 4.6,
      "dist": 1744560,
+     "distXP": 3223755,
      "best": false,
-     "expPct": 80
+     "expPct": 90
     },
     {
      "id": "1343",
@@ -7815,8 +8382,9 @@
      "min": 244,
      "h": 4.1,
      "dist": 1552509,
+     "distXP": 3058132,
      "best": false,
-     "expPct": 71
+     "expPct": 86
     },
     {
      "id": "1301",
@@ -7825,8 +8393,9 @@
      "min": 241,
      "h": 4.0,
      "dist": 1530489,
+     "distXP": 3038502,
      "best": false,
-     "expPct": 70
+     "expPct": 85
     },
     {
      "id": "1381",
@@ -7835,8 +8404,9 @@
      "min": 234,
      "h": 3.9,
      "dist": 1488064,
+     "distXP": 3000279,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "2001",
@@ -7845,8 +8415,9 @@
      "min": 203,
      "h": 3.4,
      "dist": 1287505,
+     "distXP": 2811727,
      "best": false,
-     "expPct": 59
+     "expPct": 79
     },
     {
      "id": "1314",
@@ -7855,8 +8426,9 @@
      "min": 186,
      "h": 3.1,
      "dist": 1184846,
+     "distXP": 2709511,
      "best": false,
-     "expPct": 54
+     "expPct": 76
     },
     {
      "id": "1727",
@@ -7865,8 +8437,9 @@
      "min": 174,
      "h": 2.9,
      "dist": 1105052,
+     "distXP": 2626962,
      "best": false,
-     "expPct": 51
+     "expPct": 74
     },
     {
      "id": "1319",
@@ -7875,8 +8448,9 @@
      "min": 169,
      "h": 2.8,
      "dist": 1073374,
+     "distXP": 2593366,
      "best": false,
-     "expPct": 49
+     "expPct": 73
     },
     {
      "id": "1002",
@@ -7885,8 +8459,9 @@
      "min": 142,
      "h": 2.4,
      "dist": 902419,
+     "distXP": 2402820,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1001",
@@ -7895,8 +8470,9 @@
      "min": 140,
      "h": 2.3,
      "dist": 889676,
+     "distXP": 2387921,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1101",
@@ -7905,8 +8481,9 @@
      "min": 129,
      "h": 2.2,
      "dist": 820628,
+     "distXP": 2305262,
      "best": false,
-     "expPct": 38
+     "expPct": 65
     },
     {
      "id": "1145",
@@ -7915,8 +8492,9 @@
      "min": 127,
      "h": 2.1,
      "dist": 805890,
+     "distXP": 2287174,
      "best": false,
-     "expPct": 37
+     "expPct": 64
     },
     {
      "id": "1153",
@@ -7925,8 +8503,9 @@
      "min": 123,
      "h": 2.1,
      "dist": 782781,
+     "distXP": 2258476,
      "best": false,
-     "expPct": 36
+     "expPct": 63
     },
     {
      "id": "1850",
@@ -7935,8 +8514,9 @@
      "min": 118,
      "h": 2.0,
      "dist": 751166,
+     "distXP": 2218518,
      "best": false,
-     "expPct": 34
+     "expPct": 62
     },
     {
      "id": "1843",
@@ -7945,8 +8525,9 @@
      "min": 115,
      "h": 1.9,
      "dist": 733859,
+     "distXP": 2196288,
      "best": false,
-     "expPct": 34
+     "expPct": 61
     },
     {
      "id": "1141",
@@ -7955,8 +8536,9 @@
      "min": 110,
      "h": 1.8,
      "dist": 695981,
+     "distXP": 2146701,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "1834",
@@ -7965,8 +8547,9 @@
      "min": 108,
      "h": 1.8,
      "dist": 687346,
+     "distXP": 2135209,
      "best": false,
-     "expPct": 31
+     "expPct": 60
     },
     {
      "id": "1",
@@ -7975,8 +8558,9 @@
      "min": 100,
      "h": 1.7,
      "dist": 637882,
+     "distXP": 2067943,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "61",
@@ -7985,8 +8569,9 @@
      "min": 96,
      "h": 1.6,
      "dist": 610580,
+     "distXP": 2029693,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "2",
@@ -7995,8 +8580,9 @@
      "min": 90,
      "h": 1.5,
      "dist": 570666,
+     "distXP": 1972202,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "301",
@@ -8005,8 +8591,9 @@
      "min": 90,
      "h": 1.5,
      "dist": 570173,
+     "distXP": 1971480,
      "best": false,
-     "expPct": 26
+     "expPct": 55
     },
     {
      "id": "1750",
@@ -8015,8 +8602,9 @@
      "min": 84,
      "h": 1.4,
      "dist": 535018,
+     "distXP": 1919131,
      "best": false,
-     "expPct": 24
+     "expPct": 54
     },
     {
      "id": "603",
@@ -8025,8 +8613,9 @@
      "min": 84,
      "h": 1.4,
      "dist": 533503,
+     "distXP": 1916837,
      "best": false,
-     "expPct": 24
+     "expPct": 54
     },
     {
      "id": "604",
@@ -8035,8 +8624,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 485091,
+     "distXP": 1841734,
      "best": false,
-     "expPct": 22
+     "expPct": 52
     },
     {
      "id": "302",
@@ -8045,8 +8635,9 @@
      "min": 74,
      "h": 1.2,
      "dist": 472806,
+     "distXP": 1822087,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "628",
@@ -8055,8 +8646,9 @@
      "min": 73,
      "h": 1.2,
      "dist": 462015,
+     "distXP": 1804617,
      "best": false,
-     "expPct": 21
+     "expPct": 51
     },
     {
      "id": "601",
@@ -8065,8 +8657,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 406227,
+     "distXP": 1710854,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "602",
@@ -8075,8 +8668,9 @@
      "min": 57,
      "h": 1.0,
      "dist": 363602,
+     "distXP": 1634785,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "1649",
@@ -8085,8 +8679,9 @@
      "min": 50,
      "h": 0.8,
      "dist": 317068,
+     "distXP": 1546448,
      "best": false,
-     "expPct": 15
+     "expPct": 43
     },
     {
      "id": "1691",
@@ -8095,8 +8690,9 @@
      "min": 41,
      "h": 0.7,
      "dist": 258556,
+     "distXP": 1425577,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "609",
@@ -8105,8 +8701,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 217605,
+     "distXP": 1332600,
      "best": false,
-     "expPct": 10
+     "expPct": 37
     },
     {
      "id": "608",
@@ -8115,8 +8712,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 213731,
+     "distXP": 1323368,
      "best": false,
-     "expPct": 10
+     "expPct": 37
     },
     {
      "id": "1620",
@@ -8125,8 +8723,9 @@
      "min": 33,
      "h": 0.5,
      "dist": 207264,
+     "distXP": 1307767,
      "best": false,
-     "expPct": 9
+     "expPct": 37
     },
     {
      "id": "1623",
@@ -8135,8 +8734,9 @@
      "min": 24,
      "h": 0.4,
      "dist": 151301,
+     "distXP": 1161029,
      "best": false,
-     "expPct": 7
+     "expPct": 33
     },
     {
      "id": "1604",
@@ -8145,6 +8745,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -8156,6 +8757,7 @@
     "min": 344,
     "h": 5.7,
     "dist": 2185108,
+    "distXP": 3572159,
     "best": true,
     "expPct": 100
    }
@@ -8257,6 +8859,7 @@
      "min": 336,
      "h": 5.6,
      "dist": 2136122,
+     "distXP": 3535273,
      "best": true,
      "expPct": 100
     },
@@ -8267,8 +8870,9 @@
      "min": 320,
      "h": 5.3,
      "dist": 2036315,
+     "distXP": 3458788,
      "best": false,
-     "expPct": 95
+     "expPct": 98
     },
     {
      "id": "1852",
@@ -8277,8 +8881,9 @@
      "min": 316,
      "h": 5.3,
      "dist": 2008379,
+     "distXP": 3437045,
      "best": false,
-     "expPct": 94
+     "expPct": 97
     },
     {
      "id": "1857",
@@ -8287,8 +8892,9 @@
      "min": 303,
      "h": 5.0,
      "dist": 1924249,
+     "distXP": 3370638,
      "best": false,
-     "expPct": 90
+     "expPct": 95
     },
     {
      "id": "1380",
@@ -8297,8 +8903,9 @@
      "min": 298,
      "h": 5.0,
      "dist": 1891114,
+     "distXP": 3344085,
      "best": false,
-     "expPct": 89
+     "expPct": 95
     },
     {
      "id": "1781",
@@ -8307,8 +8914,9 @@
      "min": 289,
      "h": 4.8,
      "dist": 1837006,
+     "distXP": 3300221,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1795",
@@ -8317,8 +8925,9 @@
      "min": 288,
      "h": 4.8,
      "dist": 1831867,
+     "distXP": 3296022,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1785",
@@ -8327,8 +8936,9 @@
      "min": 281,
      "h": 4.7,
      "dist": 1783541,
+     "distXP": 3256239,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1343",
@@ -8337,8 +8947,9 @@
      "min": 266,
      "h": 4.4,
      "dist": 1691386,
+     "distXP": 3178852,
      "best": false,
-     "expPct": 79
+     "expPct": 90
     },
     {
      "id": "1301",
@@ -8347,8 +8958,9 @@
      "min": 263,
      "h": 4.4,
      "dist": 1674309,
+     "distXP": 3164282,
      "best": false,
-     "expPct": 78
+     "expPct": 90
     },
     {
      "id": "1381",
@@ -8357,8 +8969,9 @@
      "min": 258,
      "h": 4.3,
      "dist": 1638599,
+     "distXP": 3133572,
      "best": false,
-     "expPct": 77
+     "expPct": 89
     },
     {
      "id": "2001",
@@ -8367,8 +8980,9 @@
      "min": 221,
      "h": 3.7,
      "dist": 1407133,
+     "distXP": 2925824,
      "best": false,
-     "expPct": 66
+     "expPct": 83
     },
     {
      "id": "1314",
@@ -8377,8 +8991,9 @@
      "min": 207,
      "h": 3.5,
      "dist": 1316315,
+     "distXP": 2839674,
      "best": false,
-     "expPct": 62
+     "expPct": 80
     },
     {
      "id": "1319",
@@ -8387,8 +9002,9 @@
      "min": 191,
      "h": 3.2,
      "dist": 1215479,
+     "distXP": 2740460,
      "best": false,
-     "expPct": 57
+     "expPct": 78
     },
     {
      "id": "1727",
@@ -8397,8 +9013,9 @@
      "min": 184,
      "h": 3.1,
      "dist": 1166238,
+     "distXP": 2690516,
      "best": false,
-     "expPct": 55
+     "expPct": 76
     },
     {
      "id": "1002",
@@ -8407,8 +9024,9 @@
      "min": 159,
      "h": 2.6,
      "dist": 1007628,
+     "distXP": 2522021,
      "best": false,
-     "expPct": 47
+     "expPct": 71
     },
     {
      "id": "1001",
@@ -8417,8 +9035,9 @@
      "min": 152,
      "h": 2.5,
      "dist": 965651,
+     "distXP": 2475244,
      "best": false,
-     "expPct": 45
+     "expPct": 70
     },
     {
      "id": "1101",
@@ -8427,8 +9046,9 @@
      "min": 152,
      "h": 2.5,
      "dist": 963196,
+     "distXP": 2472478,
      "best": false,
-     "expPct": 45
+     "expPct": 70
     },
     {
      "id": "1145",
@@ -8437,8 +9057,9 @@
      "min": 150,
      "h": 2.5,
      "dist": 952172,
+     "distXP": 2460009,
      "best": false,
-     "expPct": 45
+     "expPct": 70
     },
     {
      "id": "1153",
@@ -8447,8 +9068,9 @@
      "min": 143,
      "h": 2.4,
      "dist": 910966,
+     "distXP": 2412755,
      "best": false,
-     "expPct": 43
+     "expPct": 68
     },
     {
      "id": "1850",
@@ -8457,8 +9079,9 @@
      "min": 142,
      "h": 2.4,
      "dist": 902394,
+     "distXP": 2402790,
      "best": false,
-     "expPct": 42
+     "expPct": 68
     },
     {
      "id": "1843",
@@ -8467,8 +9090,9 @@
      "min": 139,
      "h": 2.3,
      "dist": 884858,
+     "distXP": 2382259,
      "best": false,
-     "expPct": 41
+     "expPct": 67
     },
     {
      "id": "1141",
@@ -8477,8 +9101,9 @@
      "min": 131,
      "h": 2.2,
      "dist": 834424,
+     "distXP": 2322047,
      "best": false,
-     "expPct": 39
+     "expPct": 66
     },
     {
      "id": "1834",
@@ -8487,8 +9112,9 @@
      "min": 131,
      "h": 2.2,
      "dist": 834295,
+     "distXP": 2321891,
      "best": false,
-     "expPct": 39
+     "expPct": 66
     },
     {
      "id": "1",
@@ -8497,8 +9123,9 @@
      "min": 118,
      "h": 2.0,
      "dist": 747060,
+     "distXP": 2213268,
      "best": false,
-     "expPct": 35
+     "expPct": 63
     },
     {
      "id": "301",
@@ -8507,8 +9134,9 @@
      "min": 109,
      "h": 1.8,
      "dist": 693297,
+     "distXP": 2143137,
      "best": false,
-     "expPct": 32
+     "expPct": 61
     },
     {
      "id": "61",
@@ -8517,8 +9145,9 @@
      "min": 109,
      "h": 1.8,
      "dist": 692647,
+     "distXP": 2142273,
      "best": false,
-     "expPct": 32
+     "expPct": 61
     },
     {
      "id": "1750",
@@ -8527,8 +9156,9 @@
      "min": 108,
      "h": 1.8,
      "dist": 686298,
+     "distXP": 2133809,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "2",
@@ -8537,8 +9167,9 @@
      "min": 106,
      "h": 1.8,
      "dist": 674487,
+     "distXP": 2117962,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "603",
@@ -8547,8 +9178,9 @@
      "min": 97,
      "h": 1.6,
      "dist": 617980,
+     "distXP": 2040144,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "302",
@@ -8557,8 +9189,9 @@
      "min": 94,
      "h": 1.6,
      "dist": 600455,
+     "distXP": 2015293,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "628",
@@ -8567,8 +9200,9 @@
      "min": 85,
      "h": 1.4,
      "dist": 542772,
+     "distXP": 1930822,
      "best": false,
-     "expPct": 25
+     "expPct": 55
     },
     {
      "id": "604",
@@ -8577,8 +9211,9 @@
      "min": 83,
      "h": 1.4,
      "dist": 526015,
+     "distXP": 1905451,
      "best": false,
-     "expPct": 25
+     "expPct": 54
     },
     {
      "id": "601",
@@ -8587,8 +9222,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 483838,
+     "distXP": 1839741,
      "best": false,
-     "expPct": 23
+     "expPct": 52
     },
     {
      "id": "602",
@@ -8597,8 +9233,9 @@
      "min": 75,
      "h": 1.3,
      "dist": 477186,
+     "distXP": 1829120,
      "best": false,
-     "expPct": 22
+     "expPct": 52
     },
     {
      "id": "1649",
@@ -8607,8 +9244,9 @@
      "min": 74,
      "h": 1.2,
      "dist": 468349,
+     "distXP": 1814895,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "1691",
@@ -8617,8 +9255,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 383460,
+     "distXP": 1670749,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "609",
@@ -8627,8 +9266,9 @@
      "min": 50,
      "h": 0.8,
      "dist": 315618,
+     "distXP": 1543595,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "608",
@@ -8637,8 +9277,9 @@
      "min": 42,
      "h": 0.7,
      "dist": 265829,
+     "distXP": 1441298,
      "best": false,
-     "expPct": 12
+     "expPct": 41
     },
     {
      "id": "1604",
@@ -8647,8 +9288,9 @@
      "min": 24,
      "h": 0.4,
      "dist": 151301,
+     "distXP": 1161029,
      "best": false,
-     "expPct": 7
+     "expPct": 33
     },
     {
      "id": "1620",
@@ -8657,8 +9299,9 @@
      "min": 20,
      "h": 0.3,
      "dist": 125391,
+     "distXP": 1083845,
      "best": false,
-     "expPct": 6
+     "expPct": 31
     },
     {
      "id": "1623",
@@ -8667,6 +9310,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -8678,6 +9322,7 @@
     "min": 336,
     "h": 5.6,
     "dist": 2136122,
+    "distXP": 3535273,
     "best": true,
     "expPct": 100
    }
@@ -8766,6 +9411,7 @@
      "min": 364,
      "h": 6.1,
      "dist": 2311092,
+     "distXP": 3665167,
      "best": true,
      "expPct": 100
     },
@@ -8776,8 +9422,9 @@
      "min": 354,
      "h": 5.9,
      "dist": 2250212,
+     "distXP": 3620547,
      "best": false,
-     "expPct": 97
+     "expPct": 99
     },
     {
      "id": "1852",
@@ -8786,8 +9433,9 @@
      "min": 348,
      "h": 5.8,
      "dist": 2214057,
+     "distXP": 3593763,
      "best": false,
-     "expPct": 96
+     "expPct": 98
     },
     {
      "id": "1857",
@@ -8796,8 +9444,9 @@
      "min": 337,
      "h": 5.6,
      "dist": 2140346,
+     "distXP": 3538471,
      "best": false,
-     "expPct": 93
+     "expPct": 97
     },
     {
      "id": "1781",
@@ -8806,8 +9455,9 @@
      "min": 314,
      "h": 5.2,
      "dist": 1995109,
+     "distXP": 3426664,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1785",
@@ -8816,8 +9466,9 @@
      "min": 314,
      "h": 5.2,
      "dist": 1992755,
+     "distXP": 3424820,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1795",
@@ -8826,8 +9477,9 @@
      "min": 309,
      "h": 5.2,
      "dist": 1966379,
+     "distXP": 3404071,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1380",
@@ -8836,8 +9488,9 @@
      "min": 226,
      "h": 3.8,
      "dist": 1438736,
+     "distXP": 2955147,
      "best": false,
-     "expPct": 62
+     "expPct": 81
     },
     {
      "id": "1343",
@@ -8846,8 +9499,9 @@
      "min": 199,
      "h": 3.3,
      "dist": 1267611,
+     "distXP": 2792246,
      "best": false,
-     "expPct": 55
+     "expPct": 76
     },
     {
      "id": "1301",
@@ -8856,8 +9510,9 @@
      "min": 194,
      "h": 3.2,
      "dist": 1232461,
+     "distXP": 2757449,
      "best": false,
-     "expPct": 53
+     "expPct": 75
     },
     {
      "id": "1381",
@@ -8866,8 +9521,9 @@
      "min": 184,
      "h": 3.1,
      "dist": 1172480,
+     "distXP": 2696904,
      "best": false,
-     "expPct": 51
+     "expPct": 74
     },
     {
      "id": "2001",
@@ -8876,8 +9532,9 @@
      "min": 167,
      "h": 2.8,
      "dist": 1058518,
+     "distXP": 2577441,
      "best": false,
-     "expPct": 46
+     "expPct": 70
     },
     {
      "id": "1727",
@@ -8886,8 +9543,9 @@
      "min": 162,
      "h": 2.7,
      "dist": 1032226,
+     "distXP": 2548979,
      "best": false,
-     "expPct": 45
+     "expPct": 70
     },
     {
      "id": "1314",
@@ -8896,8 +9554,9 @@
      "min": 146,
      "h": 2.4,
      "dist": 925022,
+     "distXP": 2428992,
      "best": false,
-     "expPct": 40
+     "expPct": 66
     },
     {
      "id": "1001",
@@ -8906,8 +9565,9 @@
      "min": 125,
      "h": 2.1,
      "dist": 796668,
+     "distXP": 2275771,
      "best": false,
-     "expPct": 34
+     "expPct": 62
     },
     {
      "id": "1319",
@@ -8916,8 +9576,9 @@
      "min": 123,
      "h": 2.1,
      "dist": 783734,
+     "distXP": 2259667,
      "best": false,
-     "expPct": 34
+     "expPct": 62
     },
     {
      "id": "1002",
@@ -8926,8 +9587,9 @@
      "min": 115,
      "h": 1.9,
      "dist": 730241,
+     "distXP": 2191607,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "1153",
@@ -8936,8 +9598,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 548396,
+     "distXP": 1939249,
      "best": false,
-     "expPct": 24
+     "expPct": 53
     },
     {
      "id": "604",
@@ -8946,8 +9609,9 @@
      "min": 85,
      "h": 1.4,
      "dist": 539528,
+     "distXP": 1925942,
      "best": false,
-     "expPct": 23
+     "expPct": 53
     },
     {
      "id": "61",
@@ -8956,8 +9620,9 @@
      "min": 85,
      "h": 1.4,
      "dist": 538898,
+     "distXP": 1924991,
      "best": false,
-     "expPct": 23
+     "expPct": 53
     },
     {
      "id": "1101",
@@ -8966,8 +9631,9 @@
      "min": 84,
      "h": 1.4,
      "dist": 534188,
+     "distXP": 1917874,
      "best": false,
-     "expPct": 23
+     "expPct": 52
     },
     {
      "id": "1145",
@@ -8976,8 +9642,9 @@
      "min": 80,
      "h": 1.3,
      "dist": 506288,
+     "distXP": 1875058,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "1620",
@@ -8986,8 +9653,9 @@
      "min": 78,
      "h": 1.3,
      "dist": 496950,
+     "distXP": 1860466,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "1",
@@ -8996,8 +9664,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 482307,
+     "distXP": 1837304,
      "best": false,
-     "expPct": 21
+     "expPct": 50
     },
     {
      "id": "603",
@@ -9006,8 +9675,9 @@
      "min": 74,
      "h": 1.2,
      "dist": 472637,
+     "distXP": 1821815,
      "best": false,
-     "expPct": 20
+     "expPct": 50
     },
     {
      "id": "1623",
@@ -9016,8 +9686,9 @@
      "min": 74,
      "h": 1.2,
      "dist": 468348,
+     "distXP": 1814895,
      "best": false,
-     "expPct": 20
+     "expPct": 50
     },
     {
      "id": "2",
@@ -9026,8 +9697,9 @@
      "min": 70,
      "h": 1.2,
      "dist": 444606,
+     "distXP": 1775997,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "1850",
@@ -9036,8 +9708,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 434888,
+     "distXP": 1759777,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "628",
@@ -9046,8 +9719,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 432070,
+     "distXP": 1755041,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "1141",
@@ -9056,8 +9730,9 @@
      "min": 68,
      "h": 1.1,
      "dist": 430256,
+     "distXP": 1751982,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "1843",
@@ -9066,8 +9741,9 @@
      "min": 66,
      "h": 1.1,
      "dist": 417478,
+     "distXP": 1730259,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "601",
@@ -9076,8 +9752,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 405056,
+     "distXP": 1708819,
      "best": false,
-     "expPct": 18
+     "expPct": 47
     },
     {
      "id": "1834",
@@ -9086,8 +9763,9 @@
      "min": 61,
      "h": 1.0,
      "dist": 387540,
+     "distXP": 1678022,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "301",
@@ -9096,8 +9774,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 378277,
+     "distXP": 1661453,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "608",
@@ -9106,8 +9785,9 @@
      "min": 59,
      "h": 1.0,
      "dist": 373037,
+     "distXP": 1651990,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "1604",
@@ -9116,8 +9796,9 @@
      "min": 50,
      "h": 0.8,
      "dist": 317068,
+     "distXP": 1546447,
      "best": false,
-     "expPct": 14
+     "expPct": 42
     },
     {
      "id": "609",
@@ -9126,8 +9807,9 @@
      "min": 46,
      "h": 0.8,
      "dist": 289670,
+     "distXP": 1491377,
      "best": false,
-     "expPct": 13
+     "expPct": 41
     },
     {
      "id": "302",
@@ -9136,8 +9818,9 @@
      "min": 45,
      "h": 0.7,
      "dist": 285353,
+     "distXP": 1482468,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "602",
@@ -9146,8 +9829,9 @@
      "min": 44,
      "h": 0.7,
      "dist": 277835,
+     "distXP": 1466787,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "1691",
@@ -9156,8 +9840,9 @@
      "min": 35,
      "h": 0.6,
      "dist": 222562,
+     "distXP": 1344295,
      "best": false,
-     "expPct": 10
+     "expPct": 37
     },
     {
      "id": "1750",
@@ -9166,8 +9851,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 218522,
+     "distXP": 1334774,
      "best": false,
-     "expPct": 9
+     "expPct": 36
     },
     {
      "id": "1649",
@@ -9176,6 +9862,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 1900,
      "best": false,
      "expPct": 0
     }
@@ -9187,6 +9874,7 @@
     "min": 364,
     "h": 6.1,
     "dist": 2311092,
+    "distXP": 3665167,
     "best": true,
     "expPct": 100
    }
@@ -9252,6 +9940,7 @@
      "min": 383,
      "h": 6.4,
      "dist": 2435370,
+     "distXP": 3754462,
      "best": true,
      "expPct": 100
     },
@@ -9262,8 +9951,9 @@
      "min": 376,
      "h": 6.3,
      "dist": 2389949,
+     "distXP": 3722097,
      "best": false,
-     "expPct": 98
+     "expPct": 99
     },
     {
      "id": "1852",
@@ -9272,8 +9962,9 @@
      "min": 370,
      "h": 6.2,
      "dist": 2351076,
+     "distXP": 3694152,
      "best": false,
-     "expPct": 97
+     "expPct": 98
     },
     {
      "id": "1857",
@@ -9282,8 +9973,9 @@
      "min": 359,
      "h": 6.0,
      "dist": 2282014,
+     "distXP": 3643929,
      "best": false,
-     "expPct": 94
+     "expPct": 97
     },
     {
      "id": "1785",
@@ -9292,8 +9984,9 @@
      "min": 336,
      "h": 5.6,
      "dist": 2133576,
+     "distXP": 3533345,
      "best": false,
-     "expPct": 88
+     "expPct": 94
     },
     {
      "id": "1781",
@@ -9302,8 +9995,9 @@
      "min": 333,
      "h": 5.6,
      "dist": 2116668,
+     "distXP": 3520507,
      "best": false,
-     "expPct": 87
+     "expPct": 94
     },
     {
      "id": "1795",
@@ -9312,8 +10006,9 @@
      "min": 327,
      "h": 5.5,
      "dist": 2079162,
+     "distXP": 3491847,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1380",
@@ -9322,8 +10017,9 @@
      "min": 195,
      "h": 3.3,
      "dist": 1239302,
+     "distXP": 2764260,
      "best": false,
-     "expPct": 51
+     "expPct": 74
     },
     {
      "id": "1343",
@@ -9332,8 +10028,9 @@
      "min": 172,
      "h": 2.9,
      "dist": 1094317,
+     "distXP": 2615632,
      "best": false,
-     "expPct": 45
+     "expPct": 70
     },
     {
      "id": "1727",
@@ -9342,8 +10039,9 @@
      "min": 166,
      "h": 2.8,
      "dist": 1057189,
+     "distXP": 2576010,
      "best": false,
-     "expPct": 43
+     "expPct": 69
     },
     {
      "id": "1301",
@@ -9352,8 +10050,9 @@
      "min": 164,
      "h": 2.7,
      "dist": 1043992,
+     "distXP": 2561760,
      "best": false,
-     "expPct": 43
+     "expPct": 68
     },
     {
      "id": "1381",
@@ -9362,8 +10061,9 @@
      "min": 151,
      "h": 2.5,
      "dist": 959465,
+     "distXP": 2468266,
      "best": false,
-     "expPct": 39
+     "expPct": 66
     },
     {
      "id": "2001",
@@ -9372,8 +10072,9 @@
      "min": 149,
      "h": 2.5,
      "dist": 949520,
+     "distXP": 2457000,
      "best": false,
-     "expPct": 39
+     "expPct": 65
     },
     {
      "id": "1001",
@@ -9382,8 +10083,9 @@
      "min": 129,
      "h": 2.2,
      "dist": 822371,
+     "distXP": 2307390,
      "best": false,
-     "expPct": 34
+     "expPct": 61
     },
     {
      "id": "1314",
@@ -9392,8 +10094,9 @@
      "min": 124,
      "h": 2.1,
      "dist": 787905,
+     "distXP": 2264875,
      "best": false,
-     "expPct": 32
+     "expPct": 60
     },
     {
      "id": "1620",
@@ -9402,8 +10105,9 @@
      "min": 112,
      "h": 1.9,
      "dist": 713382,
+     "distXP": 2169644,
      "best": false,
-     "expPct": 29
+     "expPct": 58
     },
     {
      "id": "1002",
@@ -9412,8 +10116,9 @@
      "min": 110,
      "h": 1.8,
      "dist": 696208,
+     "distXP": 2147003,
      "best": false,
-     "expPct": 29
+     "expPct": 57
     },
     {
      "id": "1623",
@@ -9422,8 +10127,9 @@
      "min": 108,
      "h": 1.8,
      "dist": 686298,
+     "distXP": 2133809,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "604",
@@ -9432,8 +10138,9 @@
      "min": 107,
      "h": 1.8,
      "dist": 682493,
+     "distXP": 2128719,
      "best": false,
-     "expPct": 28
+     "expPct": 57
     },
     {
      "id": "1319",
@@ -9442,8 +10149,9 @@
      "min": 97,
      "h": 1.6,
      "dist": 614148,
+     "distXP": 2034740,
      "best": false,
-     "expPct": 25
+     "expPct": 54
     },
     {
      "id": "61",
@@ -9452,8 +10160,9 @@
      "min": 96,
      "h": 1.6,
      "dist": 610490,
+     "distXP": 2029566,
      "best": false,
-     "expPct": 25
+     "expPct": 54
     },
     {
      "id": "608",
@@ -9462,8 +10171,9 @@
      "min": 90,
      "h": 1.5,
      "dist": 573401,
+     "distXP": 1976205,
      "best": false,
-     "expPct": 24
+     "expPct": 53
     },
     {
      "id": "603",
@@ -9472,8 +10182,9 @@
      "min": 89,
      "h": 1.5,
      "dist": 563324,
+     "distXP": 1961411,
      "best": false,
-     "expPct": 23
+     "expPct": 52
     },
     {
      "id": "628",
@@ -9482,8 +10193,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 549662,
+     "distXP": 1941141,
      "best": false,
-     "expPct": 23
+     "expPct": 52
     },
     {
      "id": "601",
@@ -9492,8 +10204,9 @@
      "min": 86,
      "h": 1.4,
      "dist": 543579,
+     "distXP": 1932034,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "1604",
@@ -9502,8 +10215,9 @@
      "min": 84,
      "h": 1.4,
      "dist": 535018,
+     "distXP": 1919131,
      "best": false,
-     "expPct": 22
+     "expPct": 51
     },
     {
      "id": "1",
@@ -9512,8 +10226,9 @@
      "min": 79,
      "h": 1.3,
      "dist": 498989,
+     "distXP": 1863663,
      "best": false,
-     "expPct": 20
+     "expPct": 50
     },
     {
      "id": "2",
@@ -9522,8 +10237,9 @@
      "min": 78,
      "h": 1.3,
      "dist": 494727,
+     "distXP": 1856971,
      "best": false,
-     "expPct": 20
+     "expPct": 49
     },
     {
      "id": "609",
@@ -9532,8 +10248,9 @@
      "min": 76,
      "h": 1.3,
      "dist": 483362,
+     "distXP": 1838984,
      "best": false,
-     "expPct": 20
+     "expPct": 49
     },
     {
      "id": "1153",
@@ -9542,8 +10259,9 @@
      "min": 74,
      "h": 1.2,
      "dist": 470379,
+     "distXP": 1818176,
      "best": false,
-     "expPct": 19
+     "expPct": 48
     },
     {
      "id": "602",
@@ -9552,8 +10270,9 @@
      "min": 64,
      "h": 1.1,
      "dist": 408895,
+     "distXP": 1715479,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "301",
@@ -9562,8 +10281,9 @@
      "min": 61,
      "h": 1.0,
      "dist": 386716,
+     "distXP": 1676556,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "1101",
@@ -9572,8 +10292,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 383933,
+     "distXP": 1671594,
      "best": false,
-     "expPct": 16
+     "expPct": 45
     },
     {
      "id": "1691",
@@ -9582,8 +10303,9 @@
      "min": 60,
      "h": 1.0,
      "dist": 383411,
+     "distXP": 1670661,
      "best": false,
-     "expPct": 16
+     "expPct": 44
     },
     {
      "id": "302",
@@ -9592,8 +10314,9 @@
      "min": 53,
      "h": 0.9,
      "dist": 334730,
+     "distXP": 1580693,
      "best": false,
-     "expPct": 14
+     "expPct": 42
     },
     {
      "id": "1145",
@@ -9602,8 +10325,9 @@
      "min": 53,
      "h": 0.9,
      "dist": 334464,
+     "distXP": 1580184,
      "best": false,
-     "expPct": 14
+     "expPct": 42
     },
     {
      "id": "1141",
@@ -9612,8 +10336,9 @@
      "min": 52,
      "h": 0.9,
      "dist": 329561,
+     "distXP": 1570767,
      "best": false,
-     "expPct": 14
+     "expPct": 42
     },
     {
      "id": "1834",
@@ -9622,8 +10347,9 @@
      "min": 36,
      "h": 0.6,
      "dist": 229487,
+     "distXP": 1360417,
      "best": false,
-     "expPct": 9
+     "expPct": 36
     },
     {
      "id": "1649",
@@ -9632,8 +10358,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 218522,
+     "distXP": 1334773,
      "best": false,
-     "expPct": 9
+     "expPct": 36
     },
     {
      "id": "1850",
@@ -9642,8 +10369,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 216366,
+     "distXP": 1329657,
      "best": false,
-     "expPct": 9
+     "expPct": 35
     },
     {
      "id": "1843",
@@ -9652,8 +10380,9 @@
      "min": 32,
      "h": 0.5,
      "dist": 206342,
+     "distXP": 1305523,
      "best": false,
-     "expPct": 8
+     "expPct": 35
     },
     {
      "id": "1750",
@@ -9662,6 +10391,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -9673,6 +10403,7 @@
     "min": 383,
     "h": 6.4,
     "dist": 2435370,
+    "distXP": 3754462,
     "best": true,
     "expPct": 100
    }
@@ -9739,6 +10470,7 @@
      "min": 415,
      "h": 6.9,
      "dist": 2635031,
+     "distXP": 3893278,
      "best": true,
      "expPct": 100
     },
@@ -9749,6 +10481,7 @@
      "min": 414,
      "h": 6.9,
      "dist": 2631301,
+     "distXP": 3890734,
      "best": false,
      "expPct": 100
     },
@@ -9759,8 +10492,9 @@
      "min": 379,
      "h": 6.3,
      "dist": 2408285,
+     "distXP": 3735199,
      "best": false,
-     "expPct": 91
+     "expPct": 96
     },
     {
      "id": "1343",
@@ -9769,8 +10503,9 @@
      "min": 362,
      "h": 6.0,
      "dist": 2303612,
+     "distXP": 3659717,
      "best": false,
-     "expPct": 87
+     "expPct": 94
     },
     {
      "id": "1850",
@@ -9779,8 +10514,9 @@
      "min": 354,
      "h": 5.9,
      "dist": 2251100,
+     "distXP": 3621202,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1843",
@@ -9789,8 +10525,9 @@
      "min": 343,
      "h": 5.7,
      "dist": 2178822,
+     "distXP": 3567449,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1750",
@@ -9799,8 +10536,9 @@
      "min": 333,
      "h": 5.6,
      "dist": 2116668,
+     "distXP": 3520507,
      "best": false,
-     "expPct": 80
+     "expPct": 90
     },
     {
      "id": "1319",
@@ -9809,8 +10547,9 @@
      "min": 332,
      "h": 5.5,
      "dist": 2111245,
+     "distXP": 3516379,
      "best": false,
-     "expPct": 80
+     "expPct": 90
     },
     {
      "id": "1691",
@@ -9819,8 +10558,9 @@
      "min": 332,
      "h": 5.5,
      "dist": 2108873,
+     "distXP": 3514572,
      "best": false,
-     "expPct": 80
+     "expPct": 90
     },
     {
      "id": "1145",
@@ -9829,8 +10569,9 @@
      "min": 326,
      "h": 5.4,
      "dist": 2071446,
+     "distXP": 3485919,
      "best": false,
-     "expPct": 79
+     "expPct": 90
     },
     {
      "id": "1834",
@@ -9839,8 +10580,9 @@
      "min": 320,
      "h": 5.3,
      "dist": 2034332,
+     "distXP": 3457250,
      "best": false,
-     "expPct": 77
+     "expPct": 89
     },
     {
      "id": "1101",
@@ -9849,8 +10591,9 @@
      "min": 316,
      "h": 5.3,
      "dist": 2010031,
+     "distXP": 3438336,
      "best": false,
-     "expPct": 76
+     "expPct": 88
     },
     {
      "id": "1649",
@@ -9859,8 +10602,9 @@
      "min": 314,
      "h": 5.2,
      "dist": 1995109,
+     "distXP": 3426665,
      "best": false,
-     "expPct": 76
+     "expPct": 88
     },
     {
      "id": "1314",
@@ -9869,8 +10613,9 @@
      "min": 311,
      "h": 5.2,
      "dist": 1979172,
+     "distXP": 3414152,
      "best": false,
-     "expPct": 75
+     "expPct": 88
     },
     {
      "id": "1141",
@@ -9879,8 +10624,9 @@
      "min": 301,
      "h": 5.0,
      "dist": 1911004,
+     "distXP": 3360052,
      "best": false,
-     "expPct": 73
+     "expPct": 86
     },
     {
      "id": "1604",
@@ -9889,8 +10635,9 @@
      "min": 296,
      "h": 4.9,
      "dist": 1878715,
+     "distXP": 3334090,
      "best": false,
-     "expPct": 71
+     "expPct": 86
     },
     {
      "id": "2001",
@@ -9899,8 +10646,9 @@
      "min": 291,
      "h": 4.8,
      "dist": 1847013,
+     "distXP": 3308382,
      "best": false,
-     "expPct": 70
+     "expPct": 85
     },
     {
      "id": "1623",
@@ -9909,8 +10657,9 @@
      "min": 289,
      "h": 4.8,
      "dist": 1837006,
+     "distXP": 3300221,
      "best": false,
-     "expPct": 70
+     "expPct": 85
     },
     {
      "id": "1153",
@@ -9919,8 +10668,9 @@
      "min": 286,
      "h": 4.8,
      "dist": 1815967,
+     "distXP": 3282991,
      "best": false,
-     "expPct": 69
+     "expPct": 84
     },
     {
      "id": "302",
@@ -9929,8 +10679,9 @@
      "min": 281,
      "h": 4.7,
      "dist": 1782859,
+     "distXP": 3255673,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "301",
@@ -9939,8 +10690,9 @@
      "min": 276,
      "h": 4.6,
      "dist": 1751927,
+     "distXP": 3229921,
      "best": false,
-     "expPct": 66
+     "expPct": 83
     },
     {
      "id": "609",
@@ -9949,8 +10701,9 @@
      "min": 272,
      "h": 4.5,
      "dist": 1730891,
+     "distXP": 3212278,
      "best": false,
-     "expPct": 66
+     "expPct": 83
     },
     {
      "id": "602",
@@ -9959,8 +10712,9 @@
      "min": 271,
      "h": 4.5,
      "dist": 1723052,
+     "distXP": 3205676,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "1620",
@@ -9969,8 +10723,9 @@
      "min": 269,
      "h": 4.5,
      "dist": 1712668,
+     "distXP": 3196907,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "608",
@@ -9979,8 +10734,9 @@
      "min": 264,
      "h": 4.4,
      "dist": 1679590,
+     "distXP": 3168795,
      "best": false,
-     "expPct": 64
+     "expPct": 81
     },
     {
      "id": "1",
@@ -9989,8 +10745,9 @@
      "min": 260,
      "h": 4.3,
      "dist": 1653577,
+     "distXP": 3146493,
      "best": false,
-     "expPct": 63
+     "expPct": 81
     },
     {
      "id": "2",
@@ -9999,8 +10756,9 @@
      "min": 257,
      "h": 4.3,
      "dist": 1632270,
+     "distXP": 3128095,
      "best": false,
-     "expPct": 62
+     "expPct": 80
     },
     {
      "id": "1002",
@@ -10009,8 +10767,9 @@
      "min": 253,
      "h": 4.2,
      "dist": 1610606,
+     "distXP": 3109265,
      "best": false,
-     "expPct": 61
+     "expPct": 80
     },
     {
      "id": "601",
@@ -10019,8 +10778,9 @@
      "min": 250,
      "h": 4.2,
      "dist": 1590763,
+     "distXP": 3091905,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "628",
@@ -10029,8 +10789,9 @@
      "min": 247,
      "h": 4.1,
      "dist": 1571768,
+     "distXP": 3075187,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "603",
@@ -10039,8 +10800,9 @@
      "min": 244,
      "h": 4.1,
      "dist": 1553500,
+     "distXP": 3059012,
      "best": false,
-     "expPct": 59
+     "expPct": 79
     },
     {
      "id": "61",
@@ -10049,8 +10811,9 @@
      "min": 238,
      "h": 4.0,
      "dist": 1512788,
+     "distXP": 3022620,
      "best": false,
-     "expPct": 57
+     "expPct": 78
     },
     {
      "id": "604",
@@ -10059,8 +10822,9 @@
      "min": 229,
      "h": 3.8,
      "dist": 1455784,
+     "distXP": 2970832,
      "best": false,
-     "expPct": 55
+     "expPct": 76
     },
     {
      "id": "1001",
@@ -10069,8 +10833,9 @@
      "min": 218,
      "h": 3.6,
      "dist": 1387930,
+     "distXP": 2907844,
      "best": false,
-     "expPct": 53
+     "expPct": 75
     },
     {
      "id": "1727",
@@ -10079,8 +10844,9 @@
      "min": 193,
      "h": 3.2,
      "dist": 1226075,
+     "distXP": 2751074,
      "best": false,
-     "expPct": 47
+     "expPct": 71
     },
     {
      "id": "1853",
@@ -10089,8 +10855,9 @@
      "min": 55,
      "h": 0.9,
      "dist": 348295,
+     "distXP": 1606386,
      "best": false,
-     "expPct": 13
+     "expPct": 41
     },
     {
      "id": "1858",
@@ -10099,8 +10866,9 @@
      "min": 50,
      "h": 0.8,
      "dist": 319343,
+     "distXP": 1550911,
      "best": false,
-     "expPct": 12
+     "expPct": 40
     },
     {
      "id": "1852",
@@ -10109,8 +10877,9 @@
      "min": 47,
      "h": 0.8,
      "dist": 295992,
+     "distXP": 1504309,
      "best": false,
-     "expPct": 11
+     "expPct": 39
     },
     {
      "id": "1857",
@@ -10119,8 +10888,9 @@
      "min": 46,
      "h": 0.8,
      "dist": 290895,
+     "distXP": 1493894,
      "best": false,
-     "expPct": 11
+     "expPct": 38
     },
     {
      "id": "1785",
@@ -10129,8 +10899,9 @@
      "min": 36,
      "h": 0.6,
      "dist": 227195,
+     "distXP": 1355109,
      "best": false,
-     "expPct": 9
+     "expPct": 35
     },
     {
      "id": "1795",
@@ -10139,8 +10910,9 @@
      "min": 16,
      "h": 0.3,
      "dist": 102507,
+     "distXP": 1008721,
      "best": false,
-     "expPct": 4
+     "expPct": 26
     },
     {
      "id": "1781",
@@ -10149,6 +10921,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -10160,6 +10933,7 @@
     "min": 415,
     "h": 6.9,
     "dist": 2635031,
+    "distXP": 3893278,
     "best": true,
     "expPct": 100
    }
@@ -10247,6 +11021,7 @@
      "min": 433,
      "h": 7.2,
      "dist": 2751634,
+     "distXP": 3971921,
      "best": true,
      "expPct": 100
     },
@@ -10257,6 +11032,7 @@
      "min": 428,
      "h": 7.1,
      "dist": 2720869,
+     "distXP": 3951336,
      "best": false,
      "expPct": 99
     },
@@ -10267,8 +11043,9 @@
      "min": 396,
      "h": 6.6,
      "dist": 2519098,
+     "distXP": 3813343,
      "best": false,
-     "expPct": 92
+     "expPct": 96
     },
     {
      "id": "1343",
@@ -10277,8 +11054,9 @@
      "min": 381,
      "h": 6.4,
      "dist": 2423467,
+     "distXP": 3746010,
      "best": false,
-     "expPct": 88
+     "expPct": 94
     },
     {
      "id": "1850",
@@ -10287,8 +11065,9 @@
      "min": 359,
      "h": 6.0,
      "dist": 2284711,
+     "distXP": 3645905,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1843",
@@ -10297,8 +11076,9 @@
      "min": 349,
      "h": 5.8,
      "dist": 2215904,
+     "distXP": 3595137,
      "best": false,
-     "expPct": 81
+     "expPct": 91
     },
     {
      "id": "1319",
@@ -10307,8 +11087,9 @@
      "min": 345,
      "h": 5.7,
      "dist": 2191802,
+     "distXP": 3577167,
      "best": false,
-     "expPct": 80
+     "expPct": 90
     },
     {
      "id": "1750",
@@ -10317,8 +11098,9 @@
      "min": 336,
      "h": 5.6,
      "dist": 2133576,
+     "distXP": 3533345,
      "best": false,
-     "expPct": 78
+     "expPct": 89
     },
     {
      "id": "1145",
@@ -10327,8 +11109,9 @@
      "min": 334,
      "h": 5.6,
      "dist": 2123803,
+     "distXP": 3525931,
      "best": false,
-     "expPct": 77
+     "expPct": 89
     },
     {
      "id": "1691",
@@ -10337,8 +11120,9 @@
      "min": 328,
      "h": 5.5,
      "dist": 2084634,
+     "distXP": 3496045,
      "best": false,
-     "expPct": 76
+     "expPct": 88
     },
     {
      "id": "1314",
@@ -10347,8 +11131,9 @@
      "min": 327,
      "h": 5.5,
      "dist": 2078687,
+     "distXP": 3491483,
      "best": false,
-     "expPct": 76
+     "expPct": 88
     },
     {
      "id": "1834",
@@ -10357,8 +11142,9 @@
      "min": 326,
      "h": 5.4,
      "dist": 2074791,
+     "distXP": 3488490,
      "best": false,
-     "expPct": 75
+     "expPct": 88
     },
     {
      "id": "1101",
@@ -10367,8 +11153,9 @@
      "min": 325,
      "h": 5.4,
      "dist": 2067218,
+     "distXP": 3482666,
      "best": false,
-     "expPct": 75
+     "expPct": 88
     },
     {
      "id": "1649",
@@ -10377,8 +11164,9 @@
      "min": 314,
      "h": 5.2,
      "dist": 1992756,
+     "distXP": 3424820,
      "best": false,
-     "expPct": 72
+     "expPct": 86
     },
     {
      "id": "2001",
@@ -10387,8 +11175,9 @@
      "min": 309,
      "h": 5.1,
      "dist": 1963376,
+     "distXP": 3401699,
      "best": false,
-     "expPct": 71
+     "expPct": 86
     },
     {
      "id": "1141",
@@ -10397,8 +11186,9 @@
      "min": 308,
      "h": 5.1,
      "dist": 1957707,
+     "distXP": 3397218,
      "best": false,
-     "expPct": 71
+     "expPct": 86
     },
     {
      "id": "1153",
@@ -10407,8 +11197,9 @@
      "min": 295,
      "h": 4.9,
      "dist": 1875629,
+     "distXP": 3331597,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "1604",
@@ -10417,8 +11208,9 @@
      "min": 290,
      "h": 4.8,
      "dist": 1842563,
+     "distXP": 3304755,
      "best": false,
-     "expPct": 67
+     "expPct": 83
     },
     {
      "id": "302",
@@ -10427,8 +11219,9 @@
      "min": 284,
      "h": 4.7,
      "dist": 1804883,
+     "distXP": 3273874,
      "best": false,
-     "expPct": 66
+     "expPct": 82
     },
     {
      "id": "301",
@@ -10437,8 +11230,9 @@
      "min": 281,
      "h": 4.7,
      "dist": 1786244,
+     "distXP": 3258478,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "1623",
@@ -10447,8 +11241,9 @@
      "min": 281,
      "h": 4.7,
      "dist": 1783541,
+     "distXP": 3256239,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "602",
@@ -10457,8 +11252,9 @@
      "min": 272,
      "h": 4.5,
      "dist": 1729628,
+     "distXP": 3211215,
      "best": false,
-     "expPct": 63
+     "expPct": 81
     },
     {
      "id": "609",
@@ -10467,8 +11263,9 @@
      "min": 270,
      "h": 4.5,
      "dist": 1716005,
+     "distXP": 3199728,
      "best": false,
-     "expPct": 62
+     "expPct": 81
     },
     {
      "id": "1",
@@ -10477,8 +11274,9 @@
      "min": 267,
      "h": 4.4,
      "dist": 1695937,
+     "distXP": 3182722,
      "best": false,
-     "expPct": 62
+     "expPct": 80
     },
     {
      "id": "1002",
@@ -10487,8 +11285,9 @@
      "min": 266,
      "h": 4.4,
      "dist": 1687732,
+     "distXP": 3175740,
      "best": false,
-     "expPct": 61
+     "expPct": 80
     },
     {
      "id": "2",
@@ -10497,8 +11296,9 @@
      "min": 262,
      "h": 4.4,
      "dist": 1664818,
+     "distXP": 3156153,
      "best": false,
-     "expPct": 61
+     "expPct": 79
     },
     {
      "id": "1620",
@@ -10507,8 +11307,9 @@
      "min": 262,
      "h": 4.4,
      "dist": 1662247,
+     "distXP": 3153946,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "608",
@@ -10517,8 +11318,9 @@
      "min": 260,
      "h": 4.3,
      "dist": 1654971,
+     "distXP": 3147693,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "601",
@@ -10527,8 +11329,9 @@
      "min": 251,
      "h": 4.2,
      "dist": 1594745,
+     "distXP": 3095397,
      "best": false,
-     "expPct": 58
+     "expPct": 78
     },
     {
      "id": "628",
@@ -10537,8 +11340,9 @@
      "min": 249,
      "h": 4.2,
      "dist": 1583931,
+     "distXP": 3085903,
      "best": false,
-     "expPct": 58
+     "expPct": 78
     },
     {
      "id": "603",
@@ -10547,8 +11351,9 @@
      "min": 248,
      "h": 4.1,
      "dist": 1576388,
+     "distXP": 3079262,
      "best": false,
-     "expPct": 57
+     "expPct": 78
     },
     {
      "id": "61",
@@ -10557,8 +11362,9 @@
      "min": 243,
      "h": 4.1,
      "dist": 1545639,
+     "distXP": 3052022,
      "best": false,
-     "expPct": 56
+     "expPct": 77
     },
     {
      "id": "1001",
@@ -10567,8 +11373,9 @@
      "min": 230,
      "h": 3.8,
      "dist": 1459534,
+     "distXP": 2974269,
      "best": false,
-     "expPct": 53
+     "expPct": 75
     },
     {
      "id": "604",
@@ -10577,8 +11384,9 @@
      "min": 229,
      "h": 3.8,
      "dist": 1456252,
+     "distXP": 2971261,
      "best": false,
-     "expPct": 53
+     "expPct": 75
     },
     {
      "id": "1727",
@@ -10587,8 +11395,9 @@
      "min": 209,
      "h": 3.5,
      "dist": 1326547,
+     "distXP": 2849525,
      "best": false,
-     "expPct": 48
+     "expPct": 72
     },
     {
      "id": "1858",
@@ -10597,8 +11406,9 @@
      "min": 59,
      "h": 1.0,
      "dist": 375103,
+     "distXP": 1655729,
      "best": false,
-     "expPct": 14
+     "expPct": 42
     },
     {
      "id": "1795",
@@ -10607,8 +11417,9 @@
      "min": 51,
      "h": 0.9,
      "dist": 324726,
+     "distXP": 1561410,
      "best": false,
-     "expPct": 12
+     "expPct": 39
     },
     {
      "id": "1853",
@@ -10617,8 +11428,9 @@
      "min": 41,
      "h": 0.7,
      "dist": 257492,
+     "distXP": 1423259,
      "best": false,
-     "expPct": 9
+     "expPct": 36
     },
     {
      "id": "1781",
@@ -10627,8 +11439,9 @@
      "min": 36,
      "h": 0.6,
      "dist": 227195,
+     "distXP": 1355109,
      "best": false,
-     "expPct": 8
+     "expPct": 34
     },
     {
      "id": "1852",
@@ -10637,8 +11450,9 @@
      "min": 35,
      "h": 0.6,
      "dist": 224944,
+     "distXP": 1349868,
      "best": false,
-     "expPct": 8
+     "expPct": 34
     },
     {
      "id": "1857",
@@ -10647,8 +11461,9 @@
      "min": 23,
      "h": 0.4,
      "dist": 148523,
+     "distXP": 1153090,
      "best": false,
-     "expPct": 5
+     "expPct": 29
     },
     {
      "id": "1785",
@@ -10657,6 +11472,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -10668,6 +11484,7 @@
     "min": 433,
     "h": 7.2,
     "dist": 2751634,
+    "distXP": 3971921,
     "best": true,
     "expPct": 100
    }
@@ -10755,6 +11572,7 @@
      "min": 403,
      "h": 6.7,
      "dist": 2563140,
+     "distXP": 3843922,
      "best": true,
      "expPct": 100
     },
@@ -10765,6 +11583,7 @@
      "min": 402,
      "h": 6.7,
      "dist": 2556960,
+     "distXP": 3839647,
      "best": false,
      "expPct": 100
     },
@@ -10775,8 +11594,9 @@
      "min": 367,
      "h": 6.1,
      "dist": 2332609,
+     "distXP": 3680796,
      "best": false,
-     "expPct": 91
+     "expPct": 96
     },
     {
      "id": "1343",
@@ -10785,8 +11605,9 @@
      "min": 350,
      "h": 5.8,
      "dist": 2224859,
+     "distXP": 3601788,
      "best": false,
-     "expPct": 87
+     "expPct": 94
     },
     {
      "id": "1850",
@@ -10795,8 +11616,9 @@
      "min": 347,
      "h": 5.8,
      "dist": 2206112,
+     "distXP": 3587848,
      "best": false,
-     "expPct": 86
+     "expPct": 93
     },
     {
      "id": "1843",
@@ -10805,8 +11627,9 @@
      "min": 336,
      "h": 5.6,
      "dist": 2132602,
+     "distXP": 3532607,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1691",
@@ -10815,8 +11638,9 @@
      "min": 329,
      "h": 5.5,
      "dist": 2089351,
+     "distXP": 3499659,
      "best": false,
-     "expPct": 82
+     "expPct": 91
     },
     {
      "id": "1750",
@@ -10825,8 +11649,9 @@
      "min": 327,
      "h": 5.5,
      "dist": 2079162,
+     "distXP": 3491847,
      "best": false,
-     "expPct": 81
+     "expPct": 91
     },
     {
      "id": "1319",
@@ -10835,8 +11660,9 @@
      "min": 322,
      "h": 5.4,
      "dist": 2047623,
+     "distXP": 3467546,
      "best": false,
-     "expPct": 80
+     "expPct": 90
     },
     {
      "id": "1145",
@@ -10845,8 +11671,9 @@
      "min": 318,
      "h": 5.3,
      "dist": 2019253,
+     "distXP": 3445526,
      "best": false,
-     "expPct": 79
+     "expPct": 90
     },
     {
      "id": "1834",
@@ -10855,8 +11682,9 @@
      "min": 313,
      "h": 5.2,
      "dist": 1987179,
+     "distXP": 3420445,
      "best": false,
-     "expPct": 78
+     "expPct": 89
     },
     {
      "id": "1649",
@@ -10865,8 +11693,9 @@
      "min": 309,
      "h": 5.2,
      "dist": 1966379,
+     "distXP": 3404071,
      "best": false,
-     "expPct": 77
+     "expPct": 89
     },
     {
      "id": "1101",
@@ -10875,8 +11704,9 @@
      "min": 308,
      "h": 5.1,
      "dist": 1956064,
+     "distXP": 3395919,
      "best": false,
-     "expPct": 76
+     "expPct": 88
     },
     {
      "id": "1314",
@@ -10885,8 +11715,9 @@
      "min": 300,
      "h": 5.0,
      "dist": 1908580,
+     "distXP": 3358111,
      "best": false,
-     "expPct": 74
+     "expPct": 87
     },
     {
      "id": "1604",
@@ -10895,8 +11726,9 @@
      "min": 294,
      "h": 4.9,
      "dist": 1865504,
+     "distXP": 3323403,
      "best": false,
-     "expPct": 73
+     "expPct": 86
     },
     {
      "id": "1141",
@@ -10905,8 +11737,9 @@
      "min": 293,
      "h": 4.9,
      "dist": 1861709,
+     "distXP": 3320326,
      "best": false,
-     "expPct": 73
+     "expPct": 86
     },
     {
      "id": "1623",
@@ -10915,8 +11748,9 @@
      "min": 288,
      "h": 4.8,
      "dist": 1831867,
+     "distXP": 3296022,
      "best": false,
-     "expPct": 71
+     "expPct": 86
     },
     {
      "id": "2001",
@@ -10925,8 +11759,9 @@
      "min": 279,
      "h": 4.6,
      "dist": 1770464,
+     "distXP": 3245381,
      "best": false,
-     "expPct": 69
+     "expPct": 84
     },
     {
      "id": "1153",
@@ -10935,8 +11770,9 @@
      "min": 277,
      "h": 4.6,
      "dist": 1761703,
+     "distXP": 3238085,
      "best": false,
-     "expPct": 69
+     "expPct": 84
     },
     {
      "id": "302",
@@ -10945,8 +11781,9 @@
      "min": 274,
      "h": 4.6,
      "dist": 1744534,
+     "distXP": 3223732,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "609",
@@ -10955,8 +11792,9 @@
      "min": 269,
      "h": 4.5,
      "dist": 1708930,
+     "distXP": 3193744,
      "best": false,
-     "expPct": 67
+     "expPct": 83
     },
     {
      "id": "301",
@@ -10965,8 +11803,9 @@
      "min": 269,
      "h": 4.5,
      "dist": 1708516,
+     "distXP": 3193393,
      "best": false,
-     "expPct": 67
+     "expPct": 83
     },
     {
      "id": "1620",
@@ -10975,8 +11814,9 @@
      "min": 269,
      "h": 4.5,
      "dist": 1706800,
+     "distXP": 3191940,
      "best": false,
-     "expPct": 67
+     "expPct": 83
     },
     {
      "id": "602",
@@ -10985,8 +11825,9 @@
      "min": 266,
      "h": 4.4,
      "dist": 1691705,
+     "distXP": 3179124,
      "best": false,
-     "expPct": 66
+     "expPct": 83
     },
     {
      "id": "608",
@@ -10995,8 +11836,9 @@
      "min": 262,
      "h": 4.4,
      "dist": 1662257,
+     "distXP": 3153955,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "1",
@@ -11005,8 +11847,9 @@
      "min": 253,
      "h": 4.2,
      "dist": 1607267,
+     "distXP": 3106351,
      "best": false,
-     "expPct": 63
+     "expPct": 81
     },
     {
      "id": "2",
@@ -11015,8 +11858,9 @@
      "min": 250,
      "h": 4.2,
      "dist": 1590237,
+     "distXP": 3091444,
      "best": false,
-     "expPct": 62
+     "expPct": 80
     },
     {
      "id": "601",
@@ -11025,8 +11869,9 @@
      "min": 246,
      "h": 4.1,
      "dist": 1561326,
+     "distXP": 3065953,
      "best": false,
-     "expPct": 61
+     "expPct": 80
     },
     {
      "id": "1002",
@@ -11035,8 +11880,9 @@
      "min": 244,
      "h": 4.1,
      "dist": 1550135,
+     "distXP": 3056022,
      "best": false,
-     "expPct": 60
+     "expPct": 80
     },
     {
      "id": "628",
@@ -11045,8 +11891,9 @@
      "min": 242,
      "h": 4.0,
      "dist": 1538884,
+     "distXP": 3046002,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "603",
@@ -11055,8 +11902,9 @@
      "min": 239,
      "h": 4.0,
      "dist": 1516085,
+     "distXP": 3025585,
      "best": false,
-     "expPct": 59
+     "expPct": 79
     },
     {
      "id": "61",
@@ -11065,8 +11913,9 @@
      "min": 232,
      "h": 3.9,
      "dist": 1471356,
+     "distXP": 2985078,
      "best": false,
-     "expPct": 57
+     "expPct": 78
     },
     {
      "id": "604",
@@ -11075,8 +11924,9 @@
      "min": 225,
      "h": 3.7,
      "dist": 1428839,
+     "distXP": 2945999,
      "best": false,
-     "expPct": 56
+     "expPct": 77
     },
     {
      "id": "1001",
@@ -11085,8 +11935,9 @@
      "min": 209,
      "h": 3.5,
      "dist": 1330984,
+     "distXP": 2853785,
      "best": false,
-     "expPct": 52
+     "expPct": 74
     },
     {
      "id": "1727",
@@ -11095,8 +11946,9 @@
      "min": 182,
      "h": 3.0,
      "dist": 1158419,
+     "distXP": 2682488,
      "best": false,
-     "expPct": 45
+     "expPct": 70
     },
     {
      "id": "1853",
@@ -11105,8 +11957,9 @@
      "min": 70,
      "h": 1.2,
      "dist": 442658,
+     "distXP": 1772760,
      "best": false,
-     "expPct": 17
+     "expPct": 46
     },
     {
      "id": "1857",
@@ -11115,8 +11968,9 @@
      "min": 62,
      "h": 1.0,
      "dist": 392529,
+     "distXP": 1686863,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "1852",
@@ -11125,8 +11979,9 @@
      "min": 61,
      "h": 1.0,
      "dist": 389973,
+     "distXP": 1682340,
      "best": false,
-     "expPct": 15
+     "expPct": 44
     },
     {
      "id": "1858",
@@ -11135,8 +11990,9 @@
      "min": 59,
      "h": 1.0,
      "dist": 376636,
+     "distXP": 1658497,
      "best": false,
-     "expPct": 15
+     "expPct": 43
     },
     {
      "id": "1785",
@@ -11145,8 +12001,9 @@
      "min": 51,
      "h": 0.9,
      "dist": 324726,
+     "distXP": 1561410,
      "best": false,
-     "expPct": 13
+     "expPct": 41
     },
     {
      "id": "1781",
@@ -11155,8 +12012,9 @@
      "min": 16,
      "h": 0.3,
      "dist": 102507,
+     "distXP": 1008721,
      "best": false,
-     "expPct": 4
+     "expPct": 26
     },
     {
      "id": "1795",
@@ -11165,6 +12023,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -11176,6 +12035,7 @@
     "min": 403,
     "h": 6.7,
     "dist": 2563140,
+    "distXP": 3843922,
     "best": true,
     "expPct": 100
    }
@@ -11241,6 +12101,7 @@
      "min": 468,
      "h": 7.8,
      "dist": 2974722,
+     "distXP": 4117870,
      "best": true,
      "expPct": 100
     },
@@ -11251,8 +12112,9 @@
      "min": 465,
      "h": 7.8,
      "dist": 2958330,
+     "distXP": 4107337,
      "best": false,
-     "expPct": 99
+     "expPct": 100
     },
     {
      "id": "1301",
@@ -11261,8 +12123,9 @@
      "min": 432,
      "h": 7.2,
      "dist": 2745496,
+     "distXP": 3967823,
      "best": false,
-     "expPct": 92
+     "expPct": 96
     },
     {
      "id": "1343",
@@ -11271,8 +12134,9 @@
      "min": 416,
      "h": 6.9,
      "dist": 2644277,
+     "distXP": 3899577,
      "best": false,
-     "expPct": 89
+     "expPct": 95
     },
     {
      "id": "1850",
@@ -11281,8 +12145,9 @@
      "min": 399,
      "h": 6.7,
      "dist": 2538908,
+     "distXP": 3827130,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1843",
@@ -11291,8 +12156,9 @@
      "min": 389,
      "h": 6.5,
      "dist": 2469423,
+     "distXP": 3778530,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1319",
@@ -11301,8 +12167,9 @@
      "min": 383,
      "h": 6.4,
      "dist": 2432593,
+     "distXP": 3752492,
      "best": false,
-     "expPct": 82
+     "expPct": 91
     },
     {
      "id": "1750",
@@ -11311,8 +12178,9 @@
      "min": 376,
      "h": 6.3,
      "dist": 2389949,
+     "distXP": 3722097,
      "best": false,
-     "expPct": 80
+     "expPct": 90
     },
     {
      "id": "1145",
@@ -11321,8 +12189,9 @@
      "min": 374,
      "h": 6.2,
      "dist": 2373801,
+     "distXP": 3710517,
      "best": false,
-     "expPct": 80
+     "expPct": 90
     },
     {
      "id": "1691",
@@ -11331,8 +12200,9 @@
      "min": 368,
      "h": 6.1,
      "dist": 2341359,
+     "distXP": 3687131,
      "best": false,
-     "expPct": 79
+     "expPct": 90
     },
     {
      "id": "1834",
@@ -11341,8 +12211,9 @@
      "min": 366,
      "h": 6.1,
      "dist": 2327518,
+     "distXP": 3677104,
      "best": false,
-     "expPct": 78
+     "expPct": 89
     },
     {
      "id": "1101",
@@ -11351,8 +12222,9 @@
      "min": 364,
      "h": 6.1,
      "dist": 2315836,
+     "distXP": 3668619,
      "best": false,
-     "expPct": 78
+     "expPct": 89
     },
     {
      "id": "1314",
@@ -11361,8 +12233,9 @@
      "min": 364,
      "h": 6.1,
      "dist": 2310764,
+     "distXP": 3664928,
      "best": false,
-     "expPct": 78
+     "expPct": 89
     },
     {
      "id": "1649",
@@ -11371,8 +12244,9 @@
      "min": 354,
      "h": 5.9,
      "dist": 2250212,
+     "distXP": 3620548,
      "best": false,
-     "expPct": 76
+     "expPct": 88
     },
     {
      "id": "1141",
@@ -11381,8 +12255,9 @@
      "min": 348,
      "h": 5.8,
      "dist": 2208924,
+     "distXP": 3589943,
      "best": false,
-     "expPct": 74
+     "expPct": 87
     },
     {
      "id": "2001",
@@ -11391,8 +12266,9 @@
      "min": 344,
      "h": 5.7,
      "dist": 2185918,
+     "distXP": 3572766,
      "best": false,
-     "expPct": 73
+     "expPct": 87
     },
     {
      "id": "1153",
@@ -11401,8 +12277,9 @@
      "min": 334,
      "h": 5.6,
      "dist": 2123272,
+     "distXP": 3525528,
      "best": false,
-     "expPct": 71
+     "expPct": 86
     },
     {
      "id": "1604",
@@ -11411,8 +12288,9 @@
      "min": 330,
      "h": 5.5,
      "dist": 2098201,
+     "distXP": 3506428,
      "best": false,
-     "expPct": 71
+     "expPct": 85
     },
     {
      "id": "302",
@@ -11421,8 +12299,9 @@
      "min": 324,
      "h": 5.4,
      "dist": 2060444,
+     "distXP": 3477447,
      "best": false,
-     "expPct": 69
+     "expPct": 84
     },
     {
      "id": "301",
@@ -11431,8 +12310,9 @@
      "min": 321,
      "h": 5.3,
      "dist": 2039856,
+     "distXP": 3461533,
      "best": false,
-     "expPct": 69
+     "expPct": 84
     },
     {
      "id": "1623",
@@ -11441,8 +12321,9 @@
      "min": 320,
      "h": 5.3,
      "dist": 2036315,
+     "distXP": 3458788,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "602",
@@ -11451,8 +12332,9 @@
      "min": 313,
      "h": 5.2,
      "dist": 1986636,
+     "distXP": 3420018,
      "best": false,
-     "expPct": 67
+     "expPct": 83
     },
     {
      "id": "609",
@@ -11461,8 +12343,9 @@
      "min": 311,
      "h": 5.2,
      "dist": 1973406,
+     "distXP": 3409612,
      "best": false,
-     "expPct": 66
+     "expPct": 83
     },
     {
      "id": "1",
@@ -11471,8 +12354,9 @@
      "min": 306,
      "h": 5.1,
      "dist": 1947794,
+     "distXP": 3389367,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "1002",
@@ -11481,8 +12365,9 @@
      "min": 304,
      "h": 5.1,
      "dist": 1929098,
+     "distXP": 3374504,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "2",
@@ -11491,8 +12376,9 @@
      "min": 302,
      "h": 5.0,
      "dist": 1918596,
+     "distXP": 3366124,
      "best": false,
-     "expPct": 64
+     "expPct": 82
     },
     {
      "id": "1620",
@@ -11501,8 +12387,9 @@
      "min": 301,
      "h": 5.0,
      "dist": 1915866,
+     "distXP": 3363942,
      "best": false,
-     "expPct": 64
+     "expPct": 82
     },
     {
      "id": "608",
@@ -11511,8 +12398,9 @@
      "min": 301,
      "h": 5.0,
      "dist": 1911925,
+     "distXP": 3360789,
      "best": false,
-     "expPct": 64
+     "expPct": 82
     },
     {
      "id": "601",
@@ -11521,8 +12409,9 @@
      "min": 291,
      "h": 4.9,
      "dist": 1851839,
+     "distXP": 3312310,
      "best": false,
-     "expPct": 62
+     "expPct": 80
     },
     {
      "id": "628",
@@ -11531,8 +12420,9 @@
      "min": 290,
      "h": 4.8,
      "dist": 1840394,
+     "distXP": 3302986,
      "best": false,
-     "expPct": 62
+     "expPct": 80
     },
     {
      "id": "603",
@@ -11541,8 +12431,9 @@
      "min": 288,
      "h": 4.8,
      "dist": 1831589,
+     "distXP": 3295794,
      "best": false,
-     "expPct": 62
+     "expPct": 80
     },
     {
      "id": "61",
@@ -11551,8 +12442,9 @@
      "min": 283,
      "h": 4.7,
      "dist": 1799183,
+     "distXP": 3269174,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "604",
@@ -11561,8 +12453,9 @@
      "min": 270,
      "h": 4.5,
      "dist": 1713458,
+     "distXP": 3197575,
      "best": false,
-     "expPct": 58
+     "expPct": 78
     },
     {
      "id": "1001",
@@ -11571,8 +12464,9 @@
      "min": 268,
      "h": 4.5,
      "dist": 1702426,
+     "distXP": 3188232,
      "best": false,
-     "expPct": 57
+     "expPct": 77
     },
     {
      "id": "1727",
@@ -11581,8 +12475,9 @@
      "min": 245,
      "h": 4.1,
      "dist": 1556623,
+     "distXP": 3061784,
      "best": false,
-     "expPct": 52
+     "expPct": 74
     },
     {
      "id": "1795",
@@ -11591,8 +12486,9 @@
      "min": 70,
      "h": 1.2,
      "dist": 442658,
+     "distXP": 1772760,
      "best": false,
-     "expPct": 15
+     "expPct": 43
     },
     {
      "id": "1781",
@@ -11601,8 +12497,9 @@
      "min": 55,
      "h": 0.9,
      "dist": 348295,
+     "distXP": 1606386,
      "best": false,
-     "expPct": 12
+     "expPct": 39
     },
     {
      "id": "1785",
@@ -11611,8 +12508,9 @@
      "min": 41,
      "h": 0.7,
      "dist": 257492,
+     "distXP": 1423259,
      "best": false,
-     "expPct": 9
+     "expPct": 35
     },
     {
      "id": "1858",
@@ -11621,8 +12519,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 215020,
+     "distXP": 1326449,
      "best": false,
-     "expPct": 7
+     "expPct": 32
     },
     {
      "id": "1857",
@@ -11631,8 +12530,9 @@
      "min": 18,
      "h": 0.3,
      "dist": 112066,
+     "distXP": 1041028,
      "best": false,
-     "expPct": 4
+     "expPct": 25
     },
     {
      "id": "1852",
@@ -11641,8 +12541,9 @@
      "min": 8,
      "h": 0.1,
      "dist": 52688,
+     "distXP": 808103,
      "best": false,
-     "expPct": 2
+     "expPct": 20
     },
     {
      "id": "1853",
@@ -11651,6 +12552,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -11662,6 +12564,7 @@
     "min": 468,
     "h": 7.8,
     "dist": 2974722,
+    "distXP": 4117870,
     "best": true,
     "expPct": 100
    }
@@ -11764,6 +12667,7 @@
      "min": 454,
      "h": 7.6,
      "dist": 2888347,
+     "distXP": 4062034,
      "best": true,
      "expPct": 100
     },
@@ -11774,8 +12678,9 @@
      "min": 451,
      "h": 7.5,
      "dist": 2863860,
+     "distXP": 4046053,
      "best": false,
-     "expPct": 99
+     "expPct": 100
     },
     {
      "id": "1301",
@@ -11784,8 +12689,9 @@
      "min": 418,
      "h": 7.0,
      "dist": 2657257,
+     "distXP": 3908401,
      "best": false,
-     "expPct": 92
+     "expPct": 96
     },
     {
      "id": "1343",
@@ -11794,8 +12700,9 @@
      "min": 403,
      "h": 6.7,
      "dist": 2559032,
+     "distXP": 3841081,
      "best": false,
-     "expPct": 89
+     "expPct": 95
     },
     {
      "id": "1850",
@@ -11804,8 +12711,9 @@
      "min": 383,
      "h": 6.4,
      "dist": 2433148,
+     "distXP": 3752886,
      "best": false,
-     "expPct": 84
+     "expPct": 92
     },
     {
      "id": "1843",
@@ -11814,8 +12722,9 @@
      "min": 372,
      "h": 6.2,
      "dist": 2364240,
+     "distXP": 3703641,
      "best": false,
-     "expPct": 82
+     "expPct": 91
     },
     {
      "id": "1319",
@@ -11824,8 +12733,9 @@
      "min": 368,
      "h": 6.1,
      "dist": 2336047,
+     "distXP": 3683287,
      "best": false,
-     "expPct": 81
+     "expPct": 91
     },
     {
      "id": "1750",
@@ -11834,8 +12744,9 @@
      "min": 359,
      "h": 6.0,
      "dist": 2282014,
+     "distXP": 3643929,
      "best": false,
-     "expPct": 79
+     "expPct": 90
     },
     {
      "id": "1145",
@@ -11844,8 +12755,9 @@
      "min": 357,
      "h": 6.0,
      "dist": 2271293,
+     "distXP": 3636065,
      "best": false,
-     "expPct": 79
+     "expPct": 90
     },
     {
      "id": "1691",
@@ -11854,8 +12766,9 @@
      "min": 351,
      "h": 5.8,
      "dist": 2229942,
+     "distXP": 3605558,
      "best": false,
-     "expPct": 77
+     "expPct": 89
     },
     {
      "id": "1834",
@@ -11864,8 +12777,9 @@
      "min": 350,
      "h": 5.8,
      "dist": 2222971,
+     "distXP": 3600387,
      "best": false,
-     "expPct": 77
+     "expPct": 89
     },
     {
      "id": "1314",
@@ -11874,8 +12788,9 @@
      "min": 349,
      "h": 5.8,
      "dist": 2219248,
+     "distXP": 3597622,
      "best": false,
-     "expPct": 77
+     "expPct": 89
     },
     {
      "id": "1101",
@@ -11884,8 +12799,9 @@
      "min": 348,
      "h": 5.8,
      "dist": 2214283,
+     "distXP": 3593931,
      "best": false,
-     "expPct": 77
+     "expPct": 88
     },
     {
      "id": "1649",
@@ -11894,8 +12810,9 @@
      "min": 337,
      "h": 5.6,
      "dist": 2140346,
+     "distXP": 3538471,
      "best": false,
-     "expPct": 74
+     "expPct": 87
     },
     {
      "id": "1141",
@@ -11904,8 +12821,9 @@
      "min": 331,
      "h": 5.5,
      "dist": 2105522,
+     "distXP": 3512017,
      "best": false,
-     "expPct": 73
+     "expPct": 86
     },
     {
      "id": "2001",
@@ -11914,8 +12832,9 @@
      "min": 330,
      "h": 5.5,
      "dist": 2099561,
+     "distXP": 3507467,
      "best": false,
-     "expPct": 73
+     "expPct": 86
     },
     {
      "id": "1153",
@@ -11924,8 +12843,9 @@
      "min": 318,
      "h": 5.3,
      "dist": 2022354,
+     "distXP": 3447941,
      "best": false,
-     "expPct": 70
+     "expPct": 85
     },
     {
      "id": "1604",
@@ -11934,8 +12854,9 @@
      "min": 313,
      "h": 5.2,
      "dist": 1986388,
+     "distXP": 3419823,
      "best": false,
-     "expPct": 69
+     "expPct": 84
     },
     {
      "id": "302",
@@ -11944,8 +12865,9 @@
      "min": 307,
      "h": 5.1,
      "dist": 1953406,
+     "distXP": 3393814,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "301",
@@ -11954,8 +12876,9 @@
      "min": 304,
      "h": 5.1,
      "dist": 1934582,
+     "distXP": 3378871,
      "best": false,
-     "expPct": 67
+     "expPct": 83
     },
     {
      "id": "1623",
@@ -11964,8 +12887,9 @@
      "min": 303,
      "h": 5.0,
      "dist": 1924249,
+     "distXP": 3370638,
      "best": false,
-     "expPct": 67
+     "expPct": 83
     },
     {
      "id": "602",
@@ -11974,8 +12898,9 @@
      "min": 295,
      "h": 4.9,
      "dist": 1877834,
+     "distXP": 3333378,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "609",
@@ -11984,8 +12909,9 @@
      "min": 293,
      "h": 4.9,
      "dist": 1862727,
+     "distXP": 3321152,
      "best": false,
-     "expPct": 64
+     "expPct": 82
     },
     {
      "id": "1",
@@ -11994,8 +12920,9 @@
      "min": 290,
      "h": 4.8,
      "dist": 1843896,
+     "distXP": 3305842,
      "best": false,
-     "expPct": 64
+     "expPct": 81
     },
     {
      "id": "1002",
@@ -12004,8 +12931,9 @@
      "min": 288,
      "h": 4.8,
      "dist": 1832088,
+     "distXP": 3296202,
      "best": false,
-     "expPct": 63
+     "expPct": 81
     },
     {
      "id": "2",
@@ -12014,8 +12942,9 @@
      "min": 285,
      "h": 4.8,
      "dist": 1813179,
+     "distXP": 3280700,
      "best": false,
-     "expPct": 63
+     "expPct": 81
     },
     {
      "id": "1620",
@@ -12024,8 +12953,9 @@
      "min": 284,
      "h": 4.7,
      "dist": 1803816,
+     "distXP": 3272994,
      "best": false,
-     "expPct": 62
+     "expPct": 81
     },
     {
      "id": "608",
@@ -12034,8 +12964,9 @@
      "min": 283,
      "h": 4.7,
      "dist": 1800682,
+     "distXP": 3270411,
      "best": false,
-     "expPct": 62
+     "expPct": 81
     },
     {
      "id": "601",
@@ -12044,8 +12975,9 @@
      "min": 274,
      "h": 4.6,
      "dist": 1742896,
+     "distXP": 3222360,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "628",
@@ -12054,8 +12986,9 @@
      "min": 273,
      "h": 4.5,
      "dist": 1732358,
+     "distXP": 3213512,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "603",
@@ -12064,8 +12997,9 @@
      "min": 271,
      "h": 4.5,
      "dist": 1724904,
+     "distXP": 3207237,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "61",
@@ -12074,8 +13008,9 @@
      "min": 267,
      "h": 4.4,
      "dist": 1693954,
+     "distXP": 3181036,
      "best": false,
-     "expPct": 59
+     "expPct": 78
     },
     {
      "id": "1001",
@@ -12084,8 +13019,9 @@
      "min": 252,
      "h": 4.2,
      "dist": 1604422,
+     "distXP": 3103866,
      "best": false,
-     "expPct": 56
+     "expPct": 76
     },
     {
      "id": "604",
@@ -12094,8 +13030,9 @@
      "min": 252,
      "h": 4.2,
      "dist": 1604315,
+     "distXP": 3103772,
      "best": false,
-     "expPct": 56
+     "expPct": 76
     },
     {
      "id": "1727",
@@ -12104,8 +13041,9 @@
      "min": 231,
      "h": 3.8,
      "dist": 1465827,
+     "distXP": 2980028,
      "best": false,
-     "expPct": 51
+     "expPct": 73
     },
     {
      "id": "1795",
@@ -12114,8 +13052,9 @@
      "min": 62,
      "h": 1.0,
      "dist": 392529,
+     "distXP": 1686863,
      "best": false,
-     "expPct": 14
+     "expPct": 42
     },
     {
      "id": "1781",
@@ -12124,8 +13063,9 @@
      "min": 46,
      "h": 0.8,
      "dist": 290895,
+     "distXP": 1493894,
      "best": false,
-     "expPct": 10
+     "expPct": 37
     },
     {
      "id": "1858",
@@ -12134,8 +13074,9 @@
      "min": 44,
      "h": 0.7,
      "dist": 281253,
+     "distXP": 1473942,
      "best": false,
-     "expPct": 10
+     "expPct": 36
     },
     {
      "id": "1785",
@@ -12144,8 +13085,9 @@
      "min": 23,
      "h": 0.4,
      "dist": 148523,
+     "distXP": 1153090,
      "best": false,
-     "expPct": 5
+     "expPct": 28
     },
     {
      "id": "1853",
@@ -12154,8 +13096,9 @@
      "min": 18,
      "h": 0.3,
      "dist": 112066,
+     "distXP": 1041028,
      "best": false,
-     "expPct": 4
+     "expPct": 26
     },
     {
      "id": "1852",
@@ -12164,8 +13107,9 @@
      "min": 15,
      "h": 0.2,
      "dist": 94601,
+     "distXP": 980840,
      "best": false,
-     "expPct": 3
+     "expPct": 24
     },
     {
      "id": "1857",
@@ -12174,6 +13118,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -12185,6 +13130,7 @@
     "min": 454,
     "h": 7.6,
     "dist": 2888347,
+    "distXP": 4062034,
     "best": true,
     "expPct": 100
    }
@@ -12250,6 +13196,7 @@
      "min": 463,
      "h": 7.7,
      "dist": 2939776,
+     "distXP": 4095378,
      "best": true,
      "expPct": 100
     },
@@ -12260,6 +13207,7 @@
      "min": 461,
      "h": 7.7,
      "dist": 2930288,
+     "distXP": 4089249,
      "best": false,
      "expPct": 100
     },
@@ -12270,8 +13218,9 @@
      "min": 426,
      "h": 7.1,
      "dist": 2707461,
+     "distXP": 3942329,
      "best": false,
-     "expPct": 92
+     "expPct": 96
     },
     {
      "id": "1343",
@@ -12280,8 +13229,9 @@
      "min": 409,
      "h": 6.8,
      "dist": 2597844,
+     "distXP": 3867833,
      "best": false,
-     "expPct": 88
+     "expPct": 94
     },
     {
      "id": "1850",
@@ -12290,8 +13240,9 @@
      "min": 404,
      "h": 6.7,
      "dist": 2570429,
+     "distXP": 3848957,
      "best": false,
-     "expPct": 87
+     "expPct": 94
     },
     {
      "id": "1843",
@@ -12300,8 +13251,9 @@
      "min": 393,
      "h": 6.6,
      "dist": 2498086,
+     "distXP": 3798660,
      "best": false,
-     "expPct": 85
+     "expPct": 93
     },
     {
      "id": "1750",
@@ -12310,8 +13262,9 @@
      "min": 383,
      "h": 6.4,
      "dist": 2435370,
+     "distXP": 3754462,
      "best": false,
-     "expPct": 83
+     "expPct": 92
     },
     {
      "id": "1319",
@@ -12320,8 +13273,9 @@
      "min": 381,
      "h": 6.4,
      "dist": 2423672,
+     "distXP": 3746156,
      "best": false,
-     "expPct": 82
+     "expPct": 91
     },
     {
      "id": "1691",
@@ -12330,8 +13284,9 @@
      "min": 381,
      "h": 6.3,
      "dist": 2419605,
+     "distXP": 3743263,
      "best": false,
-     "expPct": 82
+     "expPct": 91
     },
     {
      "id": "1145",
@@ -12340,8 +13295,9 @@
      "min": 376,
      "h": 6.3,
      "dist": 2389656,
+     "distXP": 3721887,
      "best": false,
-     "expPct": 81
+     "expPct": 91
     },
     {
      "id": "1834",
@@ -12350,8 +13306,9 @@
      "min": 370,
      "h": 6.2,
      "dist": 2353503,
+     "distXP": 3695903,
      "best": false,
-     "expPct": 80
+     "expPct": 90
     },
     {
      "id": "1101",
@@ -12360,8 +13317,9 @@
      "min": 366,
      "h": 6.1,
      "dist": 2327674,
+     "distXP": 3677218,
      "best": false,
-     "expPct": 79
+     "expPct": 90
     },
     {
      "id": "1649",
@@ -12370,8 +13328,9 @@
      "min": 364,
      "h": 6.1,
      "dist": 2311092,
+     "distXP": 3665167,
      "best": false,
-     "expPct": 79
+     "expPct": 89
     },
     {
      "id": "1314",
@@ -12380,8 +13339,9 @@
      "min": 360,
      "h": 6.0,
      "dist": 2285080,
+     "distXP": 3646175,
      "best": false,
-     "expPct": 78
+     "expPct": 89
     },
     {
      "id": "1141",
@@ -12390,8 +13350,9 @@
      "min": 351,
      "h": 5.8,
      "dist": 2229851,
+     "distXP": 3605491,
      "best": false,
-     "expPct": 76
+     "expPct": 88
     },
     {
      "id": "1604",
@@ -12400,8 +13361,9 @@
      "min": 344,
      "h": 5.7,
      "dist": 2185108,
+     "distXP": 3572159,
      "best": false,
-     "expPct": 74
+     "expPct": 87
     },
     {
      "id": "2001",
@@ -12410,8 +13372,9 @@
      "min": 338,
      "h": 5.6,
      "dist": 2145109,
+     "distXP": 3542072,
      "best": false,
-     "expPct": 73
+     "expPct": 86
     },
     {
      "id": "1623",
@@ -12420,8 +13383,9 @@
      "min": 336,
      "h": 5.6,
      "dist": 2136122,
+     "distXP": 3535273,
      "best": false,
-     "expPct": 73
+     "expPct": 86
     },
     {
      "id": "1153",
@@ -12430,8 +13394,9 @@
      "min": 336,
      "h": 5.6,
      "dist": 2133457,
+     "distXP": 3533255,
      "best": false,
-     "expPct": 73
+     "expPct": 86
     },
     {
      "id": "302",
@@ -12440,8 +13405,9 @@
      "min": 331,
      "h": 5.5,
      "dist": 2101790,
+     "distXP": 3509169,
      "best": false,
-     "expPct": 71
+     "expPct": 86
     },
     {
      "id": "301",
@@ -12450,8 +13416,9 @@
      "min": 326,
      "h": 5.4,
      "dist": 2071269,
+     "distXP": 3485783,
      "best": false,
-     "expPct": 70
+     "expPct": 85
     },
     {
      "id": "609",
@@ -12460,8 +13427,9 @@
      "min": 322,
      "h": 5.4,
      "dist": 2043711,
+     "distXP": 3464519,
      "best": false,
-     "expPct": 70
+     "expPct": 85
     },
     {
      "id": "602",
@@ -12470,8 +13438,9 @@
      "min": 321,
      "h": 5.4,
      "dist": 2040260,
+     "distXP": 3461846,
      "best": false,
-     "expPct": 69
+     "expPct": 85
     },
     {
      "id": "1620",
@@ -12480,8 +13449,9 @@
      "min": 317,
      "h": 5.3,
      "dist": 2012922,
+     "distXP": 3440591,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "608",
@@ -12490,8 +13460,9 @@
      "min": 313,
      "h": 5.2,
      "dist": 1989537,
+     "distXP": 3422295,
      "best": false,
-     "expPct": 68
+     "expPct": 84
     },
     {
      "id": "1",
@@ -12500,8 +13471,9 @@
      "min": 310,
      "h": 5.2,
      "dist": 1972787,
+     "distXP": 3409124,
      "best": false,
-     "expPct": 67
+     "expPct": 83
     },
     {
      "id": "2",
@@ -12510,8 +13482,9 @@
      "min": 307,
      "h": 5.1,
      "dist": 1951587,
+     "distXP": 3392374,
      "best": false,
-     "expPct": 66
+     "expPct": 83
     },
     {
      "id": "1002",
@@ -12520,8 +13493,9 @@
      "min": 303,
      "h": 5.0,
      "dist": 1925058,
+     "distXP": 3371283,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "601",
@@ -12530,8 +13504,9 @@
      "min": 300,
      "h": 5.0,
      "dist": 1907394,
+     "distXP": 3357160,
      "best": false,
-     "expPct": 65
+     "expPct": 82
     },
     {
      "id": "628",
@@ -12540,8 +13515,9 @@
      "min": 297,
      "h": 5.0,
      "dist": 1889578,
+     "distXP": 3342849,
      "best": false,
-     "expPct": 64
+     "expPct": 82
     },
     {
      "id": "603",
@@ -12550,8 +13526,9 @@
      "min": 295,
      "h": 4.9,
      "dist": 1872356,
+     "distXP": 3328950,
      "best": false,
-     "expPct": 64
+     "expPct": 81
     },
     {
      "id": "61",
@@ -12560,8 +13537,9 @@
      "min": 288,
      "h": 4.8,
      "dist": 1832089,
+     "distXP": 3296203,
      "best": false,
-     "expPct": 62
+     "expPct": 80
     },
     {
      "id": "604",
@@ -12570,8 +13548,9 @@
      "min": 279,
      "h": 4.6,
      "dist": 1771565,
+     "distXP": 3246297,
      "best": false,
-     "expPct": 60
+     "expPct": 79
     },
     {
      "id": "1001",
@@ -12580,8 +13559,9 @@
      "min": 268,
      "h": 4.5,
      "dist": 1704162,
+     "distXP": 3189704,
      "best": false,
-     "expPct": 58
+     "expPct": 78
     },
     {
      "id": "1727",
@@ -12590,8 +13570,9 @@
      "min": 242,
      "h": 4.0,
      "dist": 1534981,
+     "distXP": 3042518,
      "best": false,
-     "expPct": 52
+     "expPct": 74
     },
     {
      "id": "1795",
@@ -12600,8 +13581,9 @@
      "min": 59,
      "h": 1.0,
      "dist": 376636,
+     "distXP": 1658497,
      "best": false,
-     "expPct": 13
+     "expPct": 40
     },
     {
      "id": "1785",
@@ -12610,8 +13592,9 @@
      "min": 59,
      "h": 1.0,
      "dist": 375103,
+     "distXP": 1655729,
      "best": false,
-     "expPct": 13
+     "expPct": 40
     },
     {
      "id": "1781",
@@ -12620,8 +13603,9 @@
      "min": 50,
      "h": 0.8,
      "dist": 319343,
+     "distXP": 1550911,
      "best": false,
-     "expPct": 11
+     "expPct": 38
     },
     {
      "id": "1857",
@@ -12630,8 +13614,9 @@
      "min": 44,
      "h": 0.7,
      "dist": 281253,
+     "distXP": 1473942,
      "best": false,
-     "expPct": 10
+     "expPct": 36
     },
     {
      "id": "1853",
@@ -12640,8 +13625,9 @@
      "min": 34,
      "h": 0.6,
      "dist": 215020,
+     "distXP": 1326449,
      "best": false,
-     "expPct": 7
+     "expPct": 32
     },
     {
      "id": "1852",
@@ -12650,8 +13636,9 @@
      "min": 30,
      "h": 0.5,
      "dist": 192065,
+     "distXP": 1270112,
      "best": false,
-     "expPct": 7
+     "expPct": 31
     },
     {
      "id": "1858",
@@ -12660,6 +13647,7 @@
      "min": 0,
      "h": 0.0,
      "dist": 0,
+     "distXP": 0,
      "best": false,
      "expPct": 0
     }
@@ -12671,6 +13659,7 @@
     "min": 463,
     "h": 7.7,
     "dist": 2939776,
+    "distXP": 4095378,
     "best": true,
     "expPct": 100
    }
