@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comércio</title>
+    <link rel="icon" href="{{ url_for('static', filename='bdo_hub.svg') }}" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @font-face {
+            font-family: 'Web Pearl';
+            src: url('{{ url_for("static", filename="fonts/web_pearl_original.ttf") }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1, h2, .section-title {
+            font-family: 'Web Pearl', 'Outfit', sans-serif;
+        }
+
+        :root {
+            --bg-base: #0f172a;
+            --bg-panel: #1e293b;
+            --bg-input: #0b1220;
+            --accent-primary: #38bdf8;
+            --accent-gold: #e0b457;
+            --glass-border: #334155;
+            --muted: #64748b;
+            --text-main: #f8fafc;
+            --ok: #34d399;
+            --bad: #f87171;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            gap: 1rem;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--glass-border);
+            flex-shrink: 0;
+        }
+
+        .logo-area { display: flex; align-items: center; gap: 1rem; }
+        .logo-icon { color: var(--accent-primary); width: 32px; height: 32px; }
+
+        h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, #fff, var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-info { color: var(--muted); font-size: 0.95rem; }
+
+        /* Cards de resumo */
+        .stat-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .stat-card {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            background: var(--bg-panel);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+        }
+
+        .stat-card .sc-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--bg-input);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-primary);
+            flex-shrink: 0;
+        }
+
+        .stat-card .sc-icon svg { width: 22px; height: 22px; }
+        .stat-card .sc-icon.gold { color: var(--accent-gold); }
+
+        .stat-card .sc-info { min-width: 0; }
+        .stat-card .sc-value { font-size: 1.35rem; font-weight: 700; line-height: 1.2; }
+        .stat-card .sc-label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .stat-card .sc-sub { font-size: 0.72rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        /* Barra de ferramentas: busca + filtros */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .search-box { position: relative; flex: 1; max-width: 420px; }
+
+        .search-box svg {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        #search-input {
+            width: 100%;
+            background: var(--bg-panel);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            padding: 0.7rem 1.1rem 0.7rem 2.8rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #search-input:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }
+
+        #search-input::placeholder { color: var(--muted); }
+
+        .chips { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--bg-panel);
+            border: 1px solid var(--glass-border);
+            border-radius: 999px;
+            color: var(--muted);
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.82rem;
+            padding: 0.35rem 0.9rem;
+            cursor: pointer;
+            transition: border-color 0.15s, color 0.15s, background 0.15s;
+        }
+
+        .chip svg { width: 14px; height: 14px; }
+        .chip:hover { border-color: var(--accent-primary); color: var(--text-main); }
+        .chip.active {
+            background: rgba(56, 189, 248, 0.12);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+
+        /* Tabela de caixas */
+        .results {
+            flex: 1;
+            overflow-y: auto;
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            background: rgba(30, 41, 59, 0.35);
+        }
+
+        .results::-webkit-scrollbar { width: 8px; }
+        .results::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 4px; }
+
+        table { width: 100%; border-collapse: collapse; }
+
+        thead {
+            position: sticky;
+            top: 0;
+            background: var(--bg-panel);
+            z-index: 1;
+        }
+
+        thead th {
+            font-size: 0.72rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: left;
+            padding: 0.7rem 1.2rem;
+            border-bottom: 1px solid var(--glass-border);
+            white-space: nowrap;
+        }
+
+        thead th.num { text-align: right; }
+
+        tbody td {
+            padding: 0.6rem 1.2rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+            font-size: 0.9rem;
+            vertical-align: middle;
+        }
+
+        tbody tr { transition: background 0.15s; }
+        tbody tr:hover { background: rgba(56, 189, 248, 0.06); }
+        tbody tr:last-child td { border-bottom: none; }
+
+        .crate-name { font-weight: 600; }
+        .crate-mats { margin-top: 2px; display: flex; flex-wrap: wrap; gap: 3px; }
+
+        .mat {
+            font-size: 0.72rem;
+            color: var(--muted);
+            background: var(--bg-input);
+            border: 1px solid rgba(51, 65, 85, 0.6);
+            border-radius: 6px;
+            padding: 1px 6px;
+            white-space: nowrap;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.74rem;
+            font-weight: 600;
+            border-radius: 999px;
+            padding: 2px 10px;
+            white-space: nowrap;
+        }
+
+        .badge svg { width: 12px; height: 12px; }
+
+        .b-wood    { background: rgba(52, 211, 153, 0.14);  color: #6ee7b7; }
+        .b-mineral { background: rgba(224, 180, 87, 0.14);  color: #eec97e; }
+        .b-crop    { background: rgba(163, 230, 53, 0.12);  color: #bef264; }
+        .b-mushroom{ background: rgba(192, 132, 252, 0.14); color: #d8b4fe; }
+        .b-fish    { background: rgba(56, 189, 248, 0.14);  color: #7dd3fc; }
+
+        .region-tag { font-size: 0.74rem; color: var(--muted); white-space: nowrap; }
+        .price { color: var(--accent-gold); font-weight: 600; white-space: nowrap; }
+        .price-base { color: var(--text-main); white-space: nowrap; }
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--muted);
+            gap: 0.6rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .empty-state svg { opacity: 0.4; }
+        .empty-state .hint { font-size: 0.85rem; }
+
+        .footer {
+            flex-shrink: 0;
+            font-size: 0.72rem;
+            color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-nav">
+        <div class="logo-area">
+            <i data-lucide="boxes" class="logo-icon"></i>
+            <h1>Comércio</h1>
+        </div>
+        <div class="nav-info">Caixas de comércio &middot; rotas e produção</div>
+    </header>
+
+    <div class="stat-cards" id="stat-cards">
+        <div class="stat-card">
+            <div class="sc-icon"><i data-lucide="package"></i></div>
+            <div class="sc-info">
+                <div class="sc-value" id="sc-total">—</div>
+                <div class="sc-label">Caixas na base</div>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="sc-icon"><i data-lucide="factory"></i></div>
+            <div class="sc-info">
+                <div class="sc-value" id="sc-types">—</div>
+                <div class="sc-label">Tipos de oficina</div>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="sc-icon"><i data-lucide="map"></i></div>
+            <div class="sc-info">
+                <div class="sc-value" id="sc-regions">—</div>
+                <div class="sc-label">Regiões de produção</div>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="sc-icon gold"><i data-lucide="trending-up"></i></div>
+            <div class="sc-info">
+                <div class="sc-value" id="sc-top">—</div>
+                <div class="sc-label">Maior venda</div>
+                <div class="sc-sub" id="sc-top-name">—</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbar">
+        <div class="search-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f8fafc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+            <input id="search-input" type="text" placeholder="Buscar caixa..." autocomplete="off" autocapitalize="off" spellcheck="false">
+        </div>
+        <div class="chips" id="chips"></div>
+    </div>
+
+    <div class="results" id="results">
+        <div class="empty-state" id="empty-state">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+            <span>Carregando base de caixas...</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span id="count"></span>
+        <span>Fonte: planilha gpw v2.15 &middot; venda 150% = base &times; (1 + bônus máx de distância)</span>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const resultsEl = document.getElementById('results');
+        const countEl = document.getElementById('count');
+        const chipsEl = document.getElementById('chips');
+        const input = document.getElementById('search-input');
+
+        let crates = [];
+        let activeType = null;
+
+        const TYPE_META = {
+            'Madeira':    { cls: 'b-wood',     icon: 'tree-pine' },
+            'Minério':    { cls: 'b-mineral',  icon: 'pickaxe' },
+            'Colheita':   { cls: 'b-crop',     icon: 'wheat' },
+            'Cogumelo':   { cls: 'b-mushroom', icon: 'mushroom' },
+            'Peixe':      { cls: 'b-fish',     icon: 'fish' },
+        };
+
+        function fmt(n) {
+            return Number(n || 0).toLocaleString('pt-BR');
+        }
+
+        function fmtCompact(n) {
+            if (n == null || !isFinite(n)) return '';
+            if (Math.abs(n) >= 1e9) return (n / 1e9).toFixed(2).replace('.', ',') + ' bi';
+            if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(1).replace('.', ',') + ' mi';
+            if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(0) + ' k';
+            return String(n);
+        }
+
+        function badgeHtml(typePt) {
+            const meta = TYPE_META[typePt];
+            if (!meta) return `<span class="badge">${typePt}</span>`;
+            return `<span class="badge ${meta.cls}"><i data-lucide="${meta.icon}"></i>${typePt}</span>`;
+        }
+
+        function renderTable(list) {
+            if (!list.length) {
+                resultsEl.innerHTML = `
+                    <div class="empty-state">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+                        <span>Nenhuma caixa encontrada</span>
+                        <span class="hint">Tente outro termo ou tipo</span>
+                    </div>`;
+                countEl.textContent = '';
+                return;
+            }
+            const rows = list.map(c => `
+                <tr>
+                    <td>
+                        <div class="crate-name">${c.name}</div>
+                        <div class="crate-mats">${c.materials.map(m => `<span class="mat">${m.qty}&times; ${m.name}</span>`).join('')}</div>
+                    </td>
+                    <td>${badgeHtml(c.typePt)}</td>
+                    <td>${c.regionPt ? `<span class="region-tag">${c.regionPt}</span>` : '<span class="region-tag" style="opacity:0.45">—</span>'}</td>
+                    <td class="region-tag">${c.timeMin != null ? c.timeMin + ' min' : '—'}</td>
+                    <td class="price-base">${c.base != null ? fmt(c.base) : '—'}</td>
+                    <td class="price">${c.base != null ? fmt(Math.round(c.base * 2.5)) : '—'}</td>
+                </tr>`).join('');
+            resultsEl.innerHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Caixa</th>
+                            <th>Tipo</th>
+                            <th>Região</th>
+                            <th>Tempo</th>
+                            <th class="num">Preço base</th>
+                            <th class="num">Venda (dist. 150%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>${rows}</tbody>
+                </table>`;
+            lucide.createIcons();
+            countEl.textContent = `${list.length} de ${crates.length} caixas`;
+        }
+
+        function applyFilters() {
+            const q = input.value.trim().toLowerCase();
+            const list = crates.filter(c => {
+                if (activeType && c.typePt !== activeType) return false;
+                if (q && !c.name.toLowerCase().includes(q)) return false;
+                return true;
+            });
+            renderTable(list);
+        }
+
+        function buildChips() {
+            const types = ['Todos', ...Object.keys(TYPE_META)];
+            chipsEl.innerHTML = types.map(t =>
+                `<button class="chip ${t === 'Todos' ? 'active' : ''}" data-type="${t}">${t}</button>`
+            ).join('');
+            chipsEl.querySelectorAll('.chip').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    chipsEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+                    chip.classList.add('active');
+                    activeType = chip.dataset.type === 'Todos' ? null : chip.dataset.type;
+                    applyFilters();
+                });
+            });
+        }
+
+        function fillStats() {
+            document.getElementById('sc-total').textContent = crates.length;
+            document.getElementById('sc-types').textContent = Object.keys(TYPE_META).length;
+            document.getElementById('sc-regions').textContent = new Set(crates.filter(c => c.regionPt).map(c => c.regionPt)).size;
+            const top = crates[0];
+            if (top) {
+                document.getElementById('sc-top').textContent = fmtCompact(Math.round(top.base * 2.5));
+                document.getElementById('sc-top-name').textContent = top.name;
+            }
+        }
+
+        async function load() {
+            try {
+                const resp = await fetch('api/crates');
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                crates = data.crates || [];
+                crates.sort((a, b) => (b.base || 0) - (a.base || 0));
+                fillStats();
+                buildChips();
+                applyFilters();
+            } catch (e) {
+                resultsEl.innerHTML = `
+                    <div class="empty-state">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+                        <span>Não foi possível carregar a base de caixas.</span>
+                    </div>`;
+            }
+        }
+
+        input.addEventListener('input', applyFilters);
+        load();
+    </script>
+</body>
+</html>

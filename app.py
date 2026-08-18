@@ -6,6 +6,7 @@ from modules.hunting.app import hunting_bp, init_manager
 from modules.cp.app import cp_bp
 from modules.dashboard.app import dashboard_bp
 from modules.market.app import market_bp
+from modules.trade.app import trade_bp
 app = Flask(__name__)
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
@@ -20,6 +21,7 @@ app.register_blueprint(hunting_bp, url_prefix='/hunting')
 app.register_blueprint(cp_bp, url_prefix='/cp')
 app.register_blueprint(dashboard_bp, url_prefix='/dashboard')
 app.register_blueprint(market_bp, url_prefix='/market')
+app.register_blueprint(trade_bp, url_prefix='/trade')
 
 @app.route('/')
 def index():

@@ -1,0 +1,7269 @@
+{
+ "generatedFrom": "gpw trade crate sheet v2.15 (26/06/2026)",
+ "crates": [
+  {
+   "id": 55433,
+   "name": "Mythril Ingot Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 769731,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Mythril Ingot",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55427,
+   "name": "Jewelry Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 680508,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Gold Ingot",
+     "qty": 5.0
+    },
+    {
+     "name": "Platinum Ingot",
+     "qty": 5.0
+    },
+    {
+     "name": "Silver Ingot",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 810578,
+   "name": "Packaged Dried Opah",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 317770,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Opah",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810567,
+   "name": "Packaged Dried Giant Talking Catfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 280340,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Giant Talking Catfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810569,
+   "name": "Packaged Dried Goliath Tigerfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 275270,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Goliath Tigerfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810577,
+   "name": "Packaged Dried Goldenstriped Soapfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 274820,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Goldenstriped Soapfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810579,
+   "name": "Packaged Dried Redfin Anthias",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 274790,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Redfin Anthias",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55937,
+   "name": "Packaged Dried Swiri",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 262896,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Swiri",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810566,
+   "name": "Packaged Dried Lungfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 244300,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Lungfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810576,
+   "name": "Packaged Dried Wrought Iron Butterflyfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 244300,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Wrought Iron Butterflyfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55404,
+   "name": "Snowfield Obsidian Box",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 215000,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Obsidian Ore",
+     "qty": 5.0
+    },
+    {
+     "name": "Nickel Ingot",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 55757,
+   "name": "Snowfield Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 201150,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Snowfield Cedar Plywood",
+     "qty": 5.0
+    },
+    {
+     "name": "Thuja Plywood",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 55758,
+   "name": "Thorn Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 201150,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Snowfield Cedar Plywood",
+     "qty": 5.0
+    },
+    {
+     "name": "Thornwood Plywood",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 55755,
+   "name": "Snowfield Jade Box",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 200000,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Jade",
+     "qty": 5.0
+    },
+    {
+     "name": "Noc Ingot",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 55417,
+   "name": "Calpheon Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 197280,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Cedar Plywood",
+     "qty": 5.0
+    },
+    {
+     "name": "Fir Plywood",
+     "qty": 5.0
+    },
+    {
+     "name": "Birch Plywood",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 55432,
+   "name": "Titanium Ingot Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 192396,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Titanium Ingot",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55431,
+   "name": "Vanadium Ingot Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 190194,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Vanadium Ingot",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55444,
+   "name": "Edania Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Edania_Wood",
+   "regionPt": "Edânia",
+   "base": 174080,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Caphras Tree Plywood",
+     "qty": 5.0
+    },
+    {
+     "name": "Elder Tree Plywood",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 55971,
+   "name": "Packaged Dried Nibbler",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 170364,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Nibbler",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55976,
+   "name": "Packaged Dried Smokey Chromis",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 170364,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Smokey Chromis",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55902,
+   "name": "Packaged Dried Tuna",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Kama_Fish",
+   "regionPt": "Kamasilvia",
+   "base": 170364,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Tuna",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810119,
+   "name": "Packaged Dried Rapid Goby",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 166660,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Rapid Goby",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810111,
+   "name": "Packaged Dried Bowfin",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 164400,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Bowfin",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55907,
+   "name": "Packaged Dried Porgy",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 162654,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Porgy",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55925,
+   "name": "Packaged Dried Sea Bass",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 158028,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Sea Bass",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55418,
+   "name": "Mediah Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 155700,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Acacia Plywood",
+     "qty": 5.0
+    },
+    {
+     "name": "White Cedar Plywood",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 55961,
+   "name": "Packaged Dried Grunt",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 154944,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Grunt",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55921,
+   "name": "Packaged Dried Snakehead",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Kama_Fish",
+   "regionPt": "Kamasilvia",
+   "base": 154944,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Snakehead",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810107,
+   "name": "Packaged Dried Lamprey",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 151920,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Lamprey",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55940,
+   "name": "Packaged Dried Mandarin Fish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 151854,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Mandarin Fish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55939,
+   "name": "Packaged Dried Piranha",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 147228,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Piranha",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810125,
+   "name": "Packaged Dried King Spine Loach",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 140800,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried King Spine Loach",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810130,
+   "name": "Packaged Dried Neon Damselfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 140800,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Neon Damselfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810131,
+   "name": "Packaged Dried Ransonnet's Surfperch",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 140800,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Ransonnet's Surfperch",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810139,
+   "name": "Packaged Dried Blacktip Chromis",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 140640,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Blacktip Chromis",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810126,
+   "name": "Packaged Dried Large-headed Goby",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 140640,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Large-headed Goby",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810124,
+   "name": "Packaged Dried Short Barbel Gudgeon",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 140400,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Short Barbel Gudgeon",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810140,
+   "name": "Packaged Dried Red Seabream",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 134400,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Red Seabream",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55416,
+   "name": "Serendia Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 125460,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Pine Plywood",
+     "qty": 5.0
+    },
+    {
+     "name": "Maple Plywood",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 7458,
+   "name": "Everlasting Herb Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 119376,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Everlasting Herb",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810123,
+   "name": "Packaged Dried Dwarf Gudgeon",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 118680,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Dwarf Gudgeon",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55424,
+   "name": "Brass Ingot Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 113724,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Brass Ingot",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55415,
+   "name": "Balenos Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 110340,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Maple Plywood",
+     "qty": 5.0
+    },
+    {
+     "name": "Ash Plywood",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 55425,
+   "name": "Bronze Ingot Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 100878,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Bronze Ingot",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5906,
+   "name": "Special Purple Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 81636,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Purple Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5907,
+   "name": "Special Pie Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 79839,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Pie Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5905,
+   "name": "Special Leccinum Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 78036,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Leccinum",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5912,
+   "name": "Special Chanterelle Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 78036,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Chanterelle",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5913,
+   "name": "Special Red-Spotted Amanita Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 78036,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Red-Spotted Amanita",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5914,
+   "name": "Special Mesima Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 78036,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Mesima",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5915,
+   "name": "Special Dictyophora Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 78036,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Dictyophora",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810106,
+   "name": "Packaged Dried Silver Carp",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 75600,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Silver Carp",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5934,
+   "name": "Special Napa Cabbage Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 75400,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Napa Cabbage",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5904,
+   "name": "Special Bouquet Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 74440,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Bouquet Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7663,
+   "name": "Special Sunflower Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 73720,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Sunflower",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7664,
+   "name": "Special Olive Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 73720,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Olive",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7662,
+   "name": "Special Grape Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 71200,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Grape",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810108,
+   "name": "Packaged Dried Yalu Grayling",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 70320,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Yalu Grayling",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5937,
+   "name": "Special Radish Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 69230,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Radish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7658,
+   "name": "Special Garlic Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 68684,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Garlic",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7667,
+   "name": "Special Paprika Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 68684,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Paprika",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55426,
+   "name": "Steel Ingot Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 67296,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Steel",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7659,
+   "name": "Special Onion Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 66164,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Onion",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7666,
+   "name": "Special Tomato Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 66163,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Tomato",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5940,
+   "name": "Special Perilla Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 64610,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Perilla",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7661,
+   "name": "Special Pumpkin Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 63646,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Pumpkin",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810110,
+   "name": "Packaged Dried Dark Sleeper",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 63600,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Dark Sleeper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7665,
+   "name": "Special Carrot Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 63360,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Carrot",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7660,
+   "name": "Special Hot Pepper Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 62384,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Hot Pepper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810116,
+   "name": "Packaged Dried Common Bleak",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 62160,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Common Bleak",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7444,
+   "name": "Special Strawberry Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 61126,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Strawberry",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7657,
+   "name": "Special Pepper Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 59868,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Pepper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7679,
+   "name": "Special Arrow Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 51051,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Arrow Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7681,
+   "name": "Special Cloud Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 51051,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Cloud Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7685,
+   "name": "Special Ghost Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 51051,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Ghost Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7687,
+   "name": "Special Hump Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 51051,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Hump Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7689,
+   "name": "Special Ancient Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 51051,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Ancient Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5943,
+   "name": "Special Rice Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 50000,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Rice",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5901,
+   "name": "Special Nolina Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "Kama_Crop",
+   "regionPt": "Kamasilvia",
+   "base": 49252,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Nolina",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7680,
+   "name": "Special Dwarf Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 48527,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Dwarf Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7682,
+   "name": "Special Sky Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 48527,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Sky Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7683,
+   "name": "Special Tiger Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 48527,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Tiger Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7686,
+   "name": "Special Fog Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 48527,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Fog Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5903,
+   "name": "Special Dalvenia Alrea Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "Kama_Crop",
+   "regionPt": "Kamasilvia",
+   "base": 47448,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Dalvenia Alrea",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7688,
+   "name": "Special Bluffer Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 47272,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Bluffer Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7678,
+   "name": "Special Fortune Teller Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 46010,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Fortune Teller Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7684,
+   "name": "Special Emperor Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 46010,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Emperor Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7690,
+   "name": "Special Amanita Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 46009,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Amanita Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55970,
+   "name": "Packaged Dried Golden-thread",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 45954,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Golden-thread",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5902,
+   "name": "Special Penestraria Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "Kama_Crop",
+   "regionPt": "Kamasilvia",
+   "base": 45651,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Penestraria",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55895,
+   "name": "Packaged Dried Pomfret",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Kama_Fish",
+   "regionPt": "Kamasilvia",
+   "base": 45636,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Pomfret",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55926,
+   "name": "Packaged Dried Angler",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 44928,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Angler",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55941,
+   "name": "Packaged Dried Lenok",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 43902,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Lenok",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55894,
+   "name": "Packaged Dried Checkerboard Wrasse",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Kama_Fish",
+   "regionPt": "Kamasilvia",
+   "base": 43770,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Checkerboard Wrasse",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55981,
+   "name": "Packaged Dried John Dory",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 43512,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried John Dory",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55942,
+   "name": "Packaged Dried Arowana",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSerCalph_Fish",
+   "regionPt": "Kamasilvia/Serendia/Calpheon",
+   "base": 42678,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Arowana",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7674,
+   "name": "Special Silver Azalea Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 42044,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Silver Azalea",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55962,
+   "name": "Packaged Dried Herring",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 42036,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Herring",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55988,
+   "name": "Packaged Dried Striped Shiner",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 41844,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Striped Shiner",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55927,
+   "name": "Packaged Dried Swordfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 41844,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Swordfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55957,
+   "name": "Packaged Dried Sea Eel",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Kama_Fish",
+   "regionPt": "Kamasilvia",
+   "base": 41460,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Sea Eel",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55993,
+   "name": "Packaged Dried Yellow-head Catfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Kama_Fish",
+   "regionPt": "Kamasilvia",
+   "base": 41460,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Yellow-head Catfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55956,
+   "name": "Packaged Dried Cero",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 41010,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Cero",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55908,
+   "name": "Packaged Dried Swellfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 40818,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Swellfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55977,
+   "name": "Packaged Dried Maomao",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 40428,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Maomao",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7675,
+   "name": "Special Fire Flake Flower Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 40252,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Fire Flake Flower",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55998,
+   "name": "Packaged Dried Tapertail Anchovy",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 39978,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Tapertail Anchovy",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55920,
+   "name": "Packaged Dried Freshwater Eel",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Kama_Fish",
+   "regionPt": "Kamasilvia",
+   "base": 39786,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Freshwater Eel",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55984,
+   "name": "Packaged Dried Grouper",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Kama_Fish",
+   "regionPt": "Kamasilvia",
+   "base": 39786,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Grouper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55912,
+   "name": "Packaged Dried Octopus",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaSer_Fish",
+   "regionPt": "Kamasilvia/Serendia",
+   "base": 39786,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Octopus",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55972,
+   "name": "Packaged Dried Siganid",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 39144,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Siganid",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55916,
+   "name": "Packaged Dried Carp",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 38760,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Carp",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7673,
+   "name": "Special Sunrise Herb Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 36657,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Sunrise Herb",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7677,
+   "name": "Special Silk Honey Grass Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 36657,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Silk Honey Grass",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55922,
+   "name": "Packaged Dried Cherry Salmon",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "KamaCalph_Fish",
+   "regionPt": "Kamasilvia/Calpheon",
+   "base": 35676,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Cherry Salmon",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7671,
+   "name": "Special Corn Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 34854,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Corn",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7676,
+   "name": "Special Dry Mane Grass Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 34272,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Dry Mane Grass",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810574,
+   "name": "Packaged Dried Obtuse Barracuda",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 34270,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Obtuse Barracuda",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7669,
+   "name": "Special Barley Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 33056,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Barley",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7670,
+   "name": "Special Wheat Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 33056,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Wheat",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810568,
+   "name": "Packaged Dried Longnose Gar",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 32970,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Longnose Gar",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810113,
+   "name": "Packaged Dried Spined Bittering",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 31248,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Spined Bittering",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810565,
+   "name": "Packaged Dried Pike Characin",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 31160,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Pike Characin",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55438,
+   "name": "Mud Crystal Amulet of Curses",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 31080,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Mud Crystal",
+     "qty": 3.0
+    }
+   ]
+  },
+  {
+   "id": 810112,
+   "name": "Packaged Dried Longsnout Catfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 30960,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Longsnout Catfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55436,
+   "name": "Black Crystal Amulet of Authority",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 30720,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Black Crystal",
+     "qty": 3.0
+    }
+   ]
+  },
+  {
+   "id": 810575,
+   "name": "Packaged Dried Ribbon Eel",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 30250,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Ribbon Eel",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55437,
+   "name": "Green Crystal Amulet of Wealth",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 30000,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Green Crystal",
+     "qty": 3.0
+    }
+   ]
+  },
+  {
+   "id": 55439,
+   "name": "Red Crystal Amulet of Lovers",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 29640,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Red Crystal",
+     "qty": 3.0
+    }
+   ]
+  },
+  {
+   "id": 7668,
+   "name": "Special Potato Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 29456,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Potato",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7672,
+   "name": "Special Sweet Potato Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 29456,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Special Sweet Potato",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810114,
+   "name": "Packaged Dried Chameleon Goby",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 29040,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Chameleon Goby",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55440,
+   "name": "Translucent Crystal Amulet of Happiness",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 28920,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Translucent Crystal",
+     "qty": 3.0
+    }
+   ]
+  },
+  {
+   "id": 810105,
+   "name": "Packaged Dried Sharpbelly",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 28560,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Sharpbelly",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810115,
+   "name": "Packaged Dried Ussurian Bullhead",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 28560,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Ussurian Bullhead",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55441,
+   "name": "Opal Jewelry Box",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 28200,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Polished Opal",
+     "qty": 3.0
+    }
+   ]
+  },
+  {
+   "id": 7696,
+   "name": "High-Quality Purple Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 26232,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Purple Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7697,
+   "name": "High-Quality Pie Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 25668,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Pie Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7695,
+   "name": "High-Quality Leccinum Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 25098,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Leccinum",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5908,
+   "name": "High-quality Chanterelle Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 25098,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-quality Chanterelle",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5909,
+   "name": "High-quality Red-Spotted Amanita Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 25098,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-quality Red-Spotted Amanita",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5910,
+   "name": "High-quality Mesima Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 25098,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-quality Mesima",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5911,
+   "name": "High-quality Dictyophora Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 25098,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-quality Dictyophora",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5933,
+   "name": "High-quality Napa Cabbage Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 250.0,
+   "timeMin": 25.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 24500,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-quality Napa Cabbage",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7694,
+   "name": "High-Quality Bouquet Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 23964,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Bouquet Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7487,
+   "name": "High-Quality Sunflower Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 23740,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Sunflower",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7488,
+   "name": "High-Quality Olive Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 23740,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Olive",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7645,
+   "name": "High-Quality Arrow Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 23400,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Arrow Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7647,
+   "name": "High-Quality Cloud Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 23400,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Cloud Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7651,
+   "name": "High-Quality Ghost Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 23400,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Ghost Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7653,
+   "name": "High-Quality Hump Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 23400,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Hump Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7655,
+   "name": "High-Quality Ancient Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 23400,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Ancient Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7486,
+   "name": "High-Quality Grape Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 22946,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Grape",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5936,
+   "name": "High-quality Radish Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 250.0,
+   "timeMin": 25.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 22920,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-quality Radish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7646,
+   "name": "High-Quality Dwarf Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 22262,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Dwarf Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7648,
+   "name": "High-Quality Sky Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 22260,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Sky Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7649,
+   "name": "High-Quality Tiger Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 22260,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Tiger Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7652,
+   "name": "High-Quality Fog Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 22260,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Fog Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7482,
+   "name": "High-Quality Garlic Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 22152,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Garlic",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7491,
+   "name": "High-Quality Paprika Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 22152,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Paprika",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7654,
+   "name": "High-Quality Bluffer Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 21696,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Bluffer Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7483,
+   "name": "High-Quality Onion Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 21358,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Onion",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7490,
+   "name": "High-Quality Tomato Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 21358,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Tomato",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7644,
+   "name": "High-Quality Fortune Teller Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 21132,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Fortune Teller Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7650,
+   "name": "High-Quality Emperor Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 21132,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Emperor Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7485,
+   "name": "High-Quality Pumpkin Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 20564,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Pumpkin",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5939,
+   "name": "High-quality Perilla Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 250.0,
+   "timeMin": 25.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 20380,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-quality Perilla",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7484,
+   "name": "High-Quality Hot Pepper Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 20166,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Hot Pepper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7443,
+   "name": "High-Quality Strawberry Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 19772,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Strawberry",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7481,
+   "name": "High-Quality Pepper Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 19372,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Pepper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7656,
+   "name": "High-Quality Amanita Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 17724,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Amanita Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810133,
+   "name": "Packaged Dried Boxfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": null,
+   "timeMin": null,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 17460,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Boxfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810137,
+   "name": "Packaged Dried Lionfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 17460,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Lionfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810109,
+   "name": "Packaged Dried Pike",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 17070,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Pike",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55958,
+   "name": "Packaged Dried Croaker",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 16140,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Croaker",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7691,
+   "name": "High-Quality Nolina Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "Kama_Crop",
+   "regionPt": "Kamasilvia",
+   "base": 16026,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Nolina",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55985,
+   "name": "Packaged Dried Bigeye",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 15498,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Bigeye",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7693,
+   "name": "High-Quality Dalvenia Alrea Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "Kama_Crop",
+   "regionPt": "Kamasilvia",
+   "base": 15462,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Dalvenia Alrea",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55903,
+   "name": "Packaged Dried Beltfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 15240,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Beltfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55931,
+   "name": "Packaged Dried Ray",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 15240,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Ray",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55963,
+   "name": "Packaged Dried Sardine",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 14916,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Sardine",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7692,
+   "name": "High-Quality Penestraria Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "Kama_Crop",
+   "regionPt": "Kamasilvia",
+   "base": 14892,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Penestraria",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55943,
+   "name": "Packaged Dried Sweetfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 14466,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Sweetfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55918,
+   "name": "Packaged Dried Trout",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 14274,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Trout",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55944,
+   "name": "Packaged Dried Terrapin",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 14082,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Terrapin",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5942,
+   "name": "High-quality Rice Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 250.0,
+   "timeMin": 25.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 13840,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-quality Rice",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55442,
+   "name": "Coal Bag",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 13800,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Processed Coal",
+     "qty": 5.0
+    }
+   ]
+  },
+  {
+   "id": 7639,
+   "name": "High-Quality Silver Azalea Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 13752,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Silver Azalea",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55929,
+   "name": "Packaged Dried Flying Fish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 13698,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Flying Fish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55904,
+   "name": "Packaged Dried Flounder",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 13248,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Flounder",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7640,
+   "name": "High-Quality Fire Flake Flower Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 13188,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Fire Flake Flower",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810118,
+   "name": "Packaged Dried Morning River Goby",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 13160,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Morning River Goby",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55955,
+   "name": "Packaged Dried Yellowfin Sculpin",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 13140,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Yellowfin Sculpin",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55910,
+   "name": "Packaged Dried Rockfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 13056,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Rockfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55911,
+   "name": "Packaged Dried Squid",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 13056,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Squid",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55928,
+   "name": "Packaged Dried Mackerel",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 12732,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Mackerel",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55969,
+   "name": "Packaged Dried Gunnel",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 12672,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Gunnel",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7641,
+   "name": "High-Quality Dry Mane Grass Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 12624,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Dry Mane Grass",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7638,
+   "name": "High-Quality Sunrise Herb Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 12060,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Sunrise Herb",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7642,
+   "name": "High-Quality Silk Honey Grass Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 12060,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Silk Honey Grass",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55906,
+   "name": "Packaged Dried Amberjack",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 11706,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Amberjack",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5925,
+   "name": "Youngji Mushroom Sack",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Shroom",
+   "regionPt": "LoML",
+   "base": 11500,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Youngji Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7495,
+   "name": "High-Quality Corn Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 11490,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Corn",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55999,
+   "name": "Packaged Dried Kuhlia Marginata",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 11190,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Kuhlia Marginata",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7493,
+   "name": "High-Quality Barley Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 10926,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Barley",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7494,
+   "name": "High-Quality Wheat Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 10926,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Wheat",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55917,
+   "name": "Packaged Dried Crucian Carp",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 10290,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Crucian Carp",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810122,
+   "name": "Packaged Dried South Torrent Catfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 10000,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried South Torrent Catfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7492,
+   "name": "High-Quality Potato Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 9792,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Potato",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7496,
+   "name": "High-Quality Sweet Potato Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 9792,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Sweet Potato",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7489,
+   "name": "High-Quality Carrot Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": null,
+   "regionPt": null,
+   "base": 8520,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "High-Quality Carrot",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55429,
+   "name": "Box of Titanium",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 8430,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Titanium Ore",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55959,
+   "name": "Packaged Dried Greenling",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 8238,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Greenling",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55967,
+   "name": "Packaged Dried Dolphinfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 8106,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Dolphinfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55428,
+   "name": "Box of Vanadium",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 7788,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Vanadium Ore",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55996,
+   "name": "Packaged Dried Roundtail Paradisefish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 7788,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Roundtail Paradisefish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55932,
+   "name": "Packaged Dried Seahorse",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 7788,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Seahorse",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55960,
+   "name": "Packaged Dried Flatfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 7722,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Flatfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55949,
+   "name": "Packaged Dried Perch",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 7722,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Perch",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55934,
+   "name": "Packaged Dried Filefish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 7530,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Filefish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55936,
+   "name": "Packaged Dried Mullet",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 7530,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Mullet",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55975,
+   "name": "Packaged Dried Blackfin Sweeper",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 7398,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Blackfin Sweeper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55968,
+   "name": "Packaged Dried Striped Catfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 7272,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Striped Catfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55891,
+   "name": "Packaged Dried Butterflyfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 7206,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Butterflyfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55953,
+   "name": "Packaged Dried Bitterling",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 6888,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Bitterling",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55914,
+   "name": "Packaged Dried Jellyfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 6888,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Jellyfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55965,
+   "name": "Packaged Dried Silver-Stripe Round Herring",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 6756,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Silver Stripe Round Herring",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55935,
+   "name": "Packaged Dried Scorpion Fish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 6696,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Scorpion Fish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55954,
+   "name": "Packaged Dried Bleeker",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 6564,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Bleeker",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55443,
+   "name": "Caphras Tree Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": "Edania_Wood",
+   "regionPt": "Edânia",
+   "base": 6560,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Caphras Tree Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55423,
+   "name": "Zinc Ore Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 6498,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Zinc Ore",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55964,
+   "name": "Packaged Dried Round Herring",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 6498,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Round Herring",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7472,
+   "name": "Truffle Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 6480,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Truffle Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55983,
+   "name": "Packaged Dried Rosefish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 6372,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Rosefish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55952,
+   "name": "Packaged Dried Goby Minnow",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 6246,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Goby Minnow",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 56000,
+   "name": "Packaged Dried Rock Hind",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 6246,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Rock Hind",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55909,
+   "name": "Packaged Dried Saurel",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 6180,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Saurel",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55966,
+   "name": "Packaged Dried Whiting",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 6180,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Whiting",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810562,
+   "name": "Packaged Dried Silver Prochilodus",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 5920,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Silver Prochilodus",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55435,
+   "name": "Elder Tree Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5916,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Elder Tree Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810572,
+   "name": "Packaged Dried Brassy Chub",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 5900,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Brassy Chub",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55947,
+   "name": "Packaged Dried Dace",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_SerCalph_Fish",
+   "regionPt": "Serendia/Calpheon",
+   "base": 5856,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Dace",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7475,
+   "name": "Purple Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5820,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Purple Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810571,
+   "name": "Packaged Dried Devil Stinger",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 5810,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Devil Stinger",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810573,
+   "name": "Packaged Dried Dusky Flathead",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 5810,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Dusky Flathead",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7432,
+   "name": "Garlic Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5712,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Garlic",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7433,
+   "name": "Onion Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5712,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Onion",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7476,
+   "name": "Pie Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5706,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Pie Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55414,
+   "name": "Acacia Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5676,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Acacia Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55991,
+   "name": "Packaged Dried Bubble Eye",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 5664,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Bubble Eye",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55974,
+   "name": "Packaged Dried Surfperch",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 5664,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Surfperch",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810563,
+   "name": "Packaged Dried Common Pleco",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 5630,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Common Pleco",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7474,
+   "name": "Leccinum Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5592,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Leccinum",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7477,
+   "name": "Chanterelle Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5592,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Chanterelle",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7478,
+   "name": "Red-Spotted Amanita Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5592,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Red-Spotted Amanita",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7479,
+   "name": "Mesima Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5592,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Mesima",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7480,
+   "name": "Dictyophora Box",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5592,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dictyophora",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55434,
+   "name": "Palm Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5490,
+   "lt": 20.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Palm Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55413,
+   "name": "White Cedar Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5442,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "White Cedar Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7473,
+   "name": "Bouquet Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5364,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Bouquet Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7460,
+   "name": "Arrow Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5256,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Arrow Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7462,
+   "name": "Cloud Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5256,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Cloud Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7466,
+   "name": "Ghost Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5256,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Ghost Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7468,
+   "name": "Hump Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5256,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Hump Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7470,
+   "name": "Ancient Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5256,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Ancient Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55913,
+   "name": "Packaged Dried Crab",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 5214,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Crab",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55412,
+   "name": "Cedar Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5208,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Cedar Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810570,
+   "name": "Packaged Dried Lavascale Stargazer",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 5190,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Lavascale Stargazer",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55933,
+   "name": "Packaged Dried Starfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 5148,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Starfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810561,
+   "name": "Packaged Dried Hatchetfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 5140,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Hatchetfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5932,
+   "name": "Cabbage Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 5070,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Napa Cabbage",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7438,
+   "name": "Sunflower Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5028,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Sunflower",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7439,
+   "name": "Olive Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5028,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Olive",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7461,
+   "name": "Dwarf Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5028,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dwarf Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7463,
+   "name": "Sky Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5028,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Sky Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7464,
+   "name": "Tiger Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5028,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Tiger Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7467,
+   "name": "Fog Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 5028,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Fog Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55986,
+   "name": "Packaged Dried Fourfinger Threadfin",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Calph_Fish",
+   "regionPt": "Calpheon",
+   "base": 5022,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Fourfinger Threadfin",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55409,
+   "name": "Pine Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4968,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Pine Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7469,
+   "name": "Bluffer Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4920,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Bluffer Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810560,
+   "name": "Packaged Dried Leaffish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 4920,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Leaffish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55901,
+   "name": "Packaged Dried Mudskipper",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "_Ser_Fish",
+   "regionPt": "Serendia",
+   "base": 4830,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Mudskipper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5923,
+   "name": "Tigerflower Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 4800,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Tigerflower",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55411,
+   "name": "Fir Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4734,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Fir Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5944,
+   "name": "Viola Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 4700,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Viola",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7459,
+   "name": "Fortune Teller Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4640,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Fortune Teller Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7465,
+   "name": "Emperor Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4640,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Emperor Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7442,
+   "name": "Paprika Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4572,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Paprika",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55421,
+   "name": "Lead Ore Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4542,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Lead Ore",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5935,
+   "name": "Radish Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 4500,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Radish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55410,
+   "name": "Birch Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4500,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Birch Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7437,
+   "name": "Grape Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4480,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Grape",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7441,
+   "name": "Tomato Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4344,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Tomato",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55420,
+   "name": "Iron Ore Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4315,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Iron Ore",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55422,
+   "name": "Tin Ore Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4315,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Tin Ore",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55408,
+   "name": "Maple Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4260,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Maple Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7436,
+   "name": "Pumpkin Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4122,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Pumpkin",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7471,
+   "name": "Amanita Mushroom Crate",
+   "type": "Mushroom",
+   "typePt": "Cogumelo",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4116,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Amanita Mushroom",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55407,
+   "name": "Ash Timber Crate",
+   "type": "Wood",
+   "typePt": "Madeira",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4026,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Ash Timber",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7435,
+   "name": "Hot Pepper Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 4008,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Hot Pepper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5924,
+   "name": "Wild Berry Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 3950,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Wild Berry",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7434,
+   "name": "Strawberry Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 3894,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Strawberry",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 55419,
+   "name": "Copper Ore Crate",
+   "type": "Mineral",
+   "typePt": "Minério",
+   "workload": 60.0,
+   "timeMin": 6.0,
+   "region": null,
+   "regionPt": null,
+   "base": 3865,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Copper Ore",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5938,
+   "name": "Perilla Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 3830,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Perilla",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7450,
+   "name": "Nolina Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "Kama_Crop",
+   "regionPt": "Kamasilvia",
+   "base": 3780,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Nolina",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7452,
+   "name": "Dalvenia Alrea Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "Kama_Crop",
+   "regionPt": "Kamasilvia",
+   "base": 3666,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dalvenia Alrea",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7451,
+   "name": "Penestraria Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 300.0,
+   "timeMin": 30.0,
+   "region": "Kama_Crop",
+   "regionPt": "Kamasilvia",
+   "base": 3552,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Penestraria",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5921,
+   "name": "Scarlet Rosebay Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 3550,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Scarlet Rosebay",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5922,
+   "name": "Pink Rosebay Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 3550,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Pink Rosebay",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7431,
+   "name": "Pepper Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 3528,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Pepper",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7454,
+   "name": "Silver Azalea Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 3324,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Silver Azalea",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810121,
+   "name": "Packaged Dried Short Ninespine Stickleback",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 3212,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Short Ninespine Stickleback",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7455,
+   "name": "Fire Flake Flower Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 3204,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Fire Flake Flower",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810132,
+   "name": "Packaged Dried Pollack",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 3160,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Pollack",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5941,
+   "name": "Rice Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 3150,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Rice",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7440,
+   "name": "Carrot Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 3120,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Carrot",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7456,
+   "name": "Dry Mane Grass Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 3096,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dry Mane Grass",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810135,
+   "name": "Packaged Dried Mitre Squid",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 3060,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Mitre Squid",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7453,
+   "name": "Sunrise Herb Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 2988,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Sunrise Herb",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7457,
+   "name": "Silk Honey Grass Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 2988,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Silk Honey Grass",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7448,
+   "name": "Corn Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 2874,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Corn",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810564,
+   "name": "Packaged Dried Swamp Eel",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "Val_Fish",
+   "regionPt": "Valencia",
+   "base": 2870,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Swamp Eel",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7446,
+   "name": "Barley Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 2760,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Barley",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7447,
+   "name": "Wheat Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 2760,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Wheat",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 810136,
+   "name": "Packaged Dried Dark-banded Rockfish",
+   "type": "Fish",
+   "typePt": "Peixe",
+   "workload": 225.0,
+   "timeMin": 22.5,
+   "region": "LoML_Fish",
+   "regionPt": "LoML",
+   "base": 2680,
+   "lt": 30.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Dried Dark-banded Rockfish",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7445,
+   "name": "Potato Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 2532,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Potato",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 7449,
+   "name": "Sweet Potato Crate",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": null,
+   "regionPt": null,
+   "base": 2532,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Sweet Potato",
+     "qty": 10.0
+    }
+   ]
+  },
+  {
+   "id": 5926,
+   "name": "Reed Sack",
+   "type": "Crop",
+   "typePt": "Colheita",
+   "workload": 150.0,
+   "timeMin": 15.0,
+   "region": "LoML_Crop",
+   "regionPt": "LoML",
+   "base": 2460,
+   "lt": 15.0,
+   "materials": [
+    {
+     "name": "Black Stone Powder",
+     "qty": 1.0
+    },
+    {
+     "name": "Reed",
+     "qty": 10.0
+    }
+   ]
+  }
+ ]
+}
