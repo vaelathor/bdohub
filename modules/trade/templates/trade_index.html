@@ -485,6 +485,46 @@
         .town-foot .ship { display: flex; align-items: center; gap: 0.35rem; }
         .town-foot .ship svg { width: 13px; height: 13px; }
         .town-foot .ship b { color: var(--text-main); font-weight: 600; }
+
+        .dest-pick {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            min-width: 0;
+            flex: 1;
+        }
+        .dest-pick select {
+            background: var(--bg-base);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 4px 8px;
+            max-width: 100%;
+            min-width: 0;
+            cursor: pointer;
+            outline: none;
+        }
+        .dest-pick select:hover { border-color: rgba(56, 189, 248, 0.5); }
+        .dest-pick select:focus { border-color: rgba(56, 189, 248, 0.7); }
+        .dest-pick .dest-time {
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+        .dest-best {
+            color: var(--accent-primary);
+            font-size: 0.68rem;
+            font-weight: 600;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        .dest-best svg { width: 11px; height: 11px; }
     </style>
 </head>
 <body>
@@ -788,8 +828,23 @@
                     <span class="ws-meta">${w.cratesDay}/d</span>
                 </div>`).join('');
 
-            const ship = (name, v) => v ? `<span class="ship"><i data-lucide="truck"></i>${name}: <b>${hoursLabel(v.h)}</b></span>` : '';
-            const ships = [ship('Valencia', t.transport['Valencia']), ship('Yukjo', t.transport['Yukjo (LoML)'])].join('');
+            // Destinos de comércio: dropdown com as melhores opções (mais EXP primeiro)
+            const dests = (t.destinations || []).slice(0, 6);
+            let destBlock;
+            if (dests.length) {
+                const opts = dests.map((d, i) =>
+                    `<option value="${i}" ${d.best ? 'selected' : ''}>${d.namePt} &middot; ${hoursLabel(d.h)}</option>`
+                ).join('');
+                destBlock = `
+                    <div class="dest-pick" data-town="${t.name}">
+                        <i data-lucide="truck"></i>
+                        <select class="dest-select" title="Destino de entrega (mais EXP primeiro)">${opts}</select>
+                        <span class="dest-time">${hoursLabel(dests[0].h)}</span>
+                        <span class="dest-best"><i data-lucide="sparkles"></i>melhor EXP</span>
+                    </div>`;
+            } else {
+                destBlock = `<span class="ship"><i data-lucide="truck"></i>sem destinos</span>`;
+            }
 
             const warn = lod.insufficient ? ' warn' : '';
             const offCls = t.disabled ? ' off' : '';
@@ -822,7 +877,7 @@
                         ${lodBlock}
                     </div>
                     <div class="town-foot">
-                        <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">${ships}</div>
+                        ${destBlock}
                         <span>${t.workers - t.n_staffed > 0 ? `${t.workers - t.n_staffed} operário(s) ocioso(s)` : ''}</span>
                     </div>
                 </div>`;
@@ -865,7 +920,7 @@
                 if (tObj) tObj.disabled = data.disabled;
                 townsData.sort((a, b) => (a.disabled - b.disabled) || (b.crates_day - a.crates_day));
                 townGrid.innerHTML = townsData.map(renderTown).join('');
-                townGrid.querySelectorAll('.town-eye').forEach(b => b.addEventListener('click', () => toggleTown(b)));
+                attachTownListeners();
                 fillTownStats(townsData);
                 lucide.createIcons();
             } catch (e) {
@@ -881,6 +936,22 @@
         let townsData = [];
         let townState = {};
 
+        function attachTownListeners() {
+            townGrid.querySelectorAll('.town-eye').forEach(btn => {
+                btn.addEventListener('click', () => toggleTown(btn));
+            });
+            townGrid.querySelectorAll('.dest-select').forEach(sel => {
+                sel.addEventListener('change', () => {
+                    const pick = sel.closest('.dest-pick');
+                    const t = townsData.find(x => x.name === pick.dataset.town);
+                    if (!t) return;
+                    const dst = (t.destinations || [])[Number(sel.value)];
+                    if (!dst) return;
+                    pick.querySelector('.dest-time').textContent = hoursLabel(dst.h);
+                });
+            });
+        }
+
         async function loadTowns() {
             try {
                 const resp = await fetch('api/towns');
@@ -891,9 +962,7 @@
                     .sort((a, b) => (a.disabled - b.disabled) || (b.crates_day - a.crates_day));
                 fillTownStats(townsData);
                 townGrid.innerHTML = townsData.map(renderTown).join('');
-                townGrid.querySelectorAll('.town-eye').forEach(btn => {
-                    btn.addEventListener('click', () => toggleTown(btn));
-                });
+                attachTownListeners();
                 lucide.createIcons();
             } catch (e) {
                 townGrid.innerHTML = `
