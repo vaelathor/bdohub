@@ -29,6 +29,7 @@
      "cycleMin": 8.78,
      "cratesDay": 656,
      "inUse": true,
+     "disabled": false,
      "node": "45",
      "connPath": [
       {
@@ -55,6 +56,7 @@
      "cycleMin": 7.28,
      "cratesDay": 791,
      "inUse": true,
+     "disabled": false,
      "node": "26",
      "connPath": [
       {
@@ -77,6 +79,7 @@
      "cycleMin": 7.22,
      "cratesDay": 798,
      "inUse": true,
+     "disabled": false,
      "node": "44",
      "connPath": [
       {
@@ -103,6 +106,7 @@
      "cycleMin": 6.19,
      "cratesDay": 931,
      "inUse": true,
+     "disabled": false,
      "node": "21",
      "connPath": [
       {
@@ -125,6 +129,7 @@
      "cycleMin": 6.54,
      "cratesDay": 881,
      "inUse": true,
+     "disabled": false,
      "node": "22",
      "connPath": [
       {
@@ -146,12 +151,14 @@
      "cycleMin": 5.48,
      "cratesDay": 1050,
      "inUse": true,
+     "disabled": false,
      "node": "1",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 6,
+   "n_disabled_ws": 0,
    "n_colheita": 5,
    "n_cogumelo": 1,
    "lodging": {
@@ -197,6 +204,39 @@
     "44",
     "45"
    ],
+   "conn_detail": [
+    {
+     "id": "21",
+     "name": "Bartali Farm",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "22",
+     "name": "Finto Farm",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "26",
+     "name": "Loggia Farm",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "44",
+     "name": "Balenos Forest",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "45",
+     "name": "Toscani Farm",
+     "cp": 2,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "1",
    "crates_day": 5107,
    "transport": {
@@ -711,6 +751,7 @@
      "cycleMin": 10.93,
      "cratesDay": 527,
      "inUse": true,
+     "disabled": false,
      "node": "328",
      "connPath": [
       {
@@ -741,6 +782,7 @@
      "cycleMin": 5.24,
      "cratesDay": 1098,
      "inUse": true,
+     "disabled": false,
      "node": "301",
      "connPath": [],
      "nodeCp": 0
@@ -758,6 +800,7 @@
      "cycleMin": 5.53,
      "cratesDay": 1042,
      "inUse": true,
+     "disabled": false,
      "node": "301",
      "connPath": [],
      "nodeCp": 0
@@ -776,6 +819,7 @@
      "cycleMin": 7.61,
      "cratesDay": 757,
      "inUse": true,
+     "disabled": false,
      "node": "346",
      "connPath": [
       {
@@ -802,6 +846,7 @@
      "cycleMin": 6.94,
      "cratesDay": 830,
      "inUse": true,
+     "disabled": false,
      "node": "322",
      "connPath": [
       {
@@ -824,6 +869,7 @@
      "cycleMin": 6.92,
      "cratesDay": 832,
      "inUse": true,
+     "disabled": false,
      "node": "322",
      "connPath": [
       {
@@ -846,6 +892,7 @@
      "cycleMin": 8.0,
      "cratesDay": 720,
      "inUse": true,
+     "disabled": false,
      "node": "323",
      "connPath": [
       {
@@ -867,6 +914,7 @@
      "cycleMin": 5.21,
      "cratesDay": 1105,
      "inUse": true,
+     "disabled": false,
      "node": "301",
      "connPath": [],
      "nodeCp": 0
@@ -885,6 +933,7 @@
      "cycleMin": 5.19,
      "cratesDay": 1110,
      "inUse": true,
+     "disabled": false,
      "node": "301",
      "connPath": [],
      "nodeCp": 0
@@ -901,6 +950,7 @@
      "cycleMin": 7.85,
      "cratesDay": 734,
      "inUse": true,
+     "disabled": false,
      "node": "321",
      "connPath": [
       {
@@ -927,12 +977,14 @@
      "cycleMin": 5.39,
      "cratesDay": 1069,
      "inUse": true,
+     "disabled": false,
      "node": "301",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 11,
+   "n_disabled_ws": 0,
    "n_colheita": 9,
    "n_cogumelo": 5,
    "lodging": {
@@ -1001,6 +1053,51 @@
     "346",
     "347"
    ],
+   "conn_detail": [
+    {
+     "id": "321",
+     "name": "Alejandro Farm",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "322",
+     "name": "Costa Farm",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "323",
+     "name": "Moretti Plantation",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "328",
+     "name": "Lynch Ranch",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "341",
+     "name": "Northern Plain of Serendia",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "346",
+     "name": "Northern Swamp",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "347",
+     "name": "Lynch Farm Ruins",
+     "cp": 1,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "301",
    "crates_day": 9823,
    "transport": {
@@ -1513,6 +1610,7 @@
      "cycleMin": 8.04,
      "cratesDay": 716,
      "inUse": true,
+     "disabled": false,
      "node": "712",
      "connPath": [
       {
@@ -1534,6 +1632,7 @@
      "cycleMin": 6.95,
      "cratesDay": 829,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1551,6 +1650,7 @@
      "cycleMin": 6.56,
      "cratesDay": 879,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1568,6 +1668,7 @@
      "cycleMin": 6.62,
      "cratesDay": 870,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1584,6 +1685,7 @@
      "cycleMin": 6.61,
      "cratesDay": 871,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1601,6 +1703,7 @@
      "cycleMin": 6.54,
      "cratesDay": 880,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1617,6 +1720,7 @@
      "cycleMin": 6.4,
      "cratesDay": 901,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1634,6 +1738,7 @@
      "cycleMin": 6.39,
      "cratesDay": 902,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1651,6 +1756,7 @@
      "cycleMin": 6.4,
      "cratesDay": 899,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1667,6 +1773,7 @@
      "cycleMin": 5.59,
      "cratesDay": 1030,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1684,6 +1791,7 @@
      "cycleMin": 5.6,
      "cratesDay": 1028,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1700,6 +1808,7 @@
      "cycleMin": 5.85,
      "cratesDay": 984,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1716,6 +1825,7 @@
      "cycleMin": 6.33,
      "cratesDay": 910,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1733,6 +1843,7 @@
      "cycleMin": 7.54,
      "cratesDay": 764,
      "inUse": true,
+     "disabled": false,
      "node": "712",
      "connPath": [
       {
@@ -1755,6 +1866,7 @@
      "cycleMin": 7.93,
      "cratesDay": 726,
      "inUse": true,
+     "disabled": false,
      "node": "712",
      "connPath": [
       {
@@ -1776,6 +1888,7 @@
      "cycleMin": 6.07,
      "cratesDay": 949,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1794,6 +1907,7 @@
      "cycleMin": 6.28,
      "cratesDay": 917,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1810,6 +1924,7 @@
      "cycleMin": 6.14,
      "cratesDay": 938,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1827,6 +1942,7 @@
      "cycleMin": 5.88,
      "cratesDay": 980,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1844,6 +1960,7 @@
      "cycleMin": 6.66,
      "cratesDay": 865,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1860,6 +1977,7 @@
      "cycleMin": 6.54,
      "cratesDay": 880,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1877,6 +1995,7 @@
      "cycleMin": 6.79,
      "cratesDay": 849,
      "inUse": true,
+     "disabled": false,
      "node": "601",
      "connPath": [],
      "nodeCp": 0
@@ -1893,6 +2012,7 @@
      "cycleMin": 8.97,
      "cratesDay": 642,
      "inUse": true,
+     "disabled": false,
      "node": "628",
      "connPath": [
       {
@@ -1919,6 +2039,7 @@
      "cycleMin": 8.9,
      "cratesDay": 647,
      "inUse": true,
+     "disabled": false,
      "node": "628",
      "connPath": [
       {
@@ -1944,6 +2065,7 @@
      "cycleMin": 8.12,
      "cratesDay": 709,
      "inUse": true,
+     "disabled": false,
      "node": "633",
      "connPath": [
       {
@@ -1966,6 +2088,7 @@
      "cycleMin": 8.08,
      "cratesDay": 713,
      "inUse": true,
+     "disabled": false,
      "node": "633",
      "connPath": [
       {
@@ -1987,6 +2110,7 @@
      "cycleMin": 12.6,
      "cratesDay": 457,
      "inUse": true,
+     "disabled": false,
      "node": "603",
      "connPath": [
       {
@@ -2025,6 +2149,7 @@
      "cycleMin": 12.54,
      "cratesDay": 459,
      "inUse": true,
+     "disabled": false,
      "node": "603",
      "connPath": [
       {
@@ -2063,6 +2188,7 @@
      "cycleMin": 12.38,
      "cratesDay": 465,
      "inUse": true,
+     "disabled": false,
      "node": "603",
      "connPath": [
       {
@@ -2090,6 +2216,7 @@
     }
    ],
    "n_workshops": 29,
+   "n_disabled_ws": 0,
    "n_colheita": 16,
    "n_cogumelo": 14,
    "lodging": {
@@ -2213,6 +2340,45 @@
     "633",
     "712"
    ],
+   "conn_detail": [
+    {
+     "id": "603",
+     "name": "Florin",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "625",
+     "name": "Khuruto Cave",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "628",
+     "name": "Northern Wheat Plantation",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "629",
+     "name": "Old Dandelion",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "633",
+     "name": "Dias Farm",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "712",
+     "name": "Gabino Farm",
+     "cp": 2,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "601",
    "crates_day": 23659,
    "transport": {
@@ -2727,6 +2893,7 @@
      "cycleMin": 6.36,
      "cratesDay": 905,
      "inUse": true,
+     "disabled": false,
      "node": "64",
      "connPath": [
       {
@@ -2749,6 +2916,7 @@
      "cycleMin": 5.52,
      "cratesDay": 1043,
      "inUse": true,
+     "disabled": false,
      "node": "61",
      "connPath": [],
      "nodeCp": 0
@@ -2767,12 +2935,14 @@
      "cycleMin": 5.84,
      "cratesDay": 987,
      "inUse": true,
+     "disabled": false,
      "node": "61",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 3,
+   "n_disabled_ws": 0,
    "n_colheita": 3,
    "n_cogumelo": 2,
    "lodging": {
@@ -2800,6 +2970,15 @@
    "conn_nodes": [
     "64"
    ],
+   "conn_detail": [
+    {
+     "id": "64",
+     "name": "Casta Farm",
+     "cp": 1,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "61",
    "crates_day": 2936,
    "transport": {
@@ -3314,6 +3493,7 @@
      "cycleMin": 7.19,
      "cratesDay": 801,
      "inUse": true,
+     "disabled": false,
      "node": "602",
      "connPath": [],
      "nodeCp": 0
@@ -3331,6 +3511,7 @@
      "cycleMin": 10.44,
      "cratesDay": 552,
      "inUse": true,
+     "disabled": false,
      "node": "670",
      "connPath": [
       {
@@ -3346,6 +3527,7 @@
     }
    ],
    "n_workshops": 2,
+   "n_disabled_ws": 0,
    "n_colheita": 2,
    "n_cogumelo": 1,
    "lodging": {
@@ -3366,6 +3548,21 @@
     "654",
     "670"
    ],
+   "conn_detail": [
+    {
+     "id": "654",
+     "name": "Keplan Hill",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "670",
+     "name": "Gianin Farm",
+     "cp": 2,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "602",
    "crates_day": 1353,
    "transport": {
@@ -3880,6 +4077,7 @@
      "cycleMin": 5.44,
      "cratesDay": 1058,
      "inUse": true,
+     "disabled": false,
      "node": "604",
      "connPath": [],
      "nodeCp": 0
@@ -3897,12 +4095,14 @@
      "cycleMin": 6.02,
      "cratesDay": 956,
      "inUse": true,
+     "disabled": false,
      "node": "604",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 2,
+   "n_disabled_ws": 0,
    "n_colheita": 2,
    "n_cogumelo": 1,
    "lodging": {
@@ -3920,6 +4120,8 @@
    "cp_total": 2,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "604",
    "crates_day": 2014,
    "transport": {
@@ -4432,6 +4634,7 @@
      "cycleMin": 5.59,
      "cratesDay": 1030,
      "inUse": true,
+     "disabled": false,
      "node": "608",
      "connPath": [],
      "nodeCp": 0
@@ -4448,6 +4651,7 @@
      "cycleMin": 10.11,
      "cratesDay": 570,
      "inUse": true,
+     "disabled": false,
      "node": "609",
      "connPath": [
       {
@@ -4471,6 +4675,7 @@
     }
    ],
    "n_workshops": 2,
+   "n_disabled_ws": 0,
    "n_colheita": 0,
    "n_cogumelo": 2,
    "lodging": {
@@ -4508,6 +4713,33 @@
     "719",
     "720"
    ],
+   "conn_detail": [
+    {
+     "id": "609",
+     "name": "Behr",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "709",
+     "name": "Crioville",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "719",
+     "name": "Longleaf Tree Sentry Post",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "720",
+     "name": "Longleaf Tree Forest",
+     "cp": 1,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "608",
    "crates_day": 1600,
    "transport": {
@@ -5021,6 +5253,7 @@
      "cycleMin": 6.15,
      "cratesDay": 936,
      "inUse": true,
+     "disabled": false,
      "node": "1101",
      "connPath": [],
      "nodeCp": 0
@@ -5037,6 +5270,7 @@
      "cycleMin": 5.56,
      "cratesDay": 1037,
      "inUse": true,
+     "disabled": false,
      "node": "1101",
      "connPath": [],
      "nodeCp": 0
@@ -5053,6 +5287,7 @@
      "cycleMin": 17.9,
      "cratesDay": 322,
      "inUse": true,
+     "disabled": false,
      "node": "1153",
      "connPath": [
       {
@@ -5091,6 +5326,7 @@
      "cycleMin": 17.37,
      "cratesDay": 332,
      "inUse": true,
+     "disabled": false,
      "node": "1153",
      "connPath": [
       {
@@ -5128,6 +5364,7 @@
      "cycleMin": 16.93,
      "cratesDay": 340,
      "inUse": true,
+     "disabled": false,
      "node": "1158",
      "connPath": [
       {
@@ -5151,6 +5388,7 @@
     }
    ],
    "n_workshops": 5,
+   "n_disabled_ws": 0,
    "n_colheita": 2,
    "n_cogumelo": 3,
    "lodging": {
@@ -5192,6 +5430,57 @@
     "1163",
     "1164"
    ],
+   "conn_detail": [
+    {
+     "id": "1138",
+     "name": "Asula Highlands",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1140",
+     "name": "Altinova Entrance",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1147",
+     "name": "Stonebeak Shore",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1149",
+     "name": "Omar Lava Cave",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "1153",
+     "name": "Kusha",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1158",
+     "name": "Stonetail Horse Ranch",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1163",
+     "name": "Mediah Shore",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1164",
+     "name": "Highland Junction",
+     "cp": 1,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "1101",
    "crates_day": 2967,
    "transport": {
@@ -5704,6 +5993,7 @@
      "cycleMin": 5.52,
      "cratesDay": 1043,
      "inUse": true,
+     "disabled": false,
      "node": "1141",
      "connPath": [],
      "nodeCp": 0
@@ -5721,6 +6011,7 @@
      "cycleMin": 5.16,
      "cratesDay": 1116,
      "inUse": true,
+     "disabled": false,
      "node": "1141",
      "connPath": [],
      "nodeCp": 0
@@ -5738,6 +6029,7 @@
      "cycleMin": 10.51,
      "cratesDay": 548,
      "inUse": true,
+     "disabled": false,
      "node": "1160",
      "connPath": [
       {
@@ -5771,6 +6063,7 @@
      "cycleMin": 6.36,
      "cratesDay": 906,
      "inUse": true,
+     "disabled": false,
      "node": "1161",
      "connPath": [
       {
@@ -5792,6 +6085,7 @@
      "cycleMin": 6.82,
      "cratesDay": 845,
      "inUse": true,
+     "disabled": false,
      "node": "1161",
      "connPath": [
       {
@@ -5803,6 +6097,7 @@
     }
    ],
    "n_workshops": 5,
+   "n_disabled_ws": 0,
    "n_colheita": 2,
    "n_cogumelo": 3,
    "lodging": {
@@ -5861,6 +6156,33 @@
     "1160",
     "1161"
    ],
+   "conn_detail": [
+    {
+     "id": "1138",
+     "name": "Asula Highlands",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1158",
+     "name": "Stonetail Horse Ranch",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1160",
+     "name": "Shuri Farm",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "1161",
+     "name": "Kasula Farm",
+     "cp": 2,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "1141",
    "crates_day": 4457,
    "transport": {
@@ -6375,6 +6697,7 @@
      "cycleMin": 7.78,
      "cratesDay": 740,
      "inUse": true,
+     "disabled": false,
      "node": "1354",
      "connPath": [
       {
@@ -6401,6 +6724,7 @@
      "cycleMin": 6.63,
      "cratesDay": 869,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6418,6 +6742,7 @@
      "cycleMin": 7.14,
      "cratesDay": 807,
      "inUse": true,
+     "disabled": false,
      "node": "1355",
      "connPath": [
       {
@@ -6439,6 +6764,7 @@
      "cycleMin": 7.31,
      "cratesDay": 788,
      "inUse": true,
+     "disabled": false,
      "node": "1355",
      "connPath": [
       {
@@ -6461,6 +6787,7 @@
      "cycleMin": 6.92,
      "cratesDay": 833,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6477,6 +6804,7 @@
      "cycleMin": 6.94,
      "cratesDay": 830,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6494,6 +6822,7 @@
      "cycleMin": 6.44,
      "cratesDay": 894,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6511,6 +6840,7 @@
      "cycleMin": 6.75,
      "cratesDay": 853,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6527,6 +6857,7 @@
      "cycleMin": 6.63,
      "cratesDay": 869,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6544,6 +6875,7 @@
      "cycleMin": 5.93,
      "cratesDay": 971,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6560,6 +6892,7 @@
      "cycleMin": 6.05,
      "cratesDay": 952,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6576,6 +6909,7 @@
      "cycleMin": 5.94,
      "cratesDay": 969,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6593,6 +6927,7 @@
      "cycleMin": 6.2,
      "cratesDay": 928,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6609,6 +6944,7 @@
      "cycleMin": 6.08,
      "cratesDay": 947,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6626,6 +6962,7 @@
      "cycleMin": 5.98,
      "cratesDay": 964,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
@@ -6642,12 +6979,14 @@
      "cycleMin": 6.48,
      "cratesDay": 888,
      "inUse": true,
+     "disabled": false,
      "node": "1301",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 16,
+   "n_disabled_ws": 0,
    "n_colheita": 9,
    "n_cogumelo": 8,
    "lodging": {
@@ -6676,6 +7015,21 @@
     "1354",
     "1355"
    ],
+   "conn_detail": [
+    {
+     "id": "1354",
+     "name": "Erdal Farm",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "1355",
+     "name": "Valencia Plantation",
+     "cp": 2,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "1301",
    "crates_day": 14102,
    "transport": {
@@ -7188,6 +7542,7 @@
      "cycleMin": 7.4,
      "cratesDay": 778,
      "inUse": true,
+     "disabled": false,
      "node": "1352",
      "connPath": [
       {
@@ -7210,6 +7565,7 @@
      "cycleMin": 7.46,
      "cratesDay": 772,
      "inUse": true,
+     "disabled": false,
      "node": "1352",
      "connPath": [
       {
@@ -7231,12 +7587,14 @@
      "cycleMin": 5.36,
      "cratesDay": 1075,
      "inUse": true,
+     "disabled": false,
      "node": "1314",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 3,
+   "n_disabled_ws": 0,
    "n_colheita": 1,
    "n_cogumelo": 2,
    "lodging": {
@@ -7264,6 +7622,15 @@
    "conn_nodes": [
     "1352"
    ],
+   "conn_detail": [
+    {
+     "id": "1352",
+     "name": "Shakatu Farmland",
+     "cp": 2,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "1314",
    "crates_day": 2625,
    "transport": {
@@ -7777,6 +8144,7 @@
      "cycleMin": 7.18,
      "cratesDay": 802,
      "inUse": true,
+     "disabled": false,
      "node": "1351",
      "connPath": [
       {
@@ -7798,6 +8166,7 @@
      "cycleMin": 7.4,
      "cratesDay": 778,
      "inUse": true,
+     "disabled": false,
      "node": "1351",
      "connPath": [
       {
@@ -7820,6 +8189,7 @@
      "cycleMin": 6.25,
      "cratesDay": 921,
      "inUse": true,
+     "disabled": false,
      "node": "1319",
      "connPath": [],
      "nodeCp": 0
@@ -7836,12 +8206,14 @@
      "cycleMin": 6.69,
      "cratesDay": 861,
      "inUse": true,
+     "disabled": false,
      "node": "1319",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 4,
+   "n_disabled_ws": 0,
    "n_colheita": 2,
    "n_cogumelo": 2,
    "lodging": {
@@ -7869,6 +8241,15 @@
    "conn_nodes": [
     "1351"
    ],
+   "conn_detail": [
+    {
+     "id": "1351",
+     "name": "Bazaar Farmland",
+     "cp": 2,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "1319",
    "crates_day": 3363,
    "transport": {
@@ -8382,6 +8763,7 @@
      "cycleMin": 6.56,
      "cratesDay": 877,
      "inUse": true,
+     "disabled": false,
      "node": "1353",
      "connPath": [
       {
@@ -8403,6 +8785,7 @@
      "cycleMin": 6.68,
      "cratesDay": 862,
      "inUse": true,
+     "disabled": false,
      "node": "1353",
      "connPath": [
       {
@@ -8414,6 +8797,7 @@
     }
    ],
    "n_workshops": 2,
+   "n_disabled_ws": 0,
    "n_colheita": 1,
    "n_cogumelo": 1,
    "lodging": {
@@ -8441,6 +8825,15 @@
    "conn_nodes": [
     "1353"
    ],
+   "conn_detail": [
+    {
+     "id": "1353",
+     "name": "Altas Farmland",
+     "cp": 2,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "1343",
    "crates_day": 1739,
    "transport": {
@@ -8954,6 +9347,7 @@
      "cycleMin": 13.8,
      "cratesDay": 418,
      "inUse": true,
+     "disabled": false,
      "node": "1610",
      "connPath": [],
      "nodeCp": 0
@@ -8970,12 +9364,14 @@
      "cycleMin": 13.79,
      "cratesDay": 418,
      "inUse": false,
+     "disabled": false,
      "node": "1610",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 2,
+   "n_disabled_ws": 0,
    "n_colheita": 1,
    "n_cogumelo": 0,
    "lodging": {
@@ -8993,6 +9389,8 @@
    "cp_total": 4,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "1610",
    "crates_day": 418,
    "transport": {
@@ -9506,6 +9904,7 @@
      "cycleMin": 6.64,
      "cratesDay": 868,
      "inUse": true,
+     "disabled": false,
      "node": "1623",
      "connPath": [],
      "nodeCp": 0
@@ -9523,6 +9922,24 @@
      "cycleMin": 6.56,
      "cratesDay": 879,
      "inUse": true,
+     "disabled": false,
+     "node": "1623",
+     "connPath": [],
+     "nodeCp": 0
+    },
+    {
+     "house": "3511",
+     "name": "Grána 10",
+     "namePt": "Graná N° 10",
+     "cp": 2,
+     "packs": [
+      "Cogumelo"
+     ],
+     "walkMin": 1.17,
+     "cycleMin": 6.17,
+     "cratesDay": 934,
+     "inUse": false,
+     "disabled": true,
      "node": "1623",
      "connPath": [],
      "nodeCp": 0
@@ -9539,12 +9956,14 @@
      "cycleMin": 6.32,
      "cratesDay": 911,
      "inUse": true,
+     "disabled": false,
      "node": "1623",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 3,
+   "n_disabled_ws": 1,
    "n_colheita": 2,
    "n_cogumelo": 1,
    "lodging": {
@@ -9570,6 +9989,8 @@
    "cp_total": 6,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "1623",
    "crates_day": 2658,
    "transport": {
@@ -10083,6 +10504,7 @@
      "cycleMin": 22.09,
      "cratesDay": 261,
      "inUse": true,
+     "disabled": false,
      "node": "1666",
      "connPath": [
       {
@@ -10113,6 +10535,7 @@
      "cycleMin": 24.49,
      "cratesDay": 235,
      "inUse": true,
+     "disabled": false,
      "node": "1665",
      "connPath": [
       {
@@ -10136,6 +10559,7 @@
     }
    ],
    "n_workshops": 2,
+   "n_disabled_ws": 0,
    "n_colheita": 2,
    "n_cogumelo": 0,
    "lodging": {
@@ -10168,6 +10592,45 @@
     "1666",
     "1668"
    ],
+   "conn_detail": [
+    {
+     "id": "1656",
+     "name": "Garmoth's Nest",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "1659",
+     "name": "Night Crow Post",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "1664",
+     "name": "Gervish Mountains",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1665",
+     "name": "Dormann Lumber Camp",
+     "cp": 1,
+     "connected": false
+    },
+    {
+     "id": "1666",
+     "name": "Khimut Lumber Camp",
+     "cp": 2,
+     "connected": false
+    },
+    {
+     "id": "1668",
+     "name": "Tshira Ruins",
+     "cp": 2,
+     "connected": false
+    }
+   ],
+   "conn_connected": 0,
    "base_node": "1649",
    "crates_day": 496,
    "transport": {
@@ -10680,12 +11143,14 @@
      "cycleMin": 5.81,
      "cratesDay": 992,
      "inUse": true,
+     "disabled": false,
      "node": "1750",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 1,
+   "n_disabled_ws": 0,
    "n_colheita": 0,
    "n_cogumelo": 1,
    "lodging": {
@@ -10703,6 +11168,8 @@
    "cp_total": 3,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "1750",
    "crates_day": 992,
    "transport": {
@@ -11216,12 +11683,14 @@
      "cycleMin": 5.47,
      "cratesDay": 1054,
      "inUse": true,
+     "disabled": false,
      "node": "1781",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 1,
+   "n_disabled_ws": 0,
    "n_colheita": 1,
    "n_cogumelo": 0,
    "lodging": {
@@ -11239,6 +11708,8 @@
    "cp_total": 1,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "1781",
    "crates_day": 1054,
    "transport": {
@@ -11752,6 +12223,7 @@
      "cycleMin": 6.27,
      "cratesDay": 919,
      "inUse": true,
+     "disabled": false,
      "node": "1785",
      "connPath": [],
      "nodeCp": 0
@@ -11768,12 +12240,14 @@
      "cycleMin": 5.95,
      "cratesDay": 969,
      "inUse": true,
+     "disabled": false,
      "node": "1785",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 2,
+   "n_disabled_ws": 0,
    "n_colheita": 1,
    "n_cogumelo": 1,
    "lodging": {
@@ -11799,6 +12273,8 @@
    "cp_total": 3,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "1785",
    "crates_day": 1888,
    "transport": {
@@ -12311,6 +12787,7 @@
      "cycleMin": 5.75,
      "cratesDay": 1002,
      "inUse": true,
+     "disabled": false,
      "node": "1795",
      "connPath": [],
      "nodeCp": 0
@@ -12328,12 +12805,14 @@
      "cycleMin": 5.17,
      "cratesDay": 1114,
      "inUse": true,
+     "disabled": false,
      "node": "1795",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 2,
+   "n_disabled_ws": 0,
    "n_colheita": 1,
    "n_cogumelo": 1,
    "lodging": {
@@ -12359,6 +12838,8 @@
    "cp_total": 3,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "1795",
    "crates_day": 2117,
    "transport": {
@@ -12871,12 +13352,14 @@
      "cycleMin": 5.39,
      "cratesDay": 1068,
      "inUse": true,
+     "disabled": false,
      "node": "1853",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 1,
+   "n_disabled_ws": 0,
    "n_colheita": 0,
    "n_cogumelo": 1,
    "lodging": {
@@ -12894,6 +13377,8 @@
    "cp_total": 1,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "1853",
    "crates_day": 1068,
    "transport": {
@@ -13407,6 +13892,7 @@
      "cycleMin": 5.34,
      "cratesDay": 1078,
      "inUse": false,
+     "disabled": false,
      "node": "1857",
      "connPath": [],
      "nodeCp": 0
@@ -13424,6 +13910,7 @@
      "cycleMin": 5.63,
      "cratesDay": 1023,
      "inUse": true,
+     "disabled": false,
      "node": "1857",
      "connPath": [],
      "nodeCp": 0
@@ -13441,12 +13928,14 @@
      "cycleMin": 5.38,
      "cratesDay": 1070,
      "inUse": true,
+     "disabled": false,
      "node": "1857",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 3,
+   "n_disabled_ws": 0,
    "n_colheita": 2,
    "n_cogumelo": 0,
    "lodging": {
@@ -13472,6 +13961,8 @@
    "cp_total": 4,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "1857",
    "crates_day": 2093,
    "transport": {
@@ -13984,12 +14475,14 @@
      "cycleMin": 5.48,
      "cratesDay": 1050,
      "inUse": true,
+     "disabled": false,
      "node": "1858",
      "connPath": [],
      "nodeCp": 0
     }
    ],
    "n_workshops": 1,
+   "n_disabled_ws": 0,
    "n_colheita": 0,
    "n_cogumelo": 1,
    "lodging": {
@@ -14007,6 +14500,8 @@
    "cp_total": 1,
    "conn_cp": 0,
    "conn_nodes": [],
+   "conn_detail": [],
+   "conn_connected": 0,
    "base_node": "1858",
    "crates_day": 1050,
    "transport": {

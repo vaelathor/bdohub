@@ -270,8 +270,11 @@ class NodeGraph:
             cur = prev[cur]
         return path[::-1]
 
-    def connect_cost(self, base, targets):
-        """Custo de conectar a UNIÃO dos caminhos até `targets` (nodes compartilhados pagam 1x)."""
+    def connect_cost(self, base, targets, connected=frozenset()):
+        """Custo de conectar a UNIÃO dos caminhos até `targets` (nodes compartilhados pagam 1x).
+
+        `connected`: nodes que o jogador JÁ conectou no jogo — não pagam de novo.
+        """
         if not targets:
             return 0, []
         dist, prev = self._dijkstra(base)
@@ -285,16 +288,20 @@ class NodeGraph:
                 taken.append(cur)
                 taken_set.add(cur)
                 cur = prev[cur]
-        cost = sum(self.N[x].get('need_exploration_point', 0) for x in taken)
+        cost = sum(self.N[x].get('need_exploration_point', 0)
+                   for x in taken if x not in connected)
         return cost, sorted(taken, key=int)
 
 
-def compute_town(aff_tk, disabled_workshops=frozenset(), pt_names=None):
+def compute_town(aff_tk, disabled_workshops=frozenset(), pt_names=None,
+                 connected_nodes=frozenset()):
     """Calcula uma cidade (mesma estrutura do towns.json) com oficinas desligadas.
 
     `disabled_workshops`: set de house keys desligadas pelo usuário.
     `pt_names`: dict house -> namePt (tradução já aplicada), para preservar
     os nomes PT nas oficinas/alojamentos durante o recálculo dinâmico.
+    `connected_nodes`: set de node keys que o jogador JÁ conectou no jogo
+    (o CP de conexão deles não é contado).
     """
     houseinfo, craft_info, receipt, lodging, distances, loc, cities, traders, nodes = load()
     craft_pack = build_craft_pack(craft_info)
@@ -312,6 +319,7 @@ def compute_town(aff_tk, disabled_workshops=frozenset(), pt_names=None):
             slots[str(h.get('key'))] = h.get('lodgingSpaces', 0)
 
     house_names = loc['en']['char']
+    node_names = loc['en'].get('node', {})
     houses = {hk: h for hk, h in houseinfo.items() if h.get('affTown') == aff_tk}
     pt_names = pt_names or {}
 
@@ -439,7 +447,25 @@ def compute_town(aff_tk, disabled_workshops=frozenset(), pt_names=None):
 
     # conexão considera só as oficinas realmente em uso (staffed) e não desligadas
     targets = {w['node'] for w in per_workshop if w['inUse'] and not w['disabled'] and w.get('node')}
-    conn_cp, conn_nodes = graph.connect_cost(base_node, targets) if base_node else (0, [])
+    conn_cp, conn_nodes = graph.connect_cost(base_node, targets, connected_nodes) if base_node else (0, [])
+    # detalhe por node (nome + cp + se já conectado) para exibição no card
+    conn_detail = []
+    seen = set()
+    for w in per_workshop:
+        if not (w['inUse'] and not w['disabled']):
+            continue
+        for step in w.get('connPath', []):
+            nid = step['id']
+            if nid in seen:
+                continue
+            seen.add(nid)
+            conn_detail.append({
+                'id': nid,
+                'name': node_names.get(nid, 'Node ' + nid),
+                'cp': step['cp'],
+                'connected': nid in connected_nodes,
+            })
+    conn_detail.sort(key=lambda d: int(d['id']))
 
     # compatibilidade com o formato antigo (Valencia/Yukjo) p/ fallback
     transport = {}
@@ -483,6 +509,8 @@ def compute_town(aff_tk, disabled_workshops=frozenset(), pt_names=None):
         'cp_total': sum(houses[w].get('CP', 0) for w in workshops_use) + opt['cp'],
         'conn_cp': conn_cp,
         'conn_nodes': conn_nodes,
+        'conn_detail': conn_detail,
+        'conn_connected': sum(1 for d in conn_detail if d['connected']),
         'base_node': base_node,
         'crates_day': round(total_day),
         'transport': transport,

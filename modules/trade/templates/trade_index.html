@@ -478,6 +478,43 @@
         .lod-row.off { opacity: 0.45; }
         .lod-row.off .lod-slots small { color: var(--muted); }
         .t-node { background: rgba(45, 212, 191, 0.12); color: #5eead4; }
+        .t-conn { background: rgba(74, 222, 128, 0.12); color: #86efac; }
+
+        .node-row {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.8rem;
+        }
+        .node-row .node-name { color: var(--text-main); min-width: 0; }
+        .node-row .node-cp { color: var(--muted); font-weight: 600; white-space: nowrap; margin-left: auto; }
+        .node-row .node-cp small { color: #86efac; font-weight: 400; }
+        .node-row.connected .node-name { color: var(--muted); text-decoration: line-through; }
+        .node-row.connected .node-cp { color: transparent; }
+        .node-row.connected .node-cp small { color: #86efac; }
+
+        .node-eye {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+            border: 1px solid var(--glass-border);
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            flex-shrink: 0;
+            padding: 0;
+            transition: background 0.15s, color 0.15s, border-color 0.15s;
+        }
+        .node-eye:hover { color: var(--text-main); border-color: rgba(74, 222, 128, 0.5); }
+        .node-eye svg { width: 12px; height: 12px; }
+        .node-eye.on {
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border-color: rgba(74, 222, 128, 0.35);
+        }
 
         .mini-badge {
             font-size: 0.68rem;
@@ -979,6 +1016,16 @@
                 destBlock = `<span class="ship"><i data-lucide="truck"></i>sem destinos</span>`;
             }
 
+            // Nodes de conexão: mostra cada node do caminho com botão de já-conectado
+            const connRows = (t.conn_detail || []).map(d => `
+                <div class="node-row ${d.connected ? 'connected' : ''}">
+                    <button type="button" class="node-eye ${d.connected ? 'on' : ''}" data-node="${d.id}" title="${d.connected ? 'Desmarcar como conectado' : 'Marcar como já conectado no jogo'}">
+                        <i data-lucide="${d.connected ? 'check-circle-2' : 'circle'}"></i>
+                    </button>
+                    <span class="node-name">${d.name}</span>
+                    <span class="node-cp">${d.connected ? '<small>conectado</small>' : d.cp + ' CP'}</span>
+                </div>`).join('');
+
             const warn = lod.insufficient ? ' warn' : '';
             const offCls = t.disabled ? ' off' : '';
             return `
@@ -1001,6 +1048,7 @@
                         <span class="t-tag t-workers"><i data-lucide="users"></i>${t.workers} operários</span>
                         <span class="t-tag t-cp"><i data-lucide="layers"></i>${t.cp_total + (t.conn_cp || 0)} CP</span>
                         ${(t.conn_cp || 0) > 0 ? `<span class="t-tag t-node"><i data-lucide="git-branch"></i>${t.conn_cp} nodes</span>` : ''}
+                        ${(t.conn_connected || 0) > 0 ? `<span class="t-tag t-conn"><i data-lucide="check-circle-2"></i>${t.conn_connected} conectados</span>` : ''}
                     </div>
                     <div class="town-section">
                         <div class="town-section-title"><i data-lucide="factory"></i>Oficinas (${t.n_staffed} em uso de ${t.workshops.length})</div>
@@ -1010,6 +1058,11 @@
                         <div class="town-section-title"><i data-lucide="bed-double"></i>Alojamento</div>
                         ${lodBlock}
                     </div>
+                    ${connRows ? `
+                    <div class="town-section">
+                        <div class="town-section-title"><i data-lucide="git-branch"></i>Nodes a conectar</div>
+                        ${connRows}
+                    </div>` : ''}
                     <div class="town-foot">
                         ${destBlock}
                         <div class="foot-meta">
@@ -1077,6 +1130,7 @@
         let townsData = [];
         let townState = {};
         let wsBusy = new Set();
+        let nodeBusy = new Set();
 
         async function toggleWorkshop(btn) {
             const card = btn.closest('.town-card');
@@ -1116,12 +1170,51 @@
             }
         }
 
+        async function toggleNode(btn) {
+            const card = btn.closest('.town-card');
+            const node = btn.dataset.node;
+            const willConnect = !btn.classList.contains('on');
+            if (nodeBusy.has(node)) return;
+            nodeBusy.add(node);
+            // feedback imediato
+            btn.classList.toggle('on', willConnect);
+            btn.title = willConnect ? 'Desmarcar como conectado' : 'Marcar como já conectado no jogo';
+            btn.innerHTML = `<i data-lucide="${willConnect ? 'check-circle-2' : 'circle'}"></i>`;
+            try {
+                const resp = await fetch('api/towns/toggle_node', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ node, connected: willConnect })
+                });
+                const data = await resp.json();
+                if (data.error) throw new Error(data.error);
+                // o backend recalcula todas as cidades afetadas
+                townsData = (data.towns || []).slice()
+                    .map(t => { townState[t.name] = !!t.disabled; return t; })
+                    .sort((a, b) => (a.disabled - b.disabled) || (b.crates_day - a.crates_day));
+                townGrid.innerHTML = townsData.map(renderTown).join('');
+                attachTownListeners();
+                fillTownStats(townsData);
+                lucide.createIcons();
+            } catch (e) {
+                // rollback
+                btn.classList.toggle('on', !willConnect);
+                btn.innerHTML = `<i data-lucide="${willConnect ? 'circle' : 'check-circle-2'}"></i>`;
+                lucide.createIcons();
+            } finally {
+                nodeBusy.delete(node);
+            }
+        }
+
         function attachTownListeners() {
             townGrid.querySelectorAll('.town-eye').forEach(btn => {
                 btn.addEventListener('click', () => toggleTown(btn));
             });
             townGrid.querySelectorAll('.ws-eye').forEach(btn => {
                 btn.addEventListener('click', () => toggleWorkshop(btn));
+            });
+            townGrid.querySelectorAll('.node-eye').forEach(btn => {
+                btn.addEventListener('click', () => toggleNode(btn));
             });
             townGrid.querySelectorAll('.dest-pick').forEach(pick => {
                 const dd = pick.querySelector('.dest-dd');

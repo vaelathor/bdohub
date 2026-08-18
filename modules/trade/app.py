@@ -10,6 +10,7 @@ CITIES_PATH = os.path.join(_MOD_DIR, 'data', 'cities.json')
 TOWNS_PATH = os.path.join(_MOD_DIR, 'data', 'towns.json')
 DISABLED_PATH = os.path.join(_MOD_DIR, 'disabled_towns.json')
 DISABLED_WS_PATH = os.path.join(_MOD_DIR, 'disabled_workshops.json')
+CONNECTED_NODES_PATH = os.path.join(_MOD_DIR, 'connected_nodes.json')
 
 try:
     from .towncalc import compute_town  # quando importado como modules.trade.app
@@ -68,6 +69,21 @@ def save_disabled_workshops(data):
         json.dump(data, f, ensure_ascii=False, indent=1)
 
 
+def load_connected_nodes():
+    """Nodes que o jogador JÁ conectou no jogo (não pagam CP de novo)."""
+    try:
+        with open(CONNECTED_NODES_PATH, encoding='utf-8') as f:
+            return set(json.load(f).get('nodes', []))
+    except (OSError, ValueError):
+        return set()
+
+
+def save_connected_nodes(nodes):
+    """Persiste a lista de nodes conectados."""
+    with open(CONNECTED_NODES_PATH, 'w', encoding='utf-8') as f:
+        json.dump({'nodes': sorted(nodes)}, f, ensure_ascii=False, indent=1)
+
+
 _pt_cache = None
 
 
@@ -95,14 +111,16 @@ def _pt_names():
 
 
 def _recalc_town(town, disabled_ws):
-    """Recalcula uma cidade com as oficinas desligadas, preservando os campos
-    dinâmicos (disabled) que o frontend injeta e marcando os alojamentos que
-    deixaram de ser necessários (o mais custoso sai primeiro)."""
+    """Recalcula uma cidade com as oficinas desligadas e nodes já conectados,
+    preservando os campos dinâmicos (disabled) que o frontend injeta e
+    marcando os alojamentos que deixaram de ser necessários (o mais custoso
+    sai primeiro)."""
     aff = town.get('affTown')
     if aff is None:
         return town
     try:
-        rec = compute_town(aff, frozenset(disabled_ws), pt_names=_pt_names())
+        rec = compute_town(aff, frozenset(disabled_ws), pt_names=_pt_names(),
+                           connected_nodes=load_connected_nodes())
     except Exception:
         return town
     if rec is None:
@@ -142,11 +160,13 @@ def towns():
     data = load_towns()
     disabled = load_disabled_towns()
     ws_map = load_disabled_workshops()
+    connected = load_connected_nodes()
     out = []
     for t in data.get('towns', []):
         t['disabled'] = t.get('name') in disabled
         t['disabledWs'] = sorted(ws_map.get(t['name'], []))
-        if t['disabledWs']:
+        # recálculo quando há oficinas desligadas OU nodes já conectados
+        if t['disabledWs'] or (connected and t.get('conn_detail')):
             t = _recalc_town(t, t['disabledWs'])
         out.append(t)
     return jsonify({'params': data.get('params', {}), 'towns': out, 'error': None})
@@ -198,3 +218,34 @@ def towns_toggle_ws():
 
     rec = _recalc_town(town, ws_map.get(name, []))
     return jsonify({'ok': True, 'town': rec, 'error': None})
+
+
+@trade_bp.route('/api/towns/toggle_node', methods=['POST'])
+def towns_toggle_node():
+    """Marca/desmarca um node como já conectado no jogo; o CP dele deixa de
+    ser contado na conexão da cidade."""
+    req = request.get_json(silent=True) or {}
+    node = str(req.get('node'))
+    connected = req.get('connected')
+    if not node:
+        return jsonify({'error': 'node ausente'}), 400
+    current = load_connected_nodes()
+    if connected:
+        current.add(node)
+    else:
+        current.discard(node)
+    save_connected_nodes(current)
+
+    # recalcula TODAS as cidades afetadas (um node pode aparecer em várias)
+    data = load_towns()
+    ws_map = load_disabled_workshops()
+    disabled = load_disabled_towns()
+    out = []
+    for t in data.get('towns', []):
+        t['disabled'] = t.get('name') in disabled
+        t['disabledWs'] = sorted(ws_map.get(t['name'], []))
+        if t.get('conn_detail'):
+            t = _recalc_town(t, t['disabledWs'])
+        out.append(t)
+    return jsonify({'ok': True, 'node': node, 'connected': connected,
+                    'towns': out, 'error': None})
