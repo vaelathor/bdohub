@@ -202,11 +202,16 @@
             .prof-advance { font-size: 1.1rem !important; }
             .professions-container { gap: 0.6rem !important; }
             
+            /* Spacer para bottom nav */
+            .mobile-bottom-spacer { display: block !important; height: 80px !important; }
+            
             /* Modais */
             .modal-content { padding: 1.2rem !important; max-width: 95vw !important; }
             .modal input { font-size: 1.4rem !important; }
             .paste-zone { padding: 1rem !important; }
         }
+
+        .mobile-bottom-spacer { display: none; }
 
     </style>
 </head>
@@ -353,6 +358,9 @@
             </div>
         </main>
     </div>
+
+    <!-- Spacer para bottom nav no mobile -->
+    <div class="mobile-bottom-spacer"></div>
 
     <!-- Modais para editar nível de profissão -->
     <div id="prof-modal" class="modal">
