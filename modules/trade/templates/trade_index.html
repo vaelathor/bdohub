@@ -688,6 +688,28 @@
             .node-row { font-size: 0.75rem; }
             .town-foot { font-size: 0.72rem; }
             .dest-dd-trigger { font-size: 0.72rem; padding: 3px 6px; }
+
+            /* Accordion: compact card on mobile */
+            .town-card { cursor: pointer; }
+            .town-head { pointer-events: none; }
+            .town-head .town-eye, .town-head .town-prod { pointer-events: auto; }
+            .town-tags, .town-section, .town-foot {
+                max-height: 0; overflow: hidden; opacity: 0;
+                transition: max-height 0.3s ease, opacity 0.2s ease;
+                padding-top: 0 !important; padding-bottom: 0;
+            }
+            .town-card.expanded .town-tags,
+            .town-card.expanded .town-section,
+            .town-card.expanded .town-foot {
+                max-height: 2000px; opacity: 1; padding-top: 0.5rem !important;
+            }
+            .town-card.expanded .town-foot { padding-top: 0.4rem !important; }
+            .expand-hint {
+                display: flex; align-items: center; justify-content: center;
+                color: var(--muted); font-size: 0.65rem; gap: 0.3rem; padding: 0.15rem 0 0; opacity: 0.6;
+            }
+            .expand-hint svg { width: 10px; height: 10px; transition: transform 0.2s; }
+            .town-card.expanded .expand-hint svg { transform: rotate(180deg); }
             .toolbar { flex-wrap: wrap; }
             .search-box { max-width: 100% !important; }
             .chips { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
@@ -1074,6 +1096,7 @@
                             <span class="town-prod"><i data-lucide="box"></i>${fmt(t.crates_day)}<small>/dia</small></span>
                         </div>
                     </div>
+                    <div class="expand-hint"><i data-lucide="chevron-down"></i></div>
                     <div class="town-tags">
                         <span class="t-tag t-harvest"><i data-lucide="wheat"></i>${t.n_colheita} colheita/erva</span>
                         <span class="t-tag t-mushroom"><i data-lucide="mushroom"></i>${t.n_cogumelo} cogumelo</span>
@@ -1240,8 +1263,16 @@
 
         function attachTownListeners() {
             townGrid.querySelectorAll('.town-eye').forEach(btn => {
-                btn.addEventListener('click', () => toggleTown(btn));
+                btn.addEventListener('click', (e) => { e.stopPropagation(); toggleTown(btn); });
             });
+            if (window.innerWidth <= 768) {
+                townGrid.querySelectorAll('.town-card').forEach(card => {
+                    card.addEventListener('click', (e) => {
+                        if (e.target.closest('.town-eye') || e.target.closest('.ws-eye') || e.target.closest('.node-eye') || e.target.closest('.dest-dd')) return;
+                        card.classList.toggle('expanded');
+                    });
+                });
+            }
             townGrid.querySelectorAll('.ws-eye').forEach(btn => {
                 btn.addEventListener('click', () => toggleWorkshop(btn));
             });
