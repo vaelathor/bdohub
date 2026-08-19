@@ -675,7 +675,7 @@
 
         /* ===== MOBILE ===== */
         @media (max-width: 768px) {
-            body { overflow-y: auto !important; padding: 1rem !important; height: auto !important; }
+            body { overflow-y: auto !important; overflow-x: hidden !important; padding: 1rem !important; height: auto !important; }
             .stat-bar { flex-wrap: wrap; padding: 0.5rem 0.4rem; }
             .stat-item { min-width: calc(33% - 0.5rem); padding: 0.3rem 0; }
             .stat-item:nth-child(n+4) { border-top: 1px solid var(--glass-border); padding-top: 0.4rem; }
@@ -698,6 +698,10 @@
             table { font-size: 0.8rem; }
             thead th, tbody td { padding: 0.4rem 0.6rem; 
             /* === Accordion === */
+            body, .towns-scroll, .town-grid, .town-card { overflow-x: hidden !important; }
+            .town-head { overflow: hidden !important; min-width: 0 !important; }
+            .town-title { min-width: 0 !important; flex: 1 !important; min-width: 0 !important; }
+            .town-title .name { min-width: 0 !important; flex: 1 !important; }
             .town-card { cursor: pointer; padding: 0.5rem 0.7rem !important; }
             .town-head { min-height: 0; padding: 0; margin: 0; pointer-events: none; }
             .town-head .town-eye, .town-head .town-prod { pointer-events: auto; }
