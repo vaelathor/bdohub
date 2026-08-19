@@ -672,6 +672,23 @@
         .dest-dd-option.active .o-time { color: var(--accent-primary); }
         .dest-dd-menu::-webkit-scrollbar { width: 8px; }
         .dest-dd-menu::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 4px; }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            body { overflow-y: auto !important; padding: 1rem !important; height: auto !important; }
+            .stat-bar { flex-wrap: wrap; padding: 0.5rem 0.4rem; }
+            .stat-item { min-width: calc(33% - 0.5rem); padding: 0.3rem 0; }
+            .stat-item:nth-child(n+4) { border-top: 1px solid var(--glass-border); padding-top: 0.4rem; }
+            .town-grid { grid-template-columns: 1fr !important; }
+            .toolbar { flex-wrap: wrap; }
+            .search-box { max-width: 100% !important; }
+            .chips { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+            .top-nav { flex-wrap: wrap; gap: 0.5rem; }
+            .view-toggle { width: 100%; justify-content: center; }
+            table { font-size: 0.8rem; }
+            thead th, tbody td { padding: 0.4rem 0.6rem; }
+        }
+
     </style>
 </head>
 <body>

@@ -149,6 +149,15 @@
             height: 15px;
         }
 
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            body { overflow-y: auto !important; padding: 1rem !important; height: auto !important; }
+            .card-grid { grid-template-columns: 1fr !important; }
+            .item-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .result-card { padding: 0.8rem !important; }
+        }
+
     </style>
 </head>
 <body class="dark-theme">
