@@ -8,7 +8,7 @@
         "Suspiro de Fada": 122300
     },
     "user_cp": 509,
-    "user_cp_pct": 57.86,
+    "user_cp_pct": 79.99,
     "goal_cp": 600,
     "professions": {
         "Alquimia": {
@@ -37,11 +37,11 @@
         }
     },
     "ignored_items": [
-        "Folha Rosa",
         "Catalisador Desconhecido",
         "Iguarias de Bruxa",
         "Estrela Silvestre",
         "Garrafa de Vidro Descartada",
-        "Suspiro de Fada"
+        "Suspiro de Fada",
+        "Folha Rosa"
     ]
 }
