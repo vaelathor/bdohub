@@ -689,40 +689,29 @@
             .town-foot { font-size: 0.72rem; }
             .dest-dd-trigger { font-size: 0.72rem; padding: 3px 6px; }
 
-            /* Accordion: compact card on mobile */
-            .town-card { cursor: pointer; }
-            .town-head { pointer-events: none; }
-            .town-head .town-eye, .town-head .town-prod { pointer-events: auto; }
-            .town-card > .town-tags,
-            .town-card > .town-section,
-            .town-card > .town-foot {
-                max-height: 0 !important; overflow: hidden !important; opacity: 0 !important;
-                transition: max-height 0.3s ease, opacity 0.2s ease;
-                padding-top: 0 !important; padding-bottom: 0 !important;
-                margin: 0 !important; border: none !important;
-            }
-            .town-card.expanded > .town-tags,
-            .town-card.expanded > .town-section,
-            .town-card.expanded > .town-foot {
-                max-height: 2000px !important; opacity: 1 !important;
-                padding-top: 0.5rem !important; padding-bottom: 0.3rem !important;
-            }
-            .town-card.expanded .town-foot { padding-top: 0.4rem !important; }
-            .expand-hint {
-                display: inline-flex; align-items: center; color: var(--muted); opacity: 0.6;
-                flex-shrink: 0;
-            }
-            .expand-hint svg { width: 12px; height: 12px; transition: transform 0.2s; }
-            .town-card.expanded .expand-hint svg { transform: rotate(180deg); }
-            .town-head { min-height: 0; padding: 0; margin: 0; }
-            .town-card { padding: 0.5rem 0.7rem !important; }
+
             .toolbar { flex-wrap: wrap; }
             .search-box { max-width: 100% !important; }
             .chips { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
             .top-nav { flex-wrap: wrap; gap: 0.5rem; }
             .view-toggle { width: 100%; justify-content: center; }
             table { font-size: 0.8rem; }
-            thead th, tbody td { padding: 0.4rem 0.6rem; }
+            thead th, tbody td { padding: 0.4rem 0.6rem; 
+            /* === Accordion === */
+            .town-card { cursor: pointer; padding: 0.5rem 0.7rem !important; }
+            .town-head { min-height: 0; padding: 0; margin: 0; pointer-events: none; }
+            .town-head .town-eye, .town-head .town-prod { pointer-events: auto; }
+            .expand-hint { display: inline-flex; align-items: center; color: var(--muted); opacity: 0.6; flex-shrink: 0; }
+            .expand-hint svg { width: 12px; height: 12px; transition: transform 0.2s; }
+            .town-card.expanded .expand-hint svg { transform: rotate(180deg); }
+            /* Collapsed by default: hide everything except head */
+            .town-card:not(.expanded) > .town-tags,
+            .town-card:not(.expanded) > .town-section,
+            .town-card:not(.expanded) > .town-foot { display: none !important; }
+            /* Expanded: show all */
+            .town-card.expanded > .town-tags { display: flex !important; flex-wrap: wrap; gap: 0.4rem; padding: 0.5rem 0 0 !important; }
+            .town-card.expanded > .town-section { display: block !important; padding: 0.5rem 0 0 !important; }
+            .town-card.expanded > .town-foot { display: block !important; padding: 0.4rem 0 0 !important; }
         }
 
     </style>
@@ -1271,14 +1260,12 @@
             townGrid.querySelectorAll('.town-eye').forEach(btn => {
                 btn.addEventListener('click', (e) => { e.stopPropagation(); toggleTown(btn); });
             });
-            if (window.innerWidth <= 768) {
-                townGrid.querySelectorAll('.town-card').forEach(card => {
-                    card.addEventListener('click', (e) => {
-                        if (e.target.closest('.town-eye') || e.target.closest('.ws-eye') || e.target.closest('.node-eye') || e.target.closest('.dest-dd')) return;
-                        card.classList.toggle('expanded');
-                    });
+            townGrid.querySelectorAll('.town-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('.town-eye') || e.target.closest('.ws-eye') || e.target.closest('.node-eye') || e.target.closest('.dest-dd')) return;
+                    card.classList.toggle('expanded');
                 });
-            }
+            });
             townGrid.querySelectorAll('.ws-eye').forEach(btn => {
                 btn.addEventListener('click', () => toggleWorkshop(btn));
             });
