@@ -705,11 +705,13 @@
             }
             .town-card.expanded .town-foot { padding-top: 0.4rem !important; }
             .expand-hint {
-                display: flex; align-items: center; justify-content: center;
-                color: var(--muted); font-size: 0.65rem; gap: 0.3rem; padding: 0.15rem 0 0; opacity: 0.6;
+                display: inline-flex; align-items: center; color: var(--muted); opacity: 0.6;
+                flex-shrink: 0;
             }
-            .expand-hint svg { width: 10px; height: 10px; transition: transform 0.2s; }
+            .expand-hint svg { width: 12px; height: 12px; transition: transform 0.2s; }
             .town-card.expanded .expand-hint svg { transform: rotate(180deg); }
+            .town-head { min-height: 0; padding: 0; margin: 0; }
+            .town-card { padding: 0.5rem 0.7rem !important; }
             .toolbar { flex-wrap: wrap; }
             .search-box { max-width: 100% !important; }
             .chips { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
@@ -1088,6 +1090,7 @@
                         <div class="town-title">
                             <i data-lucide="map-pin"></i>
                             <span class="name">${t.namePt || t.name}</span>
+                            <span class="expand-hint"><i data-lucide="chevron-down"></i></span>
                         </div>
                         <div style="display:flex; align-items:center; gap:0.5rem;">
                             <button type="button" class="town-eye ${t.disabled ? 'off' : 'on'}" data-town="${t.name}" title="${t.disabled ? 'Reativar na contagem' : 'Desligar da contagem'}">
@@ -1096,7 +1099,6 @@
                             <span class="town-prod"><i data-lucide="box"></i>${fmt(t.crates_day)}<small>/dia</small></span>
                         </div>
                     </div>
-                    <div class="expand-hint"><i data-lucide="chevron-down"></i></div>
                     <div class="town-tags">
                         <span class="t-tag t-harvest"><i data-lucide="wheat"></i>${t.n_colheita} colheita/erva</span>
                         <span class="t-tag t-mushroom"><i data-lucide="mushroom"></i>${t.n_cogumelo} cogumelo</span>
