@@ -1,6 +1,6 @@
 # BDOHub Design System — Guia Definitivo
 
-> **Versão:** 2.1  
+> **Versão:** 2.1.1  
 > **Autor:** Buffy (Codebuff)  
 > **Data:** Ago 2026  
 > **Referências:** Binance, Coinbase, Cal.com, Airtable, ClickHouse  
@@ -139,6 +139,7 @@ Primitive Tokens (valores brutos)
 | `--accent-primary-muted` | `rgba(56,189,248,0.15)` | Fundo sutil de acento |
 | `--accent-primary-soft` | `rgba(56,189,248,0.08)` | Fundo very subtle de acento |
 | `--accent-gold` | `#e0b457` | Ouro, premiums, moedas (Market/Trade) |
+| `--accent-glow` | `rgba(56,189,248,0.5)` | Glow de acento em botães e sombras |
 
 #### Status
 | Token | Hex | Uso |
@@ -149,6 +150,10 @@ Primitive Tokens (valores brutos)
 | `--info` | `#3b82f6` | Informação, focus ring |
 | `--ok` | `#22c55e` | Status positivo suave (quantidade disponível, estoque ok) |
 | `--bad` | `#f87171` | Status negativo suave (estoque baixo, atenção menor que danger) |
+| `--danger-soft` | `rgba(239,68,68,0.15)` | Fundo sutil de erro (borders, badges) |
+| `--danger-soft-focus` | `rgba(239,68,68,0.25)` | Focus ring de erro |
+| `--success-soft` | `rgba(16,185,129,0.15)` | Fundo sutil de sucesso (borders, badges) |
+| `--success-soft-focus` | `rgba(16,185,129,0.25)` | Focus ring de sucesso |
 
 > **Nota sobre `--ok` e `--bad`**: Estes tokens são intencionalmente mais suaves que `--success` e `--danger`. `--ok` (#22c55e) é ligeiramente mais brilhante que `--success` (#10b981), indicando um estado positivo "de rotina" (estoque suficiente, item disponível). `--bad` (#f87171) é mais claro que `--danger` (#ef4444), indicando atenção moderada (estoque baixo, preço acima do mercado) sem o peso visual de uma falha crítica. Usados no módulo Market e Trade para diferenciação sutil entre severidades.
 
@@ -631,12 +636,12 @@ input.input-error,
 input[type="number"].input-error,
 input[type="text"].input-error {
     border-color: var(--danger);
-    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15);
+    box-shadow: 0 0 0 2px var(--danger-soft);
 }
 
 input.input-error:focus {
     border-color: var(--danger);
-    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+    box-shadow: 0 0 0 2px var(--danger-soft-focus);
 }
 
 /* --- Estado de sucesso --- */
@@ -644,12 +649,12 @@ input.input-success,
 input[type="number"].input-success,
 input[type="text"].input-success {
     border-color: var(--success);
-    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+    box-shadow: 0 0 0 2px var(--success-soft);
 }
 
 input.input-success:focus {
     border-color: var(--success);
-    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+    box-shadow: 0 0 0 2px var(--success-soft-focus);
 }
 
 /* --- Estado desabilitado --- */
@@ -1104,7 +1109,7 @@ input.input-display { font-size: var(--fs-display) !important; }
     background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(255, 255, 255, 0.04) 50%,
+        var(--skeleton-shimmer) 50%,
         transparent 100%
     );
     animation: skeletonShimmer 1.5s infinite;
@@ -1828,6 +1833,7 @@ Media query:            @media (...)       (não afeta especificidade)
             --accent-primary-muted: rgba(56,189,248,0.15);
             --accent-primary-soft: rgba(56,189,248,0.08);
             --accent-gold: #e0b457;
+            --accent-glow: rgba(56,189,248,0.5);
 
             /* === Status === */
             --success: #10b981;
@@ -1836,6 +1842,10 @@ Media query:            @media (...)       (não afeta especificidade)
             --info: #3b82f6;
             --ok: #22c55e;
             --bad: #f87171;
+            --danger-soft: rgba(239,68,68,0.15);
+            --danger-soft-focus: rgba(239,68,68,0.25);
+            --success-soft: rgba(16,185,129,0.15);
+            --success-soft-focus: rgba(16,185,129,0.25);
 
             /* === Tipografia === */
             --fs-display: 2.5rem;
@@ -1873,6 +1883,7 @@ Media query:            @media (...)       (não afeta especificidade)
 
             /* === Componentes === */
             --comp-btn-height: 44px;
+            --skeleton-shimmer: rgba(255,255,255,0.04);
 
             /* === Ícones === */
             --icon-sm: 16px;
