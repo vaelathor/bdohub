@@ -1,6 +1,6 @@
 # BDOHub Design System — Guia Definitivo
 
-> **Versão:** 2.1.1  
+> **Versão:** 2.1.2  
 > **Autor:** Buffy (Codebuff)  
 > **Data:** Ago 2026  
 > **Referências:** Binance, Coinbase, Cal.com, Airtable, ClickHouse  
@@ -1879,7 +1879,7 @@ Media query:            @media (...)       (não afeta especificidade)
             /* === Sombras === */
             --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
             --shadow-elevated: 0 10px 15px -3px rgba(0,0,0,0.2), 0 4px 6px -2px rgba(0,0,0,0.1);
-            --shadow-glow: 0 4px 15px rgba(56,189,248,0.5);
+            --shadow-glow: 0 4px 15px var(--accent-glow);
 
             /* === Componentes === */
             --comp-btn-height: 44px;
