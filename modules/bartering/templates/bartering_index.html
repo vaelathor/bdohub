@@ -734,19 +734,46 @@
         }
 
         /* ===== MOBILE ===== */
+        /* ===== MOBILE GLOBAL ===== */
         @media (max-width: 768px) {
-            body { overflow-y: auto !important; padding: 1rem !important; height: auto !important; }
-            .metrics-grid { grid-template-columns: 1fr 1fr !important; gap: 0.6rem !important; }
-            .main-split { grid-template-columns: 1fr !important; }
-            .two-col { grid-template-columns: 1fr !important; }
+            html { overflow-x: hidden !important; }
+            body { overflow-y: auto !important; padding: 0.8rem !important; height: auto !important; overflow-x: hidden !important; }
+            .app-container { padding: 0.8rem !important; overflow-x: hidden !important; width: 100% !important; max-width: 100vw !important; height: auto !important; }
+            
+            /* Stat cards: empilha em 1 ou 2 colunas */
+            .stat-grid { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
+            .stat-card { padding: 0.8rem !important; }
+            .rem-row { flex-direction: column !important; gap: 0.4rem !important; }
+            .rem-stat { flex-direction: row !important; justify-content: space-between !important; }
+            
+            /* Dashboard grid: empilha tudo verticalmente */
+            .dashboard-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+            
+            /* Glass panels */
+            .glass-panel { padding: 0.8rem !important; overflow: hidden !important; }
+            
+            /* Routes grid */
+            .routes-grid { grid-template-columns: 1fr !important; gap: 0.5rem !important; }
+            .route-item { gap: 0.6rem !important; padding: 0.7rem 0.8rem !important; flex-wrap: wrap; }
+            .route-name { font-size: 0.85rem !important; }
+            .route-costs { min-width: auto !important; gap: 6px !important; font-size: 0.8rem !important; }
+            .route-total { font-size: 0.9rem !important; }
+            
+            /* Tabelas */
+            table { font-size: 0.75rem; }
+            thead th, tbody td { padding: 0.3rem 0.4rem; }
+            
+            /* Botões e forms */
             .bargain-row { flex-direction: column !important; }
-            .stat-cards { grid-template-columns: repeat(2, 1fr) !important; }
-            table { font-size: 0.8rem; }
-            thead th, tbody td { padding: 0.4rem 0.6rem; }
             .bargain-btn { padding: 0.5rem 0.8rem !important; font-size: 0.85rem; }
-            .routes-grid { grid-template-columns: 1fr !important; }
-            .route-item { gap: 0.8rem !important; padding: 0.8rem 1rem !important; flex-wrap: wrap; }
-            .route-costs { min-width: auto !important; }
+            .two-col { grid-template-columns: 1fr !important; }
+            input[type="text"], input[type="number"] { font-size: 0.9rem !important; }
+            
+            /* Header */
+            .top-nav { flex-wrap: wrap !important; gap: 0.5rem !important; }
+            h1 { font-size: 1.3rem !important; }
+            
+            /* Modal */
             .modal-box { width: 95vw !important; max-height: 85vh !important; }
             .modal-box > div[style*="overflow-y"] { overflow-x: auto !important; }
         }
