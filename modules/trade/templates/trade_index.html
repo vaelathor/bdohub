@@ -679,7 +679,7 @@
             .stat-bar { flex-wrap: wrap; padding: 0.5rem 0.4rem; }
             .stat-item { min-width: calc(33% - 0.5rem); padding: 0.3rem 0; }
             .stat-item:nth-child(n+4) { border-top: 1px solid var(--glass-border); padding-top: 0.4rem; }
-            .town-grid { grid-template-columns: 1fr !important; gap: 0.7rem !important; }
+            .town-grid { grid-template-columns: 1fr !important; gap: 0.5rem !important; overflow-x: hidden !important; }
             .town-card { padding: 0.8rem !important; }
             .town-card .town-section { padding-top: 0.4rem; }
             .town-card .town-section-title { font-size: 0.62rem; }
@@ -693,15 +693,19 @@
             .town-card { cursor: pointer; }
             .town-head { pointer-events: none; }
             .town-head .town-eye, .town-head .town-prod { pointer-events: auto; }
-            .town-tags, .town-section, .town-foot {
-                max-height: 0; overflow: hidden; opacity: 0;
+            .town-card > .town-tags,
+            .town-card > .town-section,
+            .town-card > .town-foot {
+                max-height: 0 !important; overflow: hidden !important; opacity: 0 !important;
                 transition: max-height 0.3s ease, opacity 0.2s ease;
-                padding-top: 0 !important; padding-bottom: 0;
+                padding-top: 0 !important; padding-bottom: 0 !important;
+                margin: 0 !important; border: none !important;
             }
-            .town-card.expanded .town-tags,
-            .town-card.expanded .town-section,
-            .town-card.expanded .town-foot {
-                max-height: 2000px; opacity: 1; padding-top: 0.5rem !important;
+            .town-card.expanded > .town-tags,
+            .town-card.expanded > .town-section,
+            .town-card.expanded > .town-foot {
+                max-height: 2000px !important; opacity: 1 !important;
+                padding-top: 0.5rem !important; padding-bottom: 0.3rem !important;
             }
             .town-card.expanded .town-foot { padding-top: 0.4rem !important; }
             .expand-hint {
