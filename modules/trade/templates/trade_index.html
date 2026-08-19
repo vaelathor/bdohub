@@ -675,7 +675,7 @@
 
         /* ===== MOBILE ===== */
         @media (max-width: 768px) {
-            body { overflow-y: auto !important; overflow-x: hidden !important; padding: 1rem !important; height: auto !important; padding-bottom: 70px !important; }
+            body { overflow-y: auto !important; overflow-x: hidden !important; padding: 1rem !important; height: auto !important; display: block !important; gap: 0 !important; }
             .stat-bar { flex-wrap: wrap; padding: 0.5rem 0.4rem; }
             .stat-item { min-width: calc(33% - 0.5rem); padding: 0.3rem 0; }
             .stat-item:nth-child(n+4) { border-top: 1px solid var(--glass-border); padding-top: 0.4rem; }
@@ -708,6 +708,9 @@
             .expand-hint { display: inline-flex; align-items: center; color: var(--muted); opacity: 0.6; flex-shrink: 0; }
             .expand-hint svg { width: 12px; height: 12px; transition: transform 0.2s; }
             .town-card.expanded .expand-hint svg { transform: rotate(180deg); }
+            
+            /* Compensar bottom nav bar (56px) - mesmo padrao do Bartering */
+            body { padding-bottom: 70px !important; }
             /* Collapsed by default: hide everything except head */
             .town-card:not(.expanded) > .town-tags,
             .town-card:not(.expanded) > .town-section,
