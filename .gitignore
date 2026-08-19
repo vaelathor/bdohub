@@ -3,3 +3,7 @@ venv/
 __pycache__/
 *.pyc
 *.log
+.staging_bdohub/
+data_backups/
+*.sqlite3
+.DS_Store
