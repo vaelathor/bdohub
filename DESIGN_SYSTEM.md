@@ -1,6 +1,6 @@
 # BDOHub Design System — Guia Definitivo
 
-> **Versão:** 2.0  
+> **Versão:** 2.1  
 > **Autor:** Buffy (Codebuff)  
 > **Data:** Ago 2026  
 > **Referências:** Binance, Coinbase, Cal.com, Airtable, ClickHouse  
@@ -78,11 +78,13 @@ Primitive Tokens (valores brutos)
 | Categoria | Tokens | Exemplo |
 |-----------|--------|---------|
 | **Cores** | `--bg-*`, `--text-*`, `--accent-*`, `--status-*` | `--bg-panel: #1e293b` |
-| **Tipografia** | `--fs-*`, `--fw-*`, `--lh-*`, `--ls-*` | `--fs-h1: 1.8rem` |
+| **Tipografia** | `--fs-*` | `--fs-h1: 1.8rem` |
 | **Espaçamento** | `--sp-*` | `--sp-4: 1rem` |
 | **Formas** | `--radius-*` | `--radius-lg: 12px` |
 | **Sombras** | `--shadow-*` | `--shadow-card: 0 4px 6px ...` |
 | **Componentes** | `--comp-*` | `--comp-btn-height: 44px` |
+| **Ícones** | `--icon-*` | `--icon-md: 20px` |
+| **Z-Index** | `--z-*` | `--z-modal: 1000` |
 
 ### Referência entre Tokens
 
@@ -127,6 +129,7 @@ Primitive Tokens (valores brutos)
 | `--text-sec` | `#cbd5e1` | Texto secundário, labels |
 | `--muted` | `#64748b` | Texto desabilitado, hints, timestamps |
 | `--text-on-accent` | `#0f172a` | Texto sobre fundo de acento (azul) |
+| `--text-on-danger` | `#ffffff` | Texto sobre fundo de perigo (vermelho) |
 
 #### Acento
 | Token | Hex | Uso |
@@ -140,10 +143,14 @@ Primitive Tokens (valores brutos)
 #### Status
 | Token | Hex | Uso |
 |-------|-----|-----|
-| `--success` | `#10b981` | Sucesso, valores positivos |
+| `--success` | `#10b981` | Sucesso, valores positivos, confirmação |
 | `--danger` | `#ef4444` | Erro, exclusão, valores negativos |
 | `--warning` | `#f59e0b` | Aviso, badges de alerta |
 | `--info` | `#3b82f6` | Informação, focus ring |
+| `--ok` | `#22c55e` | Status positivo suave (quantidade disponível, estoque ok) |
+| `--bad` | `#f87171` | Status negativo suave (estoque baixo, atenção menor que danger) |
+
+> **Nota sobre `--ok` e `--bad`**: Estes tokens são intencionalmente mais suaves que `--success` e `--danger`. `--ok` (#22c55e) é ligeiramente mais brilhante que `--success` (#10b981), indicando um estado positivo "de rotina" (estoque suficiente, item disponível). `--bad` (#f87171) é mais claro que `--danger` (#ef4444), indicando atenção moderada (estoque baixo, preço acima do mercado) sem o peso visual de uma falha crítica. Usados no módulo Market e Trade para diferenciação sutil entre severidades.
 
 ### Paleta Light Theme
 
@@ -176,8 +183,9 @@ Primitive Tokens (valores brutos)
 
 | Fonte | Uso | Peso | Fallback |
 |-------|-----|------|----------|
-| **Outfit** | Fonte principal (body, UI) | 300, 400, 500, 600, 700 | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` |
-| **Web Pearl** | Títulos decorativos (h1) | Normal | `'Outfit', sans-serif` |
+| **Outfit** | Fonte principal (body, UI, títulos) | 300, 400, 500, 600, 700 | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` |
+
+> **Nota**: O sistema usa **apenas Outfit** como fonte carregada. Para títulos H1, usa-se Outfit 700 com gradiente branco→azul para crear destaque visual sem precisar de uma segunda fonte.
 
 ### Escala Tipográfica (Desktop)
 
@@ -207,19 +215,18 @@ Primitive Tokens (valores brutos)
 
 ### Regras Tipográficas
 
-1. **H1** usa `Web Pearl` + gradiente branco→azul para destaque visual.
+1. **H1** usa Outfit 700 + gradiente branco→azul para destaque visual.
 2. **H2** (section-title): `color: var(--text-sec)`, borda inferior com `var(--glass-border)`.
 3. **Labels**: sempre `text-transform: uppercase`, `letter-spacing: 0.5px`, cor `var(--muted)`.
 4. **Valores numéricos**: sempre `font-weight: 700`, cor `var(--accent-primary)`.
 5. **Display numbers**: usar `var(--fs-display)` para números de destaque.
-6. **Nunca usar font-weight 700 em body text** — reserved for headings and numbers.
+6. **Nunca usar font-weight 700 em body text** — reservado para headings e números.
 
 ### Font Substitutes
 
 | Fonte Original | Substituto | Notas |
 |----------------|------------|-------|
 | Outfit | Inter | Ajustar line-height +0.05 |
-| Web Pearl | Outfit 700 | Sem gradiente |
 | JetBrains Mono (monospace) | ui-monospace | Para valores tabulares |
 
 ---
@@ -311,7 +318,7 @@ Todo módulo DEVE ter `padding-bottom: 70px` no body no mobile:
     --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
                    0 2px 4px -1px rgba(0, 0, 0, 0.06);
     
-    /* Elevado (modais, dropdowns) */
+    /* Elevado (modais, dropdowns, tooltips) */
     --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
                        0 4px 6px -2px rgba(0, 0, 0, 0.1);
     
@@ -378,7 +385,8 @@ O componente base de todos os módulos.
 
 .section-title svg {
     color: var(--accent-primary);
-    width: 20px;
+    width: var(--icon-md);                  /* 20px */
+    height: var(--icon-md);
 }
 
 @media (max-width: 768px) {
@@ -448,9 +456,22 @@ O componente base de todos os módulos.
 
 .stat-item:last-child { border-right: none; }
 
-.stat-item-icon { font-size: 1.5rem; margin-bottom: var(--sp-1); }
-.stat-item-value { font-size: var(--fs-body); font-weight: 700; color: var(--accent-primary); }
-.stat-item-label { font-size: var(--fs-micro); color: var(--muted); text-transform: uppercase; }
+.stat-item-icon {
+    font-size: 1.5rem;
+    margin-bottom: var(--sp-1);
+}
+
+.stat-item-value {
+    font-size: var(--fs-body);
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.stat-item-label {
+    font-size: var(--fs-micro);
+    color: var(--muted);
+    text-transform: uppercase;
+}
 
 @media (max-width: 768px) {
     .stat-bar { flex-wrap: wrap; gap: var(--sp-3); }
@@ -459,15 +480,11 @@ O componente base de todos os módulos.
 }
 ```
 
-### 8.5 Button Primary
+### 8.5 Buttons
 
 ```css
-.btn-primary {
-    height: var(--comp-btn-height, 44px);
-    background: var(--accent-primary);
-    color: var(--text-on-accent);
-    border: none;
-    border-radius: var(--radius-md);
+.btn {
+    height: var(--comp-btn-height);
     font-family: var(--font-main);
     font-size: var(--fs-body);
     font-weight: 600;
@@ -477,8 +494,16 @@ O componente base de todos os módulos.
     justify-content: center;
     gap: var(--sp-2);
     padding: 0 var(--sp-4);
-    box-shadow: var(--shadow-glow);
+    border: none;
+    border-radius: var(--radius-md);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Primary --- */
+.btn-primary {
+    background: var(--accent-primary);
+    color: var(--text-on-accent);
+    box-shadow: var(--shadow-glow);
 }
 
 .btn-primary:hover {
@@ -492,7 +517,15 @@ O componente base de todos os módulos.
     transition-duration: 0.1s;
 }
 
-/* Variantes */
+.btn-primary:disabled {
+    background: var(--muted);
+    color: var(--bg-panel);
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- Secondary --- */
 .btn-secondary {
     background: transparent;
     color: var(--text-main);
@@ -505,11 +538,44 @@ O componente base de todos os módulos.
     background: var(--accent-primary-soft);
 }
 
-.btn-danger {
-    background: var(--danger);
-    color: white;
+.btn-secondary:active {
+    transform: scale(0.97);
+    transition-duration: 0.1s;
 }
 
+.btn-secondary:disabled {
+    background: transparent;
+    color: var(--muted);
+    border-color: var(--bg-inset);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- Danger --- */
+.btn-danger {
+    background: var(--danger);
+    color: var(--text-on-danger);
+    box-shadow: none;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
+.btn-danger:active {
+    transform: scale(0.97);
+    transition-duration: 0.1s;
+}
+
+.btn-danger:disabled {
+    background: var(--bg-inset);
+    color: var(--muted);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- Ghost --- */
 .btn-ghost {
     background: transparent;
     color: var(--accent-primary);
@@ -517,7 +583,17 @@ O componente base de todos os módulos.
     padding: var(--sp-1) var(--sp-3);
 }
 
-/* Tamanhos */
+.btn-ghost:hover {
+    background: var(--accent-primary-soft);
+}
+
+.btn-ghost:disabled {
+    color: var(--muted);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- Tamanhos --- */
 .btn-sm { height: 32px; font-size: var(--fs-caption); padding: 0 var(--sp-3); }
 .btn-lg { height: 52px; font-size: var(--fs-h3); padding: 0 var(--sp-6); }
 ```
@@ -537,7 +613,7 @@ input[type="search"] {
     font-size: var(--fs-body);
     padding: var(--sp-3);
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
     width: 100%;
 }
 
@@ -550,7 +626,41 @@ input::placeholder {
     color: var(--muted);
 }
 
-/* Input de destaque (grande) */
+/* --- Estado de erro --- */
+input.input-error,
+input[type="number"].input-error,
+input[type="text"].input-error {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15);
+}
+
+input.input-error:focus {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+}
+
+/* --- Estado de sucesso --- */
+input.input-success,
+input[type="number"].input-success,
+input[type="text"].input-success {
+    border-color: var(--success);
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+}
+
+input.input-success:focus {
+    border-color: var(--success);
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+}
+
+/* --- Estado desabilitado --- */
+input:disabled {
+    background: var(--bg-inset);
+    color: var(--muted);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* --- Input de destaque (grande) --- */
 .input-display {
     font-size: var(--fs-display);
     font-weight: 700;
@@ -561,7 +671,7 @@ input::placeholder {
     padding: var(--sp-2) 0;
 }
 
-/* Input médio */
+/* --- Input médio --- */
 .input-lg {
     font-size: 1.8rem;
     font-weight: 700;
@@ -604,7 +714,7 @@ input.input-display { font-size: var(--fs-display) !important; }
     width: 18px; height: 18px;
     left: 2px; bottom: 2px;
     background: white;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     transition: 0.3s;
 }
 
@@ -621,7 +731,7 @@ input.input-display { font-size: var(--fs-display) !important; }
     inset: 0;
     background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(4px);
-    z-index: 1000;
+    z-index: var(--z-modal);
     justify-content: center;
     align-items: center;
 }
@@ -738,6 +848,321 @@ input.input-display { font-size: var(--fs-display) !important; }
 }
 ```
 
+### 8.13 Tabela de Dados (Data Table)
+
+```css
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--fs-body-sm);
+}
+
+.data-table thead th {
+    text-align: left;
+    font-size: var(--fs-caption);
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: var(--sp-3) var(--sp-4);
+    border-bottom: 1px solid var(--glass-border);
+    white-space: nowrap;
+}
+
+/* Valores numéricos alinhados à direita */
+.data-table thead th.num,
+.data-table tbody td.num {
+    text-align: right;
+    font-family: ui-monospace, 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid var(--glass-border);
+    transition: background 0.15s;
+}
+
+.data-table tbody tr:hover {
+    background: var(--bg-panel-hover);
+}
+
+.data-table tbody td {
+    padding: var(--sp-3) var(--sp-4);
+    color: var(--text-main);
+    vertical-align: middle;
+}
+
+/* Valores positivos/negativos */
+.data-table .val-positive { color: var(--success); }
+.data-table .val-negative { color: var(--danger); }
+.data-table .val-ok { color: var(--ok); }
+.data-table .val-bad { color: var(--bad); }
+
+/* Mobile: scroll horizontal */
+@media (max-width: 768px) {
+    .data-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .data-table {
+        min-width: 600px;  /* Largura mínima para manter legibilidade */
+    }
+    
+    .data-table thead th,
+    .data-table tbody td {
+        padding: var(--sp-2) var(--sp-3);
+        font-size: var(--fs-caption);
+    }
+}
+```
+
+### 8.14 Tooltip
+
+```css
+.tooltip-wrap {
+    position: relative;
+    display: inline-flex;
+}
+
+.tooltip-wrap .tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-elevated);
+    color: var(--text-main);
+    font-size: var(--fs-caption);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: var(--sp-2) var(--sp-3);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-elevated);
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s, transform 0.15s;
+    z-index: var(--z-tooltip);
+}
+
+.tooltip-wrap .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--bg-elevated);
+}
+
+.tooltip-wrap:hover .tooltip,
+.tooltip-wrap:focus-within .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-2px);
+}
+
+/* Mobile: tooltip embaixo do elemento */
+@media (max-width: 768px) {
+    .tooltip-wrap .tooltip {
+        bottom: auto;
+        top: calc(100% + 8px);
+    }
+    
+    .tooltip-wrap .tooltip::after {
+        top: auto;
+        bottom: 100%;
+        border-top-color: transparent;
+        border-bottom-color: var(--bg-elevated);
+    }
+}
+```
+
+### 8.15 Tabs de Navegação
+
+```css
+.tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: var(--sp-4);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tab {
+    padding: var(--sp-3) var(--sp-4);
+    font-size: var(--fs-body-sm);
+    font-weight: 500;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+    font-family: var(--font-main);
+}
+
+.tab:hover {
+    color: var(--text-sec);
+}
+
+.tab.active {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.tab:disabled {
+    color: var(--bg-inset);
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        gap: 0;
+        margin-bottom: var(--sp-3);
+    }
+    
+    .tab {
+        padding: var(--sp-2) var(--sp-3);
+        font-size: var(--fs-caption);
+        flex-shrink: 0;
+    }
+}
+```
+
+### 8.16 Empty State
+
+```css
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sp-10) var(--sp-4);
+    text-align: center;
+    gap: var(--sp-4);
+}
+
+.empty-state-icon {
+    width: var(--icon-xl);
+    height: var(--icon-xl);
+    color: var(--muted);
+    opacity: 0.5;
+}
+
+.empty-state-title {
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    color: var(--text-sec);
+}
+
+.empty-state-desc {
+    font-size: var(--fs-body-sm);
+    color: var(--muted);
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+.empty-state .btn {
+    margin-top: var(--sp-2);
+}
+
+@media (max-width: 768px) {
+    .empty-state {
+        padding: var(--sp-8) var(--sp-4);
+    }
+    
+    .empty-state-icon {
+        width: var(--icon-lg);
+        height: var(--icon-lg);
+    }
+    
+    .empty-state-title {
+        font-size: var(--fs-body);
+    }
+}
+```
+
+### 8.17 Loading / Skeleton State
+
+```css
+/* --- Skeleton pulsante --- */
+.skeleton {
+    background: var(--bg-inset);
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.04) 50%,
+        transparent 100%
+    );
+    animation: skeletonShimmer 1.5s infinite;
+}
+
+@keyframes skeletonShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Variantes de tamanho */
+.skeleton-text {
+    height: 1em;
+    width: 100%;
+}
+
+.skeleton-text-sm {
+    height: 0.75em;
+    width: 60%;
+}
+
+.skeleton-title {
+    height: 1.5em;
+    width: 40%;
+    margin-bottom: var(--sp-2);
+}
+
+.skeleton-circle {
+    border-radius: var(--radius-full);
+}
+
+.skeleton-card {
+    height: 120px;
+    border-radius: var(--radius-lg);
+}
+
+/* --- Spinner --- */
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--glass-border);
+    border-top-color: var(--accent-primary);
+    border-radius: var(--radius-full);
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.spinner-sm { width: 16px; height: 16px; }
+.spinner-lg { width: 40px; height: 40px; border-width: 3px; }
+
+@media (max-width: 768px) {
+    .skeleton-card { height: 80px; }
+}
+```
+
 ---
 
 ## 9. Layout e Grid
@@ -785,7 +1210,7 @@ MOBILE:
         width: 100%; height: 56px;
         flex-direction: row; justify-content: space-around;
         border-right: none; border-top: 1px solid var(--glass-border);
-        background: rgba(15, 23, 42, 0.98); z-index: 1000;
+        background: rgba(15, 23, 42, 0.98); z-index: var(--z-nav);
     }
     .content-frame { width: 100%; height: calc(100vh - 56px); flex: none; }
 }
@@ -918,6 +1343,15 @@ transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes skeletonShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
 ```
 
 ### Hover Effects
@@ -944,6 +1378,31 @@ transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     border-color: var(--accent-primary);
 }
 ```
+
+### Reduced Motion
+
+Usuários que preferem reduzir movimento devem ter todas as transições e animações desativadas ou minimizadas:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .btn:hover { transform: none; }
+    .btn:active { transform: none; }
+    .list-item:hover { transform: none; }
+    .tooltip-wrap:hover .tooltip { transform: translateX(-50%); }
+    .progress-bar-fill { transition: none; }
+}
+```
+
+> **Regra**: Todo `transition` e `animation` no sistema deve ser desativado por esta regra. Não usar `transition: none` individualmente — a regra global cobre todos os casos.
 
 ### JavaScript — Animações Sutis
 
@@ -1048,6 +1507,7 @@ document.documentElement.setAttribute('data-theme', saved);
 | `--muted` sobre `--bg-base` | 4.6:1 | ✅ AA |
 | `--accent-primary` sobre `--bg-base` | 5.8:1 | ✅ AA |
 | `--text-on-accent` sobre `--accent-primary` | 7.2:1 | ✅ AAA |
+| `--text-on-danger` sobre `--danger` | 4.8:1 | ✅ AA |
 
 ### Focus Rings
 
@@ -1076,36 +1536,168 @@ document.documentElement.setAttribute('data-theme', saved);
 ## 14. Padrões por Módulo
 
 ### Dashboard (`/dashboard/`)
+
 - **Layout**: 2 colunas (2fr 1fr) → 1 coluna no mobile.
 - **Stats**: 4 cards em row → 2x2 no mobile.
 - **Calendário**: Grid 7 colunas (mantém no mobile, fonte reduzida para 0.6rem).
 - **CSS externo**: `static/css/dashboard.css`.
 
+```html
+<div class="app-container">
+  <header class="top-nav">
+    <h1>Dashboard</h1>
+    <div class="nav-info">...</div>
+  </header>
+  <div class="stat-grid">           <!-- 4 stat-cards -->
+    <div class="stat-card">...</div>
+    <div class="stat-card">...</div>
+    <div class="stat-card">...</div>
+    <div class="stat-card">...</div>
+  </div>
+  <main class="dashboard-grid">     <!-- 2fr 1fr → 1fr -->
+    <div class="glass-panel calendar">...</div>
+    <div class="glass-panel tasks">...</div>
+  </main>
+</div>
+```
+
 ### Bartering (`/bartering/`)
+
 - **Layout**: Stat grid (3 cards) + Dashboard grid (2fr 1fr) → empilha tudo.
 - **Componentes**: Routes grid (2 colunas → 1), Exp calculator, Modal de tabela.
 - **Referência**: Este módulo tem o mobile mais bem resolvido.
 
+```html
+<div class="app-container">
+  <header class="top-nav">
+    <h1>Bartering</h1>
+    <div class="nav-info">...</div>
+  </header>
+  <div class="stat-grid">           <!-- 3 stat-cards -->
+    <div class="stat-card">...</div>
+    <div class="stat-card">...</div>
+    <div class="stat-card">...</div>
+  </div>
+  <main class="dashboard-grid">     <!-- 2fr 1fr → 1fr -->
+    <div class="glass-panel routes-grid">
+      <div class="route-item">...</div>
+      <div class="route-item">...</div>
+    </div>
+    <div class="glass-panel barganha">
+      <input class="input-display" />
+      <div class="rem-row">...</div>
+    </div>
+  </main>
+  <div class="glass-panel exp-calc">...</div>
+</div>
+```
+
 ### Hunting (`/hunting/`)
+
 - **Layout**: Flex column com cards empilhados.
 - **Calendar page**: Página separada com grid auto-fit.
 - **CSS separado**: Usa `static/css/style.css` externo.
 
+```html
+<div class="app-container">
+  <header class="top-nav">
+    <h1>Hunting</h1>
+    <div class="nav-info">...</div>
+  </header>
+  <main class="dashboard-grid">     <!-- flex column, cards empilhados -->
+    <div class="glass-panel hunt-info">...</div>
+    <div class="glass-panel hunt-exp">
+      <div class="progress-bar-container">...</div>
+    </div>
+  </main>
+</div>
+```
+
 ### CP (`/cp/`)
+
 - **Layout**: 3 colunas (350px 1fr 350px) → 1 coluna no mobile.
 - **Status row**: 2 cards lado a lado → empilha.
 - **OCR**: Paste zone com drag & drop.
 
+```html
+<div class="app-container">
+  <header class="top-nav">
+    <h1>Contribution Points</h1>
+    <div class="nav-info">...</div>
+  </header>
+  <main class="dashboard-grid">     <!-- 3 colunas → 1 -->
+    <div class="glass-panel status-inputs">
+      <input class="input-lg" />
+      <input class="input-lg" />
+    </div>
+    <div class="glass-panel lifeskills-panel">
+      <div class="prof-card">...</div>
+      <div class="subprodutos-grid">...</div>
+    </div>
+    <div class="glass-panel summary-footer">
+      <div class="status-row">...</div>
+    </div>
+  </main>
+</div>
+```
+
 ### Market (`/market/`)
+
 - **Layout**: Flex column com lista + detalhe.
 - **Grids**: Auto-fill com minmax.
 - **Cores extras**: `--accent-gold`, `--ok`, `--bad`.
 
+```html
+<div class="app-container">
+  <header class="top-nav">
+    <h1>Market</h1>
+    <input class="search-input" type="search" />
+  </header>
+  <main class="dashboard-grid">     <!-- flex column -->
+    <div class="glass-panel items-grid">
+      <div class="item-card">...</div>
+      <div class="item-card">...</div>
+    </div>
+    <div class="glass-panel detail-panel">
+      <div class="chart-flex">...</div>
+    </div>
+  </main>
+</div>
+```
+
 ### Trade (`/trade/`)
+
 - **Layout**: Stat bar + Toolbar + Town grid.
 - **Body é flex column**: NÃO mudar display no mobile.
 - **Accordion**: Cards colapsados por padrão no mobile.
 - **Grid towns**: `repeat(auto-fill, minmax(min(340px, 100%), 1fr))` → `1fr`.
+
+```html
+<body class="dark-theme">    <!-- flex column, NÃO mudar no mobile -->
+  <header class="top-nav">
+    <h1>Trade</h1>
+    <div class="toolbar">...</div>
+  </header>
+  <div class="stat-bar">     <!-- flex, wrap no mobile -->
+    <div class="stat-item">...</div>
+    <div class="stat-item">...</div>
+    <div class="stat-item">...</div>
+    <div class="stat-item">...</div>
+    <div class="stat-item">...</div>
+  </div>
+  <div class="towns-scroll">
+    <div class="town-grid">  <!-- auto-fill 340px → 1fr -->
+      <div class="town-card">
+        <div class="town-head">...</div>
+        <div class="town-tags">...</div>
+        <div class="town-workshops">...</div>
+        <div class="town-nodes">...</div>
+        <div class="town-route">...</div>
+      </div>
+    </div>
+  </div>
+</body>
+```
 
 ---
 
@@ -1149,6 +1741,7 @@ Media query:            @media (...)       (não afeta especificidade)
 - ✅ Usar tokens `var(--*)` para todas as cores.
 - ✅ Usar `--accent-primary` para ações principais.
 - ✅ Usar `--accent-gold` apenas para contextos monetários.
+- ✅ Usar `--ok`/`--bad` para status suaves, `--success`/`--danger` para status fortes.
 - ❌ Nunca usar hex hardcoded em componentes.
 - ❌ Nunca usar verde/vermelho como fundo de card.
 - ❌ Nunca usar acento azul em texto corrido.
@@ -1171,6 +1764,7 @@ Media query:            @media (...)       (não afeta especificidade)
 - ✅ Usar componentes documentados nesta referência.
 - ✅ Adicionar hover/active states em todos os elementos interativos.
 - ✅ Usar `transition: all 0.2s` em todos os elementos interativos.
+- ✅ Usar `:disabled` em botões e inputs quando aplicável.
 - ❌ Nunca inventar um componente que já existe.
 - ❌ Nunca usar `!important` sem justificativa.
 - ❌ Nunca mudar display:flex no mobile se layout depender dele.
@@ -1186,14 +1780,11 @@ Media query:            @media (...)       (não afeta especificidade)
 
 ## 17. Gaps Conhecidos
 
-- **Animações complexas**: O sistema documenta transições básicas. Animações de page transition, scroll-triggered, e parallax não estão cobertas.
-- **Form validation states**: Estados de erro/sucesso em inputs além do focus não estão formalizados.
 - **Dark/Light toggle persistente**: O toggle salva em localStorage mas não sincroniza entre abas.
-- **Ícones**: O sistema usa Lucide icons mas não documenta tamanhos padrão por contexto.
 - **Print styles**: Não há regras para impressão.
 - **RTL support**: Não há suporte para layout da direita para esquerda.
 - **High contrast mode**: Não há regras para `prefers-contrast: high`.
-- **Reduced motion**: Não há regras para `prefers-reduced-motion`.
+- **Animações complexas**: Page transitions, scroll-triggered animations e parallax não estão cobertas (apenas transições básicas e hover).
 
 ---
 
@@ -1211,39 +1802,42 @@ Media query:            @media (...)       (não afeta especificidade)
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            /* Superfícies */
+            /* === Superfícies === */
             --bg-base: #0f172a;
             --bg-panel: #1e293b;
             --bg-panel-hover: #253349;
             --bg-input: #0b1220;
             --bg-elevated: #334155;
             --bg-inset: #0a1020;
-            
-            /* Bordas */
+
+            /* === Bordas === */
             --glass-border: #334155;
             --glass-border-hover: #475569;
             --border-strong: #64748b;
-            
-            /* Texto */
+
+            /* === Texto === */
             --text-main: #f8fafc;
             --text-sec: #cbd5e1;
             --muted: #64748b;
             --text-on-accent: #0f172a;
-            
-            /* Acento */
+            --text-on-danger: #ffffff;
+
+            /* === Acento === */
             --accent-primary: #38bdf8;
             --accent-primary-hover: #0ea5e9;
             --accent-primary-muted: rgba(56,189,248,0.15);
             --accent-primary-soft: rgba(56,189,248,0.08);
             --accent-gold: #e0b457;
-            
-            /* Status */
+
+            /* === Status === */
             --success: #10b981;
             --danger: #ef4444;
             --warning: #f59e0b;
             --info: #3b82f6;
-            
-            /* Tipografia */
+            --ok: #22c55e;
+            --bad: #f87171;
+
+            /* === Tipografia === */
             --fs-display: 2.5rem;
             --fs-h1: 1.8rem;
             --fs-h2: 1.2rem;
@@ -1252,8 +1846,8 @@ Media query:            @media (...)       (não afeta especificidade)
             --fs-body-sm: 0.8rem;
             --fs-caption: 0.75rem;
             --fs-micro: 0.65rem;
-            
-            /* Espaçamento */
+
+            /* === Espaçamento === */
             --sp-1: 0.25rem;
             --sp-2: 0.5rem;
             --sp-3: 0.75rem;
@@ -1262,21 +1856,40 @@ Media query:            @media (...)       (não afeta especificidade)
             --sp-6: 1.5rem;
             --sp-8: 2rem;
             --sp-10: 2.5rem;
-            
-            /* Formas */
+
+            /* === Formas === */
             --radius-xs: 4px;
             --radius-sm: 6px;
             --radius-md: 8px;
             --radius-lg: 12px;
             --radius-xl: 16px;
             --radius-pill: 9999px;
-            
-            /* Sombras */
+            --radius-full: 50%;
+
+            /* === Sombras === */
             --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
             --shadow-elevated: 0 10px 15px -3px rgba(0,0,0,0.2), 0 4px 6px -2px rgba(0,0,0,0.1);
             --shadow-glow: 0 4px 15px rgba(56,189,248,0.5);
-            
-            /* Fonte */
+
+            /* === Componentes === */
+            --comp-btn-height: 44px;
+
+            /* === Ícones === */
+            --icon-sm: 16px;
+            --icon-md: 20px;
+            --icon-lg: 24px;
+            --icon-xl: 40px;
+
+            /* === Z-Index === */
+            --z-base: 0;
+            --z-dropdown: 100;
+            --z-sticky: 200;
+            --z-nav: 500;
+            --z-modal: 1000;
+            --z-toast: 1100;
+            --z-tooltip: 1200;
+
+            /* === Fonte === */
             --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
 
@@ -1303,8 +1916,8 @@ Media query:            @media (...)       (não afeta especificidade)
         }
 
         h1 {
-            font-family: 'Web Pearl', 'Outfit', sans-serif;
             font-size: var(--fs-h1);
+            font-weight: 700;
             background: linear-gradient(90deg, #fff, var(--accent-primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1339,7 +1952,11 @@ Media query:            @media (...)       (não afeta especificidade)
             margin-bottom: var(--sp-4);
         }
 
-        .section-title svg { color: var(--accent-primary); width: 20px; }
+        .section-title svg {
+            color: var(--accent-primary);
+            width: var(--icon-md);
+            height: var(--icon-md);
+        }
 
         /* ===== MOBILE ===== */
         @media (max-width: 768px) {
@@ -1371,6 +1988,16 @@ Media query:            @media (...)       (não afeta especificidade)
             /* Compensar bottom nav bar (56px) */
             body { padding-bottom: 70px !important; }
             .app-container { padding-bottom: 70px !important; }
+        }
+
+        /* ===== REDUCED MOTION ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
         }
     </style>
 </head>
